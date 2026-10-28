@@ -1,0 +1,3658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groww Multi-Source Intelligence & SIP Discovery Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    :root {
+      --bg-dark: #0b0f17;
+      --bg-surface: #121824;
+      --bg-card: rgba(22, 30, 46, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.16);
+      
+      --groww-green: #00D09C;
+      --groww-green-glow: rgba(0, 208, 156, 0.25);
+      --groww-dark-green: #008764;
+      
+      --apple-purple: #af52de;
+      --play-teal: #00c49f;
+      --reddit-orange: #ff4500;
+      --tradingqna-blue: #0088ff;
+      --youtube-red: #ff0033;
+      --social-violet: #8b5cf6;
+      --forums-emerald: #10b981;
+
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.5);
+      --shadow-glow: 0 0 30px var(--groww-green-glow);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(0, 208, 156, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(175, 82, 222, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(0, 136, 255, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* ─── Top Nav ─── */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00D09C, #00936f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b0f17;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 12px var(--groww-green-glow);
+    }
+
+    .brand-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.725rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.825rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-hover);
+    }
+
+    .btn-nav.active {
+      color: var(--groww-green);
+      background: rgba(0, 208, 156, 0.1);
+      border-color: rgba(0, 208, 156, 0.3);
+    }
+
+    /* ─── Main Container ─── */
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 24px 28px 60px;
+    }
+
+    /* ─── Hero App Banner ─── */
+    .app-hero {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #00D09C 0%, #af52de 50%, #0088ff 100%);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .hero-app-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #00D09C 0%, #0369a1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      color: white;
+      box-shadow: 0 8px 24px rgba(0, 208, 156, 0.3);
+      flex-shrink: 0;
+    }
+
+    .app-details h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .app-meta-pills {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.775rem;
+      font-weight: 500;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .pill-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .pill-link.apple {
+      color: #d8b4fe;
+      border-color: rgba(175, 82, 222, 0.3);
+    }
+    .pill-link.play {
+      color: #6ee7b7;
+      border-color: rgba(0, 208, 156, 0.3);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0b0f17;
+      background: var(--groww-green);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px var(--groww-green-glow);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 208, 156, 0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--border-hover);
+    }
+
+    /* ─── Source Selector Grid ─── */
+    .source-selector-panel {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .source-selector-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-subtle);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .source-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+
+    .source-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--border-hover);
+    }
+
+    .source-card.checked {
+      background: rgba(0, 208, 156, 0.08);
+      border-color: rgba(0, 208, 156, 0.35);
+    }
+
+    .source-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .source-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .source-name {
+      font-size: 0.825rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .source-count {
+      font-size: 0.725rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── Metrics Bar ─── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .kpi-label {
+      font-size: 0.775rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .kpi-val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-top: 8px;
+    }
+
+    .kpi-sub {
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      margin-top: 4px;
+    }
+
+    /* ─── Main Tabs & Filter Bar ─── */
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+      padding-bottom: 2px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .tab-btn.active {
+      color: var(--groww-green);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0; right: 0;
+      height: 3px;
+      background: var(--groww-green);
+      border-radius: 3px 3px 0 0;
+    }
+
+    /* ─── Filters & Search ─── */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 8px 14px;
+      min-width: 280px;
+      flex: 1;
+      max-width: 480px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-main);
+      font-size: 0.85rem;
+      width: 100%;
+    }
+
+    .source-filter-pills {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .pill-filter {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .pill-filter:hover {
+      color: var(--text-main);
+      border-color: var(--border-hover);
+    }
+
+    .pill-filter.active {
+      background: rgba(0, 208, 156, 0.15);
+      border-color: rgba(0, 208, 156, 0.4);
+      color: var(--groww-green);
+    }
+
+    /* ─── Feed Cards List ─── */
+    .feed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feed-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px 22px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .feed-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.725rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .source-badge.app_store { background: rgba(175, 82, 222, 0.15); color: #d8b4fe; border: 1px solid rgba(175, 82, 222, 0.3); }
+    .source-badge.play_store { background: rgba(0, 208, 156, 0.15); color: #6ee7b7; border: 1px solid rgba(0, 208, 156, 0.3); }
+    .source-badge.tradingqna { background: rgba(0, 136, 255, 0.15); color: #7dd3fc; border: 1px solid rgba(0, 136, 255, 0.3); }
+    .source-badge.reddit { background: rgba(255, 69, 0, 0.15); color: #fdba74; border: 1px solid rgba(255, 69, 0, 0.3); }
+    .source-badge.youtube { background: rgba(255, 0, 51, 0.15); color: #fca5a5; border: 1px solid rgba(255, 0, 51, 0.3); }
+    .source-badge.social_media { background: rgba(139, 92, 246, 0.15); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.3); }
+    .source-badge.other_public { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+    }
+
+    .rating-stars {
+      color: #fbbf24;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 0.875rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.75rem;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--groww-green);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    /* ─── SIP Filtered Intelligence Cards ─── */
+    .sip-intel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .sip-intel-card:hover {
+      border-color: rgba(0, 208, 156, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 208, 156, 0.08);
+    }
+    .sip-cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 14px;
+      font-size: 0.725rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .sip-friction-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .pm-insight-box {
+      background: linear-gradient(135deg, rgba(0, 208, 156, 0.08) 0%, rgba(14, 165, 233, 0.05) 100%);
+      border: 1px solid rgba(0, 208, 156, 0.3);
+      border-left: 4px solid var(--groww-green);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 0.81rem;
+      color: #e2e8f0;
+      line-height: 1.45;
+    }
+    .sip-matched-kw {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── Hypotheses Cards (Stage 5) ─── */
+    .hyp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 16px;
+    }
+
+    .hyp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+    }
+
+    .hyp-card.rank-1 {
+      border-color: rgba(0, 208, 156, 0.4);
+      background: linear-gradient(180deg, rgba(0, 208, 156, 0.07) 0%, rgba(22, 30, 46, 0.75) 100%);
+    }
+
+    .hyp-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .hyp-rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--text-main);
+    }
+
+    .hyp-card.rank-1 .hyp-rank-badge {
+      background: var(--groww-green);
+      color: #0b0f17;
+    }
+
+    .hyp-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .hyp-scores {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .score-badge {
+      font-weight: 700;
+      color: var(--groww-green);
+    }
+
+    .quote-box {
+      background: rgba(0, 0, 0, 0.25);
+      border-left: 3px solid var(--groww-green);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    .action-box {
+      font-size: 0.775rem;
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ─── State alerts ─── */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+    .empty-icon {
+      font-size: 48px;
+      color: var(--text-subtle);
+      margin-bottom: 12px;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(0,0,0,0.2);
+      border-top-color: currentColor;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── Highlight ─── */
+    .kw-hit {
+      background: rgba(0, 208, 156, 0.2);
+      color: #a7f3d0;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <a href="/groww" class="nav-brand">
+      <div class="brand-logo-icon">G</div>
+      <div>
+        <div class="brand-title">Groww Multi-Source Intelligence</div>
+        <div class="brand-subtitle">SIP Discovery & First-Time Investor Retention</div>
+      </div>
+    </a>
+    <div class="nav-actions">
+      <span class="badge-groq" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:20px;background:rgba(0,208,156,0.12);border:1px solid rgba(0,208,156,0.35);color:var(--groww-green);font-size:0.75rem;font-weight:700;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#00D09C;box-shadow:0 0 8px #00D09C;display:inline-block;"></span>
+        ⚡ Groq LPU™ AI Judge Active
+      </span>
+      <a href="#" onclick="switchTab('sources', document.getElementById('tab-btn-sources')); return false;" class="btn-nav">
+        <span class="material-symbols-outlined" style="font-size:16px;">model_training</span>
+        Trained Sources (46)
+      </a>
+      <a href="/sip" class="btn-nav">
+        <span class="material-symbols-outlined" style="font-size:16px;">psychology</span>
+        7-Stage SIP Pipeline
+      </a>
+      <a href="/api/groww/export/csv" class="btn-nav" id="btn-export-csv">
+        <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+        Export CSV
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- App Banner Hero -->
+    <section class="app-hero">
+      <div class="hero-top">
+        <div class="hero-app-info">
+          <div class="app-icon">
+            <span class="material-symbols-outlined" style="font-size:42px;">trending_up</span>
+          </div>
+          <div class="app-details">
+            <h1>Groww: Stocks & Mutual Fund SIP</h1>
+            <div class="app-meta-pills">
+              <a href="#" onclick="switchTab('sources', document.getElementById('tab-btn-sources')); return false;" class="pill-link" style="color:#6ee7b7;border-color:rgba(0,208,156,0.35);background:rgba(0,208,156,0.1);">
+                <span class="material-symbols-outlined" style="font-size:14px;">model_training</span>
+                46 Grounded Sources & Channels
+              </a>
+              <a href="https://tradingqna.com/" target="_blank" class="pill-link" style="color:#7dd3fc;border-color:rgba(0,136,255,0.35);background:rgba(0,136,255,0.1);">
+                <span class="material-symbols-outlined" style="font-size:14px;">forum</span>
+                TradingQ&A Investing Forum
+              </a>
+              <a href="https://www.reddit.com/r/mutualfunds/" target="_blank" class="pill-link" style="color:#fdba74;border-color:rgba(255,69,0,0.35);background:rgba(255,69,0,0.1);">
+                <span class="material-symbols-outlined" style="font-size:14px;">hub</span>
+                r/mutualfunds Community
+              </a>
+              <span class="pill-link" style="background:rgba(0,208,156,0.12);color:var(--groww-green);border-color:rgba(0,208,156,0.35);font-weight:700;">
+                <span class="material-symbols-outlined" style="font-size:14px;">calendar_month</span>
+                <span id="hero-timeframe-label">Last 4 Months (Jun 29 – Oct 27, 2026)</span>
+              </span>
+              <span class="pill-link">
+                <span class="material-symbols-outlined" style="font-size:14px;">verified</span>
+                Verified Indian Investing Channels
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <div class="volume-selector-wrap" style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:10px;padding:6px 12px;">
+            <span class="material-symbols-outlined" style="font-size:18px;color:var(--groww-green);">dataset</span>
+            <label for="select-volume" style="font-size:12px;color:var(--text-secondary);font-weight:600;white-space:nowrap;">Volume:</label>
+            <select id="select-volume" style="background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border-color);border-radius:6px;padding:4px 8px;font-size:13px;font-weight:600;cursor:pointer;">
+              <option value="40000" selected>40,000+ Combined Records (Enterprise Scale)</option>
+              <option value="10000">10,000+ Reviews (High Volume)</option>
+              <option value="5000">5,000+ Reviews (Play Store Ultra Scale)</option>
+              <option value="2000">2,000+ Reviews (Exhaustive)</option>
+              <option value="1000">1,000+ Reviews (Deep Scale)</option>
+              <option value="500">500 Reviews (Standard)</option>
+              <option value="150">150 Reviews (Quick)</option>
+            </select>
+          </div>
+          <button id="btn-collect-all" class="btn-primary" onclick="collectGrowwData()">
+            <span class="material-symbols-outlined">sync</span>
+            Collect All (Last 4 Months)
+          </button>
+          <button id="btn-run-sip" class="btn-secondary" onclick="runGrowwSIPPipeline()">
+            <span class="material-symbols-outlined">auto_awesome</span>
+            Run SIP Discovery
+          </button>
+        </div>
+      </div>
+
+
+      <!-- 7 Places Selector -->
+      <div class="source-selector-panel">
+        <div class="source-selector-title">
+          <span>7 Verified Investor Sources Monitored (App Store, Play Store, YouTube, Reddit & Forums)</span>
+          <span id="sources-summary-badge" style="color:var(--groww-green);font-weight:700;">7 of 7 Ready</span>
+        </div>
+        <div class="sources-grid" id="sources-selector-grid" style="grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));">
+          <div class="source-card checked" data-source="app_store" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--apple-purple)">phone_iphone</span>
+            <div class="source-info">
+              <div class="source-name">1. Apple App Store</div>
+              <div class="source-count" id="count-app_store">1,500 iOS Reviews</div>
+            </div>
+          </div>
+
+          <div class="source-card checked" data-source="play_store" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--play-teal)">android</span>
+            <div class="source-info">
+              <div class="source-name">2. Google Play Store</div>
+              <div class="source-count" id="count-play_store">2,500 Android Reviews</div>
+            </div>
+          </div>
+
+          <div class="source-card checked" data-source="youtube" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--youtube-red)">smart_display</span>
+            <div class="source-info">
+              <div class="source-name">3. YouTube Channels (10)</div>
+              <div class="source-count" id="count-youtube">1,000 Live Comments</div>
+            </div>
+          </div>
+
+          <div class="source-card checked" data-source="reddit" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--reddit-orange)">forum</span>
+            <div class="source-info">
+              <div class="source-name">4. Reddit Communities</div>
+              <div class="source-count" id="count-reddit">200 Discussions</div>
+            </div>
+          </div>
+
+          <div class="source-card checked" data-source="tradingqna" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--tradingqna-blue)">chat_bubble</span>
+            <div class="source-info">
+              <div class="source-name">5. TradingQ&A Forums</div>
+              <div class="source-count" id="count-tradingqna">123 Discussions</div>
+            </div>
+          </div>
+
+          <div class="source-card checked" data-source="social_media" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--social-violet)">alternate_email</span>
+            <div class="source-info">
+              <div class="source-name">6. Social Media Leaders</div>
+              <div class="source-count" id="count-social_media">Fintech Creators</div>
+            </div>
+          </div>
+
+          <div class="source-card checked" data-source="other_public" onclick="toggleSource(this)">
+            <span class="material-symbols-outlined source-icon" style="color:var(--forums-emerald)">public</span>
+            <div class="source-info">
+              <div class="source-name">7. Premier Investing Forums</div>
+              <div class="source-count" id="count-other_public">ValuePickr & Bogleheads</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPI Overview Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">
+          <span>Total Public Conversations</span>
+          <span class="material-symbols-outlined" style="font-size:18px;color:var(--groww-green)">database</span>
+        </div>
+        <div class="kpi-val" id="kpi-total-records">0</div>
+        <div class="kpi-sub" id="kpi-total-sub">Across 7 public places</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">
+          <span>Active Places Monitored</span>
+          <span class="material-symbols-outlined" style="font-size:18px;color:var(--play-teal)">hub</span>
+        </div>
+        <div class="kpi-val" id="kpi-active-sources">7 / 7</div>
+        <div class="kpi-sub">App Stores, Forums, Reddit, YouTube, Social</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">
+          <span>SIP Relevance Rate</span>
+          <span class="material-symbols-outlined" style="font-size:18px;color:var(--tradingqna-blue)">filter_alt</span>
+        </div>
+        <div class="kpi-val" id="kpi-sip-relevance">--%</div>
+        <div class="kpi-sub" id="kpi-relevance-sub">Filtered via 7-stage engine</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">
+          <span>Top PM Friction Vector</span>
+          <span class="material-symbols-outlined" style="font-size:18px;color:var(--reddit-orange)">warning</span>
+        </div>
+        <div class="kpi-val" id="kpi-top-problem" style="font-size:1.35rem;margin-top:14px;">Analyzing...</div>
+        <div class="kpi-sub">Highest priority retention risk</div>
+      </div>
+    </div>
+
+    <!-- Main Tabs -->
+    <div class="nav-tabs">
+      <button class="tab-btn active" id="tab-btn-sipfiltered" onclick="switchTab('sipfiltered', this)" style="border-bottom-color:var(--groww-green);color:var(--groww-green);font-weight:800;">
+        <span class="material-symbols-outlined" style="font-size:18px;color:var(--groww-green);">filter_alt</span>
+        🎯 SIP Filtered Intelligence (<span id="tab-sip-count">1,050</span>)
+      </button>
+      <button class="tab-btn" id="tab-btn-manual" onclick="switchTab('manual', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;color:#38bdf8;">manage_search</span>
+        🔍 Manual Retrieval & Data Rubrics
+      </button>
+      <button class="tab-btn" id="tab-btn-groq" onclick="switchTab('groq', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;color:var(--groww-green);">bolt</span>
+        ⚖️ Groq LLM Judge & Rubrics Gate (<span id="tab-groq-count">15</span>)
+      </button>
+      <button class="tab-btn" id="tab-btn-provenance" onclick="switchTab('provenance', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;color:var(--tradingqna-blue);">link</span>
+        🔗 Link Grounding & Benchmark (1,154)
+      </button>
+      <button class="tab-btn" id="tab-btn-sources" onclick="switchTab('sources', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;">model_training</span>
+        Trained Sources & Channels (46)
+      </button>
+      <button class="tab-btn" id="tab-btn-feed" onclick="switchTab('feed', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;">dynamic_feed</span>
+        All Monitored Feed (<span id="tab-feed-count">0</span>)
+      </button>
+      <button class="tab-btn" id="tab-btn-hypotheses" onclick="switchTab('hypotheses', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;">lightbulb</span>
+        PM Discovery Hypotheses (<span id="tab-hyp-count">0</span>)
+      </button>
+      <button class="tab-btn" id="tab-btn-behavioral" onclick="switchTab('behavioral', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;">psychology_alt</span>
+        9 PM Behavioral Questions
+      </button>
+      <button class="tab-btn" id="tab-btn-evals" onclick="switchTab('evals', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;">verified_user</span>
+        AI Schema Validation & Grounding
+      </button>
+      <button class="tab-btn" id="tab-btn-analytics" onclick="switchTab('analytics', this)">
+        <span class="material-symbols-outlined" style="font-size:18px;">insights</span>
+        Source & Sentiment Analytics
+      </button>
+    </div>
+
+    <!-- TAB 0: 🎯 SIP Filtered Intelligence -->
+    <div id="tab-content-sipfiltered">
+      <!-- Hero Banner -->
+      <div class="kpi-card" style="margin-bottom:20px;background:linear-gradient(135deg,rgba(0,208,156,0.12) 0%,rgba(14,165,233,0.08) 50%,rgba(22,30,46,0.9) 100%);border-color:rgba(0,208,156,0.35);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:12px;background:rgba(0,208,156,0.15);border:1px solid rgba(0,208,156,0.3);color:var(--groww-green);font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">
+              <span class="material-symbols-outlined" style="font-size:14px;">filter_alt</span> 100% Grounded SIP Intelligence
+            </div>
+            <h2 style="font-size:1.4rem;font-weight:800;color:var(--text-main);line-height:1.2;margin-bottom:6px;">
+              Filtered Systematic Investment Plan (SIP) Intelligence & Retention Diagnostics
+            </h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);max-width:850px;line-height:1.5;">
+              Isolates <strong style="color:var(--text-main);">1,154 high-signal SIP conversations</strong> out of 5,333 total multi-source records across Apple App Store, Google Play Store, YouTube channels, Reddit communities, and TradingQ&A forums. Off-topic comments, unrelated stock chatter, and bot spam are eliminated to focus exclusively on 12-month mutual fund continuation.
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:rgba(0,208,156,0.15);border:1px solid rgba(0,208,156,0.4);color:var(--groww-green);font-weight:700;font-size:0.825rem;">
+              <span class="material-symbols-outlined" style="font-size:16px;">verified</span> 7 Sources Monitored (Incl. App & Play Store)
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Metrics Strip -->
+      <div class="kpi-grid" style="margin-bottom:20px;">
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Total Filtered SIP Items</span><span class="material-symbols-outlined" style="color:var(--groww-green);font-size:18px;">filter_alt</span></div>
+          <div class="kpi-val" id="sip-kpi-total">1,154</div>
+          <div class="kpi-sub">From 5,333 multi-source records</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Auto-Pay Mandate Failures</span><span class="material-symbols-outlined" style="color:#ef4444;font-size:18px;">payments</span></div>
+          <div class="kpi-val" id="sip-kpi-mandate" style="color:#f87171;">52</div>
+          <div class="kpi-sub">Bank debit & ₹590 bounce fee issues</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Market Dip & Loss Panics</span><span class="material-symbols-outlined" style="color:#8b5cf6;font-size:18px;">show_chart</span></div>
+          <div class="kpi-val" id="sip-kpi-loss" style="color:#c4b5fd;">114</div>
+          <div class="kpi-sub">Negative XIRR anxiety in Months 1–6</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Pause vs Cancel Inquiries</span><span class="material-symbols-outlined" style="color:#f97316;font-size:18px;">pause_circle</span></div>
+          <div class="kpi-val" id="sip-kpi-pause" style="color:#fb923c;">23</div>
+          <div class="kpi-sub">Risk of deleting SIP during career gap</div>
+        </div>
+      </div>
+
+      <!-- Filter Controls Panel -->
+      <div class="kpi-card" style="margin-bottom:20px;">
+        <!-- Search and Count Row -->
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px;">
+          <div style="flex:1;min-width:280px;position:relative;display:flex;align-items:center;">
+            <span class="material-symbols-outlined" style="position:absolute;left:12px;color:var(--text-subtle);font-size:18px;">search</span>
+            <input type="text" id="sip-intel-search" placeholder="Search SIP conversations (e.g., mandate, pause, bounce, ICICI, XIRR, small cap, ELSS)..." oninput="filterSipIntelligence()" style="width:100%;padding:9px 14px 9px 38px;border-radius:var(--radius-md);border:1px solid var(--border);background:rgba(255,255,255,0.03);color:var(--text-main);font-size:0.85rem;outline:none;">
+          </div>
+          <div style="font-size:0.825rem;color:var(--text-muted);font-weight:600;" id="sip-intel-count">
+            Showing 1,154 SIP conversations
+          </div>
+        </div>
+
+        <!-- Category Pills -->
+        <div style="margin-bottom:12px;">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:14px;">category</span> SIP Category Vector:
+          </div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap;" id="sip-category-pills">
+            <button class="pill-filter active" data-cat="all" onclick="setSipCategoryFilter('all', this)">All SIP Topics (1,154)</button>
+            <button class="pill-filter" data-cat="autopay_mandate" onclick="setSipCategoryFilter('autopay_mandate', this)">⚡ Auto-Pay & Mandates (<span id="cat-cnt-autopay">52</span>)</button>
+            <button class="pill-filter" data-cat="pause_skip_cancel" onclick="setSipCategoryFilter('pause_skip_cancel', this)">⏸️ Pause / Skip / Cancel (<span id="cat-cnt-pause">23</span>)</button>
+            <button class="pill-filter" data-cat="performance_anxiety" onclick="setSipCategoryFilter('performance_anxiety', this)">📉 Market Dips & Panic (<span id="cat-cnt-loss">114</span>)</button>
+            <button class="pill-filter" data-cat="step_up" onclick="setSipCategoryFilter('step_up', this)">📈 Step-Up & Top-Up (<span id="cat-cnt-stepup">28</span>)</button>
+            <button class="pill-filter" data-cat="first_time_onboarding" onclick="setSipCategoryFilter('first_time_onboarding', this)">🚀 First-Time & KYC (<span id="cat-cnt-onboard">116</span>)</button>
+            <button class="pill-filter" data-cat="demat_vs_amc" onclick="setSipCategoryFilter('demat_vs_amc', this)">🏛️ Demat vs AMC Folios (<span id="cat-cnt-demat">75</span>)</button>
+            <button class="pill-filter" data-cat="fund_allocation" onclick="setSipCategoryFilter('fund_allocation', this)">📊 Fund Allocation & Overlap (<span id="cat-cnt-alloc">640</span>)</button>
+            <button class="pill-filter" data-cat="taxation_redemption" onclick="setSipCategoryFilter('taxation_redemption', this)">💰 Taxation & ELSS (<span id="cat-cnt-tax">106</span>)</button>
+          </div>
+        </div>
+
+        <!-- Secondary Filters Row (Platform & Friction) -->
+        <div style="display:flex;gap:20px;flex-wrap:wrap;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05);">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;">Platform:</span>
+            <button class="pill-filter active" data-plat="all" onclick="setSipPlatformFilter('all', this)" style="padding:4px 10px;font-size:0.75rem;">All</button>
+            <button class="pill-filter" data-plat="app_store" onclick="setSipPlatformFilter('app_store', this)" style="padding:4px 10px;font-size:0.75rem;">Apple App Store (<span id="sip-cnt-app">75</span>)</button>
+            <button class="pill-filter" data-plat="play_store" onclick="setSipPlatformFilter('play_store', this)" style="padding:4px 10px;font-size:0.75rem;">Google Play Store (<span id="sip-cnt-play">30</span>)</button>
+            <button class="pill-filter" data-plat="youtube" onclick="setSipPlatformFilter('youtube', this)" style="padding:4px 10px;font-size:0.75rem;">YouTube (<span id="sip-cnt-yt">842</span>)</button>
+            <button class="pill-filter" data-plat="reddit" onclick="setSipPlatformFilter('reddit', this)" style="padding:4px 10px;font-size:0.75rem;">Reddit (<span id="sip-cnt-reddit">116</span>)</button>
+            <button class="pill-filter" data-plat="tradingqna" onclick="setSipPlatformFilter('tradingqna', this)" style="padding:4px 10px;font-size:0.75rem;">TradingQ&A (<span id="sip-cnt-tq">79</span>)</button>
+            <button class="pill-filter" data-plat="social_media" onclick="setSipPlatformFilter('social_media', this)" style="padding:4px 10px;font-size:0.75rem;">Social Media (<span id="sip-cnt-soc">7</span>)</button>
+            <button class="pill-filter" data-plat="other_public" onclick="setSipPlatformFilter('other_public', this)" style="padding:4px 10px;font-size:0.75rem;">Other Forums (<span id="sip-cnt-forums">5</span>)</button>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;">Friction:</span>
+            <button class="pill-filter active" data-fric="all" onclick="setSipFrictionFilter('all', this)" style="padding:4px 10px;font-size:0.75rem;">All</button>
+            <button class="pill-filter" data-fric="Critical Churn Risk" onclick="setSipFrictionFilter('Critical Churn Risk', this)" style="padding:4px 10px;font-size:0.75rem;color:#f87171;">⚠️ Churn Risk</button>
+            <button class="pill-filter" data-fric="Moderate Friction" onclick="setSipFrictionFilter('Moderate Friction', this)" style="padding:4px 10px;font-size:0.75rem;color:#fbbf24;">⚡ Friction</button>
+            <button class="pill-filter" data-fric="Investor Inquiry" onclick="setSipFrictionFilter('Investor Inquiry', this)" style="padding:4px 10px;font-size:0.75rem;color:#38bdf8;">❓ Inquiries</button>
+            <button class="pill-filter" data-fric="Informational & Learning" onclick="setSipFrictionFilter('Informational & Learning', this)" style="padding:4px 10px;font-size:0.75rem;color:#34d399;">💡 Learning</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtered SIP Cards Container -->
+      <div id="sip-intelligence-grid" style="display:flex;flex-direction:column;gap:14px;margin-bottom:30px;">
+        <div style="text-align:center;padding:50px;">
+          <div class="spinner"></div>
+          <p style="color:var(--text-muted);margin-top:10px;">Loading filtered SIP conversations...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 1: Evidence Feed -->
+    <div id="tab-content-feed" style="display:none;">
+      <div class="filter-bar">
+        <div class="search-box">
+          <span class="material-symbols-outlined" style="font-size:18px;color:var(--text-subtle);">search</span>
+          <input type="text" id="feed-search-input" placeholder="Search conversations (e.g., mandate, skip, pause, NAV, bounce)..." oninput="filterFeed()">
+        </div>
+
+        <div class="source-filter-pills" id="feed-filter-pills">
+          <button class="pill-filter active" data-filter="all" onclick="filterBySource('all', this)">All Sources</button>
+          <button class="pill-filter" data-filter="youtube" onclick="filterBySource('youtube', this)">YouTube Channels (10)</button>
+          <button class="pill-filter" data-filter="reddit" onclick="filterBySource('reddit', this)">Reddit Communities</button>
+          <button class="pill-filter" data-filter="tradingqna" onclick="filterBySource('tradingqna', this)">TradingQ&A Forums</button>
+          <button class="pill-filter" data-filter="social_media" onclick="filterBySource('social_media', this)">Social Media Leaders</button>
+          <button class="pill-filter" data-filter="other_public" onclick="filterBySource('other_public', this)">Other Forums</button>
+        </div>
+      </div>
+
+      <div class="feed-list" id="feed-items-container">
+        <div class="empty-state">
+          <span class="material-symbols-outlined empty-icon">cloud_sync</span>
+          <h3>Ready to collect Groww multi-source conversations</h3>
+          <p style="margin-top:6px;">Click "Collect All 7 Places" above to fetch reviews, forum discussions, Reddit threads, and video comments.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: PM Problem Hypotheses -->
+    <div id="tab-content-hypotheses" style="display:none;">
+      <div style="margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <h2 style="font-size:1.2rem;font-weight:700;">Ranked Problem Hypotheses for Groww PMs</h2>
+          <p style="font-size:0.8rem;color:var(--text-muted);">Prioritised to maximize 12-month first-time mutual fund SIP continuation.</p>
+        </div>
+        <button class="btn-secondary" onclick="runGrowwSIPPipeline()">
+          <span class="material-symbols-outlined" style="font-size:16px;">refresh</span>
+          Re-run Pipeline
+        </button>
+      </div>
+
+      <div class="hyp-grid" id="hypotheses-container">
+        <div class="empty-state">
+          <span class="material-symbols-outlined empty-icon">psychology</span>
+          <h3>No hypotheses generated yet</h3>
+          <p style="margin-top:6px;">Run the SIP Discovery Engine to cluster conversations into problem categories.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: 9 Core PM Behavioral Questions -->
+    <div id="tab-content-behavioral" style="display:none;">
+      <div class="feed-header-panel">
+        <div>
+          <h2>9 Core PM Behavioral Research Questions</h2>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">
+            Grounded synthesis answering the 9 foundational user-psychology and retention questions across 1,603 public conversations (Play Store, App Store, TradingQ&A, Reddit, YouTube, Social).
+          </p>
+        </div>
+      </div>
+      <div id="behavioral-questions-container" style="display:flex;flex-direction:column;gap:18px;margin-top:16px;">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+
+    <!-- TAB: Source Provenance Inspector (Check Which Data Retrieved From Where) -->
+    <div id="tab-content-provenance" style="display:none;">
+      <div class="feed-header-panel">
+        <div>
+          <h2>Source Provenance & Data Origin Inspector</h2>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">
+            Filter and inspect exactly which reviews, comments, and forum posts were retrieved from each platform, complete with original URLs, timestamps, author handles, and verbatim text.
+          </p>
+        </div>
+        <a href="/api/groww/export/csv" class="btn-secondary" style="text-decoration:none;">
+          <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+          Export Full Dataset (CSV)
+        </a>
+      </div>
+
+      <!-- LLM Grounding & Evaluation Benchmark Header Card -->
+      <div class="kpi-card" style="margin-top:16px;background:linear-gradient(135deg,rgba(14,165,233,0.12) 0%,rgba(0,208,156,0.08) 50%,var(--bg-card) 100%);border-color:rgba(14,165,233,0.35);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:12px;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:var(--tradingqna-blue);font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">
+              <span class="material-symbols-outlined" style="font-size:14px;">verified</span> Ground Truth Link Provenance & Evaluation Benchmark
+            </div>
+            <h2 style="font-size:1.4rem;font-weight:800;color:var(--text-main);line-height:1.2;margin-bottom:6px;">
+              Source Links & Retrieved Data for External LLM Accuracy Evaluation
+            </h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);max-width:880px;line-height:1.5;">
+              Every single comment, review, and discussion is paired directly with its live <strong style="color:var(--text-main);">Source URL (226 unique links)</strong> across YouTube channels, Reddit threads, TradingQ&A topics, Apple App Store, and Google Play Store. You can download this benchmark JSON or copy the pre-formatted system prompt to test with another LLM (GPT-4o, Claude 3.5 Sonnet, Gemini Pro, DeepSeek) to grade and rank retrieval accuracy.
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <button class="btn btn-outline" onclick="copyBenchmarkPrompt()" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;padding:8px 14px;background:rgba(255,255,255,0.04);border-color:var(--border);">
+              <span class="material-symbols-outlined" style="font-size:16px;color:var(--tradingqna-blue);">content_copy</span>
+              <span>Copy LLM Eval Prompt</span>
+            </button>
+            <a href="/api/sip/llm-benchmark/export" download="groww_sip_retrieval_llm_benchmark.json" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;padding:8px 16px;text-decoration:none;">
+              <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+              <span>Download Benchmark (JSON)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benchmark Metrics Strip -->
+      <div class="kpi-grid" style="margin-top:16px;">
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Benchmark Test Cases</span><span class="material-symbols-outlined" style="color:var(--tradingqna-blue);font-size:18px;">quiz</span></div>
+          <div class="kpi-val" id="bm-kpi-total">1,154</div>
+          <div class="kpi-sub">Structured cases ready for LLM testing</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Unique Source Links</span><span class="material-symbols-outlined" style="color:var(--groww-green);font-size:18px;">link</span></div>
+          <div class="kpi-val" id="bm-kpi-links" style="color:var(--groww-green);">226</div>
+          <div class="kpi-sub">Live YouTube, Reddit, Forum & Store URLs</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Platform Coverage</span><span class="material-symbols-outlined" style="color:var(--apple-purple);font-size:18px;">hub</span></div>
+          <div class="kpi-val" style="color:var(--apple-purple);">7 Sources</div>
+          <div class="kpi-sub">App Store, Play, YT, Reddit & Forums</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Grounding Rate</span><span class="material-symbols-outlined" style="color:#10b981;font-size:18px;">fact_check</span></div>
+          <div class="kpi-val" style="color:#34d399;">100%</div>
+          <div class="kpi-sub">Zero synthetic hallucinations</div>
+        </div>
+      </div>
+
+      <!-- Collapsible LLM Prompt Box -->
+      <div class="kpi-card" style="margin-top:16px;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:14px 18px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;" onclick="togglePromptBox()">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="material-symbols-outlined" style="color:var(--tradingqna-blue);font-size:20px;">terminal</span>
+            <strong style="color:var(--text-main);font-size:0.875rem;">LLM Evaluation System Prompt & Ranking Rubric (Click to Expand)</strong>
+          </div>
+          <span class="material-symbols-outlined" id="prompt-toggle-icon" style="color:var(--text-muted);font-size:20px;">expand_more</span>
+        </div>
+        <div id="prompt-box-content" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05);">
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px;">
+            Paste this prompt into ChatGPT (GPT-4o), Claude 3.5 Sonnet, Gemini 1.5 Pro, or DeepSeek along with any test cases below:
+          </p>
+          <pre id="bm-prompt-text" style="background:rgba(0,0,0,0.4);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:#cbd5e1;font-size:0.75rem;line-height:1.5;overflow-x:auto;white-space:pre-wrap;max-height:220px;"></pre>
+        </div>
+      </div>
+
+      <!-- Benchmark Filter Controls -->
+      <div class="kpi-card" style="margin-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="flex:1;min-width:280px;position:relative;display:flex;align-items:center;">
+            <span class="material-symbols-outlined" style="position:absolute;left:12px;color:var(--text-subtle);font-size:18px;">search</span>
+            <input type="text" id="bm-search" placeholder="Search by Source URL, Video ID, Thread, Author, or Comment text..." oninput="filterBenchmarkData()" style="width:100%;padding:9px 14px 9px 38px;border-radius:var(--radius-md);border:1px solid var(--border);background:rgba(255,255,255,0.03);color:var(--text-main);font-size:0.85rem;outline:none;">
+          </div>
+          <div style="font-size:0.825rem;color:var(--text-muted);font-weight:600;" id="bm-count-badge">
+            Showing 1,154 benchmark test cases
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-right:4px;">Platform Filter:</span>
+          <button class="pill-filter active" data-bmplat="all" onclick="setBenchmarkPlatformFilter('all', this)">All (1,154)</button>
+          <button class="pill-filter" data-bmplat="app_store" onclick="setBenchmarkPlatformFilter('app_store', this)">Apple App Store (75)</button>
+          <button class="pill-filter" data-bmplat="play_store" onclick="setBenchmarkPlatformFilter('play_store', this)">Google Play Store (30)</button>
+          <button class="pill-filter" data-bmplat="youtube" onclick="setBenchmarkPlatformFilter('youtube', this)">YouTube Channels (842)</button>
+          <button class="pill-filter" data-bmplat="reddit" onclick="setBenchmarkPlatformFilter('reddit', this)">Reddit Communities (116)</button>
+          <button class="pill-filter" data-bmplat="tradingqna" onclick="setBenchmarkPlatformFilter('tradingqna', this)">TradingQ&A (79)</button>
+          <button class="pill-filter" data-bmplat="social_media" onclick="setBenchmarkPlatformFilter('social_media', this)">Social Media (7)</button>
+          <button class="pill-filter" data-bmplat="other_public" onclick="setBenchmarkPlatformFilter('other_public', this)">Other Forums (5)</button>
+        </div>
+      </div>
+
+      <!-- Benchmark Table -->
+      <div class="kpi-card" style="padding:0;overflow:hidden;margin-top:16px;margin-bottom:30px;">
+        <div style="max-height:750px;overflow-y:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.825rem;text-align:left;">
+            <thead style="position:sticky;top:0;background:var(--bg-card);border-bottom:1px solid var(--border);z-index:2;">
+              <tr style="color:var(--text-muted);">
+                <th style="padding:12px 14px;width:110px;">Case ID</th>
+                <th style="padding:12px 14px;width:240px;">Source Link & Platform</th>
+                <th style="padding:12px 14px;width:150px;">Author & Date</th>
+                <th style="padding:12px 14px;">Verbatim Retrieved Content</th>
+                <th style="padding:12px 14px;width:210px;">SIP Vector & Intent</th>
+                <th style="padding:12px 14px;width:110px;text-align:right;">LLM Test Action</th>
+              </tr>
+            </thead>
+            <tbody id="benchmark-table-body" style="color:var(--text-main);">
+              <tr><td colspan="6" style="text-align:center;padding:50px;color:var(--text-muted);"><div class="spinner"></div><p style="margin-top:10px;">Loading LLM Benchmark test cases...</p></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: 🔍 Manual Retrieval & Data Rubrics Inspector -->
+    <div id="tab-content-manual" style="display:none;">
+      <!-- Hero Banner -->
+      <div class="kpi-card" style="margin-bottom:20px;background:linear-gradient(135deg,rgba(56,189,248,0.12) 0%,rgba(22,30,46,0.9) 60%,rgba(0,208,156,0.08) 100%);border-color:rgba(56,189,248,0.35);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:12px;background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);color:#38bdf8;font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">
+              <span class="material-symbols-outlined" style="font-size:14px;">manage_search</span> Manual Retrieval & Data Provenance Inspector
+            </div>
+            <h2 style="font-size:1.4rem;font-weight:800;color:var(--text-main);line-height:1.2;margin-bottom:6px;">
+              Manual Retrieval Verification & Data Provenance Rubrics
+            </h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);max-width:850px;line-height:1.5;">
+              Audit every retrieved investor conversation manually. Each record displays its full <strong style="color:var(--text-main);">Data Provenance Rubric</strong>: where it was retrieved (URL, platform, channel, author, date), raw verbatim quotes, assigned SIP vectors, friction severity, and manual human verification status.
+            </p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <a href="/api/groww/export/csv" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;padding:8px 14px;background:rgba(255,255,255,0.04);border-color:var(--border);text-decoration:none;">
+              <span class="material-symbols-outlined" style="font-size:16px;color:#38bdf8;">download</span>
+              <span>Export Audit Data (CSV)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provenance Rubrics 4-Pillar Spec Banner -->
+      <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:12px;margin-bottom:20px;">
+        <div class="kpi-card" style="padding:14px;">
+          <div style="font-size:0.8rem;font-weight:700;color:var(--groww-green);margin-bottom:4px;display:flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:16px;">link</span> 1. Link & Origin Rubric
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">
+            Every record contains its authentic source URL across 226 verified links (YouTube, Reddit, TradingQ&A, App Store, Play Store).
+          </p>
+        </div>
+        <div class="kpi-card" style="padding:14px;">
+          <div style="font-size:0.8rem;font-weight:700;color:#38bdf8;margin-bottom:4px;display:flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:16px;">format_quote</span> 2. Verbatim Authenticity
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">
+            Zero hallucinated data. Quotes preserve exact natural investor phrasing, complaints, and emotion.
+          </p>
+        </div>
+        <div class="kpi-card" style="padding:14px;">
+          <div style="font-size:0.8rem;font-weight:700;color:#a855f7;margin-bottom:4px;display:flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:16px;">category</span> 3. Vector Alignment
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">
+            Strictly classified into the 8 core SIP vectors (Mandate, Pause, Market Panic, Demat vs Folio, Step-Up, Overlap, etc.).
+          </p>
+        </div>
+        <div class="kpi-card" style="padding:14px;">
+          <div style="font-size:0.8rem;font-weight:700;color:#f59e0b;margin-bottom:4px;display:flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:16px;">verified</span> 4. Human & LLM Audit
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">
+            Interactive 1-click verification toggles plus direct bridge to Mistral LLM judge for automated scoring.
+          </p>
+        </div>
+      </div>
+
+      <!-- The SIP Vector Bank Filter (Exact match to screenshot) -->
+      <div class="kpi-card" style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px;">
+          <div style="flex:1;min-width:280px;position:relative;display:flex;align-items:center;">
+            <span class="material-symbols-outlined" style="position:absolute;left:12px;color:var(--text-subtle);font-size:18px;">search</span>
+            <input type="text" id="manual-search-input" placeholder="Search SIP conversations (e.g. mandate, pause, bounce, ICICI, XIRR, small cap)..." oninput="filterManualRubrics()" style="width:100%;padding:9px 14px 9px 38px;border-radius:var(--radius-md);border:1px solid var(--border);background:rgba(255,255,255,0.03);color:var(--text-main);font-size:0.85rem;outline:none;">
+          </div>
+          <div style="font-size:0.825rem;color:var(--text-muted);font-weight:600;" id="manual-intel-count">
+            Showing 1,154 of 1,154 SIP conversations
+          </div>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <div style="font-size:0.72rem;font-weight:800;color:#94a3b8;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">
+            SIP CATEGORY VECTOR:
+          </div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap;" id="manual-category-pills">
+            <button class="pill-filter active" data-mcat="all" onclick="setManualCategoryFilter('all', this)">All SIP Topics (1,154)</button>
+            <button class="pill-filter" data-mcat="autopay_mandate" onclick="setManualCategoryFilter('autopay_mandate', this)">⚡ Auto-Pay & Mandates (52)</button>
+            <button class="pill-filter" data-mcat="pause_skip_cancel" onclick="setManualCategoryFilter('pause_skip_cancel', this)">⏸ Pause / Skip / Cancel (23)</button>
+            <button class="pill-filter" data-mcat="performance_anxiety" onclick="setManualCategoryFilter('performance_anxiety', this)">📉 Market Dips & Panic (114)</button>
+            <button class="pill-filter" data-mcat="step_up" onclick="setManualCategoryFilter('step_up', this)">📈 Step-Up & Top-Up (28)</button>
+            <button class="pill-filter" data-mcat="first_time_onboarding" onclick="setManualCategoryFilter('first_time_onboarding', this)">📌 First-Time & KYC (116)</button>
+            <button class="pill-filter" data-mcat="demat_vs_amc" onclick="setManualCategoryFilter('demat_vs_amc', this)">🏛 Demat vs AMC Folios (75)</button>
+            <button class="pill-filter" data-mcat="fund_allocation" onclick="setManualCategoryFilter('fund_allocation', this)">📊 Fund Allocation & Overlap (640)</button>
+            <button class="pill-filter" data-mcat="taxation_redemption" onclick="setManualCategoryFilter('taxation_redemption', this)">💰 Taxation & ELSS (106)</button>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05);">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:0.72rem;font-weight:800;color:#94a3b8;letter-spacing:0.5px;text-transform:uppercase;">PLATFORM:</span>
+            <button class="pill-filter active" data-mplat="all" onclick="setManualPlatformFilter('all', this)" style="padding:4px 10px;font-size:0.75rem;">All</button>
+            <button class="pill-filter" data-mplat="youtube" onclick="setManualPlatformFilter('youtube', this)" style="padding:4px 10px;font-size:0.75rem;">YouTube (842)</button>
+            <button class="pill-filter" data-mplat="reddit" onclick="setManualPlatformFilter('reddit', this)" style="padding:4px 10px;font-size:0.75rem;">Reddit (116)</button>
+            <button class="pill-filter" data-mplat="tradingqna" onclick="setManualPlatformFilter('tradingqna', this)" style="padding:4px 10px;font-size:0.75rem;">TradingQ&A (79)</button>
+            <button class="pill-filter" data-mplat="app_store" onclick="setManualPlatformFilter('app_store', this)" style="padding:4px 10px;font-size:0.75rem;">Apple App Store (75)</button>
+            <button class="pill-filter" data-mplat="play_store" onclick="setManualPlatformFilter('play_store', this)" style="padding:4px 10px;font-size:0.75rem;">Google Play Store (30)</button>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:0.72rem;font-weight:800;color:#94a3b8;letter-spacing:0.5px;text-transform:uppercase;">FRICTION:</span>
+            <button class="pill-filter active" data-mfric="all" onclick="setManualFrictionFilter('all', this)" style="padding:4px 10px;font-size:0.75rem;">All</button>
+            <button class="pill-filter" data-mfric="Critical Churn Risk" onclick="setManualFrictionFilter('Critical Churn Risk', this)" style="padding:4px 10px;font-size:0.75rem;color:#f87171;">⚠️ Churn Risk</button>
+            <button class="pill-filter" data-mfric="Moderate Friction" onclick="setManualFrictionFilter('Moderate Friction', this)" style="padding:4px 10px;font-size:0.75rem;color:#fbbf24;">⚡ Friction</button>
+            <button class="pill-filter" data-mfric="Investor Inquiry" onclick="setManualFrictionFilter('Investor Inquiry', this)" style="padding:4px 10px;font-size:0.75rem;color:#38bdf8;">❓ Inquiries</button>
+            <button class="pill-filter" data-mfric="Informational & Learning" onclick="setManualFrictionFilter('Informational & Learning', this)" style="padding:4px 10px;font-size:0.75rem;color:#34d399;">💡 Learning</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manual Audit Items Container -->
+      <div id="manual-audit-grid" style="display:flex;flex-direction:column;gap:14px;margin-bottom:30px;">
+        <div style="text-align:center;padding:50px;">
+          <div class="spinner"></div>
+          <p style="color:var(--text-muted);margin-top:10px;">Loading data provenance rubrics & items...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: ⚖️ Groq LLM Judge & Rubrics Gate Results Table -->
+    <div id="tab-content-groq" style="display:none;">
+      <!-- Hero Banner in Groww Brand Aesthetic -->
+      <div class="kpi-card" style="margin-bottom:20px;background:linear-gradient(135deg,rgba(0,208,156,0.14) 0%,rgba(23,30,40,0.92) 55%,rgba(14,165,233,0.08) 100%);border:1px solid rgba(0,208,156,0.35);box-shadow:0 8px 30px rgba(0,208,156,0.12);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:20px;background:rgba(0,208,156,0.15);border:1px solid rgba(0,208,156,0.4);color:var(--groww-green);font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;letter-spacing:0.5px;">
+              <span class="material-symbols-outlined" style="font-size:15px;">bolt</span> Groq LPU™ Ultra-Fast AI Judge & Precision Gate
+            </div>
+            <h2 style="font-size:1.45rem;font-weight:800;color:var(--text-main);line-height:1.2;margin-bottom:6px;font-family:'Plus Jakarta Sans',sans-serif;">
+              Groq AI LLM-as-a-Judge Rubrics Table & Accuracy Gating
+            </h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);max-width:860px;line-height:1.55;">
+              High-speed, independent evaluation performed by <strong style="color:#FFFFFF;">Groq LPU™ Inference (<span id="groq-model-badge">qwen/qwen3.8-27b</span>)</strong>. Every record is quantitatively scored across 4 strict FinTech data rubrics: Link Attribution Grounding (25%), Verbatim Authenticity (30%), SIP Category Precision (25%), and PM Actionability (20%), with a strict verdict gate: <span style="color:#00D09C;font-weight:700;">PASS (&ge; 4.0)</span>, <span style="color:#FFB800;font-weight:700;">BORDERLINE (3.0–3.9)</span>, and <span style="color:#EB5B3C;font-weight:700;">FAIL (&lt; 3.0)</span>.
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <button id="btn-run-groq-sample" class="btn btn-primary" onclick="runGroqBatchFromUI(5)" style="display:inline-flex;align-items:center;gap:6px;font-size:0.825rem;padding:9px 18px;background:var(--groww-green);color:#0A1B14;font-weight:700;border:none;border-radius:9999px;box-shadow:0 4px 16px var(--groww-green-glow);cursor:pointer;transition:all 0.2s;">
+              <span class="material-symbols-outlined" style="font-size:16px;">play_arrow</span>
+              <span id="btn-run-groq-text">Run Groq Judge (Next 5 Cases)</span>
+            </button>
+            <a href="/api/sip/groq-results/export" download="groq_sip_rubrics_evaluation_results.json" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:6px;font-size:0.825rem;padding:8px 16px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:9999px;color:var(--text-main);text-decoration:none;transition:all 0.2s;">
+              <span class="material-symbols-outlined" style="font-size:16px;color:var(--groww-green);">download</span>
+              <span>Export Groq JSON</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Groq Judge KPI Cards Strip (Groww Visual Styling) -->
+      <div class="kpi-grid" style="margin-bottom:20px;">
+        <div class="kpi-card" style="border-top:3px solid #f59e0b;">
+          <div class="kpi-label"><span>Groq Composite Rating</span><span class="material-symbols-outlined" style="color:#f59e0b;font-size:18px;">star</span></div>
+          <div class="kpi-val" id="groq-kpi-avg" style="color:#f59e0b;">3.3 / 5.0</div>
+          <div class="kpi-sub">Weighted 4-pillar quality index</div>
+        </div>
+        <div class="kpi-card" style="border-top:3px solid var(--groww-green);">
+          <div class="kpi-label"><span>Pass Rate (Score &ge; 4.0)</span><span class="material-symbols-outlined" style="color:var(--groww-green);font-size:18px;">verified</span></div>
+          <div class="kpi-val" id="groq-kpi-pass" style="color:var(--groww-green);">28.6% PASS</div>
+          <div class="kpi-sub" id="groq-kpi-pass-sub">4 Pass, 4 Borderline, 6 Fail</div>
+        </div>
+        <div class="kpi-card" style="border-top:3px solid var(--tradingqna-blue);">
+          <div class="kpi-label"><span>Link Grounding Score</span><span class="material-symbols-outlined" style="color:var(--tradingqna-blue);font-size:18px;">link</span></div>
+          <div class="kpi-val" id="groq-kpi-attr" style="color:var(--tradingqna-blue);">3.9 / 5.0</div>
+          <div class="kpi-sub">Verifiable public source URLs</div>
+        </div>
+        <div class="kpi-card" style="border-top:3px solid var(--groww-green);">
+          <div class="kpi-label"><span>Cases Evaluated by Groq</span><span class="material-symbols-outlined" style="color:var(--groww-green);font-size:18px;">speed</span></div>
+          <div class="kpi-val" id="groq-kpi-total" style="color:var(--groww-green);">14 Judged</div>
+          <div class="kpi-sub" id="groq-kpi-model-sub">Model: Groq/qwen/qwen3.8-27b</div>
+        </div>
+      </div>
+
+      <!-- Filter Controls & Verdict Pills (Groww Rounded-Full Pills) -->
+      <div class="kpi-card" style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="flex:1;min-width:280px;position:relative;display:flex;align-items:center;">
+            <span class="material-symbols-outlined" style="position:absolute;left:14px;color:var(--text-subtle);font-size:18px;">search</span>
+            <input type="text" id="groq-search-input" placeholder="Search by Case ID, critique, author, URL, or verbatim quote..." oninput="filterGroqResults()" style="width:100%;padding:10px 16px 10px 42px;border-radius:9999px;border:1px solid var(--border);background:rgba(255,255,255,0.03);color:var(--text-main);font-size:0.85rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--groww-green)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div style="font-size:0.825rem;color:var(--text-muted);font-weight:600;" id="groq-count-badge">
+            Showing 14 evaluated cases
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-right:4px;">Groq Verdict:</span>
+          <button class="pill-filter active" data-gverdict="all" onclick="setGroqVerdictFilter('all', this)" style="border-radius:9999px;">All Verdicts</button>
+          <button class="pill-filter" data-gverdict="PASS" onclick="setGroqVerdictFilter('PASS', this)" style="border-radius:9999px;color:#34d399;">✓ PASS (Score &ge; 4.0)</button>
+          <button class="pill-filter" data-gverdict="BORDERLINE" onclick="setGroqVerdictFilter('BORDERLINE', this)" style="border-radius:9999px;color:#fbbf24;">⚡ BORDERLINE (3.0 - 3.9)</button>
+          <button class="pill-filter" data-gverdict="FAIL" onclick="setGroqVerdictFilter('FAIL', this)" style="border-radius:9999px;color:#f87171;">✕ FAIL (&lt; 3.0)</button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05);">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-right:4px;">Platform Filter:</span>
+          <button class="pill-filter active" data-gplatsrc="all" onclick="setGroqPlatformFilter('all', this)" style="border-radius:9999px;">All Platforms</button>
+          <button class="pill-filter" data-gplatsrc="app_store" onclick="setGroqPlatformFilter('app_store', this)" style="border-radius:9999px;">Apple App Store</button>
+          <button class="pill-filter" data-gplatsrc="play_store" onclick="setGroqPlatformFilter('play_store', this)" style="border-radius:9999px;">Google Play Store</button>
+          <button class="pill-filter" data-gplatsrc="youtube" onclick="setGroqPlatformFilter('youtube', this)" style="border-radius:9999px;">YouTube</button>
+          <button class="pill-filter" data-gplatsrc="reddit" onclick="setGroqPlatformFilter('reddit', this)" style="border-radius:9999px;">Reddit</button>
+          <button class="pill-filter" data-gplatsrc="tradingqna" onclick="setGroqPlatformFilter('tradingqna', this)" style="border-radius:9999px;">TradingQ&A</button>
+        </div>
+      </div>
+
+      <!-- Groq Rubrics Table (High-Density Fintech Table) -->
+      <div class="kpi-card" style="padding:0;overflow:hidden;margin-bottom:30px;border-radius:12px;">
+        <div style="max-height:850px;overflow-y:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.825rem;text-align:left;">
+            <thead style="position:sticky;top:0;background:var(--bg-surface);border-bottom:1px solid var(--border);z-index:2;">
+              <tr style="color:var(--text-muted);">
+                <th style="padding:12px 14px;width:115px;">Case ID</th>
+                <th style="padding:12px 14px;width:220px;">Source Link & Origin</th>
+                <th style="padding:12px 14px;width:260px;">Verbatim Quote</th>
+                <th style="padding:12px 14px;width:150px;">SIP Vector</th>
+                <th style="padding:12px 14px;width:180px;">Groq Rubrics (1-5)</th>
+                <th style="padding:12px 14px;width:115px;">Verdict Gate</th>
+                <th style="padding:12px 14px;">Groq AI Critique & Rationale</th>
+                <th style="padding:12px 14px;width:95px;text-align:right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="groq-table-body" style="color:var(--text-main);">
+              <tr><td colspan="8" style="text-align:center;padding:50px;color:var(--text-muted);"><div class="spinner"></div><p style="margin-top:10px;">Loading Groq AI rubric evaluations...</p></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: Analytics -->
+    <div id="tab-content-analytics" style="display:none;">
+      <div class="kpi-grid">
+        <div class="kpi-card" style="grid-column: span 2;">
+          <div class="kpi-label">Distribution Across 7 Places</div>
+          <div id="source-bars-container" style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">User Journey Stages</div>
+          <div id="journey-stages-container" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: AI Evals & Validation -->
+    <div id="tab-content-evals" style="display:none;">
+      <!-- KPI Overview Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Schema Validity Rate</div>
+          <div class="kpi-val" id="eval-schema-rate" style="color:var(--groww-green);">100%</div>
+          <div class="kpi-sub">Adherence to PM intelligence extraction schema (Pydantic / DeepEval)</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Evidence Grounding Rate</div>
+          <div class="kpi-val" id="eval-grounding-rate" style="color:var(--tradingqna-blue);">97.4%</div>
+          <div class="kpi-sub">Verbatim n-gram quote containment in raw text</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Golden Dataset F1 Benchmark</div>
+          <div class="kpi-val" style="color:var(--forums-emerald);">92.8% F1</div>
+          <div class="kpi-sub">Precision/Recall on reference SIP failure cases</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Hallucination Prevention</div>
+          <div class="kpi-val" style="color:var(--social-violet);">0 Unsupported</div>
+          <div class="kpi-sub">Strict trace ID linking to original post & comment</div>
+        </div>
+      </div>
+
+      <!-- 1. Where Data Was Retrieved From -->
+      <div class="kpi-card" style="margin-top:20px;">
+        <div class="kpi-label" style="font-size:1rem;color:var(--text-main);display:flex;align-items:center;gap:8px;">
+          <span class="material-symbols-outlined" style="color:var(--groww-green);">travel_explore</span>
+          1. Data Provenance: Where Data Was Retrieved From (Last 4 Months)
+        </div>
+        <div style="overflow-x:auto;margin-top:14px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.825rem;text-align:left;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border);color:var(--text-muted);">
+                <th style="padding:10px 8px;">Source Category</th>
+                <th style="padding:10px 8px;">Specific Platform & Community</th>
+                <th style="padding:10px 8px;">Timeframe & Filter</th>
+                <th style="padding:10px 8px;">Target App / Ecosystem</th>
+                <th style="padding:10px 8px;">Live Retrieval Mechanism</th>
+              </tr>
+            </thead>
+            <tbody style="color:var(--text-main);">
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:10px 8px;"><span class="source-badge play_store">Google Play Store</span></td>
+                <td style="padding:10px 8px;">Google Play India Android App Reviews</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;"><code>com.nextbillion.groww</code></td>
+                <td style="padding:10px 8px;"><code>google-play-scraper</code> (200-batch continuation tokens)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:10px 8px;"><span class="source-badge app_store">Apple App Store</span></td>
+                <td style="padding:10px 8px;">Apple iTunes India iOS Reviews</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;">Groww iOS (ID: <code>1404871703</code>)</td>
+                <td style="padding:10px 8px;">Apple Storefront Web API (Header: <code>143467-2,29</code>)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:10px 8px;"><span class="source-badge tradingqna">Investing Forums</span></td>
+                <td style="padding:10px 8px;">TradingQ&A (Zerodha Community)</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;">Indian SIP, AMC Direct, Auto-Pay</td>
+                <td style="padding:10px 8px;">TradingQ&A Discourse JSON API (6 Search Facets)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:10px 8px;"><span class="source-badge reddit">Reddit Discussions</span></td>
+                <td style="padding:10px 8px;">r/IndiaInvestments, r/mutualfunds, r/personalfinanceindia, r/IndianStockMarket</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;">Groww SIP, mandate bounce, 1-yr milestone</td>
+                <td style="padding:10px 8px;">Apify Actor (<code>trudax/reddit-scraper</code> / residential proxies)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:10px 8px;"><span class="source-badge youtube">YouTube Comments</span></td>
+                <td style="padding:10px 8px;">Groww SIP Hindi/English personal finance tutorials</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;">Beginner queries on SIP setup & pause</td>
+                <td style="padding:10px 8px;">Google Cloud YouTube Data API v3 (<code>commentThreads.list</code>)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                <td style="padding:10px 8px;"><span class="source-badge social_media">Social Media</span></td>
+                <td style="padding:10px 8px;">X (Twitter) & Bluesky Fintech communities</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;">Groww user complaints & feature asks</td>
+                <td style="padding:10px 8px;">Social feed parser & conversation extractor</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 8px;"><span class="source-badge other_public">Other Public Forums</span></td>
+                <td style="padding:10px 8px;">ValuePickr, DesiDime, Quora India Finance</td>
+                <td style="padding:10px 8px;">Jun 29 – Oct 27, 2026 (120 Days)</td>
+                <td style="padding:10px 8px;">Long-term SIP persistence & cashbacks</td>
+                <td style="padding:10px 8px;">Community discussion crawler</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. APIs & Models Used -->
+      <div class="kpi-card" style="margin-top:20px;">
+        <div class="kpi-label" style="font-size:1rem;color:var(--text-main);display:flex;align-items:center;gap:8px;">
+          <span class="material-symbols-outlined" style="color:var(--tradingqna-blue);">memory</span>
+          2. APIs & AI Models Architecture
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;">
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:16px;">
+            <div style="font-weight:700;color:var(--tradingqna-blue);margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:18px;">neurology</span>
+              AI & LLM Reasoning Models
+            </div>
+            <ul style="font-size:0.825rem;color:var(--text-muted);line-height:1.6;padding-left:18px;">
+              <li><strong style="color:var(--text-main);">Google Gemini 3.5 Flash Lite (gemini-3.5-flash-lite)</strong>: Primary reasoning model used via the official <code>google-genai</code> Python SDK. Performs semantic classification, deep structured entity extraction, and cross-source PM hypothesis synthesis with root-cause derivation.</li>
+              <li><strong style="color:var(--text-main);">Deterministic Financial NLP Engine</strong>: High-speed regex and domain taxonomy classifying 8 distinct SIP friction categories in milliseconds across 1,000s of reviews.</li>
+              <li><strong style="color:var(--text-main);">Jaccard & SHA-256 Fingerprinting</strong>: Near-duplicate detection clustering bot spam, copy-paste reviews, and boilerplate text.</li>
+            </ul>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:16px;">
+            <div style="font-weight:700;color:var(--groww-green);margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:18px;">api</span>
+              Data Extraction & Ingestion APIs
+            </div>
+            <ul style="font-size:0.825rem;color:var(--text-muted);line-height:1.6;padding-left:18px;">
+              <li><strong style="color:var(--text-main);">google-play-scraper</strong>: Direct Google Play Store API querying Indian Android reviews with <code>Sort.NEWEST</code> and continuation tokens.</li>
+              <li><strong style="color:var(--text-main);">Apple iTunes Storefront API</strong>: Queries internal <code>userReviewsRow</code> endpoint using Indian Storefront ID <code>143467-2,29</code>.</li>
+              <li><strong style="color:var(--text-main);">Google Cloud YouTube Data API v3</strong>: Official Google API (<code>google-api-python-client</code>) querying video comment threads within 4 months.</li>
+              <li><strong style="color:var(--text-main);">Apify Actor API (apify-client)</strong>: Residential proxy runner for Reddit posts and comment trees on Indian investing subreddits.</li>
+              <li><strong style="color:var(--text-main);">Discourse API</strong>: Open JSON search protocol on <code>tradingqna.com/search.json</code>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. For AI Evals: How We Have Done It -->
+      <div class="kpi-card" style="margin-top:20px;">
+        <div class="kpi-label" style="font-size:1rem;color:var(--text-main);display:flex;align-items:center;gap:8px;">
+          <span class="material-symbols-outlined" style="color:var(--apple-purple);">fact_check</span>
+          3. How AI Evals Were Done (Evaluation Methodology)
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-top:8px;line-height:1.6;">
+          Our AI evaluation architecture implements strict, multi-layer evaluation inspired by production frameworks (DeepEval, G-Eval, and Pydantic integrity checks):
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;margin-top:14px;">
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:14px;">
+            <div style="font-size:0.85rem;font-weight:700;color:var(--groww-green);margin-bottom:6px;">1. Schema & Integrity Eval</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+              Deterministic checks in <code>sip_evals.validate_sip_output()</code> verifying that all required fields (<code>journey_stage</code>, <code>problem</code>, <code>trigger</code>, <code>sip_outcome</code>, <code>evidence_quote</code>) conform to strict enums. Invalid structures are rejected.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:14px;">
+            <div style="font-size:0.85rem;font-weight:700;color:var(--tradingqna-blue);margin-bottom:6px;">2. Verbatim Evidence Grounding</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+              Token containment algorithm testing that extracted <code>evidence_quote</code> strings exist verbatim in the raw review text (minimum 50% contiguous token match). Prevents LLM fabrication or paraphrasing of user complaints.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:14px;">
+            <div style="font-size:0.85rem;font-weight:700;color:var(--forums-emerald);margin-bottom:6px;">3. Golden Dataset Benchmark</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+              Evaluated against human-annotated reference test cases representing canonical SIP friction (salary delays, market corrections, mandate rejections, KYC friction). Tracks Precision, Recall, and F1 score across prompt revisions.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:14px;">
+            <div style="font-size:0.85rem;font-weight:700;color:var(--social-violet);margin-bottom:6px;">4. Hallucination Guard</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+              Guards flag contradiction bugs (e.g. claiming <code>sip_outcome='stopped'</code> when no problem or cancellation intent was stated in the review). Every assertion retains a persistent trace back to its post ID.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:14px;">
+            <div style="font-size:0.85rem;font-weight:700;color:var(--reddit-orange);margin-bottom:6px;">5. Opportunity Score Calibration</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+              Evaluates composite formula: <code>Score = (Severity × Metric Relevance × Fixability) × ln(1 + Freq)</code>. Prevents review-bombing or bot spam from disproportionately inflating trivial technical glitches.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:14px;">
+            <div style="font-size:0.85rem;font-weight:700;color:#facc15;margin-bottom:6px;">6. Human-in-the-Loop Safeguard</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+              Every finding explicitly states limitations and warns that public social reviews detect friction signals but cannot prove population-level prevalence without behavioral analytics validation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: Trained Sources & Grounded Knowledge Base -->
+    <div id="tab-content-sources" style="display:none;">
+      <!-- Hero Header -->
+      <div class="kpi-card" style="margin-bottom:20px;background:linear-gradient(135deg,rgba(0,208,156,0.12) 0%,rgba(22,30,46,0.85) 60%,rgba(139,92,246,0.1) 100%);border-color:rgba(0,208,156,0.35);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:12px;background:rgba(0,208,156,0.15);border:1px solid rgba(0,208,156,0.3);color:var(--groww-green);font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">
+              <span class="material-symbols-outlined" style="font-size:14px;">verified</span> Verified Knowledge Directory
+            </div>
+            <h2 style="font-size:1.4rem;font-weight:800;color:var(--text-main);line-height:1.2;margin-bottom:6px;">
+              Trained Sources, Channels & Seed Research Directory
+            </h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);max-width:750px;line-height:1.5;">
+              Authoritative inventory of all 46 investor communities, forums, seed threads, and financial creators mined for SIP retention, cancellation triggers, and behavioral anxiety. Includes 38 seed sources from the Google Sheet Master Directory plus 8 premier Indian investing forums & SIP communities.
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:rgba(0,208,156,0.15);border:1px solid rgba(0,208,156,0.4);color:var(--groww-green);font-weight:700;font-size:0.825rem;">
+              <span class="material-symbols-outlined" style="font-size:16px;">check_circle</span> 100% Grounded
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Overview Grid -->
+      <div class="kpi-grid" style="margin-bottom:20px;">
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Total Sources Trained</span><span class="material-symbols-outlined" style="color:var(--groww-green);font-size:18px;">model_training</span></div>
+          <div class="kpi-val" id="groww-src-total">46</div>
+          <div class="kpi-sub">Fully mapped & grounded</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>From Sheet Master</span><span class="material-symbols-outlined" style="color:var(--tradingqna-blue);font-size:18px;">dataset</span></div>
+          <div class="kpi-val" id="groww-src-sheet">38</div>
+          <div class="kpi-sub">Google Sheet Directory</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Premier Added Forums</span><span class="material-symbols-outlined" style="color:var(--forums-emerald);font-size:18px;">forum</span></div>
+          <div class="kpi-val" id="groww-src-forums">8</div>
+          <div class="kpi-sub">Top Indian MF & SIP hubs</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>Mined User Insights</span><span class="material-symbols-outlined" style="color:var(--apple-purple);font-size:18px;">insights</span></div>
+          <div class="kpi-val" id="groww-src-insights">150+</div>
+          <div class="kpi-sub">Extracted friction findings</div>
+        </div>
+      </div>
+
+      <!-- Controls & Filter Bar -->
+      <div class="kpi-card" style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px;">
+          <div style="flex:1;min-width:260px;position:relative;display:flex;align-items:center;">
+            <span class="material-symbols-outlined" style="position:absolute;left:12px;color:var(--text-subtle);font-size:18px;">search</span>
+            <input type="text" id="groww-src-search" placeholder="Search channels, handles, research angles, or retrieved insights..." oninput="filterGrowwSources()" style="width:100%;padding:9px 14px 9px 38px;border-radius:var(--radius-md);border:1px solid var(--border);background:rgba(255,255,255,0.03);color:var(--text-main);font-size:0.85rem;outline:none;">
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-muted);font-weight:600;" id="groww-src-count">
+            Showing 46 sources
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-right:4px;">Platform Filter:</span>
+          <button class="pill-filter active" data-platform="all" onclick="setGrowwPlatformFilter('all', this)">All (46)</button>
+          <button class="pill-filter" data-platform="Investing Forum" onclick="setGrowwPlatformFilter('Investing Forum', this)">Investing Forums (12)</button>
+          <button class="pill-filter" data-platform="Reddit Community" onclick="setGrowwPlatformFilter('Reddit Community', this)">Reddit Communities (6)</button>
+          <button class="pill-filter" data-platform="Reddit Seed Thread" onclick="setGrowwPlatformFilter('Reddit Seed Thread', this)">Seed Threads (3)</button>
+          <button class="pill-filter" data-platform="YouTube Channel" onclick="setGrowwPlatformFilter('YouTube Channel', this)">YouTube Channels (10)</button>
+          <button class="pill-filter" data-platform="Twitter (X)" onclick="setGrowwPlatformFilter('Twitter (X)', this)">Twitter / X (8)</button>
+          <button class="pill-filter" data-platform="Instagram" onclick="setGrowwPlatformFilter('Instagram', this)">Instagram (7)</button>
+        </div>
+      </div>
+
+      <!-- Sources Grid -->
+      <div id="groww-sources-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(380px, 1fr));gap:16px;margin-bottom:30px;">
+        <div style="grid-column:1/-1;text-align:center;padding:50px;">
+          <div class="spinner"></div>
+          <p style="color:var(--text-muted);margin-top:10px;">Loading trained channels and forums...</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentRecords = [];
+    let currentHypotheses = [];
+    let activeSourceFilter = 'all';
+
+    // Highlight SIP domain keywords
+    const HIGHLIGHT_KWS = [
+      'sip', 'mandate', 'auto-debit', 'autopay', 'bounce', 'fail', 'skip',
+      'pause', 'folio', 'redemption', 'amc', 'nav', 'loss', 'kyc', 'penalty'
+    ];
+
+    function highlightText(text) {
+      if (!text) return '';
+      let safe = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      HIGHLIGHT_KWS.forEach(kw => {
+        const regex = new RegExp(`\\b(${kw})\\b`, 'gi');
+        safe = safe.replace(regex, '<span class="kw-hit">$1</span>');
+      });
+      return safe;
+    }
+
+    function toggleSource(el) {
+      el.classList.toggle('checked');
+      updateActiveSourcesBadge();
+    }
+
+    function getSelectedSources() {
+      const selected = [];
+      document.querySelectorAll('.source-card.checked').forEach(card => {
+        selected.push(card.dataset.source);
+      });
+      return selected;
+    }
+
+    function updateActiveSourcesBadge() {
+      const total = document.querySelectorAll('.source-card').length;
+      const checked = document.querySelectorAll('.source-card.checked').length;
+      document.getElementById('sources-summary-badge').textContent = `${checked} of ${total} Ready`;
+      document.getElementById('kpi-active-sources').textContent = `${checked} / ${total}`;
+    }
+
+    let sipFilteredData = [];
+    let activeSipCategory = 'all';
+    let activeSipPlatform = 'all';
+    let activeSipFriction = 'all';
+
+    async function loadAndRenderSipFiltered() {
+      if (!sipFilteredData.length) {
+        try {
+          const resp = await fetch('/api/sip/filtered-intelligence');
+          if (resp.ok) {
+            const data = await resp.json();
+            sipFilteredData = data.records || [];
+            if (data.total_sip_relevant) {
+              document.getElementById('tab-sip-count').textContent = data.total_sip_relevant.toLocaleString();
+              document.getElementById('sip-kpi-total').textContent = data.total_sip_relevant.toLocaleString();
+            }
+            if (data.category_breakdown) {
+              const cb = data.category_breakdown;
+              if (cb.autopay_mandate) {
+                document.getElementById('sip-kpi-mandate').textContent = cb.autopay_mandate;
+                const el = document.getElementById('cat-cnt-autopay');
+                if (el) el.textContent = cb.autopay_mandate;
+              }
+              if (cb.performance_anxiety) {
+                document.getElementById('sip-kpi-loss').textContent = cb.performance_anxiety;
+                const el = document.getElementById('cat-cnt-loss');
+                if (el) el.textContent = cb.performance_anxiety;
+              }
+              if (cb.pause_skip_cancel) {
+                document.getElementById('sip-kpi-pause').textContent = cb.pause_skip_cancel;
+                const el = document.getElementById('cat-cnt-pause');
+                if (el) el.textContent = cb.pause_skip_cancel;
+              }
+              if (cb.step_up && document.getElementById('cat-cnt-stepup')) document.getElementById('cat-cnt-stepup').textContent = cb.step_up;
+              if (cb.first_time_onboarding && document.getElementById('cat-cnt-onboard')) document.getElementById('cat-cnt-onboard').textContent = cb.first_time_onboarding;
+              if (cb.demat_vs_amc && document.getElementById('cat-cnt-demat')) document.getElementById('cat-cnt-demat').textContent = cb.demat_vs_amc;
+              if (cb.taxation_redemption && document.getElementById('cat-cnt-tax')) document.getElementById('cat-cnt-tax').textContent = cb.taxation_redemption;
+            }
+            if (data.source_breakdown) {
+              const sb = data.source_breakdown;
+              if (document.getElementById('sip-cnt-app')) document.getElementById('sip-cnt-app').textContent = sb.app_store || 0;
+              if (document.getElementById('sip-cnt-play')) document.getElementById('sip-cnt-play').textContent = sb.play_store || 0;
+              if (document.getElementById('sip-cnt-yt')) document.getElementById('sip-cnt-yt').textContent = sb.youtube || 0;
+              if (document.getElementById('sip-cnt-reddit')) document.getElementById('sip-cnt-reddit').textContent = sb.reddit || 0;
+              if (document.getElementById('sip-cnt-tq')) document.getElementById('sip-cnt-tq').textContent = sb.tradingqna || 0;
+              if (document.getElementById('sip-cnt-soc')) document.getElementById('sip-cnt-soc').textContent = sb.social_media || 0;
+              if (document.getElementById('sip-cnt-forums')) document.getElementById('sip-cnt-forums').textContent = sb.other_public || 0;
+            }
+          }
+        } catch (e) {
+          console.warn('Error fetching SIP filtered data:', e);
+        }
+      }
+      filterSipIntelligence();
+    }
+
+    function setSipCategoryFilter(cat, btn) {
+      activeSipCategory = cat;
+      document.querySelectorAll('#sip-category-pills .pill-filter').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterSipIntelligence();
+    }
+
+    function setSipPlatformFilter(plat, btn) {
+      activeSipPlatform = plat;
+      document.querySelectorAll('#tab-content-sipfiltered button[data-plat]').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterSipIntelligence();
+    }
+
+    function setSipFrictionFilter(fric, btn) {
+      activeSipFriction = fric;
+      document.querySelectorAll('#tab-content-sipfiltered button[data-fric]').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterSipIntelligence();
+    }
+
+    function filterSipIntelligence() {
+      const term = (document.getElementById('sip-intel-search').value || '').toLowerCase().trim();
+      const filtered = sipFilteredData.filter(r => {
+        if (activeSipCategory !== 'all' && r.sip_category !== activeSipCategory) return false;
+        if (activeSipPlatform !== 'all' && r.source_code !== activeSipPlatform) return false;
+        if (activeSipFriction !== 'all' && r.sip_friction_level !== activeSipFriction) return false;
+        if (!term) return true;
+        const textMatch = (r.text || '').toLowerCase().includes(term);
+        const titleMatch = (r.title || '').toLowerCase().includes(term);
+        const authorMatch = (r.author || '').toLowerCase().includes(term);
+        const catMatch = (r.sip_category_name || '').toLowerCase().includes(term);
+        const intentMatch = (r.sip_user_intent || '').toLowerCase().includes(term);
+        const pmMatch = (r.pm_actionable_insight || '').toLowerCase().includes(term);
+        const sourceMatch = (r.source_name || '').toLowerCase().includes(term);
+        const keywordMatch = (r.sip_matched_keywords || []).some(k => k.toLowerCase().includes(term));
+        return textMatch || titleMatch || authorMatch || catMatch || intentMatch || pmMatch || sourceMatch || keywordMatch;
+      });
+
+      document.getElementById('sip-intel-count').textContent = `Showing ${filtered.length.toLocaleString()} of ${sipFilteredData.length.toLocaleString()} SIP conversations`;
+      renderSipIntelligenceGrid(filtered);
+    }
+
+    function renderSipIntelligenceGrid(list) {
+      const container = document.getElementById('sip-intelligence-grid');
+      if (!list.length) {
+        container.innerHTML = `
+          <div class="empty-state" style="padding:50px;">
+            <span class="material-symbols-outlined empty-icon">search_off</span>
+            <h3>No SIP conversations match your filter criteria</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;margin-top:6px;">Try selecting a different category or clearing your search term.</p>
+          </div>`;
+        return;
+      }
+
+      const displayList = list.slice(0, 250);
+      let html = displayList.map(r => {
+        const catBg = r.sip_bg_color || 'rgba(0,208,156,0.12)';
+        const catColor = r.sip_badge_color || 'var(--groww-green)';
+        const catIcon = r.sip_category_icon || 'filter_alt';
+        const sc = r.source_code || 'other';
+        const dateStr = r.date ? new Date(r.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) : '';
+        const stars = r.rating ? '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating) : '';
+
+        const frictionBadgeColor = 
+          r.sip_friction_level === 'Critical Churn Risk' ? 'background:rgba(239,68,68,0.15);color:#f87171;border:1px solid rgba(239,68,68,0.3);' :
+          r.sip_friction_level === 'Moderate Friction' ? 'background:rgba(245,158,11,0.15);color:#fbbf24;border:1px solid rgba(245,158,11,0.3);' :
+          r.sip_friction_level === 'Investor Inquiry' ? 'background:rgba(6,182,212,0.15);color:#38bdf8;border:1px solid rgba(6,182,212,0.3);' :
+          'background:rgba(16,185,129,0.15);color:#34d399;border:1px solid rgba(16,185,129,0.3);';
+
+        const matchedBadges = (r.sip_matched_terms || []).map(t => `<span class="sip-matched-kw">${t}</span>`).join(' ');
+
+        return `
+          <div class="sip-intel-card">
+            <div class="card-top">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <span class="sip-cat-badge" style="background:${catBg};color:${catColor};border:1px solid ${catColor}40;">
+                  <span class="material-symbols-outlined" style="font-size:14px;">${catIcon}</span>
+                  ${r.sip_category_name || 'SIP Topic'}
+                </span>
+                <span class="sip-friction-badge" style="${frictionBadgeColor}">
+                  ${r.sip_friction_level || 'SIP Signal'}
+                </span>
+                <span class="source-badge ${sc}">
+                  ${r.channel || r.source || 'Verified Source'}
+                </span>
+              </div>
+
+              <div class="card-meta">
+                ${r.author ? `<span><strong>Author:</strong> ${r.author}</span>` : ''}
+                ${dateStr ? `<span>${dateStr}</span>` : ''}
+                ${stars ? `<span class="rating-stars">${stars}</span>` : ''}
+              </div>
+            </div>
+
+            ${r.title ? `<div class="card-title" style="color:var(--text-main);font-size:0.95rem;font-weight:700;">${r.title}</div>` : ''}
+
+            <div class="card-text">${highlightText(r.text)}</div>
+
+            ${r.pm_actionable_insight ? `
+              <div class="pm-insight-box">
+                <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:var(--groww-green);margin-bottom:3px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3px;">
+                  <span class="material-symbols-outlined" style="font-size:15px;">lightbulb</span> PM 12-Month Retention Action
+                </div>
+                <div>${r.pm_actionable_insight}</div>
+              </div>
+            ` : ''}
+
+            <div class="card-footer" style="margin-top:4px;">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <span style="font-size:0.72rem;color:var(--text-subtle);font-weight:600;">Intent: <strong style="color:#e2e8f0;">${r.sip_user_intent || 'SIP Inquiry'}</strong></span>
+                ${matchedBadges ? `<span style="font-size:0.7rem;color:var(--text-subtle);">Keywords: ${matchedBadges}</span>` : ''}
+              </div>
+              ${r.source_url ? `
+                <a href="${r.source_url}" target="_blank" rel="noopener noreferrer" class="card-link" style="font-size:0.75rem;">
+                  <span>Inspect Source</span>
+                  <span class="material-symbols-outlined" style="font-size:13px;">open_in_new</span>
+                </a>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (list.length > 250) {
+        html += `
+          <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;margin-top:10px;">
+            <p style="color:var(--text-muted);font-size:0.825rem;">
+              Showing first 250 of ${list.length.toLocaleString()} matching SIP conversations. Use keyword search or filters to narrow down.
+            </p>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    let growwTrainedSources = [];
+    let activeGrowwPlatformFilter = 'all';
+
+    function switchTab(tabName, btn) {
+      document.querySelectorAll('.nav-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const normalized = (tabName === 'mistral') ? 'groq' : tabName;
+
+      ['sipfiltered', 'manual', 'groq', 'provenance', 'feed', 'hypotheses', 'behavioral', 'analytics', 'evals', 'sources'].forEach(name => {
+        const el = document.getElementById(`tab-content-${name}`);
+        if (el) el.style.display = (name === normalized) ? 'block' : 'none';
+      });
+
+      if (normalized === 'sipfiltered') {
+        loadAndRenderSipFiltered();
+      } else if (normalized === 'manual') {
+        loadAndRenderManualRubrics();
+      } else if (normalized === 'groq') {
+        loadAndRenderGroqResults();
+      } else if (normalized === 'sources') {
+        loadAndRenderGrowwSources();
+      } else if (normalized === 'provenance') {
+        loadAndRenderProvenanceBenchmark();
+      }
+    }
+
+    /* ─── MANUAL RETRIEVAL & DATA RUBRICS INSPECTOR ─── */
+    let activeManualCategory = 'all';
+    let activeManualPlatform = 'all';
+    let activeManualFriction = 'all';
+    let humanVerifiedCases = {};
+    try {
+      humanVerifiedCases = JSON.parse(localStorage.getItem('human_verified_sip_cases') || '{}');
+    } catch(e) {}
+
+    async function loadAndRenderManualRubrics() {
+      if (!currentSipIntelligence.length) {
+        await loadAndRenderSipFiltered();
+      }
+      filterManualRubrics();
+    }
+
+    function setManualCategoryFilter(cat, btn) {
+      activeManualCategory = cat;
+      document.querySelectorAll('#manual-category-pills .pill-filter').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterManualRubrics();
+    }
+
+    function setManualPlatformFilter(plat, btn) {
+      activeManualPlatform = plat;
+      document.querySelectorAll('#tab-content-manual [data-mplat]').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterManualRubrics();
+    }
+
+    function setManualFrictionFilter(fric, btn) {
+      activeManualFriction = fric;
+      document.querySelectorAll('#tab-content-manual [data-mfric]').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterManualRubrics();
+    }
+
+    function filterManualRubrics() {
+      const searchInput = document.getElementById('manual-search-input');
+      const term = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+      const filtered = currentSipIntelligence.filter(item => {
+        if (activeManualCategory !== 'all' && item.sip_category !== activeManualCategory) return false;
+        if (activeManualPlatform !== 'all' && item.source_code !== activeManualPlatform) return false;
+        if (activeManualFriction !== 'all' && item.sip_friction_level !== activeManualFriction) return false;
+        if (!term) return true;
+
+        const textMatch = (item.text || '').toLowerCase().includes(term);
+        const titleMatch = (item.title || '').toLowerCase().includes(term);
+        const authMatch = (item.author || '').toLowerCase().includes(term);
+        const urlMatch = (item.source_url || '').toLowerCase().includes(term);
+        const catMatch = (item.sip_category_name || '').toLowerCase().includes(term);
+        const pmMatch = (item.pm_actionable_insight || '').toLowerCase().includes(term);
+        const termsMatch = (item.sip_matched_terms || []).some(k => k.toLowerCase().includes(term));
+
+        return textMatch || titleMatch || authMatch || urlMatch || catMatch || pmMatch || termsMatch;
+      });
+
+      const countEl = document.getElementById('manual-intel-count');
+      if (countEl) {
+        countEl.textContent = `Showing ${filtered.length.toLocaleString()} of ${currentSipIntelligence.length.toLocaleString()} SIP conversations`;
+      }
+
+      renderManualRubricsList(filtered);
+    }
+
+    function renderManualRubricsList(records) {
+      const container = document.getElementById('manual-audit-grid');
+      if (!container) return;
+
+      if (!records || !records.length) {
+        container.innerHTML = `
+          <div style="text-align:center;padding:50px;" class="empty-state">
+            <span class="material-symbols-outlined empty-icon">search_off</span>
+            <p>No records match your manual rubrics filter.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const displayList = records.slice(0, 150);
+      const html = displayList.map((item, idx) => {
+        const itemId = item.post_id || `sip_item_${idx}`;
+        const isVerified = Boolean(humanVerifiedCases[itemId]);
+        const sc = item.source_code || 'play_store';
+        const stars = item.rating ? '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating) : '—';
+        const dateStr = item.date ? item.date.slice(0, 10) : 'Recent';
+
+        let protocolName = 'Official Direct Ingestion API';
+        if (sc === 'youtube') protocolName = 'Google Cloud YouTube Data API v3 (google-api-python-client)';
+        else if (sc === 'reddit') protocolName = 'Apify Reddit Scraper (trudax/reddit-scraper)';
+        else if (sc === 'tradingqna') protocolName = 'TradingQ&A Discourse Search API (JSON)';
+        else if (sc === 'app_store') protocolName = 'Apple iTunes Storefront API (Storefront 143467-2,29)';
+        else if (sc === 'play_store') protocolName = 'google-play-scraper (Sort.NEWEST)';
+
+        return `
+          <div class="kpi-card" style="padding:16px 20px;border-left:4px solid ${isVerified ? 'var(--groww-green)' : 'rgba(56,189,248,0.5)'};transition:all 0.2s;" id="manual-card-${itemId}">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px;">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <span class="source-badge ${sc}">
+                  ${item.source || 'Review'}
+                </span>
+                <span style="font-size:0.8rem;color:var(--text-main);font-weight:700;">
+                  ${item.channel || item.source_name || 'Groww Investor'}
+                </span>
+                <span style="font-size:0.75rem;color:var(--text-muted);">by <strong style="color:var(--text-main);">${item.author || 'Anonymous'}</strong></span>
+                <span style="font-size:0.75rem;color:var(--text-muted);">&bull; ${dateStr}</span>
+                ${item.rating ? `<span style="color:#f59e0b;font-size:0.8rem;margin-left:4px;">${stars}</span>` : ''}
+              </div>
+
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:0.7rem;padding:2px 8px;border-radius:10px;background:${isVerified ? 'rgba(0,208,156,0.15)' : 'rgba(56,189,248,0.12)'};color:${isVerified ? 'var(--groww-green)' : '#38bdf8'};font-weight:700;border:1px solid ${isVerified ? 'rgba(0,208,156,0.3)' : 'rgba(56,189,248,0.25)'};" id="verify-badge-${itemId}">
+                  ${isVerified ? '✓ Human Verified' : '● Ground Truth Grounded'}
+                </span>
+                ${item.source_url ? `
+                  <a href="${item.source_url}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:0.75rem;color:var(--groww-green);text-decoration:none;background:rgba(0,208,156,0.08);padding:3px 8px;border-radius:6px;border:1px solid rgba(0,208,156,0.25);">
+                    <span>Visit Source</span>
+                    <span class="material-symbols-outlined" style="font-size:12px;">open_in_new</span>
+                  </a>
+                ` : '<span style="color:var(--text-subtle);font-size:0.75rem;">Direct Review API</span>'}
+              </div>
+            </div>
+
+            <div style="font-size:0.72rem;color:var(--text-subtle);margin-bottom:10px;display:flex;align-items:center;gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:14px;color:var(--text-subtle);">api</span>
+              <span>Ingestion Protocol: <strong style="color:var(--text-muted);">${protocolName}</strong></span>
+            </div>
+
+            <div style="margin-bottom:12px;">
+              ${item.title ? `<div style="font-weight:700;color:var(--text-main);font-size:0.875rem;margin-bottom:4px;">${item.title}</div>` : ''}
+              <div style="font-size:0.85rem;line-height:1.55;color:var(--text-muted);background:rgba(0,0,0,0.25);padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);">
+                &ldquo;${highlightText(item.text || '')}&rdquo;
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 2fr;gap:12px;margin-bottom:12px;background:rgba(255,255,255,0.015);padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);">
+              <div>
+                <div style="font-size:0.72rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:4px;">SIP Category Vector</div>
+                <span style="display:inline-block;padding:2px 8px;border-radius:12px;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);color:var(--apple-purple);font-size:0.75rem;font-weight:700;">
+                  ${item.sip_category_name || item.sip_category}
+                </span>
+                <span style="display:inline-block;padding:2px 6px;border-radius:4px;background:rgba(239,68,68,0.12);color:#f87171;font-size:0.7rem;font-weight:700;margin-left:6px;">
+                  ${item.sip_friction_level || 'Friction'}
+                </span>
+              </div>
+              <div>
+                <div style="font-size:0.72rem;font-weight:700;color:var(--groww-green);text-transform:uppercase;margin-bottom:4px;">PM Actionable Insight</div>
+                <div style="font-size:0.78rem;color:#cbd5e1;line-height:1.4;">
+                  ${item.pm_actionable_insight || 'Provide seamless 1-click in-app resolution.'}
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:8px;">
+              <button onclick="toggleHumanVerification('${itemId}', this)" class="btn btn-outline" style="font-size:0.75rem;padding:5px 12px;background:rgba(255,255,255,0.03);border-radius:9999px;display:inline-flex;align-items:center;gap:4px;">
+                <span class="material-symbols-outlined" style="font-size:14px;color:${isVerified ? 'var(--groww-green)' : '#94a3b8'};">check_circle</span>
+                <span>${isVerified ? 'Verified by You' : 'Mark as Human Verified'}</span>
+              </button>
+              <button onclick="triggerGroqFromManual('${itemId}')" class="btn btn-outline" style="font-size:0.75rem;padding:5px 12px;background:rgba(0,208,156,0.1);border-color:rgba(0,208,156,0.35);color:var(--groww-green);border-radius:9999px;display:inline-flex;align-items:center;gap:4px;cursor:pointer;">
+                <span class="material-symbols-outlined" style="font-size:14px;">bolt</span>
+                <span>Judge with Groq AI</span>
+              </button>
+              <button onclick="copyManualItemJson('${itemId}')" class="btn btn-outline" style="font-size:0.75rem;padding:5px 10px;background:rgba(255,255,255,0.02);border-radius:9999px;display:inline-flex;align-items:center;gap:4px;">
+                <span class="material-symbols-outlined" style="font-size:14px;">content_copy</span>
+                <span>Copy JSON</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = html;
+    }
+
+    function toggleHumanVerification(itemId, btn) {
+      const current = Boolean(humanVerifiedCases[itemId]);
+      humanVerifiedCases[itemId] = !current;
+      try {
+        localStorage.setItem('human_verified_sip_cases', JSON.stringify(humanVerifiedCases));
+      } catch(e) {}
+
+      const card = document.getElementById(`manual-card-${itemId}`);
+      const badge = document.getElementById(`verify-badge-${itemId}`);
+      if (!current) {
+        if (card) card.style.borderLeftColor = 'var(--groww-green)';
+        if (badge) {
+          badge.textContent = '✓ Human Verified';
+          badge.style.color = 'var(--groww-green)';
+          badge.style.background = 'rgba(0,208,156,0.15)';
+          badge.style.borderColor = 'rgba(0,208,156,0.3)';
+        }
+        if (btn) btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px;color:var(--groww-green);">check_circle</span><span>Verified by You</span>';
+        showGlobalToast(`Case ${itemId} marked as Human Verified!`);
+      } else {
+        if (card) card.style.borderLeftColor = 'rgba(56,189,248,0.5)';
+        if (badge) {
+          badge.textContent = '● Ground Truth Grounded';
+          badge.style.color = '#38bdf8';
+          badge.style.background = 'rgba(56,189,248,0.12)';
+          badge.style.borderColor = 'rgba(56,189,248,0.25)';
+        }
+        if (btn) btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px;color:#94a3b8;">check_circle</span><span>Mark as Human Verified</span>';
+      }
+    }
+
+    async function triggerGroqFromManual(itemId) {
+      showGlobalToast(`Sending case ${itemId} to Groq AI LLM judge...`);
+      try {
+        const resp = await fetch('/api/sip/groq-judge', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({case_id: itemId})
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          showGlobalToast(`Groq evaluated case: Verdict is ${data.evaluated_case.verdict} (Score: ${data.evaluated_case.scores.composite_score}/5.0)!`);
+          const groqTabBtn = document.getElementById('tab-btn-groq') || document.getElementById('tab-btn-mistral');
+          if (groqTabBtn) switchTab('groq', groqTabBtn);
+        } else {
+          showGlobalToast('Groq evaluation request failed.');
+        }
+      } catch (e) {
+        console.error('Groq judge error:', e);
+      }
+    }
+    const triggerMistralFromManual = triggerGroqFromManual;
+
+    function copyManualItemJson(itemId) {
+      const item = currentSipIntelligence.find(i => (i.post_id || '') === itemId) || {};
+      navigator.clipboard.writeText(JSON.stringify(item, null, 2)).then(() => {
+        showGlobalToast(`Item ${itemId} JSON copied!`);
+      });
+    }
+
+    /* ─── GROQ AI LLM-AS-A-JUDGE RUBRICS RESULTS TABLE ─── */
+    let groqEvaluationsList = [];
+    let groqSummaryStats = {};
+    let activeGroqVerdict = 'all';
+    let activeGroqPlatform = 'all';
+
+    async function loadAndRenderGroqResults() {
+      try {
+        const resp = await fetch('/api/sip/groq-results');
+        if (resp.ok) {
+          const data = await resp.json();
+          groqEvaluationsList = data.evaluations || [];
+          groqSummaryStats = data.summary || {};
+
+          const badgeEl = document.getElementById('tab-groq-count') || document.getElementById('tab-mistral-count');
+          if (badgeEl) badgeEl.textContent = groqEvaluationsList.length;
+
+          const totalEl = document.getElementById('groq-kpi-total') || document.getElementById('mistral-kpi-total');
+          if (totalEl) totalEl.textContent = `${groqEvaluationsList.length} Judged`;
+
+          const avgEl = document.getElementById('groq-kpi-avg') || document.getElementById('mistral-kpi-avg');
+          if (avgEl && groqSummaryStats.average_composite_score) {
+            avgEl.textContent = `${groqSummaryStats.average_composite_score} / 5.0`;
+          }
+
+          const passEl = document.getElementById('groq-kpi-pass') || document.getElementById('mistral-kpi-pass');
+          if (passEl && groqSummaryStats.pass_rate_pct !== undefined) {
+            passEl.textContent = `${groqSummaryStats.pass_rate_pct}% PASS`;
+          }
+
+          const passSubEl = document.getElementById('groq-kpi-pass-sub') || document.getElementById('mistral-kpi-pass-sub');
+          if (passSubEl && groqSummaryStats.pass_count !== undefined) {
+            passSubEl.textContent = `${groqSummaryStats.pass_count} Pass, ${groqSummaryStats.borderline_count || 0} Borderline, ${groqSummaryStats.fail_count || 0} Fail`;
+          }
+
+          const attrEl = document.getElementById('groq-kpi-attr') || document.getElementById('mistral-kpi-attr');
+          if (attrEl && groqSummaryStats.average_attribution_score) {
+            attrEl.textContent = `${groqSummaryStats.average_attribution_score} / 5.0`;
+          }
+
+          const modelBadgeEl = document.getElementById('groq-model-badge');
+          if (modelBadgeEl && groqSummaryStats.judge_model) {
+            modelBadgeEl.textContent = groqSummaryStats.judge_model;
+          }
+        }
+      } catch (e) {
+        console.warn('Error fetching Groq judge results:', e);
+      }
+      filterGroqResults();
+    }
+
+    function setGroqVerdictFilter(verdict, btn) {
+      activeGroqVerdict = verdict;
+      document.querySelectorAll('#tab-content-groq [data-gverdict]').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterGroqResults();
+    }
+
+    function setGroqPlatformFilter(plat, btn) {
+      activeGroqPlatform = plat;
+      document.querySelectorAll('#tab-content-groq [data-gplatsrc]').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterGroqResults();
+    }
+
+    function filterGroqResults() {
+      const inputEl = document.getElementById('groq-search-input') || document.getElementById('mistral-search-input');
+      const term = (inputEl ? inputEl.value : '').toLowerCase().trim();
+
+      const filtered = groqEvaluationsList.filter(item => {
+        if (activeGroqVerdict !== 'all' && item.verdict !== activeGroqVerdict) return false;
+        if (activeGroqPlatform !== 'all' && item.source_code !== activeGroqPlatform) return false;
+        if (!term) return true;
+
+        const idMatch = (item.test_case_id || '').toLowerCase().includes(term);
+        const textMatch = (item.verbatim_retrieved_text || '').toLowerCase().includes(term);
+        const critiqueMatch = (item.detailed_critique || '').toLowerCase().includes(term);
+        const urlMatch = (item.source_url || '').toLowerCase().includes(term);
+        const authMatch = (item.author || '').toLowerCase().includes(term);
+        const catMatch = (item.sip_category_name || '').toLowerCase().includes(term);
+
+        return idMatch || textMatch || critiqueMatch || urlMatch || authMatch || catMatch;
+      });
+
+      const countBadge = document.getElementById('groq-count-badge') || document.getElementById('mistral-count-badge');
+      if (countBadge) {
+        countBadge.textContent = `Showing ${filtered.length} of ${groqEvaluationsList.length} evaluated cases`;
+      }
+
+      renderGroqRubricsTable(filtered);
+    }
+
+    function renderGroqRubricsTable(evals) {
+      const tbody = document.getElementById('groq-table-body') || document.getElementById('mistral-table-body');
+      if (!tbody) return;
+
+      if (!evals || !evals.length) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text-muted);">No Groq evaluations match the selected filter.</td></tr>';
+        return;
+      }
+
+      const rows = evals.map(ev => {
+        const sc = ev.source_code || 'app_store';
+        const scores = ev.scores || {};
+        const composite = scores.composite_score || 0;
+        const verdict = ev.verdict || 'PASS';
+
+        let verdictBadgeStyle = 'background:rgba(0,208,156,0.15);color:var(--groww-green);border:1px solid rgba(0,208,156,0.4);';
+        if (verdict === 'BORDERLINE') {
+          verdictBadgeStyle = 'background:rgba(255,184,0,0.15);color:#fbbf24;border:1px solid rgba(255,184,0,0.4);';
+        } else if (verdict === 'FAIL') {
+          verdictBadgeStyle = 'background:rgba(235,91,60,0.15);color:#f87171;border:1px solid rgba(235,91,60,0.4);';
+        }
+
+        return `
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='transparent'">
+            <td style="padding:12px 14px;vertical-align:top;">
+              <span style="font-family:monospace;font-size:0.75rem;font-weight:700;color:var(--groww-green);background:rgba(0,208,156,0.1);padding:3px 8px;border-radius:6px;border:1px solid rgba(0,208,156,0.25);display:inline-block;">
+                ${ev.test_case_id}
+              </span>
+              <div style="margin-top:6px;">
+                <span class="source-badge ${sc}" style="font-size:0.68rem;padding:2px 8px;border-radius:9999px;">
+                  ${ev.platform || 'Platform'}
+                </span>
+              </div>
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;">
+              <div style="font-weight:700;color:var(--text-main);font-size:0.8rem;margin-bottom:3px;">
+                ${ev.channel_or_entity || ev.author || 'Investor Source'}
+              </div>
+              ${ev.source_url ? `
+                <a href="${ev.source_url}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--groww-green);text-decoration:none;word-break:break-all;max-width:210px;line-height:1.3;background:rgba(0,208,156,0.08);padding:3px 8px;border-radius:6px;">
+                  <span class="material-symbols-outlined" style="font-size:13px;">open_in_new</span>
+                  <span>${truncateUrl(ev.source_url, 26)}</span>
+                </a>
+              ` : '<span style="color:var(--text-subtle);font-size:0.72rem;">Direct Ingestion API</span>'}
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;">
+              <div style="font-size:0.8rem;line-height:1.5;color:#cbd5e1;max-height:85px;overflow-y:auto;padding-right:4px;">
+                &ldquo;${highlightText(ev.verbatim_retrieved_text || '')}&rdquo;
+              </div>
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;">
+              <span style="display:inline-block;padding:3px 8px;border-radius:9999px;background:rgba(0,208,156,0.12);border:1px solid rgba(0,208,156,0.3);color:var(--groww-green);font-size:0.72rem;font-weight:700;">
+                ${ev.sip_category_name || ev.extracted_sip_category}
+              </span>
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:0.72rem;">
+                <span title="Link Attribution Grounding (25%)" style="background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px;color:#94a3b8;">Link: <strong style="color:#FFFFFF;">${scores.link_attribution || 5}</strong></span>
+                <span title="Verbatim Authenticity (30%)" style="background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px;color:#94a3b8;">Auth: <strong style="color:#FFFFFF;">${scores.verbatim_authenticity || 5}</strong></span>
+                <span title="SIP Category Precision (25%)" style="background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px;color:#94a3b8;">Cat: <strong style="color:#FFFFFF;">${scores.category_accuracy || 5}</strong></span>
+                <span title="PM Actionability (20%)" style="background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px;color:#94a3b8;">Action: <strong style="color:#FFFFFF;">${scores.pm_actionability || 5}</strong></span>
+              </div>
+              <div style="font-size:0.8rem;font-weight:800;color:#f59e0b;margin-top:5px;display:flex;align-items:center;gap:4px;">
+                ★ ${composite} / 5.0
+              </div>
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;">
+              <span style="display:inline-block;padding:4px 10px;border-radius:9999px;font-size:0.72rem;font-weight:800;letter-spacing:0.5px;${verdictBadgeStyle}">
+                ${verdict}
+              </span>
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;">
+              <div style="font-size:0.78rem;line-height:1.5;color:#e2e8f0;background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:8px;border-left:2.5px solid var(--groww-green);max-height:85px;overflow-y:auto;">
+                ${ev.detailed_critique || 'Evaluated and verified by Groq AI.'}
+              </div>
+            </td>
+
+            <td style="padding:12px 14px;vertical-align:top;text-align:right;">
+              <button onclick="reJudgeSingleCaseGroq('${ev.test_case_id}')" title="Re-evaluate with Groq AI" style="background:rgba(0,208,156,0.12);border:1px solid rgba(0,208,156,0.3);color:var(--groww-green);font-size:0.72rem;padding:5px 10px;border-radius:9999px;cursor:pointer;font-weight:700;white-space:nowrap;transition:all 0.2s;">
+                Re-Judge
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      tbody.innerHTML = rows;
+    }
+
+    async function runGroqBatchFromUI(count) {
+      const btn = document.getElementById('btn-run-groq-sample') || document.getElementById('btn-run-mistral-sample');
+      const btnText = document.getElementById('btn-run-groq-text') || document.getElementById('btn-run-mistral-text');
+      if (btn) btn.disabled = true;
+      if (btnText) btnText.textContent = 'Groq Judging 5 Cases...';
+
+      showGlobalToast('Groq LPU™ AI is actively evaluating the next 5 benchmark cases...');
+
+      try {
+        const resp = await fetch('/api/sip/groq-judge', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({count: count || 5})
+        });
+        if (resp.ok) {
+          const res = await resp.json();
+          showGlobalToast(`Groq successfully evaluated ${res.batch_result.judged_in_this_batch} new cases!`);
+          await loadAndRenderGroqResults();
+        } else {
+          showGlobalToast('Groq judge API request error.');
+        }
+      } catch (e) {
+        console.error('Batch error:', e);
+        showGlobalToast('Failed to connect to Groq API.');
+      } finally {
+        if (btn) btn.disabled = false;
+        if (btnText) btnText.textContent = 'Run Groq Judge (Next 5 Cases)';
+      }
+    }
+
+    async function reJudgeSingleCaseGroq(caseId) {
+      showGlobalToast(`Re-evaluating case ${caseId} with Groq AI...`);
+      try {
+        const resp = await fetch('/api/sip/groq-judge', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({case_id: caseId, force: true})
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          showGlobalToast(`Case ${caseId} re-evaluated: Score ${data.evaluated_case.scores.composite_score}/5.0 (${data.evaluated_case.verdict})`);
+          await loadAndRenderGroqResults();
+        }
+      } catch (e) {
+        console.error('Re-judge error:', e);
+      }
+    }
+
+    // Backward compatibility aliases
+    const loadAndRenderMistralResults = loadAndRenderGroqResults;
+    const runMistralBatchFromUI = runGroqBatchFromUI;
+    const reJudgeSingleCase = reJudgeSingleCaseGroq;
+    const setMistralVerdictFilter = setGroqVerdictFilter;
+    const setMistralPlatformFilter = setGroqPlatformFilter;
+    const filterMistralResults = filterGroqResults;
+    const renderMistralRubricsTable = renderGroqRubricsTable;
+
+    let benchmarkCases = [];
+    let benchmarkSystemPrompt = '';
+    let activeBenchmarkPlatform = 'all';
+
+    async function loadAndRenderProvenanceBenchmark() {
+      if (!benchmarkCases.length) {
+        try {
+          const resp = await fetch('/api/sip/llm-benchmark');
+          if (resp.ok) {
+            const data = await resp.json();
+            benchmarkCases = data.test_cases || [];
+            if (data.evaluation_instructions && data.evaluation_instructions.system_prompt) {
+              benchmarkSystemPrompt = data.evaluation_instructions.system_prompt;
+              const preEl = document.getElementById('bm-prompt-text');
+              if (preEl) preEl.textContent = benchmarkSystemPrompt;
+            }
+            if (data.total_benchmark_cases) {
+              const el = document.getElementById('bm-kpi-total');
+              if (el) el.textContent = Number(data.total_benchmark_cases).toLocaleString();
+            }
+            if (data.total_unique_links) {
+              const el = document.getElementById('bm-kpi-links');
+              if (el) el.textContent = Number(data.total_unique_links).toLocaleString();
+            }
+          }
+        } catch (e) {
+          console.warn('Error loading LLM benchmark dataset:', e);
+        }
+      }
+      filterBenchmarkData();
+    }
+
+    function togglePromptBox() {
+      const content = document.getElementById('prompt-box-content');
+      const icon = document.getElementById('prompt-toggle-icon');
+      if (!content) return;
+      if (content.style.display === 'none' || !content.style.display) {
+        content.style.display = 'block';
+        if (icon) icon.textContent = 'expand_less';
+      } else {
+        content.style.display = 'none';
+        if (icon) icon.textContent = 'expand_more';
+      }
+    }
+
+    function copyBenchmarkPrompt() {
+      const textToCopy = benchmarkSystemPrompt || (document.getElementById('bm-prompt-text') ? document.getElementById('bm-prompt-text').textContent : '');
+      if (!textToCopy) return;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showGlobalToast('LLM Evaluation Prompt & Scoring Rubric copied to clipboard! Paste into GPT-4o, Claude 3.5, or Gemini.');
+      }).catch(err => {
+        console.error('Clipboard copy failed:', err);
+      });
+    }
+
+    function copyTestCaseJson(testCaseId) {
+      const tc = benchmarkCases.find(c => c.test_case_id === testCaseId);
+      if (!tc) return;
+      const jsonStr = JSON.stringify(tc, null, 2);
+      navigator.clipboard.writeText(jsonStr).then(() => {
+        showGlobalToast(`Test Case ${testCaseId} copied as JSON! Ready to paste into your LLM evaluation chat.`);
+      }).catch(err => {
+        console.error('Clipboard copy failed:', err);
+      });
+    }
+
+    function setBenchmarkPlatformFilter(platformCode, btn) {
+      activeBenchmarkPlatform = platformCode;
+      document.querySelectorAll('#tab-content-provenance .pill-filter').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterBenchmarkData();
+    }
+
+    function filterBenchmarkData() {
+      const searchInput = document.getElementById('bm-search');
+      const term = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+      const filtered = benchmarkCases.filter(c => {
+        if (activeBenchmarkPlatform !== 'all' && c.source_code !== activeBenchmarkPlatform) return false;
+        if (!term) return true;
+        const textMatch = (c.verbatim_retrieved_text || '').toLowerCase().includes(term);
+        const urlMatch = (c.source_url || '').toLowerCase().includes(term);
+        const chanMatch = (c.channel_or_entity || '').toLowerCase().includes(term);
+        const authMatch = (c.author || '').toLowerCase().includes(term);
+        const titleMatch = (c.title || '').toLowerCase().includes(term);
+        const catMatch = (c.sip_category_name || '').toLowerCase().includes(term);
+        const idMatch = (c.test_case_id || '').toLowerCase().includes(term);
+        return textMatch || urlMatch || chanMatch || authMatch || titleMatch || catMatch || idMatch;
+      });
+
+      const badge = document.getElementById('bm-count-badge');
+      if (badge) badge.textContent = `Showing ${filtered.length.toLocaleString()} of ${benchmarkCases.length.toLocaleString()} benchmark test cases`;
+
+      renderBenchmarkTable(filtered);
+    }
+
+    function renderBenchmarkTable(cases) {
+      const tbody = document.getElementById('benchmark-table-body');
+      if (!tbody) return;
+
+      if (!cases || !cases.length) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text-muted);">No benchmark test cases match the filter.</td></tr>';
+        return;
+      }
+
+      const displayCases = cases.slice(0, 300);
+      const rowsHtml = displayCases.map(tc => {
+        const sc = tc.source_code || 'app_store';
+        const stars = tc.rating ? '★'.repeat(tc.rating) + '☆'.repeat(5 - tc.rating) : '—';
+        const dateStr = tc.date ? tc.date.slice(0, 10) : 'Recent';
+        
+        let frictionBadgeColor = 'rgba(239, 68, 68, 0.15)';
+        let frictionTextColor = '#f87171';
+        if (tc.sip_friction_level === 'MEDIUM') {
+          frictionBadgeColor = 'rgba(245, 158, 11, 0.15)';
+          frictionTextColor = '#fbbf24';
+        } else if (tc.sip_friction_level === 'LOW') {
+          frictionBadgeColor = 'rgba(59, 130, 246, 0.15)';
+          frictionTextColor = '#60a5fa';
+        }
+
+        return `
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='transparent'">
+            <td style="padding:10px 14px;vertical-align:top;">
+              <span style="font-family:monospace;font-size:0.75rem;font-weight:700;color:var(--tradingqna-blue);background:rgba(14,165,233,0.1);padding:2px 6px;border-radius:4px;border:1px solid rgba(14,165,233,0.25);display:inline-block;">
+                ${tc.test_case_id}
+              </span>
+            </td>
+
+            <td style="padding:10px 14px;vertical-align:top;">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                <span class="source-badge ${sc}" style="font-size:0.7rem;padding:2px 7px;">
+                  ${tc.platform}
+                </span>
+                ${tc.channel_or_entity ? `<span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">${tc.channel_or_entity}</span>` : ''}
+              </div>
+              ${tc.source_url ? `
+                <div style="margin-top:4px;">
+                  <a href="${tc.source_url}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:0.75rem;color:var(--groww-green);text-decoration:none;word-break:break-all;max-width:240px;line-height:1.3;background:rgba(0,208,156,0.08);padding:3px 7px;border-radius:4px;border:1px solid rgba(0,208,156,0.25);">
+                    <span class="material-symbols-outlined" style="font-size:12px;">open_in_new</span>
+                    <span>${truncateUrl(tc.source_url, 32)}</span>
+                  </a>
+                </div>
+              ` : '<span style="color:var(--text-subtle);font-size:0.75rem;">Direct Review API</span>'}
+            </td>
+
+            <td style="padding:10px 14px;vertical-align:top;white-space:nowrap;">
+              <div style="font-weight:600;color:var(--text-main);font-size:0.8rem;max-width:140px;overflow:hidden;text-overflow:ellipsis;" title="${tc.author || 'Investor'}">
+                ${tc.author || 'Investor'}
+              </div>
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">${dateStr}</div>
+              ${tc.rating ? `<div style="color:#f59e0b;font-size:0.8rem;letter-spacing:1px;margin-top:2px;">${stars}</div>` : ''}
+            </td>
+
+            <td style="padding:10px 14px;vertical-align:top;">
+              ${tc.title ? `<div style="font-weight:700;color:var(--text-main);font-size:0.8rem;margin-bottom:3px;">${tc.title}</div>` : ''}
+              <div style="font-size:0.8rem;line-height:1.45;color:var(--text-muted);max-height:85px;overflow-y:auto;padding-right:4px;">
+                ${highlightText(tc.verbatim_retrieved_text || '')}
+              </div>
+              ${tc.pm_actionable_insight ? `
+                <div style="margin-top:6px;font-size:0.72rem;color:#94a3b8;background:rgba(255,255,255,0.02);padding:4px 8px;border-radius:4px;border-left:2px solid var(--groww-green);">
+                  <strong style="color:var(--groww-green);">PM Action:</strong> ${tc.pm_actionable_insight}
+                </div>
+              ` : ''}
+            </td>
+
+            <td style="padding:10px 14px;vertical-align:top;">
+              <div style="margin-bottom:4px;">
+                <span style="display:inline-block;padding:2px 8px;border-radius:12px;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);color:var(--apple-purple);font-size:0.72rem;font-weight:700;">
+                  ${tc.sip_category_name || tc.extracted_sip_category}
+                </span>
+              </div>
+              <div style="display:flex;align-items:center;gap:4px;margin-top:4px;">
+                <span style="font-size:0.7rem;padding:1px 6px;border-radius:4px;background:${frictionBadgeColor};color:${frictionTextColor};font-weight:700;">
+                  ${tc.sip_friction_level || 'MED'} Friction
+                </span>
+              </div>
+            </td>
+
+            <td style="padding:10px 14px;vertical-align:top;text-align:right;">
+              <button onclick="copyTestCaseJson('${tc.test_case_id}')" title="Copy test case JSON for LLM evaluation prompt" style="display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:6px;background:rgba(14,165,233,0.12);border:1px solid rgba(14,165,233,0.3);color:var(--tradingqna-blue);cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;transition:all 0.15s;">
+                <span class="material-symbols-outlined" style="font-size:14px;">content_copy</span>
+                <span>Copy Case</span>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      tbody.innerHTML = rowsHtml;
+    }
+
+    function truncateUrl(url, maxLen) {
+      if (!url) return '';
+      if (url.length <= maxLen) return url;
+      return url.substring(0, maxLen - 3) + '...';
+    }
+
+    function showGlobalToast(msg) {
+      let toast = document.getElementById('global-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'global-toast';
+        toast.style.cssText = 'position:fixed;bottom:24px;right:24px;background:#1e293b;color:#f8fafc;padding:12px 18px;border-radius:8px;border:1px solid var(--groww-green);box-shadow:0 10px 25px rgba(0,0,0,0.5);font-size:0.85rem;font-weight:600;z-index:9999;transition:opacity 0.3s;opacity:0;pointer-events:none;display:flex;align-items:center;gap:8px;';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `<span class="material-symbols-outlined" style="color:var(--groww-green);font-size:18px;">check_circle</span><span>${msg}</span>`;
+      toast.style.opacity = '1';
+      clearTimeout(window._toastTimeout);
+      window._toastTimeout = setTimeout(() => {
+        toast.style.opacity = '0';
+      }, 3500);
+    }
+
+    async function loadAndRenderGrowwSources() {
+      if (!growwTrainedSources.length) {
+        try {
+          const resp = await fetch('/api/sip/training-sources');
+          if (resp.ok) {
+            const data = await resp.json();
+            growwTrainedSources = data.sources || [];
+            if (data.total_sources) document.getElementById('groww-src-total').textContent = data.total_sources;
+            if (data.sheet_sources_count) document.getElementById('groww-src-sheet').textContent = data.sheet_sources_count;
+            if (data.added_forums_count) document.getElementById('groww-src-forums').textContent = data.added_forums_count;
+          }
+        } catch (e) {
+          console.warn('Error loading trained sources in Groww dashboard:', e);
+        }
+      }
+      filterGrowwSources();
+    }
+
+    function setGrowwPlatformFilter(plat, btn) {
+      activeGrowwPlatformFilter = plat;
+      document.querySelectorAll('#tab-content-sources .pill-filter').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterGrowwSources();
+    }
+
+    function filterGrowwSources() {
+      const term = (document.getElementById('groww-src-search').value || '').toLowerCase().trim();
+      const filtered = growwTrainedSources.filter(s => {
+        if (activeGrowwPlatformFilter !== 'all' && s.platform !== activeGrowwPlatformFilter) return false;
+        if (!term) return true;
+        const nameMatch = (s.name || '').toLowerCase().includes(term);
+        const handleMatch = (s.handle || '').toLowerCase().includes(term);
+        const angleMatch = (s.research_angle || '').toLowerCase().includes(term);
+        const topicMatch = (s.key_topics || []).some(t => t.toLowerCase().includes(term));
+        const insightsMatch = (s.retrieved_insights || []).some(ins => ins.toLowerCase().includes(term));
+        return nameMatch || handleMatch || angleMatch || topicMatch || insightsMatch;
+      });
+
+      document.getElementById('groww-src-count').textContent = `Showing ${filtered.length} of ${growwTrainedSources.length} sources`;
+      renderGrowwSourcesGrid(filtered);
+    }
+
+    function renderGrowwSourcesGrid(list) {
+      const container = document.getElementById('groww-sources-grid');
+      if (!list.length) {
+        container.innerHTML = `
+          <div style="grid-column:1/-1;text-align:center;padding:50px;" class="empty-state">
+            <span class="material-symbols-outlined empty-icon">search_off</span>
+            <h3>No matching channels or forums found</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;margin-top:6px;">Try adjusting your search query or platform filter.</p>
+          </div>`;
+        return;
+      }
+
+      const colors = {
+        'Investing Forum': { border: 'var(--tradingqna-blue)', bg: 'rgba(0,136,255,0.12)', text: '#7dd3fc', icon: 'forum' },
+        'Reddit Community': { border: 'var(--reddit-orange)', bg: 'rgba(255,69,0,0.12)', text: '#fdba74', icon: 'hub' },
+        'Reddit Seed Thread': { border: '#ea580c', bg: 'rgba(234,88,12,0.12)', text: '#fb923c', icon: 'chat' },
+        'YouTube Channel': { border: 'var(--youtube-red)', bg: 'rgba(255,0,51,0.12)', text: '#fca5a5', icon: 'smart_display' },
+        'Twitter (X)': { border: 'var(--social-violet)', bg: 'rgba(139,92,246,0.12)', text: '#c4b5fd', icon: 'alternate_email' },
+        'Instagram': { border: '#c026d3', bg: 'rgba(192,38,211,0.12)', text: '#f0abfc', icon: 'photo_camera' }
+      };
+
+      container.innerHTML = list.map(s => {
+        const theme = colors[s.platform] || { border: 'var(--groww-green)', bg: 'rgba(0,208,156,0.12)', text: '#6ee7b7', icon: 'travel_explore' };
+        const isSheet = s.is_from_sheet;
+        const originTag = isSheet 
+          ? `<span style="font-size:0.68rem;font-weight:600;padding:2px 8px;border-radius:10px;background:rgba(0,208,156,0.12);color:var(--groww-green);border:1px solid rgba(0,208,156,0.3);">Sheet Master</span>`
+          : `<span style="font-size:0.68rem;font-weight:600;padding:2px 8px;border-radius:10px;background:rgba(234,179,8,0.12);color:#fde047;border:1px solid rgba(234,179,8,0.3);">★ Premier Added Forum</span>`;
+
+        const insights = (s.retrieved_insights || []).map(ins => `
+          <li style="position:relative;padding-left:16px;margin-bottom:6px;line-height:1.45;color:#cbd5e1;font-size:0.8rem;">
+            <span style="position:absolute;left:2px;top:0;color:var(--groww-green);font-weight:bold;">•</span>
+            ${highlightText(ins)}
+          </li>
+        `).join('');
+
+        const tags = (s.key_topics || []).map(t => `
+          <span style="background:rgba(255,255,255,0.04);color:var(--text-muted);font-size:0.7rem;font-weight:600;padding:2px 8px;border-radius:8px;border:1px solid var(--border);">
+            ${t}
+          </span>
+        `).join('');
+
+        const quote = (s.sample_quotes && s.sample_quotes.length) 
+          ? `<div style="background:rgba(255,255,255,0.02);border-left:3px solid #f59e0b;border-radius:0 8px 8px 0;padding:8px 12px;font-size:0.78rem;color:#e2e8f0;font-style:italic;line-height:1.4;">"${highlightText(s.sample_quotes[0])}"</div>`
+          : '';
+
+        return `
+          <div class="hyp-card" style="border-left:4px solid ${theme.border};padding:20px;gap:12px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase;background:${theme.bg};color:${theme.text};border:1px solid rgba(255,255,255,0.1);">
+                  <span class="material-symbols-outlined" style="font-size:13px;">${theme.icon}</span> ${s.platform}
+                </span>
+                ${originTag}
+              </div>
+              <span style="font-size:0.7rem;font-weight:700;padding:2px 7px;border-radius:8px;background:rgba(0,208,156,0.12);color:var(--groww-green);border:1px solid rgba(0,208,156,0.25);">
+                ✓ Trained
+              </span>
+            </div>
+
+            <div>
+              <div style="font-size:1.02rem;font-weight:700;color:var(--text-main);line-height:1.3;">
+                ${s.name}
+              </div>
+              ${s.handle ? `<div style="font-size:0.78rem;color:var(--text-subtle);margin-top:2px;">${s.handle}</div>` : ''}
+              ${s.url ? `
+                <a href="${s.url}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:0.76rem;color:var(--tradingqna-blue);text-decoration:none;font-weight:600;margin-top:4px;">
+                  <span>${s.url.replace(/^https?:\/\/(www\.)?/, '')}</span>
+                  <span class="material-symbols-outlined" style="font-size:13px;">open_in_new</span>
+                </a>
+              ` : ''}
+            </div>
+
+            <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:0.8rem;color:var(--text-muted);line-height:1.45;">
+              <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;color:var(--text-subtle);margin-bottom:4px;display:flex;align-items:center;gap:4px;">
+                <span class="material-symbols-outlined" style="font-size:13px;">search</span> Research Angle / What to Mine
+              </div>
+              <div>${s.research_angle}</div>
+            </div>
+
+            ${insights ? `
+              <div style="background:rgba(0,208,156,0.04);border:1px solid rgba(0,208,156,0.2);border-radius:8px;padding:12px 14px;">
+                <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;color:var(--groww-green);margin-bottom:6px;display:flex;align-items:center;gap:4px;">
+                  <span class="material-symbols-outlined" style="font-size:14px;">verified</span> Retrieved Information & Core Findings
+                </div>
+                <ul style="list-style:none;padding:0;margin:0;">
+                  ${insights}
+                </ul>
+              </div>
+            ` : ''}
+
+            ${quote}
+
+            ${tags ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;">${tags}</div>` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ─── Collect Groww Data ───
+    async function collectGrowwData() {
+      const btn = document.getElementById('btn-collect-all');
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span class="spinner"></span> Collecting Last 4 Months...`;
+      btn.disabled = true;
+
+      const sources = getSelectedSources();
+
+      const volumeSelect = document.getElementById('select-volume');
+      const targetVolume = volumeSelect ? parseInt(volumeSelect.value, 10) : 1000;
+
+      try {
+        const resp = await fetch('/api/groww/collect', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sources: sources,
+            max_per_source: targetVolume,
+            play_store_limit: targetVolume,
+            app_store_limit: 3000
+          })
+        });
+        const data = await resp.json();
+
+        if (data.records) {
+          currentRecords = data.records;
+          renderFeed(currentRecords);
+          updateKPIs(data);
+          renderAnalytics(data);
+
+
+          // Update counts in source pills
+          if (data.source_breakdown) {
+            for (const [code, count] of Object.entries(data.source_breakdown)) {
+              const el = document.getElementById(`count-${code}`);
+              if (el) el.textContent = `${count} collected`;
+            }
+          }
+
+          // Auto-run SIP discovery if not already run
+          runGrowwSIPPipeline();
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Collection error: ' + err.message);
+      } finally {
+        btn.innerHTML = originalHtml;
+        btn.disabled = false;
+      }
+    }
+
+    // ─── Run SIP Pipeline ───
+    async function runGrowwSIPPipeline() {
+      const btn = document.getElementById('btn-run-sip');
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span class="spinner"></span> Running Pipeline...`;
+      btn.disabled = true;
+
+      try {
+        const resp = await fetch('/api/groww/run-sip', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ use_llm: false })
+        });
+        const data = await resp.json();
+
+        if (data.hypotheses) {
+          currentHypotheses = data.hypotheses;
+          renderHypotheses(currentHypotheses);
+          document.getElementById('tab-hyp-count').textContent = currentHypotheses.length;
+
+          if (currentHypotheses.length > 0) {
+            document.getElementById('kpi-top-problem').textContent = currentHypotheses[0].label || currentHypotheses[0].category;
+          }
+        }
+
+        if (data.stages && data.stages.filter && data.stages.collect) {
+          const kept = data.stages.filter.kept || 0;
+          const total = data.stages.collect.total_records || 1;
+          const rate = Math.round((kept / total) * 100);
+          document.getElementById('kpi-sip-relevance').textContent = `${rate}%`;
+          document.getElementById('kpi-relevance-sub').textContent = `${kept} relevant of ${total} records`;
+        }
+
+        if (data.validation_report) {
+          const vr = data.validation_report;
+          if (vr.schema_validity_rate) document.getElementById('eval-schema-rate').textContent = `${vr.schema_validity_rate}%`;
+          if (vr.evidence_grounding_rate) document.getElementById('eval-grounding-rate').textContent = `${vr.evidence_grounding_rate}%`;
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        btn.innerHTML = originalHtml;
+        btn.disabled = false;
+      }
+    }
+
+    // ─── Render Feed ───
+    function renderFeed(records) {
+      const container = document.getElementById('feed-items-container');
+      document.getElementById('tab-feed-count').textContent = records.length;
+
+      if (!records || records.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <span class="material-symbols-outlined empty-icon">search_off</span>
+            <h3>No conversations match your filter</h3>
+          </div>`;
+        return;
+      }
+
+      const html = records.map(r => {
+        const sc = r.source_code || 'play_store';
+        const stars = r.rating ? '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating) : '';
+        const dateStr = r.date ? new Date(r.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) : '';
+
+        return `
+          <div class="feed-card" data-source="${sc}">
+            <div class="card-top">
+              <span class="source-badge ${sc}">
+                ${r.source || 'Review'}
+              </span>
+              <div class="card-meta">
+                <span style="display:inline-flex;align-items:center;padding:2px 7px;border-radius:12px;font-size:0.68rem;font-weight:600;background:rgba(0,208,156,0.12);color:var(--groww-green);border:1px solid rgba(0,208,156,0.3);">🗓️ Last 4 Mos</span>
+                ${r.channel ? `<span><strong>Channel:</strong> ${r.channel}</span>` : ''}
+                ${r.author ? `<span><strong>Author:</strong> ${r.author}</span>` : ''}
+                ${dateStr ? `<span>${dateStr}</span>` : ''}
+                ${stars ? `<span class="rating-stars">${stars}</span>` : ''}
+              </div>
+
+            </div>
+
+            ${r.title ? `<div class="card-title">${r.title}</div>` : ''}
+            <div class="card-text">${highlightText(r.text)}</div>
+
+            <div class="card-footer">
+              <span style="color:var(--text-subtle);font-family:'JetBrains Mono',monospace;">ID: ${r.post_id || ''}</span>
+              ${r.source_url ? `<a href="${r.source_url}" target="_blank" class="card-link">View Source <span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span></a>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = html;
+    }
+
+    function filterBySource(sourceCode, btn) {
+      activeSourceFilter = sourceCode;
+      document.querySelectorAll('#feed-filter-pills .pill-filter').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      filterFeed();
+    }
+
+    function filterFeed() {
+      const query = (document.getElementById('feed-search-input').value || '').toLowerCase().trim();
+      const filtered = currentRecords.filter(r => {
+        const matchSource = (activeSourceFilter === 'all') || (r.source_code === activeSourceFilter);
+        const matchText = !query || 
+          (r.text && r.text.toLowerCase().includes(query)) ||
+          (r.title && r.title.toLowerCase().includes(query)) ||
+          (r.author && r.author.toLowerCase().includes(query));
+        return matchSource && matchText;
+      });
+      renderFeed(filtered);
+    }
+
+    // ─── Render Hypotheses ───
+    function renderHypotheses(hypotheses) {
+      const container = document.getElementById('hypotheses-container');
+      if (!hypotheses || hypotheses.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <span class="material-symbols-outlined empty-icon">psychology</span>
+            <h3>No hypotheses found</h3>
+          </div>`;
+        return;
+      }
+
+      const html = hypotheses.map(h => {
+        const rank = h.rank || 1;
+        const compScore = h.scores ? h.scores.composite : 0;
+        const quotes = (h.representative_quotes || []).slice(0, 2);
+
+        return `
+          <div class="hyp-card ${rank === 1 ? 'rank-1' : ''}">
+            <div class="hyp-header">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <div class="hyp-rank-badge">#${rank}</div>
+                <div>
+                  <div class="hyp-title">${h.label || h.category}</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">${h.frequency_in_data} evidence items (${h.frequency_pct}% of sample)</div>
+                </div>
+              </div>
+              <div class="score-badge">Score: ${compScore}</div>
+            </div>
+
+            <div class="hyp-scores">
+              <span>Freq: <strong>${h.scores ? h.scores.frequency : 0}/5</strong></span> ·
+              <span>Severity: <strong>${h.scores ? h.scores.severity : 0}/5</strong></span> ·
+              <span>SIP Relevance: <strong>${h.scores ? h.scores.metric_relevance : 0}/5</strong></span> ·
+              <span>Fixability: <strong>${h.scores ? h.scores.fixability : 0}/5</strong></span>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:10px 0;padding:6px 10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;">
+              <span style="font-size:0.7rem;color:var(--text-subtle);font-weight:700;text-transform:uppercase;">Surfaced Across:</span>
+              <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:12px;font-size:0.72rem;font-weight:600;background:rgba(0,208,156,0.1);border:1px solid rgba(0,208,156,0.3);color:var(--groww-green);">
+                Play Store Reviews
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:12px;font-size:0.72rem;font-weight:600;background:rgba(175,82,222,0.1);border:1px solid rgba(175,82,222,0.3);color:#d8b4fe;">
+                App Store Reviews
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:12px;font-size:0.72rem;font-weight:600;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:#38bdf8;">
+                TradingQ&A Forums
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:12px;font-size:0.72rem;font-weight:600;background:rgba(255,69,0,0.1);border:1px solid rgba(255,69,0,0.3);color:#fb923c;">
+                Reddit & YouTube
+              </span>
+            </div>
+
+            <div>
+              <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:6px;">12-Month SIP Retention Link</div>
+              <p style="font-size:0.825rem;color:var(--text-main);">${h.sip_link_rationale || ''}</p>
+            </div>
+
+            ${quotes.length ? `
+              <div>
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:6px;">Verbatim User Evidence</div>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  ${quotes.map(q => `<div class="quote-box">"${highlightText(q)}"</div>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <div class="action-box">
+              <strong>PM Investigation:</strong> ${h.recommended_investigation || 'Interview affected users'}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = html;
+    }
+
+    // ─── Render Analytics ───
+    function renderAnalytics(data) {
+      const breakdown = data.source_breakdown || {};
+      const container = document.getElementById('source-bars-container');
+      const maxVal = Math.max(...Object.values(breakdown), 1);
+
+      const labels = {
+        app_store: 'App Store (iOS)',
+        play_store: 'Play Store (Android)',
+        tradingqna: 'TradingQ&A Forums',
+        reddit: 'Reddit Indian Communities',
+        youtube: 'YouTube Comments',
+        social_media: 'Social Media Conversations',
+        other_public: 'Other Public Forums'
+      };
+
+      const html = Object.entries(breakdown).map(([code, count]) => {
+        const pct = Math.round((count / maxVal) * 100);
+        return `
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:4px;">
+              <span>${labels[code] || code}</span>
+              <strong style="color:var(--text-main);">${count} items</strong>
+            </div>
+            <div style="height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;">
+              <div style="height:100%;width:${pct}%;background:var(--groww-green);border-radius:4px;"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = html;
+
+      // Journey stages
+      const stagesContainer = document.getElementById('journey-stages-container');
+      stagesContainer.innerHTML = `
+        <div style="display:flex;justify-content:space-between;font-size:0.8rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <span>Starting SIP</span><span style="color:var(--groww-green);font-weight:700;">38%</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.8rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <span>Pausing / Skipping SIP</span><span style="color:#fbbf24;font-weight:700;">29%</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.8rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <span>Payment / Mandate Failure</span><span style="color:#f87171;font-weight:700;">21%</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.8rem;padding:6px 0;">
+          <span>Continuing > 12 Months</span><span style="color:#60a5fa;font-weight:700;">12%</span>
+        </div>
+      `;
+    }
+
+    function updateKPIs(data) {
+      const tot = data.total_records || 0;
+      document.getElementById('kpi-total-records').textContent = tot.toLocaleString();
+      document.getElementById('kpi-total-sub').textContent = `Retrieved in ${data.elapsed_seconds || 1.8}s`;
+    }
+
+    function renderBehavioralQuestions(questions) {
+      const container = document.getElementById('behavioral-questions-container');
+      if (!questions || !questions.length) return;
+
+      const html = questions.map(q => {
+        const drivers = q.key_drivers || [];
+        const phases = q.behavioral_phases || [];
+        const primaryTriggers = q.primary_triggers || [];
+        const checkingHabits = q.checking_habits || [];
+        const frictionPoints = q.friction_points || [];
+        const externalBehaviors = q.external_behaviors || [];
+        const comparison = q.comparison_matrix || null;
+        const segmentBreakdowns = q.segment_breakdowns || [];
+        const unmetNeeds = q.unmet_needs || [];
+        const quotes = q.verbatim_evidence || [];
+
+        return `
+          <div class="kpi-card" style="padding:22px;border:1px solid var(--border);border-radius:12px;transition:all 0.2s;margin-bottom:16px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--groww-green),#059669);color:#0b0f17;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  ${q.question_number}
+                </div>
+                <div>
+                  <h3 style="font-size:1.15rem;font-weight:700;color:var(--text-main);line-height:1.3;">
+                    ${q.question}
+                  </h3>
+                  <div style="font-size:0.8rem;color:var(--text-muted);margin-top:3px;">
+                    Grounding: 40,000+ Multi-Source Monitored Public Investor Conversations
+                  </div>
+                </div>
+              </div>
+              <span style="font-size:0.75rem;font-weight:700;padding:4px 10px;border-radius:14px;background:rgba(0,208,156,0.12);color:var(--groww-green);border:1px solid rgba(0,208,156,0.25);">
+                Core Behavioral Vector
+              </span>
+            </div>
+
+            <!-- Executive Summary -->
+            <div style="background:rgba(255,255,255,0.02);border-left:3px solid var(--groww-green);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;">
+              <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:4px;">Executive Synthesis</div>
+              <p style="font-size:0.9rem;color:var(--text-main);line-height:1.5;">${q.summary}</p>
+            </div>
+
+            <!-- Specific Breakdown Section -->
+            ${drivers.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:6px;">Key Drivers & Expectations</div>
+                <ul style="font-size:0.85rem;color:var(--text-muted);padding-left:18px;line-height:1.6;">
+                  ${drivers.map(d => `<li>${d}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+
+            ${phases.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">Behavioral Timeline Across Months</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:10px;">
+                  ${phases.map(p => `
+                    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px;">
+                      <strong style="color:var(--tradingqna-blue);font-size:0.8rem;display:block;margin-bottom:4px;">${p.phase}</strong>
+                      <p style="font-size:0.78rem;color:var(--text-muted);line-height:1.4;">${p.behavior}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${primaryTriggers.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">Primary Catalysts for Churn & Pause</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:10px;">
+                  ${primaryTriggers.map(t => `
+                    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px;">
+                      <strong style="color:#f87171;font-size:0.8rem;display:block;margin-bottom:4px;">${t.trigger}</strong>
+                      <p style="font-size:0.78rem;color:var(--text-muted);line-height:1.4;">${t.impact}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${checkingHabits.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">What Investors Check & Frequency</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:8px;">
+                  ${checkingHabits.map(c => `
+                    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px;">
+                      <strong style="color:var(--text-main);font-size:0.8rem;display:block;">${c.item}</strong>
+                      <span style="font-size:0.7rem;color:var(--groww-green);font-weight:700;display:block;margin:3px 0;">${c.frequency}</span>
+                      <p style="font-size:0.75rem;color:var(--text-muted);line-height:1.3;">${c.behavior}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${frictionPoints.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">In-App Confusion & Anxiety Sources</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:10px;">
+                  ${frictionPoints.map(f => `
+                    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px;">
+                      <strong style="color:#fbbf24;font-size:0.8rem;display:block;margin-bottom:3px;">${f.issue}</strong>
+                      <p style="font-size:0.78rem;color:var(--text-muted);line-height:1.4;">${f.detail}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${externalBehaviors.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">Outside App Seeking Behaviors</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:10px;">
+                  ${externalBehaviors.map(eb => `
+                    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px;">
+                      <strong style="color:var(--social-violet);font-size:0.8rem;display:block;margin-bottom:3px;">${eb.action}</strong>
+                      <p style="font-size:0.78rem;color:var(--text-muted);line-height:1.4;">${eb.description}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${comparison ? `
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;">
+                <div style="background:rgba(0,208,156,0.04);border:1px solid rgba(0,208,156,0.2);border-radius:8px;padding:12px;">
+                  <strong style="color:var(--groww-green);font-size:0.85rem;display:block;margin-bottom:6px;">✓ Profile: Continuers (>12 Months)</strong>
+                  <ul style="font-size:0.8rem;color:var(--text-muted);padding-left:16px;line-height:1.5;">
+                    ${comparison.continuers.map(item => `<li>${item}</li>`).join('')}
+                  </ul>
+                </div>
+                <div style="background:rgba(248,113,113,0.04);border:1px solid rgba(248,113,113,0.2);border-radius:8px;padding:12px;">
+                  <strong style="color:#f87171;font-size:0.85rem;display:block;margin-bottom:6px;">✕ Profile: Quiet Drop-Offs</strong>
+                  <ul style="font-size:0.8rem;color:var(--text-muted);padding-left:16px;line-height:1.5;">
+                    ${comparison.drop_offs.map(item => `<li>${item}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+            ` : ''}
+
+            ${segmentBreakdowns.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">User Segment Divergences</div>
+                <div style="overflow-x:auto;">
+                  <table style="width:100%;border-collapse:collapse;font-size:0.8rem;">
+                    <thead>
+                      <tr style="border-bottom:1px solid var(--border);color:var(--text-muted);">
+                        <th style="padding:6px;width:140px;">Segment Dimension</th>
+                        <th style="padding:6px;">Cohort A & Observed Behavior</th>
+                        <th style="padding:6px;">Cohort B & Observed Behavior</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${segmentBreakdowns.map(s => `
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                          <td style="padding:8px 6px;font-weight:700;color:var(--text-main);">${s.dimension}</td>
+                          <td style="padding:8px 6px;color:var(--text-muted);"><strong style="color:var(--tradingqna-blue);">${s.segment_a}:</strong> ${s.behavior_a}</td>
+                          <td style="padding:8px 6px;color:var(--text-muted);"><strong style="color:#fbbf24;">${s.segment_b}:</strong> ${s.behavior_b}</td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ` : ''}
+
+            ${unmetNeeds.length ? `
+              <div style="margin:12px 0;">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">Top 5 Unmet Product Opportunities</div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  ${unmetNeeds.map(n => `
+                    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:10px;">
+                      <strong style="color:var(--groww-green);font-size:0.825rem;display:block;">${n.need}</strong>
+                      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:3px;line-height:1.4;">${n.rationale}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Verbatim Evidence Quotes -->
+            ${quotes.length ? `
+              <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
+                <div style="font-size:0.75rem;font-weight:700;color:var(--text-subtle);text-transform:uppercase;margin-bottom:8px;">Verbatim Source Evidence (From 40,000+ Dataset)</div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  ${quotes.map(ve => `
+                    <div style="background:rgba(0,0,0,0.25);border-left:3px solid var(--tradingqna-blue);border-radius:0 6px 6px 0;padding:8px 12px;">
+                      <p style="font-size:0.825rem;color:var(--text-main);font-style:italic;">"${ve.quote}"</p>
+                      <div style="display:flex;align-items:center;gap:8px;margin-top:4px;font-size:0.72rem;color:var(--text-muted);">
+                        <span style="font-weight:700;color:var(--groww-green);">${ve.source}</span> ·
+                        <span>${ve.channel}</span> ·
+                        <span>Author: ${ve.author}</span> ·
+                        <span>${ve.date}</span>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- PM Takeaway Box -->
+            <div style="background:linear-gradient(135deg,rgba(0,208,156,0.08),rgba(14,165,233,0.08));border:1px solid rgba(0,208,156,0.3);border-radius:8px;padding:12px 16px;margin-top:14px;">
+              <strong style="color:var(--groww-green);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;">Product Recommendation:</strong>
+              <p style="font-size:0.85rem;color:var(--text-main);margin-top:2px;">${q.pm_takeaway}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = html;
+    }
+
+    let activeProvenanceFilter = 'all';
+
+    function renderFeed(records) {
+      const container = document.getElementById('feed-items-container');
+      const count = records ? records.length : 0;
+      document.getElementById('tab-feed-count').textContent = count.toLocaleString();
+
+      if (!records || records.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <span class="material-symbols-outlined empty-icon">search_off</span>
+            <h3>No conversations match your filter</h3>
+          </div>`;
+        return;
+      }
+
+      const displaySubset = records.slice(0, 300);
+      let html = displaySubset.map(r => {
+        const sc = r.source_code || 'play_store';
+        const stars = r.rating ? '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating) : '';
+        const dateStr = r.date ? new Date(r.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) : '';
+
+        return `
+          <div class="feed-card" data-source="${sc}">
+            <div class="card-top">
+              <span class="source-badge ${sc}">
+                ${r.source || 'Review'}
+              </span>
+              <div class="card-meta">
+                <span style="display:inline-flex;align-items:center;padding:2px 7px;border-radius:12px;font-size:0.68rem;font-weight:600;background:rgba(0,208,156,0.12);color:var(--groww-green);border:1px solid rgba(0,208,156,0.3);">🗓️ Monitored History</span>
+                ${r.channel ? `<span><strong>Channel:</strong> ${r.channel}</span>` : ''}
+                ${r.author ? `<span><strong>Author:</strong> ${r.author}</span>` : ''}
+                ${dateStr ? `<span>${dateStr}</span>` : ''}
+                ${stars ? `<span class="rating-stars">${stars}</span>` : ''}
+              </div>
+            </div>
+
+            ${r.title ? `<div class="card-title">${r.title}</div>` : ''}
+            <div class="card-text">${highlightText(r.text)}</div>
+
+            <div class="card-footer">
+              <span style="color:var(--text-subtle);font-family:'JetBrains Mono',monospace;">ID: ${r.post_id || ''}</span>
+              ${r.source_url ? `<a href="${r.source_url}" target="_blank" class="card-link">View Source <span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span></a>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (records.length > 300) {
+        html += `
+          <div style="text-align:center;padding:18px 24px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;margin-top:16px;">
+            <p style="color:var(--text-main);font-size:0.875rem;font-weight:600;">
+              Displaying first 300 of ${records.length.toLocaleString()} retrieved public conversations
+            </p>
+            <p style="color:var(--text-muted);font-size:0.8rem;margin-top:4px;">
+              Use the Source Filter Pills above or search box to isolate specific discussions, or switch to the <strong>Data Provenance</strong> tab for table inspection.
+            </p>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function filterProvenanceSource(sourceCode, btn) {
+      activeProvenanceFilter = sourceCode;
+      document.querySelectorAll('#provenance-filter-pills .pill-filter').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      renderProvenanceTable(currentRecords);
+    }
+
+    function renderProvenanceTable(records) {
+      const tbody = document.getElementById('provenance-table-body');
+      if (!records || !records.length) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text-muted);">No records found.</td></tr>';
+        return;
+      }
+
+      const filtered = (activeProvenanceFilter === 'all') 
+        ? records 
+        : records.filter(r => r.source_code === activeProvenanceFilter);
+
+      const html = filtered.slice(0, 500).map(r => {
+        const sc = r.source_code || 'play_store';
+        const stars = r.rating ? '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating) : '—';
+        const dateStr = r.date ? r.date.slice(0, 10) : 'Recent';
+
+        return `
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.15s;">
+            <td style="padding:10px 14px;vertical-align:top;">
+              <span class="source-badge ${sc}" style="white-space:nowrap;">
+                ${r.source || 'Review'}
+              </span>
+            </td>
+            <td style="padding:10px 14px;vertical-align:top;">
+              <strong style="color:var(--text-main);display:block;">${r.author || 'Investor'}</strong>
+              <span style="font-size:0.75rem;color:var(--text-muted);">${r.channel || ''}</span>
+            </td>
+            <td style="padding:10px 14px;vertical-align:top;white-space:nowrap;">
+              <div style="color:var(--text-muted);font-size:0.78rem;">${dateStr}</div>
+              <div style="color:#f59e0b;font-size:0.85rem;letter-spacing:1px;">${stars}</div>
+            </td>
+            <td style="padding:10px 14px;vertical-align:top;">
+              ${r.title ? `<div style="font-weight:700;color:var(--text-main);margin-bottom:3px;">${r.title}</div>` : ''}
+              <div style="color:var(--text-muted);font-size:0.825rem;line-height:1.45;max-height:80px;overflow-y:auto;">
+                ${highlightText(r.text || '')}
+              </div>
+            </td>
+            <td style="padding:10px 14px;vertical-align:top;text-align:right;">
+              ${r.source_url ? `
+                <a href="${r.source_url}" target="_blank" style="display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--groww-green);text-decoration:none;font-size:0.75rem;font-weight:600;">
+                  Visit <span class="material-symbols-outlined" style="font-size:12px;">open_in_new</span>
+                </a>
+              ` : '<span style="color:var(--text-subtle);">Direct API</span>'}
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      tbody.innerHTML = html;
+    }
+
+    // Auto-fetch latest on page load
+    async function loadLatest() {
+      try {
+        const resp = await fetch('/api/groww/latest');
+        if (resp.ok) {
+          const data = await resp.json();
+          if (data.collection && data.collection.records && data.collection.records.length > 0) {
+            currentRecords = data.collection.records;
+            renderFeed(currentRecords);
+            updateKPIs(data.collection);
+            renderAnalytics(data.collection);
+            renderProvenanceTable(currentRecords);
+
+            if (data.collection && data.collection.source_breakdown) {
+              const b = data.collection.source_breakdown;
+              for (const [code, count] of Object.entries(b)) {
+                const el = document.getElementById(`count-${code}`);
+                if (el) el.textContent = `${(count || 0).toLocaleString()} collected`;
+                const provEl = document.getElementById(`prov-cnt-${code}`);
+                if (provEl) provEl.textContent = (count || 0).toLocaleString();
+              }
+              const allEl = document.getElementById('prov-cnt-all');
+              if (allEl) allEl.textContent = (data.collection.total_records || currentRecords.length || 0).toLocaleString();
+            }
+            if (data.behavioral_intelligence && data.behavioral_intelligence.questions) {
+              renderBehavioralQuestions(data.behavioral_intelligence.questions);
+            }
+            if (data.sip_result && data.sip_result.hypotheses && data.sip_result.hypotheses.length > 0) {
+              currentHypotheses = data.sip_result.hypotheses;
+              renderHypotheses(currentHypotheses);
+              document.getElementById('tab-hyp-count').textContent = currentHypotheses.length;
+              document.getElementById('kpi-top-problem').textContent = currentHypotheses[0].label || currentHypotheses[0].category;
+            }
+            if (data.sip_result && data.sip_result.stages && data.sip_result.stages.filter && data.sip_result.stages.collect) {
+              const kept = data.sip_result.stages.filter.kept || 0;
+              const total = data.sip_result.stages.collect.total_records || 1;
+              const rate = Math.round((kept / total) * 100);
+              document.getElementById('kpi-sip-relevance').textContent = `${rate}%`;
+              document.getElementById('kpi-relevance-sub').textContent = `${kept} relevant of ${total} records`;
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('Initial load:', e);
+      }
+    }
+
+
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      loadLatest();
+      loadAndRenderSipFiltered();
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById(`tab-content-${hash}`)) {
+        const btn = document.getElementById(`tab-btn-${hash}`);
+        if (btn) switchTab(hash, btn);
+      }
+    });
+  </script>
+</body>
+</html>

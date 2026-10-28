@@ -1,0 +1,1461 @@
+{
+  "Pinterest": {
+    "2026-10-13 09:44": {
+      "sentiment": {
+        "positive": 56.0,
+        "negative": 38.0,
+        "neutral": 6.0
+      },
+      "features": {
+        "Ads and Sponsored Content": {
+          "name": "Ads and Sponsored Content",
+          "count": 10,
+          "positive_mentions": 0,
+          "negative_mentions": 10,
+          "example_quotes": [
+            "far too many ads. the video ads are the worst",
+            "now its just littered with ads",
+            "nsfw and scam ads labeled as SPONSORED"
+          ]
+        },
+        "Idea and Inspiration Discovery": {
+          "name": "Idea and Inspiration Discovery",
+          "count": 9,
+          "positive_mentions": 9,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "it gives me very good ideas for drawings",
+            "gives me ideas, memes, wallpapers, etc.",
+            "great success for all kinds of inspiration and idea collection"
+          ]
+        },
+        "AI Content and Search": {
+          "name": "AI Content and Search",
+          "count": 7,
+          "positive_mentions": 0,
+          "negative_mentions": 7,
+          "example_quotes": [
+            "ai is taking over too",
+            "get rid of all the AI garbage",
+            "it's filled with ai generated garbage and the search doesn't even work anymore"
+          ]
+        },
+        "File and Image Research": {
+          "name": "File and Image Research",
+          "count": 5,
+          "positive_mentions": 5,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "pinterest is such good files research app",
+            "it's so good I got every pic i want",
+            "I LOVE THE PICTURES"
+          ]
+        },
+        "App Stability and Performance": {
+          "name": "App Stability and Performance",
+          "count": 4,
+          "positive_mentions": 1,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "it was today not work",
+            "sometimes can't access pin that i saved",
+            "having problems while opening this app"
+          ]
+        },
+        "Account Management and Moderation": {
+          "name": "Account Management and Moderation",
+          "count": 3,
+          "positive_mentions": 0,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "My account has been suspended telling me some suspicious activity",
+            "accuse you of copy rite infringement when you pin something",
+            "profile it says user not found"
+          ]
+        },
+        "Download and Saving functionality": {
+          "name": "Download and Saving functionality",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "Unable to download on laptop, where is the button that sez download",
+            "sometimes can't access pin that i saved"
+          ]
+        },
+        "UI Design and Layout": {
+          "name": "UI Design and Layout",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "the latest update is the worst thing ever. bring back the circle icons!",
+            "something is a little off message keeps showing"
+          ]
+        },
+        "Notifications": {
+          "name": "Notifications",
+          "count": 1,
+          "positive_mentions": 0,
+          "negative_mentions": 1,
+          "example_quotes": [
+            "way too many notifications and pop-ups"
+          ]
+        }
+      },
+      "average_rating": 3.66,
+      "review_count": 50,
+      "pkg_id": "com.pinterest",
+      "meta": {
+        "title": "Pinterest",
+        "icon": "https://play-lh.googleusercontent.com/VExMwhu9Fe5kz72YnPWP6mHrNA5WfgZ-PJMnBnQmXFpLncTAOaaHtK4b8w7b2xxGxtqycDatYslVyNSLucl9QA",
+        "score": 4.252445,
+        "ratings": 11667557,
+        "installs": "1,000,000,000+",
+        "developer": "Pinterest",
+        "genre": "Lifestyle"
+      },
+      "notable_positives": [
+        "Great for creative ideas and inspiration",
+        "Aesthetic and useful images for art and outfits",
+        "User-friendly interface for mood boards"
+      ],
+      "notable_negatives": [
+        "Too many ads and pop-ups",
+        "Excessive AI-generated garbage/content",
+        "Account suspension and technical issues"
+      ],
+      "top_requested": [
+        "Option to completely opt out of AI-generated images and slop",
+        "Bring back circle icons and previous UI elements",
+        "Fix download button and saving functionality on all devices"
+      ],
+      "rating_dist": {
+        "1": 12,
+        "2": 5,
+        "3": 1,
+        "4": 2,
+        "5": 30
+      },
+      "monthly_counts": [
+        {
+          "month": "2026-10",
+          "count": 50
+        }
+      ],
+      "scorecard": {
+        "complexity": 8.5,
+        "pricing": 8.1,
+        "performance": 7.8,
+        "integration": 7.3,
+        "support": 8.1,
+        "ux": 7.3,
+        "overall": 7.9
+      },
+      "painpoints": [
+        {
+          "key": "complexity",
+          "label": "Complexity & Onboarding",
+          "description": "Steep learning curve, confusing navigation, friction in setup",
+          "icon": "\ud83e\udde9",
+          "count": 0,
+          "negative_count": 0,
+          "positive_count": 0,
+          "quotes": [],
+          "severity": "Low",
+          "percentage": 0.0,
+          "negative_percentage": 0.0
+        },
+        {
+          "key": "pricing",
+          "label": "Pricing & Hidden Fees",
+          "description": "Subscription costs, unexpected fees, deposit charges, paywalls",
+          "icon": "\ud83d\udcb3",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "no price detailed No Sale",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Paulryder Ryder"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "performance",
+          "label": "Performance & Stability",
+          "description": "Crashes, freezing, slow load times, battery drain, errors",
+          "icon": "\u26a1",
+          "count": 3,
+          "negative_count": 2,
+          "positive_count": 1,
+          "quotes": [
+            {
+              "quote": "Unable to download on laptop, where is the button that sez download ????",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "monkey Man"
+            },
+            {
+              "quote": "Pinterest has gone down hill. They accuse you of copy rite infringement when you pin something. How are you supposed to know this. Go after the original poster. Isn't Pinterest supposed to be about creating mood boards from inspiration others put on ",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Victoria"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 6.0,
+          "negative_percentage": 4.0
+        },
+        {
+          "key": "integration",
+          "label": "Mobile & Bank Integration",
+          "description": "Plaid linking failures, biometric login issues, broken syncing",
+          "icon": "\ud83d\udd17",
+          "count": 3,
+          "negative_count": 3,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "way too many notifications and pop-ups",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Carrie Ferrell"
+            },
+            {
+              "quote": "Instead of going to Pinterest, I prefer using the web to find wishes and wallpapers. You have started showing useless, unwanted, and frivolous ads for fashion, beauty products, Blinkit and drama again. It is shameful that you are using your platform ",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "new crypto"
+            },
+            {
+              "quote": "My account has been suspended telling me some suspicious activity has been reported on it. May I know what's the suspicious activity have been observed. I have been maintaining my creative paintings and other stuff on it from a long time.",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Kubair Sharma"
+            }
+          ],
+          "severity": "Medium",
+          "percentage": 6.0,
+          "negative_percentage": 6.0
+        },
+        {
+          "key": "support",
+          "label": "Customer Support",
+          "description": "Unresponsive agents, automated bots, unresolved tickets",
+          "icon": "\ud83c\udfa7",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "its filled with ai generated garbage and the search doesn't even work anymore, it refuses to show anything even remotely close to the terms i used, on top of being full of even more ai generated garbage in ads. dont bother",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Fae B."
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "ux",
+          "label": "UX & Navigation",
+          "description": "Clunky controls, poor visual hierarchy, broken dark mode, cluttered layouts",
+          "icon": "\ud83c\udfa8",
+          "count": 3,
+          "negative_count": 3,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "Unable to download on laptop, where is the button that sez download ????",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "monkey Man"
+            },
+            {
+              "quote": "I used to love Pinterest and used it for over a decade with great success for all kinds of inspiration and idea collection but now it's so chock full of ads it's practically unusable. Some of them are really inappropriate too such as ads for accessor",
+              "rating": 2,
+              "date": "2026-10-12",
+              "author": "Nico King"
+            },
+            {
+              "quote": "used to be a great place for inspo boards, now its just littered with ads and ai with no way to opt out of ai. they give you a placating 'see less ai :)))' button but it does nothing. let me opt out of ai images entirely, i dont want to see slop i wa",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "RobitRabbit"
+            }
+          ],
+          "severity": "Medium",
+          "percentage": 6.0,
+          "negative_percentage": 6.0
+        }
+      ],
+      "pricing_analysis": {
+        "complaint_count": 1,
+        "complaint_percentage": 2.0,
+        "sentiment_score": 8.1,
+        "fee_transparency_rating": "High",
+        "top_complaints": [
+          {
+            "quote": "no price detailed No Sale",
+            "rating": 1,
+            "date": "2026-10-12"
+          }
+        ]
+      },
+      "loved_features": [
+        {
+          "quote": "very useful and one of the best app i installed , it really helps me in many ways so helpful app",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Twinkle Verma"
+        },
+        {
+          "quote": "Pinterest is just everything words can even explain. To me it gives me ideas, memes, wallpapers, etc. I'll highly recommend it to anyone to hasn't used it or heard about it.",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Dunni Gaji"
+        },
+        {
+          "quote": "it's very nice app my all time favorite I just use it for everything for my outfit for make up for uploading reels i just love ittt \ud83d\udc97\ud83d\udc97\ud83d\ude1c\ud83d\ude1c",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Nadeem Khan"
+        },
+        {
+          "quote": "very nice app and I love more",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Nidha Niyanasmin"
+        },
+        {
+          "quote": "just love this \ud83e\udd0c\ud83c\udffb\u2728\ud83d\ude0d\ud83c\udf37\ud83d\udc97\ud83d\udd25",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Baisa Hiya Chauhan"
+        },
+        {
+          "quote": "I LOVE THE PICTURES\ud83e\udd11\u2728\ud83d\udc9a\ud83e\ude76",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Azure Wath"
+        },
+        {
+          "quote": "a great app it's got a lot. of badass channels that you would not think to look for until you see the pictures right here on Pinterest",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "John Morgan"
+        }
+      ],
+      "velocity": {
+        "monthly_breakdown": [
+          {
+            "month": "2026-10",
+            "count": 50,
+            "avg_rating": 3.66,
+            "pos_pct": 64.0,
+            "neg_pct": 34.0
+          }
+        ],
+        "weekly_velocity": 4.2,
+        "velocity_delta_pct": 0,
+        "trajectory": "Stable"
+      }
+    },
+    "2026-10-13 10:10": {
+      "sentiment": {
+        "positive": 64.0,
+        "negative": 32.0,
+        "neutral": 4.0
+      },
+      "features": {
+        "Idea & Inspiration Discovery": {
+          "name": "Idea & Inspiration Discovery",
+          "count": 9,
+          "positive_mentions": 9,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "it gives me very good ideas for drawings",
+            "gives me ideas, memes, wallpapers, etc.",
+            "great success for all kinds of inspiration and idea collection"
+          ]
+        },
+        "Advertisements": {
+          "name": "Advertisements",
+          "count": 9,
+          "positive_mentions": 0,
+          "negative_mentions": 9,
+          "example_quotes": [
+            "far too many ads",
+            "you uninstalled this app because you see 1 post for every 5 ads",
+            "now its just littered with ads"
+          ]
+        },
+        "AI Content & Slop": {
+          "name": "AI Content & Slop",
+          "count": 7,
+          "positive_mentions": 0,
+          "negative_mentions": 7,
+          "example_quotes": [
+            "ai is taking over too",
+            "filled with ai generated garbage",
+            "tired of seeing ai modified images"
+          ]
+        },
+        "Image Search & Content Quality": {
+          "name": "Image Search & Content Quality",
+          "count": 6,
+          "positive_mentions": 3,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "pinterest is such good files research app",
+            "it's so good I got every pic i want",
+            "search doesn't even work anymore"
+          ]
+        },
+        "Community & Environment": {
+          "name": "Community & Environment",
+          "count": 4,
+          "positive_mentions": 4,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "everyone is non toxic and girls support each other",
+            "aesthetic and nice contents",
+            "good for creative ppl"
+          ]
+        },
+        "Saved Pins & Boards": {
+          "name": "Saved Pins & Boards",
+          "count": 4,
+          "positive_mentions": 1,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "sometimes can't access pin that i saved",
+            "got rid of the option to refine recommendations based on boards",
+            "creating mood boards from inspiration"
+          ]
+        },
+        "App Reliability & Performance": {
+          "name": "App Reliability & Performance",
+          "count": 4,
+          "positive_mentions": 1,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "it was today not work",
+            "having problems while opening this app",
+            "My account has been suspended telling me some suspicious activity"
+          ]
+        },
+        "Notifications": {
+          "name": "Notifications",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "way too many notifications and pop-ups"
+          ]
+        }
+      },
+      "average_rating": 3.68,
+      "review_count": 50,
+      "pkg_id": "com.pinterest",
+      "meta": {
+        "title": "Pinterest",
+        "icon": "https://play-lh.googleusercontent.com/VExMwhu9Fe5kz72YnPWP6mHrNA5WfgZ-PJMnBnQmXFpLncTAOaaHtK4b8w7b2xxGxtqycDatYslVyNSLucl9QA",
+        "score": 4.2523828,
+        "ratings": 11667559,
+        "installs": "1,000,000,000+",
+        "developer": "Pinterest",
+        "genre": "Lifestyle"
+      },
+      "notable_positives": [
+        "Great for creative ideas and inspiration",
+        "Aesthetic wallpapers and pictures",
+        "Non-toxic and supportive community"
+      ],
+      "notable_negatives": [
+        "Too many ads and pop-ups",
+        "Prevalence of AI-generated content and garbage",
+        "Technical issues and account suspensions"
+      ],
+      "top_requested": [
+        "Option to completely opt out of AI-generated images",
+        "Fewer ads and sponsored content",
+        "Better search functionality to match exact terms",
+        "In-app shopping store features (irl store)",
+        "Bring back previous UI elements like circle icons"
+      ],
+      "rating_dist": {
+        "1": 12,
+        "2": 5,
+        "3": 0,
+        "4": 3,
+        "5": 30
+      },
+      "monthly_counts": [
+        {
+          "month": "2026-10",
+          "count": 50
+        }
+      ],
+      "scorecard": {
+        "complexity": 8.5,
+        "pricing": 8.1,
+        "performance": 7.8,
+        "integration": 7.3,
+        "support": 8.2,
+        "ux": 7.3,
+        "overall": 7.9
+      },
+      "painpoints": [
+        {
+          "key": "complexity",
+          "label": "Complexity & Onboarding",
+          "description": "Steep learning curve, confusing navigation, friction in setup",
+          "icon": "\ud83e\udde9",
+          "count": 0,
+          "negative_count": 0,
+          "positive_count": 0,
+          "quotes": [],
+          "severity": "Low",
+          "percentage": 0.0,
+          "negative_percentage": 0.0
+        },
+        {
+          "key": "pricing",
+          "label": "Pricing & Hidden Fees",
+          "description": "Subscription costs, unexpected fees, deposit charges, paywalls",
+          "icon": "\ud83d\udcb3",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "no price detailed No Sale",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Paulryder Ryder"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "performance",
+          "label": "Performance & Stability",
+          "description": "Crashes, freezing, slow load times, battery drain, errors",
+          "icon": "\u26a1",
+          "count": 3,
+          "negative_count": 2,
+          "positive_count": 1,
+          "quotes": [
+            {
+              "quote": "Unable to download on laptop, where is the button that sez download ????",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "monkey Man"
+            },
+            {
+              "quote": "Pinterest has gone down hill. They accuse you of copy rite infringement when you pin something. How are you supposed to know this. Go after the original poster. Isn't Pinterest supposed to be about creating mood boards from inspiration others put on ",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Victoria"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 6.0,
+          "negative_percentage": 4.0
+        },
+        {
+          "key": "integration",
+          "label": "Mobile & Bank Integration",
+          "description": "Plaid linking failures, biometric login issues, broken syncing",
+          "icon": "\ud83d\udd17",
+          "count": 3,
+          "negative_count": 3,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "way too many notifications and pop-ups",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Carrie Ferrell"
+            },
+            {
+              "quote": "Instead of going to Pinterest, I prefer using the web to find wishes and wallpapers. You have started showing useless, unwanted, and frivolous ads for fashion, beauty products, Blinkit and drama again. It is shameful that you are using your platform ",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "new crypto"
+            },
+            {
+              "quote": "My account has been suspended telling me some suspicious activity has been reported on it. May I know what's the suspicious activity have been observed. I have been maintaining my creative paintings and other stuff on it from a long time.",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Kubair Sharma"
+            }
+          ],
+          "severity": "Medium",
+          "percentage": 6.0,
+          "negative_percentage": 6.0
+        },
+        {
+          "key": "support",
+          "label": "Customer Support",
+          "description": "Unresponsive agents, automated bots, unresolved tickets",
+          "icon": "\ud83c\udfa7",
+          "count": 2,
+          "negative_count": 1,
+          "positive_count": 1,
+          "quotes": [
+            {
+              "quote": "its filled with ai generated garbage and the search doesn't even work anymore, it refuses to show anything even remotely close to the terms i used, on top of being full of even more ai generated garbage in ads. dont bother",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "Fae B."
+            }
+          ],
+          "severity": "Low",
+          "percentage": 4.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "ux",
+          "label": "UX & Navigation",
+          "description": "Clunky controls, poor visual hierarchy, broken dark mode, cluttered layouts",
+          "icon": "\ud83c\udfa8",
+          "count": 3,
+          "negative_count": 3,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "Unable to download on laptop, where is the button that sez download ????",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "monkey Man"
+            },
+            {
+              "quote": "I used to love Pinterest and used it for over a decade with great success for all kinds of inspiration and idea collection but now it's so chock full of ads it's practically unusable. Some of them are really inappropriate too such as ads for accessor",
+              "rating": 2,
+              "date": "2026-10-12",
+              "author": "Nico King"
+            },
+            {
+              "quote": "used to be a great place for inspo boards, now its just littered with ads and ai with no way to opt out of ai. they give you a placating 'see less ai :)))' button but it does nothing. let me opt out of ai images entirely, i dont want to see slop i wa",
+              "rating": 1,
+              "date": "2026-10-12",
+              "author": "RobitRabbit"
+            }
+          ],
+          "severity": "Medium",
+          "percentage": 6.0,
+          "negative_percentage": 6.0
+        }
+      ],
+      "pricing_analysis": {
+        "complaint_count": 1,
+        "complaint_percentage": 2.0,
+        "sentiment_score": 8.1,
+        "fee_transparency_rating": "High",
+        "top_complaints": [
+          {
+            "quote": "no price detailed No Sale",
+            "rating": 1,
+            "date": "2026-10-12"
+          }
+        ]
+      },
+      "loved_features": [
+        {
+          "quote": "this is such a goated app so much fun love it",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Amina Malik"
+        },
+        {
+          "quote": "Pinterest is THE best app ever . everyone is non toxic and girls support each other instead of judging . I love Pinterest . Pinterest should also be a store irl yk .",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Khattak Home"
+        },
+        {
+          "quote": "very useful and one of the best app i installed , it really helps me in many ways so helpful app",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Twinkle Verma"
+        },
+        {
+          "quote": "Pinterest is just everything words can even explain. To me it gives me ideas, memes, wallpapers, etc. I'll highly recommend it to anyone to hasn't used it or heard about it.",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Dunni Gaji"
+        },
+        {
+          "quote": "it's very nice app my all time favorite I just use it for everything for my outfit for make up for uploading reels i just love ittt \ud83d\udc97\ud83d\udc97\ud83d\ude1c\ud83d\ude1c",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Nadeem Khan"
+        },
+        {
+          "quote": "very nice app and I love more",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Nidha Niyanasmin"
+        },
+        {
+          "quote": "just love this \ud83e\udd0c\ud83c\udffb\u2728\ud83d\ude0d\ud83c\udf37\ud83d\udc97\ud83d\udd25",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Baisa Hiya Chauhan"
+        },
+        {
+          "quote": "I LOVE THE PICTURES\ud83e\udd11\u2728\ud83d\udc9a\ud83e\ude76",
+          "rating": 5,
+          "date": "2026-10-12",
+          "author": "Azure Wath"
+        }
+      ],
+      "velocity": {
+        "monthly_breakdown": [
+          {
+            "month": "2026-10",
+            "count": 50,
+            "avg_rating": 3.68,
+            "pos_pct": 66.0,
+            "neg_pct": 34.0
+          }
+        ],
+        "weekly_velocity": 4.2,
+        "velocity_delta_pct": 0,
+        "trajectory": "Stable"
+      }
+    }
+  },
+  "Behance - Creative Portfolios": {
+    "2026-10-13 09:44": {
+      "sentiment": {
+        "positive": 68.0,
+        "negative": 22.0,
+        "neutral": 10.0
+      },
+      "features": {
+        "Inspiration and Discovery": {
+          "name": "Inspiration and Discovery",
+          "count": 4,
+          "positive_mentions": 4,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "such a good place for inspiration.",
+            "one of the best apps you can use to get inspo"
+          ]
+        },
+        "Authentication and Login": {
+          "name": "Authentication and Login",
+          "count": 3,
+          "positive_mentions": 0,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "I have issue when I try to log in with Facebook account",
+            "I\u2019m unable to sign in to the Behance mobile app using my Adobe ID."
+          ]
+        },
+        "Project Sharing and Publishing": {
+          "name": "Project Sharing and Publishing",
+          "count": 3,
+          "positive_mentions": 0,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "I can't even share my work",
+            "it keeps cutting it"
+          ]
+        },
+        "Portfolio Creation": {
+          "name": "Portfolio Creation",
+          "count": 3,
+          "positive_mentions": 3,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "it let you create a portfolio",
+            "it's the best fir portfolio \ud83d\udc4c"
+          ]
+        },
+        "App Performance": {
+          "name": "App Performance",
+          "count": 3,
+          "positive_mentions": 2,
+          "negative_mentions": 1,
+          "example_quotes": [
+            "This app is very smooth and fast.",
+            "worst app. just web page wrapper"
+          ]
+        },
+        "Job Search and Freelance Opportunities": {
+          "name": "Job Search and Freelance Opportunities",
+          "count": 3,
+          "positive_mentions": 3,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "you can apply for job",
+            "good platform for freelancer"
+          ]
+        },
+        "Notifications": {
+          "name": "Notifications",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "Problem with message notification",
+            "app doesn't notify when there is a new message or inquiry."
+          ]
+        },
+        "Media Quality and Resolution": {
+          "name": "Media Quality and Resolution",
+          "count": 2,
+          "positive_mentions": 2,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "super private, masssive quality res.",
+            "its provide me the better quality!"
+          ]
+        }
+      },
+      "average_rating": 3.9,
+      "review_count": 50,
+      "pkg_id": "com.behance.behance",
+      "meta": {
+        "title": "Behance - Creative Portfolios",
+        "icon": "https://play-lh.googleusercontent.com/TWXbMMrPAPyf-MJIrj1tFfLAozOv0tLSmt6oApKd9et0MfspEaE-Qzu3Dss-w4zOZ0Wg6GWf_TIjIGjabJYRew",
+        "score": 4.5380435,
+        "ratings": 202931,
+        "installs": "10,000,000+",
+        "developer": "Adobe Inc",
+        "genre": "Art & Design"
+      },
+      "notable_positives": [
+        "Great platform for showcasing creative work and portfolios",
+        "Valuable source of design inspiration and networking",
+        "Smooth performance and high-quality resolution"
+      ],
+      "notable_negatives": [
+        "Login and authentication issues (Facebook and Adobe ID)",
+        "Bugs related to sharing, posting, and downloading work",
+        "Poor customer support and account restriction appeals process"
+      ],
+      "top_requested": [
+        "Pin Project feature to highlight top work",
+        "Promotion and advertising for freelancers",
+        "Better search feature"
+      ],
+      "rating_dist": {
+        "1": 10,
+        "2": 1,
+        "3": 3,
+        "4": 6,
+        "5": 30
+      },
+      "monthly_counts": [
+        {
+          "month": "2026-08",
+          "count": 3
+        },
+        {
+          "month": "2026-09",
+          "count": 35
+        },
+        {
+          "month": "2026-10",
+          "count": 12
+        }
+      ],
+      "scorecard": {
+        "complexity": 8.1,
+        "pricing": 8.5,
+        "performance": 7.3,
+        "integration": 8.3,
+        "support": 8.1,
+        "ux": 8.4,
+        "overall": 8.1
+      },
+      "painpoints": [
+        {
+          "key": "complexity",
+          "label": "Complexity & Onboarding",
+          "description": "Steep learning curve, confusing navigation, friction in setup",
+          "icon": "\ud83e\udde9",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "pricing",
+          "label": "Pricing & Hidden Fees",
+          "description": "Subscription costs, unexpected fees, deposit charges, paywalls",
+          "icon": "\ud83d\udcb3",
+          "count": 0,
+          "negative_count": 0,
+          "positive_count": 0,
+          "quotes": [],
+          "severity": "Low",
+          "percentage": 0.0,
+          "negative_percentage": 0.0
+        },
+        {
+          "key": "performance",
+          "label": "Performance & Stability",
+          "description": "Crashes, freezing, slow load times, battery drain, errors",
+          "icon": "\u26a1",
+          "count": 3,
+          "negative_count": 3,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            },
+            {
+              "quote": "it won't validate and download on the cell phone application and the others do.",
+              "rating": 1,
+              "date": "2026-10-05",
+              "author": "Lucie Elizabeth Ann Wesson"
+            },
+            {
+              "quote": "I\u2019m unable to sign in to the Behance mobile app using my Adobe ID. The app shows the error: \u201cbad_request \u2014 Request parameters failed to meet all constraints.\u201d I\u2019m using Android 16. Clearing the app cache/data, reinstalling the app, restarting the dev",
+              "rating": 1,
+              "date": "2026-08-28",
+              "author": "Dima R."
+            }
+          ],
+          "severity": "Medium",
+          "percentage": 6.0,
+          "negative_percentage": 6.0
+        },
+        {
+          "key": "integration",
+          "label": "Mobile & Bank Integration",
+          "description": "Plaid linking failures, biometric login issues, broken syncing",
+          "icon": "\ud83d\udd17",
+          "count": 4,
+          "negative_count": 1,
+          "positive_count": 2,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 8.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "support",
+          "label": "Customer Support",
+          "description": "Unresponsive agents, automated bots, unresolved tickets",
+          "icon": "\ud83c\udfa7",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "ux",
+          "label": "UX & Navigation",
+          "description": "Clunky controls, poor visual hierarchy, broken dark mode, cluttered layouts",
+          "icon": "\ud83c\udfa8",
+          "count": 4,
+          "negative_count": 1,
+          "positive_count": 3,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 8.0,
+          "negative_percentage": 2.0
+        }
+      ],
+      "pricing_analysis": {
+        "complaint_count": 0,
+        "complaint_percentage": 0.0,
+        "sentiment_score": 8.5,
+        "fee_transparency_rating": "High",
+        "top_complaints": []
+      },
+      "loved_features": [
+        {
+          "quote": "It is a great platform to showcase professional creativity; a huge thank you for the opportunity. \ud83d\udc96",
+          "rating": 5,
+          "date": "2026-10-09",
+          "author": "creative art"
+        },
+        {
+          "quote": "This app is very smooth and fast.",
+          "rating": 5,
+          "date": "2026-10-08",
+          "author": "Tech Hypes"
+        },
+        {
+          "quote": "a great collaborating application so much creativity and easily navigable",
+          "rating": 5,
+          "date": "2026-09-30",
+          "author": "Michele G."
+        },
+        {
+          "quote": "this is a best app for portfolio or inspirations",
+          "rating": 5,
+          "date": "2026-09-29",
+          "author": "Lalit Rao"
+        },
+        {
+          "quote": "it's the best fir portfolio \ud83d\udc4c",
+          "rating": 5,
+          "date": "2026-09-25",
+          "author": "Exalted Ekele"
+        },
+        {
+          "quote": "Love it! Suggestions : Please add a Pin Project feature! \ud83d\udccc I\u2019d love to pin my best 1\u20133 projects to the top of my profile so recruiters and clients can easily see the work I want to highlight.",
+          "rating": 5,
+          "date": "2026-09-23",
+          "author": "Hidayah Habib"
+        },
+        {
+          "quote": "one of the best apps you can use to get inspo and follow up the latest trends",
+          "rating": 5,
+          "date": "2026-09-03",
+          "author": "Maxwell Ndubuisi"
+        },
+        {
+          "quote": "excellent app, the best concepts of design",
+          "rating": 5,
+          "date": "2026-09-01",
+          "author": "Hugo Gutierrez Diaz"
+        }
+      ],
+      "velocity": {
+        "monthly_breakdown": [
+          {
+            "month": "2026-08",
+            "count": 3,
+            "avg_rating": 3.67,
+            "pos_pct": 66.7,
+            "neg_pct": 33.3
+          },
+          {
+            "month": "2026-09",
+            "count": 35,
+            "avg_rating": 4.14,
+            "pos_pct": 80.0,
+            "neg_pct": 17.1
+          },
+          {
+            "month": "2026-10",
+            "count": 12,
+            "avg_rating": 3.25,
+            "pos_pct": 50.0,
+            "neg_pct": 33.3
+          }
+        ],
+        "weekly_velocity": 4.2,
+        "velocity_delta_pct": -65.7,
+        "trajectory": "Decelerating"
+      }
+    },
+    "2026-10-13 10:10": {
+      "sentiment": {
+        "positive": 68.0,
+        "negative": 26.0,
+        "neutral": 6.0
+      },
+      "features": {
+        "portfolio creation and publishing": {
+          "name": "portfolio creation and publishing",
+          "count": 6,
+          "positive_mentions": 3,
+          "negative_mentions": 3,
+          "example_quotes": [
+            "I can't even share my work",
+            "I love this app because it let you create a portfolio",
+            "it's the best fir portfolio \ud83d\udc4c"
+          ]
+        },
+        "inspiration and design discovery": {
+          "name": "inspiration and design discovery",
+          "count": 5,
+          "positive_mentions": 5,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "such a good place for inspiration.",
+            "this is a best app for portfolio or inspirations",
+            "one of the best apps you can use to get inspo"
+          ]
+        },
+        "messaging and notifications": {
+          "name": "messaging and notifications",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "Problem with message notification, app doesn't notify when there is a new message",
+            "app doesn't notify when there is a new message or inquiry."
+          ]
+        },
+        "login and authentication": {
+          "name": "login and authentication",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "I have issue when I try to log in with Facebook account",
+            "I\u2019m unable to sign in to the Behance mobile app using my Adobe ID."
+          ]
+        },
+        "app performance and speed": {
+          "name": "app performance and speed",
+          "count": 2,
+          "positive_mentions": 2,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "This app is very smooth and fast.",
+            "easily navigable"
+          ]
+        },
+        "search functionality": {
+          "name": "search functionality",
+          "count": 2,
+          "positive_mentions": 0,
+          "negative_mentions": 2,
+          "example_quotes": [
+            "no search feature",
+            "no search feature, nothing useful"
+          ]
+        },
+        "job search and career opportunities": {
+          "name": "job search and career opportunities",
+          "count": 2,
+          "positive_mentions": 2,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "at the same time you can apply for job",
+            "good platform for freelancer"
+          ]
+        },
+        "image and media quality": {
+          "name": "image and media quality",
+          "count": 2,
+          "positive_mentions": 2,
+          "negative_mentions": 0,
+          "example_quotes": [
+            "super private, masssive quality res.",
+            "its provide me the better quality!"
+          ]
+        }
+      },
+      "average_rating": 3.9,
+      "review_count": 50,
+      "pkg_id": "com.behance.behance",
+      "meta": {
+        "title": "Behance - Creative Portfolios",
+        "icon": "https://play-lh.googleusercontent.com/TWXbMMrPAPyf-MJIrj1tFfLAozOv0tLSmt6oApKd9et0MfspEaE-Qzu3Dss-w4zOZ0Wg6GWf_TIjIGjabJYRew",
+        "score": 4.5380435,
+        "ratings": 202931,
+        "installs": "10,000,000+",
+        "developer": "Adobe Inc",
+        "genre": "Art & Design"
+      },
+      "notable_positives": [
+        "Great platform for inspiration and creative ideas",
+        "Smooth and fast app performance",
+        "Useful for portfolios and freelancing"
+      ],
+      "notable_negatives": [
+        "Login and authentication issues (Facebook and Adobe ID)",
+        "Inability to share or upload work properly",
+        "Poor customer support and account flagging issues"
+      ],
+      "top_requested": [
+        "Pin Project feature",
+        "Promotion and advertising for freelancers",
+        "Better account support and unbanning process"
+      ],
+      "rating_dist": {
+        "1": 10,
+        "2": 1,
+        "3": 3,
+        "4": 6,
+        "5": 30
+      },
+      "monthly_counts": [
+        {
+          "month": "2026-08",
+          "count": 3
+        },
+        {
+          "month": "2026-09",
+          "count": 35
+        },
+        {
+          "month": "2026-10",
+          "count": 12
+        }
+      ],
+      "scorecard": {
+        "complexity": 8.1,
+        "pricing": 8.5,
+        "performance": 7.3,
+        "integration": 8.3,
+        "support": 8.1,
+        "ux": 8.4,
+        "overall": 8.1
+      },
+      "painpoints": [
+        {
+          "key": "complexity",
+          "label": "Complexity & Onboarding",
+          "description": "Steep learning curve, confusing navigation, friction in setup",
+          "icon": "\ud83e\udde9",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "pricing",
+          "label": "Pricing & Hidden Fees",
+          "description": "Subscription costs, unexpected fees, deposit charges, paywalls",
+          "icon": "\ud83d\udcb3",
+          "count": 0,
+          "negative_count": 0,
+          "positive_count": 0,
+          "quotes": [],
+          "severity": "Low",
+          "percentage": 0.0,
+          "negative_percentage": 0.0
+        },
+        {
+          "key": "performance",
+          "label": "Performance & Stability",
+          "description": "Crashes, freezing, slow load times, battery drain, errors",
+          "icon": "\u26a1",
+          "count": 3,
+          "negative_count": 3,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            },
+            {
+              "quote": "it won't validate and download on the cell phone application and the others do.",
+              "rating": 1,
+              "date": "2026-10-05",
+              "author": "Lucie Elizabeth Ann Wesson"
+            },
+            {
+              "quote": "I\u2019m unable to sign in to the Behance mobile app using my Adobe ID. The app shows the error: \u201cbad_request \u2014 Request parameters failed to meet all constraints.\u201d I\u2019m using Android 16. Clearing the app cache/data, reinstalling the app, restarting the dev",
+              "rating": 1,
+              "date": "2026-08-28",
+              "author": "Dima R."
+            }
+          ],
+          "severity": "Medium",
+          "percentage": 6.0,
+          "negative_percentage": 6.0
+        },
+        {
+          "key": "integration",
+          "label": "Mobile & Bank Integration",
+          "description": "Plaid linking failures, biometric login issues, broken syncing",
+          "icon": "\ud83d\udd17",
+          "count": 4,
+          "negative_count": 1,
+          "positive_count": 2,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 8.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "support",
+          "label": "Customer Support",
+          "description": "Unresponsive agents, automated bots, unresolved tickets",
+          "icon": "\ud83c\udfa7",
+          "count": 1,
+          "negative_count": 1,
+          "positive_count": 0,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 2.0,
+          "negative_percentage": 2.0
+        },
+        {
+          "key": "ux",
+          "label": "UX & Navigation",
+          "description": "Clunky controls, poor visual hierarchy, broken dark mode, cluttered layouts",
+          "icon": "\ud83c\udfa8",
+          "count": 4,
+          "negative_count": 1,
+          "positive_count": 3,
+          "quotes": [
+            {
+              "quote": "My Behance account was falsely flagged for spam because I was repeatedly updating my project to fix mistakes. All my projects are now private, making my portfolio inaccessible to recruiters. I lost my job last month and am actively seeking opportunit",
+              "rating": 1,
+              "date": "2026-10-10",
+              "author": "Muneeb iftikhar"
+            }
+          ],
+          "severity": "Low",
+          "percentage": 8.0,
+          "negative_percentage": 2.0
+        }
+      ],
+      "pricing_analysis": {
+        "complaint_count": 0,
+        "complaint_percentage": 0.0,
+        "sentiment_score": 8.5,
+        "fee_transparency_rating": "High",
+        "top_complaints": []
+      },
+      "loved_features": [
+        {
+          "quote": "It is a great platform to showcase professional creativity; a huge thank you for the opportunity. \ud83d\udc96",
+          "rating": 5,
+          "date": "2026-10-09",
+          "author": "creative art"
+        },
+        {
+          "quote": "This app is very smooth and fast.",
+          "rating": 5,
+          "date": "2026-10-08",
+          "author": "Tech Hypes"
+        },
+        {
+          "quote": "a great collaborating application so much creativity and easily navigable",
+          "rating": 5,
+          "date": "2026-09-30",
+          "author": "Michele G."
+        },
+        {
+          "quote": "this is a best app for portfolio or inspirations",
+          "rating": 5,
+          "date": "2026-09-29",
+          "author": "Lalit Rao"
+        },
+        {
+          "quote": "it's the best fir portfolio \ud83d\udc4c",
+          "rating": 5,
+          "date": "2026-09-25",
+          "author": "Exalted Ekele"
+        },
+        {
+          "quote": "Love it! Suggestions : Please add a Pin Project feature! \ud83d\udccc I\u2019d love to pin my best 1\u20133 projects to the top of my profile so recruiters and clients can easily see the work I want to highlight.",
+          "rating": 5,
+          "date": "2026-09-23",
+          "author": "Hidayah Habib"
+        },
+        {
+          "quote": "one of the best apps you can use to get inspo and follow up the latest trends",
+          "rating": 5,
+          "date": "2026-09-03",
+          "author": "Maxwell Ndubuisi"
+        },
+        {
+          "quote": "excellent app, the best concepts of design",
+          "rating": 5,
+          "date": "2026-09-01",
+          "author": "Hugo Gutierrez Diaz"
+        }
+      ],
+      "velocity": {
+        "monthly_breakdown": [
+          {
+            "month": "2026-08",
+            "count": 3,
+            "avg_rating": 3.67,
+            "pos_pct": 66.7,
+            "neg_pct": 33.3
+          },
+          {
+            "month": "2026-09",
+            "count": 35,
+            "avg_rating": 4.14,
+            "pos_pct": 80.0,
+            "neg_pct": 17.1
+          },
+          {
+            "month": "2026-10",
+            "count": 12,
+            "avg_rating": 3.25,
+            "pos_pct": 50.0,
+            "neg_pct": 33.3
+          }
+        ],
+        "weekly_velocity": 4.2,
+        "velocity_delta_pct": -65.7,
+        "trajectory": "Decelerating"
+      }
+    }
+  }
+}

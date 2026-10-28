@@ -50,12 +50,22 @@ def create_llm_client(provider: Optional[str] = None):
 
         class Client:
             def complete(self, system: str, user: str) -> str:
-                response = client.models.generate_content(
-                    model=model,
-                    contents=user,
-                    config=types.GenerateContentConfig(system_instruction=system),
-                )
-                return response.text or ""
+                import time
+                for attempt in range(4):
+                    try:
+                        response = client.models.generate_content(
+                            model=model,
+                            contents=user,
+                            config=types.GenerateContentConfig(system_instruction=system),
+                        )
+                        return response.text or ""
+                    except Exception as exc:
+                        err_str = str(exc)
+                        if "429" in err_str or "ResourceExhausted" in err_str:
+                            time.sleep(2 * (attempt + 1))
+                            continue
+                        raise
+                return ""
 
         return Client()
 

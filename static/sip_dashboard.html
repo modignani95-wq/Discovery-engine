@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SIP Discovery Engine - AI-powered problem discovery for SIP retention">
+<title>SIP Discovery Engine | AI Problem Hypotheses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --primary:#1a237e;--primary-c:#e8eaf6;--surf:#fff;--bg:#f0f2ff;--bg2:#e8eaf6;
+  --text:#1a1a2e;--text2:#4a4a6a;--text3:#8a8aaa;--bord:#c5cae9;
+  --green:#00897b;--green-b:#e0f2f1;--red:#d32f2f;--red-b:#ffebee;
+  --amber:#f57c00;--amber-b:#fff3e0;--blue:#1565c0;--blue-b:#e3f2fd;
+  --purple:#6a1b9a;--purple-b:#f3e5f5;
+  --r:16px;--rsm:10px;
+  --sh:0 2px 8px rgba(26,35,126,.10),0 1px 2px rgba(26,35,126,.06);
+  --shmd:0 4px 16px rgba(26,35,126,.14)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Roboto,system-ui,sans-serif;font-size:14px;min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:#9fa8da;border-radius:4px}
+header{background:linear-gradient(135deg,#1a237e 0%,#283593 60%,#534bae 100%);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:68px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(26,35,126,.3)}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+.logo-icon{width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:13px;display:flex;align-items:center;justify-content:center}
+.logo-icon .material-icons{color:#fff;font-size:24px}
+.logo-title{font-family:sans-serif;font-size:1.15rem;font-weight:700;color:#fff}
+.logo-sub{font-size:.72rem;color:rgba(255,255,255,.75)}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-link{color:rgba(255,255,255,.85);text-decoration:none;padding:7px 16px;border-radius:20px;font-size:.85rem;font-weight:500;transition:all .2s;display:flex;align-items:center;gap:6px}
+.nav-link:hover,.nav-link.active{background:rgba(255,255,255,.18);color:#fff}
+.nav-link .material-icons{font-size:17px}
+main{max-width:1300px;margin:0 auto;padding:28px 24px 80px}
+
+.hero-banner{background:linear-gradient(135deg,#1a237e 0%,#283593 40%,#0288d1 100%);border-radius:var(--r);padding:40px 48px;margin-bottom:28px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;box-shadow:var(--shmd);position:relative;overflow:hidden}
+.hero-banner::before{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;background:rgba(255,255,255,.06);border-radius:50%}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#e3f2fd;font-size:.72rem;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.04em;text-transform:uppercase}
+.hero-banner h1{font-size:2.1rem;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.2}
+.hero-banner p{color:rgba(255,255,255,.8);font-size:.95rem;max-width:560px;line-height:1.6;margin-bottom:20px}
+.hero-cta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:24px;font-size:.875rem;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none;font-family:inherit}
+.btn .material-icons{font-size:18px}
+.btn-white{background:#fff;color:var(--primary)}.btn-white:hover{background:#e8eaf6}
+.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)}.btn-ghost:hover{background:rgba(255,255,255,.25)}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:#283593}.btn-primary:disabled{background:#9fa8da;cursor:not-allowed}
+.btn-tonal{background:var(--primary-c);color:var(--primary);border:1px solid var(--bord)}.btn-tonal:hover{background:#c5cae9}
+.hero-stats{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1;flex-shrink:0}
+.hero-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:12px 20px;text-align:center;min-width:130px}
+.hero-stat-v{font-size:1.6rem;font-weight:700;color:#fff;line-height:1}
+.hero-stat-l{font-size:.7rem;color:rgba(255,255,255,.7);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+.disc{background:var(--amber-b);border:1px solid #ffcc80;border-radius:var(--rsm);padding:12px 18px;margin-bottom:22px;display:flex;align-items:flex-start;gap:10px;font-size:.8rem;color:#6d4c00;line-height:1.5}
+.disc .material-icons{color:var(--amber);font-size:20px;flex-shrink:0;margin-top:1px}
+.run-panel{background:linear-gradient(135deg,var(--primary-c),#fff);border:1.5px solid var(--bord);border-radius:var(--r);padding:24px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.run-info h3{font-size:1rem;font-weight:600;margin-bottom:4px}
+.run-info p{font-size:.82rem;color:var(--text2);max-width:480px}
+#runStatus{font-size:.82rem;color:var(--text2);display:flex;align-items:center;gap:6px}
+.pipe-steps{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:28px}
+.ps{background:var(--surf);border:1.5px solid var(--bord);border-radius:var(--rsm);padding:14px 10px;text-align:center;transition:all .2s}
+.ps.done{border-color:var(--green);background:var(--green-b)}.ps.active{border-color:var(--primary);background:var(--primary-c)}
+.sn{width:26px;height:26px;border-radius:50%;background:var(--bg2);color:var(--text2);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.ps.done .sn{background:var(--green);color:#fff}.ps.active .sn{background:var(--primary);color:#fff}
+.sl{font-size:.7rem;font-weight:600;color:var(--text2)}.ps.done .sl{color:var(--green)}.ps.active .sl{color:var(--primary)}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+.mc{background:var(--surf);border:1px solid var(--bord);border-radius:var(--r);padding:20px;box-shadow:var(--sh);display:flex;align-items:flex-start;gap:14px;transition:all .2s}
+.mc:hover{box-shadow:var(--shmd);transform:translateY(-2px)}
+.mi{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mi .material-icons{font-size:22px}
+.mi.blue{background:var(--blue-b);color:var(--blue)}.mi.green{background:var(--green-b);color:var(--green)}.mi.purple{background:var(--purple-b);color:var(--purple)}.mi.amber{background:var(--amber-b);color:var(--amber)}
+.mv{font-size:1.8rem;font-weight:700;color:var(--text);line-height:1}.mlb{font-size:.75rem;color:var(--text2);margin-top:4px;font-weight:500}.ms{font-size:.7rem;color:var(--text3);margin-top:2px}
+.tabs{display:flex;border-bottom:2px solid var(--bord);margin-bottom:24px}
+.tab{padding:11px 22px;font-size:.875rem;font-weight:500;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;display:flex;align-items:center;gap:6px}
+.tab .material-icons{font-size:17px}.tab:hover{color:var(--primary)}.tab.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:600}
+.tp{display:none}.tp.active{display:block}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+.card{background:var(--surf);border:1px solid var(--bord);border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #eef}
+.card-title{font-size:.9rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.card-title .material-icons{font-size:18px;color:var(--primary)}
+.hyp-card{background:var(--surf);border:1.5px solid var(--bord);border-radius:var(--r);padding:22px;box-shadow:var(--sh);transition:all .2s;margin-bottom:16px}
+.hyp-card:hover{box-shadow:var(--shmd);border-color:var(--primary);transform:translateY(-1px)}
+.hyp-card.r1{border-color:#1565c0;background:linear-gradient(135deg,#e3f2fd,#fff)}
+.hyp-card.r2{border-color:#283593;background:linear-gradient(135deg,#e8eaf6,#fff)}
+.hyp-card.r3{border-color:#6a1b9a;background:linear-gradient(135deg,#f3e5f5,#fff)}
+.hyp-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:14px}
+.hyp-rank{width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hyp-card.r1 .hyp-rank{background:linear-gradient(135deg,#1565c0,#1976d2)}.hyp-card.r2 .hyp-rank{background:linear-gradient(135deg,#283593,#3949ab)}.hyp-card.r3 .hyp-rank{background:linear-gradient(135deg,#6a1b9a,#8e24aa)}
+.hyp-label{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:4px}.hyp-freq{font-size:.78rem;color:var(--text2)}
+.hyp-scores{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.sp{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:14px;font-size:.72rem;font-weight:600}
+.sp.freq{background:var(--blue-b);color:var(--blue)}.sp.sev{background:var(--red-b);color:var(--red)}.sp.rel{background:var(--amber-b);color:var(--amber)}.sp.fix{background:var(--green-b);color:var(--green)}.sp.comp{background:var(--purple-b);color:var(--purple);font-size:.8rem}
+.q-item{background:var(--bg);border-left:3px solid var(--primary);border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:6px;font-size:.78rem;color:var(--text2);font-style:italic;line-height:1.4}
+.hyp-footer{display:flex;align-items:flex-start;gap:16px;margin-top:14px;padding-top:12px;border-top:1px solid #eef;flex-wrap:wrap}
+.hf{flex:1;min-width:200px}
+.hf-lbl{font-size:.7rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:flex;align-items:center;gap:4px}
+.hf-lbl .material-icons{font-size:13px}.hf-txt{font-size:.78rem;color:var(--text2);line-height:1.4}.lim{font-size:.7rem;color:var(--text3);font-style:italic;margin-top:4px}
+.chart-w{position:relative;height:200px;width:100%}
+.ev-wrap{overflow-x:auto;margin-top:8px}
+.evt{width:100%;border-collapse:collapse;font-size:.78rem}
+.evt th{background:var(--bg2);color:var(--text2);font-weight:600;padding:10px 12px;text-align:left;white-space:nowrap;border-bottom:1.5px solid var(--bord)}
+.evt td{padding:9px 12px;border-bottom:1px solid #f0f0f8;vertical-align:top;line-height:1.4}
+.evt tr:hover td{background:var(--bg)}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:600}
+.b-stopped{background:var(--red-b);color:var(--red)}.b-paused{background:var(--amber-b);color:var(--amber)}.b-continued{background:var(--green-b);color:var(--green)}.b-unknown{background:var(--bg2);color:var(--text2)}.b-starting{background:var(--blue-b);color:var(--blue)}.b-high{background:var(--green-b);color:var(--green)}.b-medium{background:var(--amber-b);color:var(--amber)}.b-low{background:var(--red-b);color:var(--red)}
+.filter-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:var(--rsm);border:1px solid var(--bord)}
+.filter-label{font-size:.75rem;font-weight:600;color:var(--text2)}
+.fsel,.finp{background:var(--surf);border:1px solid var(--bord);border-radius:8px;padding:6px 12px;font-size:.8rem;color:var(--text);outline:none;font-family:inherit}
+.fsel:focus,.finp:focus{border-color:var(--primary)}
+.eval-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.em{background:var(--bg);border:1px solid var(--bord);border-radius:var(--rsm);padding:16px;text-align:center}
+.em-v{font-size:2rem;font-weight:700;line-height:1}.em-v.pass{color:var(--green)}.em-v.warn{color:var(--amber)}.em-v.fail{color:var(--red)}
+.em-l{font-size:.72rem;color:var(--text2);margin-top:4px;font-weight:500}
+.gc{background:var(--bg);border:1px solid var(--bord);border-radius:var(--rsm);padding:12px;margin-bottom:8px;font-size:.78rem}
+.gc-in{color:var(--text);font-weight:500;margin-bottom:8px}
+.fs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.fc{padding:2px 8px;border-radius:10px;font-size:.68rem;font-weight:600}
+.fc.pass{background:var(--green-b);color:var(--green)}.fc.fail_mismatch,.fc.fail_missing{background:var(--red-b);color:var(--red)}.fc.warn_extra{background:var(--amber-b);color:var(--amber)}.fc.no_match{background:var(--bg2);color:var(--text3)}
+.empty{text-align:center;padding:60px 24px;color:var(--text2)}.empty .material-icons{font-size:56px;color:var(--bord);margin-bottom:14px}
+.empty h3{font-size:1rem;font-weight:600;margin-bottom:6px}.empty p{font-size:.82rem;max-width:380px;margin:0 auto}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid var(--bord);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+section{margin-bottom:28px}
+.sec-title{font-size:1rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px;margin-bottom:16px}
+/* Trained Sources & Channels Directory Styles */
+.src-hero-bar{background:linear-gradient(135deg,#1a237e 0%,#283593 50%,#00695c 100%);border-radius:var(--r);padding:24px 28px;margin-bottom:20px;color:#fff;box-shadow:var(--shmd);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.src-hero-title{font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.src-hero-desc{font-size:.84rem;color:rgba(255,255,255,.85);max-width:680px;line-height:1.5}
+.src-kpi-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}
+.src-kpi{background:var(--surf);border:1px solid var(--bord);border-radius:var(--rsm);padding:14px 16px;text-align:center;box-shadow:var(--sh)}
+.src-kpi-val{font-size:1.6rem;font-weight:700;color:var(--primary);line-height:1}
+.src-kpi-lbl{font-size:.7rem;color:var(--text2);margin-top:4px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.src-control-bar{background:var(--surf);border:1px solid var(--bord);border-radius:var(--r);padding:16px 20px;margin-bottom:20px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:14px}
+.src-search-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.src-search-box{flex:1;min-width:240px;position:relative;display:flex;align-items:center}
+.src-search-box .material-icons{position:absolute;left:12px;color:var(--text3);font-size:19px}
+.src-input{width:100%;padding:9px 12px 9px 38px;border:1.5px solid var(--bord);border-radius:24px;font-size:.85rem;color:var(--text);outline:none;background:var(--bg);font-family:inherit;transition:all .2s}
+.src-input:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(26,35,126,.1)}
+.src-pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.src-pill{border:1px solid var(--bord);background:var(--bg);color:var(--text2);font-size:.76rem;font-weight:600;padding:6px 14px;border-radius:20px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.src-pill:hover{border-color:var(--primary);color:var(--primary)}
+.src-pill.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 2px 6px rgba(26,35,126,.25)}
+.src-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:18px;margin-bottom:30px}
+.src-card{background:var(--surf);border:1.5px solid var(--bord);border-radius:var(--r);padding:22px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:12px;transition:all .2s ease;position:relative}
+.src-card:hover{transform:translateY(-2px);box-shadow:var(--shmd);border-color:var(--primary)}
+.src-card.platform-investing-forum{border-left:5px solid #1565c0}
+.src-card.platform-reddit-community{border-left:5px solid #ff4500}
+.src-card.platform-reddit-seed-thread{border-left:5px solid #ea580c}
+.src-card.platform-youtube-channel{border-left:5px solid #dc2626}
+.src-card.platform-twitter-x{border-left:5px solid #7c3aed}
+.src-card.platform-instagram{border-left:5px solid #c026d3}
+.src-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.src-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.src-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:12px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.src-badge.forum{background:#e3f2fd;color:#1565c0}
+.src-badge.reddit{background:#fff3e0;color:#e65100}
+.src-badge.thread{background:#ffedd5;color:#c2410c}
+.src-badge.youtube{background:#fee2e2;color:#b91c1c}
+.src-badge.twitter{background:#f3e8ff;color:#6b21a8}
+.src-badge.instagram{background:#fae8ff;color:#86198f}
+.src-origin-tag{font-size:.67rem;font-weight:600;padding:2px 8px;border-radius:10px;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.src-origin-tag.added{background:#fefce8;color:#854d0e;border-color:#fef08a}
+.src-title-area{margin-top:2px}
+.src-title{font-size:1.02rem;font-weight:700;color:var(--text);line-height:1.3}
+.src-handle{font-size:.78rem;color:var(--text3);font-weight:500;margin-top:2px}
+.src-link{display:inline-flex;align-items:center;gap:4px;font-size:.76rem;color:var(--blue);text-decoration:none;font-weight:600;margin-top:4px}
+.src-link:hover{text-decoration:underline}
+.src-angle-box{background:var(--bg);border:1px solid var(--bord);border-radius:8px;padding:10px 12px;font-size:.8rem;color:var(--text2);line-height:1.45}
+.src-angle-title{font-size:.68rem;font-weight:700;text-transform:uppercase;color:var(--text3);margin-bottom:4px;display:flex;align-items:center;gap:4px;letter-spacing:.04em}
+.src-insights-box{background:rgba(0,137,123,.05);border:1px solid rgba(0,137,123,.22);border-radius:8px;padding:12px 14px;font-size:.8rem;color:var(--text)}
+.src-insights-title{font-size:.68rem;font-weight:700;text-transform:uppercase;color:var(--green);margin-bottom:6px;display:flex;align-items:center;gap:4px;letter-spacing:.04em}
+.src-insights-list{list-style:none;padding:0;margin:0}
+.src-insights-list li{position:relative;padding-left:16px;margin-bottom:6px;line-height:1.45;color:var(--text2);font-size:.78rem}
+.src-insights-list li::before{content:"•";position:absolute;left:3px;top:-1px;color:var(--green);font-weight:bold;font-size:15px}
+.src-quotes-box{background:#fff;border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:8px 12px;font-size:.76rem;color:var(--text2);font-style:italic;line-height:1.4}
+.src-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.src-tag{background:var(--bg2);color:var(--text2);font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:10px}
+
+/* SIP Filtered Intelligence */
+.sip-intel-card{background:var(--card);border:1px solid var(--bord);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px;transition:all .2s;box-shadow:var(--sh)}
+.sip-intel-card:hover{border-color:var(--green);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.sip-cat-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:14px;font-size:.72rem;font-weight:700;letter-spacing:.02em}
+.sip-friction-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:8px;font-size:.68rem;font-weight:700;text-transform:uppercase}
+.pm-insight-box{background:rgba(0,137,123,.06);border:1px solid rgba(0,137,123,.3);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:10px 14px;font-size:.8rem;color:var(--text);line-height:1.45}
+.sip-matched-kw{display:inline-block;background:var(--bg2);border:1px solid var(--bord);border-radius:6px;padding:1px 6px;font-size:.68rem;color:var(--text3);font-family:monospace}
+.kw-hit{background:rgba(0,137,123,0.18);color:var(--green);padding:1px 4px;border-radius:4px;font-weight:700}
+</style></head><body>
+
+<header>
+  <a class="logo" href="/sip">
+    <div class="logo-icon"><span class="material-icons">candlestick_chart</span></div>
+    <div><div class="logo-title">SIP Discovery Engine</div><div class="logo-sub">AI Problem Hypotheses for SIP Retention</div></div>
+  </a>
+  <nav class="nav-links">
+    <a class="nav-link" href="/groww" style="background:rgba(0,208,156,0.18);color:#6ee7b7;border:1px solid rgba(0,208,156,0.4);"><span class="material-icons">hub</span>Groww Multi-Source</a>
+    <a class="nav-link" href="#" onclick="showTab('sources'); return false;" style="background:rgba(255,255,255,0.12);"><span class="material-icons">model_training</span>Trained Sources (46)</a>
+    <a class="nav-link active" href="/sip"><span class="material-icons">psychology</span>SIP Discovery</a>
+  </nav>
+
+</header>
+
+<main>
+  <!-- Hero -->
+  <div class="hero-banner">
+    <div style="position:relative;z-index:1">
+      <div class="hero-tag"><span class="material-icons">science</span>7-Stage AI Pipeline</div>
+      <h1>SIP Problem Discovery Engine</h1>
+      <p>Turn public investor conversations and community discussions into evidence-backed problem hypotheses. Identify why investors pause, reduce, or stop SIPs — and prioritise what to investigate first.</p>
+      <div class="hero-cta">
+        <button class="btn btn-white" id="btnRun" onclick="runPipeline()"><span class="material-icons">play_arrow</span>Run Discovery Pipeline</button>
+        <button class="btn btn-ghost" onclick="loadLatest()"><span class="material-icons">refresh</span>Load Latest Results</button>
+        <button class="btn btn-ghost" onclick="showTab('sources')" style="border-color:rgba(255,255,255,0.5);"><span class="material-icons">model_training</span>Trained Sources (46)</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-v" id="statRecords">—</div><div class="hero-stat-l">Records Analysed</div></div>
+      <div class="hero-stat"><div class="hero-stat-v" id="statHyps">—</div><div class="hero-stat-l">Hypotheses Found</div></div>
+      <div class="hero-stat"><div class="hero-stat-v" id="statValidity">—</div><div class="hero-stat-l">Schema Valid %</div></div>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disc">
+    <span class="material-icons">warning</span>
+    <span><strong>Important:</strong> This engine identifies <em>possible</em> problems from public investor conversations, forums, and community discussions. It cannot prove population prevalence or that solving any problem will improve 12-month SIP continuation. All findings require human review and validation against behavioural data.</span>
+  </div>
+
+  <!-- Run Panel -->
+  <div class="run-panel">
+    <div class="run-info">
+      <h3>7-Stage SIP Discovery Pipeline</h3>
+      <p>Collect → Clean → Filter → Extract → Aggregate → Validate → Dashboard. Uses multi-source investor conversations across forums, Reddit communities, YouTube, and personal finance creators.</p>
+    </div>
+    <div id="runStatus" style="font-size:.82rem;color:var(--text2);display:flex;align-items:center;gap:6px">
+      <span class="material-icons">info</span> Run analysis or load latest results.
+    </div>
+  </div>
+
+  <!-- Pipeline Steps -->
+  <section>
+    <div class="sec-title"><span class="material-icons">account_tree</span>Pipeline Stages</div>
+    <div class="pipe-steps">
+      <div class="ps" id="s1"><div class="sn">1</div><div class="sl">Collect</div></div>
+      <div class="ps" id="s2"><div class="sn">2</div><div class="sl">Clean</div></div>
+      <div class="ps" id="s3"><div class="sn">3</div><div class="sl">Filter</div></div>
+      <div class="ps" id="s4"><div class="sn">4</div><div class="sl">Extract</div></div>
+      <div class="ps" id="s5"><div class="sn">5</div><div class="sl">Aggregate</div></div>
+      <div class="ps" id="s6"><div class="sn">6</div><div class="sl">Validate</div></div>
+      <div class="ps" id="s7"><div class="sn">7</div><div class="sl">Dashboard</div></div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <div class="mg">
+    <div class="mc"><div class="mi blue"><span class="material-icons">inbox</span></div><div><div class="mv" id="mC">—</div><div class="mlb">Records Collected</div><div class="ms">Stage 1</div></div></div>
+    <div class="mc"><div class="mi green"><span class="material-icons">verified</span></div><div><div class="mv" id="mF">—</div><div class="mlb">Relevant Records</div><div class="ms">After Stage 3</div></div></div>
+    <div class="mc"><div class="mi purple"><span class="material-icons">emoji_objects</span></div><div><div class="mv" id="mH">—</div><div class="mlb">Problem Hypotheses</div><div class="ms">Stage 5 output</div></div></div>
+    <div class="mc"><div class="mi amber"><span class="material-icons">fact_check</span></div><div><div class="mv" id="mV">—%</div><div class="mlb">Schema Validity Rate</div><div class="ms">Stage 6 checks</div></div></div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" id="tab-btn-sipfiltered" onclick="showTab('sipfiltered')" style="border-bottom-color:var(--green);font-weight:700;"><span class="material-icons" style="color:var(--green);">filter_alt</span>🎯 Filtered SIP Intelligence (1,154)</div>
+    <div class="tab" id="tab-btn-manual" onclick="showTab('manual')"><span class="material-icons" style="color:var(--blue);">manage_search</span>🔍 Manual Retrieval & Rubrics</div>
+    <div class="tab" id="tab-btn-groq" onclick="showTab('groq')"><span class="material-icons" style="color:var(--green);">bolt</span>⚖️ Groq LLM Judge & Rubrics Gate</div>
+    <div class="tab" id="tab-btn-llmbench" onclick="showTab('llmbench')"><span class="material-icons">link</span>🔗 Link Grounding & Benchmark (1,154)</div>
+    <div class="tab" id="tab-btn-sources" onclick="showTab('sources')"><span class="material-icons">model_training</span>Trained Sources & Channels (46)</div>
+    <div class="tab" onclick="showTab('opp')"><span class="material-icons">emoji_objects</span>Opportunity Ranking</div>
+    <div class="tab" onclick="showTab('dist')"><span class="material-icons">donut_large</span>Distributions</div>
+    <div class="tab" onclick="showTab('ev')"><span class="material-icons">search</span>Evidence Explorer</div>
+    <div class="tab" onclick="showTab('eval')"><span class="material-icons">grading</span>AI Evals</div>
+  </div>
+
+  <!-- Tab: Filtered SIP Intelligence -->
+  <div class="tp active" id="tp-sipfiltered">
+    <div class="src-hero" style="background:linear-gradient(135deg,rgba(0,137,123,.12) 0%,rgba(21,101,192,.08) 50%,var(--card) 100%);">
+      <div class="src-hero-text">
+        <div class="src-tag-pill"><span class="material-icons" style="font-size:14px;">filter_alt</span>100% Filtered SIP Intelligence</div>
+        <h2>Filtered Systematic Investment Plan (SIP) Intelligence</h2>
+        <p>1,154 High-Signal SIP conversations isolated from 5,333 total records across Apple App Store, Google Play Store, YouTube channels, Reddit communities, and TradingQ&A forums. Off-topic comments, unrelated stock chatter, and bot spam are eliminated to focus exclusively on 12-month mutual fund continuation.</p>
+      </div>
+      <div class="src-hero-badge"><span class="material-icons">verified</span>7 Sources Monitored (Incl. App & Play Store)</div>
+    </div>
+
+    <!-- KPI Strip -->
+    <div class="src-kpis" style="margin-bottom:16px;">
+      <div class="src-kpi"><div class="src-kpi-val" id="sipDashKpiTotal">1,154</div><div class="src-kpi-lbl">Total Filtered SIP Items</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="sipDashKpiMandate" style="color:var(--red);">52</div><div class="src-kpi-lbl">Auto-Pay Mandate Failures</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="sipDashKpiLoss" style="color:var(--purple);">114</div><div class="src-kpi-lbl">Market Dip & Loss Panics</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="sipDashKpiPause" style="color:var(--amber);">23</div><div class="src-kpi-lbl">Pause vs Cancel Inquiries</div></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="src-control-bar">
+      <div class="src-search-row">
+        <div class="src-search-box">
+          <span class="material-icons">search</span>
+          <input type="text" class="src-input" id="sipDashSearchInput" placeholder="Search SIP conversations (e.g. mandate, pause, bounce, ICICI, XIRR, small cap)..." oninput="filterSipDashIntelligence()">
+        </div>
+        <div style="font-size:.78rem;color:var(--text3);white-space:nowrap;font-weight:600;" id="sipDashMatchCount">Showing 1,154 SIP conversations</div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;margin-bottom:6px;display:block;">SIP Category Vector:</span>
+        <div class="src-pills" id="sipDashCatPills">
+          <div class="src-pill active" data-cat="all" onclick="setSipDashCatFilter('all', this)">All SIP Topics (1,154)</div>
+          <div class="src-pill" data-cat="autopay_mandate" onclick="setSipDashCatFilter('autopay_mandate', this)">⚡ Auto-Pay & Mandates (52)</div>
+          <div class="src-pill" data-cat="pause_skip_cancel" onclick="setSipDashCatFilter('pause_skip_cancel', this)">⏸️ Pause / Skip / Cancel (23)</div>
+          <div class="src-pill" data-cat="performance_anxiety" onclick="setSipDashCatFilter('performance_anxiety', this)">📉 Market Dips & Panic (114)</div>
+          <div class="src-pill" data-cat="step_up" onclick="setSipDashCatFilter('step_up', this)">📈 Step-Up & Top-Up (28)</div>
+          <div class="src-pill" data-cat="first_time_onboarding" onclick="setSipDashCatFilter('first_time_onboarding', this)">🚀 First-Time & KYC (116)</div>
+          <div class="src-pill" data-cat="demat_vs_amc" onclick="setSipDashCatFilter('demat_vs_amc', this)">🏛️ Demat vs AMC Folios (75)</div>
+          <div class="src-pill" data-cat="fund_allocation" onclick="setSipDashCatFilter('fund_allocation', this)">📊 Fund Allocation & Overlap (640)</div>
+          <div class="src-pill" data-cat="taxation_redemption" onclick="setSipDashCatFilter('taxation_redemption', this)">💰 Taxation & ELSS (106)</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--bord);">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+          <span style="font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;">Platform:</span>
+          <div class="src-pill active" data-plat="all" onclick="setSipDashPlatFilter('all', this)" style="padding:3px 8px;font-size:.72rem;">All</div>
+          <div class="src-pill" data-plat="app_store" onclick="setSipDashPlatFilter('app_store', this)" style="padding:3px 8px;font-size:.72rem;">Apple App Store (75)</div>
+          <div class="src-pill" data-plat="play_store" onclick="setSipDashPlatFilter('play_store', this)" style="padding:3px 8px;font-size:.72rem;">Google Play (30)</div>
+          <div class="src-pill" data-plat="youtube" onclick="setSipDashPlatFilter('youtube', this)" style="padding:3px 8px;font-size:.72rem;">YouTube (842)</div>
+          <div class="src-pill" data-plat="reddit" onclick="setSipDashPlatFilter('reddit', this)" style="padding:3px 8px;font-size:.72rem;">Reddit (116)</div>
+          <div class="src-pill" data-plat="tradingqna" onclick="setSipDashPlatFilter('tradingqna', this)" style="padding:3px 8px;font-size:.72rem;">TradingQ&A (79)</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+          <span style="font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;">Friction:</span>
+          <div class="src-pill active" data-fric="all" onclick="setSipDashFricFilter('all', this)" style="padding:3px 8px;font-size:.72rem;">All</div>
+          <div class="src-pill" data-fric="Critical Churn Risk" onclick="setSipDashFricFilter('Critical Churn Risk', this)" style="padding:3px 8px;font-size:.72rem;color:var(--red);">⚠️ Churn Risk</div>
+          <div class="src-pill" data-fric="Moderate Friction" onclick="setSipDashFricFilter('Moderate Friction', this)" style="padding:3px 8px;font-size:.72rem;color:var(--amber);">⚡ Friction</div>
+          <div class="src-pill" data-fric="Investor Inquiry" onclick="setSipDashFricFilter('Investor Inquiry', this)" style="padding:3px 8px;font-size:.72rem;color:var(--blue);">❓ Inquiries</div>
+          <div class="src-pill" data-fric="Informational & Learning" onclick="setSipDashFricFilter('Informational & Learning', this)" style="padding:3px 8px;font-size:.72rem;color:var(--green);">💡 Learning</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards Container -->
+    <div id="sipDashGrid" style="display:flex;flex-direction:column;gap:12px;margin-bottom:30px;">
+      <div style="text-align:center;padding:50px;"><div class="spinner"></div><p style="margin-top:10px;color:var(--text2);">Loading filtered SIP intelligence...</p></div>
+    </div>
+  </div>
+
+  <!-- Tab: Opportunities -->
+  <div class="tp" id="tp-opp">
+    <div id="hypC"><div class="empty"><span class="material-icons">lightbulb</span><h3>No hypotheses yet</h3><p>Run the Discovery Pipeline to generate ranked problem hypotheses from your review data.</p></div></div>
+  </div>
+
+  <!-- Tab: Distributions -->
+  <div class="tp" id="tp-dist">
+    <div class="two-col">
+      <div class="card"><div class="card-header"><div class="card-title"><span class="material-icons">account_balance_wallet</span>SIP Outcome Distribution</div></div><div class="chart-w"><canvas id="cOutcome"></canvas></div></div>
+      <div class="card"><div class="card-header"><div class="card-title"><span class="material-icons">route</span>Journey Stage</div></div><div class="chart-w"><canvas id="cJourney"></canvas></div></div>
+    </div>
+    <div class="two-col">
+      <div class="card"><div class="card-header"><div class="card-title"><span class="material-icons">mood</span>Emotion Distribution</div></div><div class="chart-w"><canvas id="cEmotion"></canvas></div></div>
+      <div class="card"><div class="card-header"><div class="card-title"><span class="material-icons">bolt</span>Top Triggers</div></div><div id="trigC" style="padding:8px 0"><div class="empty" style="padding:30px"><p>No trigger data.</p></div></div></div>
+    </div>
+    <div class="card"><div class="card-header"><div class="card-title"><span class="material-icons">filter_alt</span>Relevance Filter Stats</div></div><div id="filtS" style="font-size:.82rem;color:var(--text2)">No data yet.</div></div>
+  </div>
+
+  <!-- Tab: Evidence -->
+  <div class="tp" id="tp-ev">
+    <div class="filter-bar">
+      <span class="filter-label">Filter:</span>
+      <select class="fsel" id="fO" onchange="renderEvidence()"><option value="">All Outcomes</option><option value="stopped">Stopped</option><option value="paused">Paused</option><option value="continued">Continued</option><option value="unknown">Unknown</option></select>
+      <select class="fsel" id="fC" onchange="renderEvidence()"><option value="">All Categories</option><option value="payment_failure">Payment Failure</option><option value="performance_anxiety">Performance Anxiety</option><option value="complexity">Complexity</option><option value="app_technical">Technical Issues</option><option value="support">Support Gap</option><option value="kyc_compliance">KYC</option><option value="withdrawal">Withdrawal</option><option value="feature_request">Feature Request</option></select>
+      <input class="finp" id="fT" placeholder="Search text..." oninput="renderEvidence()">
+      <span id="evCnt" style="font-size:.78rem;color:var(--text3);margin-left:auto"></span>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="ev-wrap"><table class="evt">
+        <thead><tr><th>Date</th><th>★</th><th>Source Platform</th><th>Category</th><th>SIP Outcome</th><th>Journey</th><th>Trigger</th><th>Emotion</th><th>Evidence Quote</th><th>Conf.</th></tr></thead>
+        <tbody id="evTb"><tr><td colspan="10" style="text-align:center;padding:40px;color:var(--text3)">Run pipeline to see evidence.</td></tr></tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <!-- Tab: Trained Sources & Channels (46) -->
+  <div class="tp" id="tp-sources">
+    <div class="src-hero-bar">
+      <div>
+        <div class="src-hero-title">
+          <span class="material-icons" style="font-size:26px;color:#80cbc4;">model_training</span>
+          Trained Sources, Channels & Research Directory
+        </div>
+        <div class="src-hero-desc">
+          Complete, verified inventory of all 46 authoritative channels, investing forums, subreddits, and seed research threads the SIP Discovery Engine is trained and grounded on. Includes 38 seed sources from the Master Directory plus 8 premier Indian investing forums.
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <span class="badge" style="background:rgba(255,255,255,0.18);color:#fff;padding:6px 14px;font-size:12px;border:1px solid rgba(255,255,255,0.35);border-radius:20px;font-weight:600;">
+          ✓ 100% Grounded
+        </span>
+      </div>
+    </div>
+
+    <!-- Quick KPIs -->
+    <div class="src-kpi-bar">
+      <div class="src-kpi"><div class="src-kpi-val" id="srcKpiTotal">46</div><div class="src-kpi-lbl">Total Sources Trained</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="srcKpiSheet">38</div><div class="src-kpi-lbl">From Sheet Directory</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="srcKpiForums">8</div><div class="src-kpi-lbl">Premier Added Forums</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="srcKpiPlatforms">6</div><div class="src-kpi-lbl">Platforms Covered</div></div>
+      <div class="src-kpi"><div class="src-kpi-val" id="srcKpiInsights">150+</div><div class="src-kpi-lbl">Mined User Insights</div></div>
+    </div>
+
+    <!-- Control & Filter Bar -->
+    <div class="src-control-bar">
+      <div class="src-search-row">
+        <div class="src-search-box">
+          <span class="material-icons">search</span>
+          <input type="text" class="src-input" id="srcSearchInput" placeholder="Search channels, handles, research angles, or retrieved insights..." oninput="filterSources()">
+        </div>
+        <div style="font-size:.78rem;color:var(--text3);white-space:nowrap;font-weight:600;" id="srcMatchCount">Showing 46 sources</div>
+      </div>
+      <div class="src-pills">
+        <span style="font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;margin-right:4px;">Platform Filter:</span>
+        <div class="src-pill active" data-platform="all" onclick="setPlatformFilter('all', this)"><span class="material-icons" style="font-size:15px;">apps</span>All (46)</div>
+        <div class="src-pill" data-platform="Investing Forum" onclick="setPlatformFilter('Investing Forum', this)"><span class="material-icons" style="font-size:15px;">forum</span>Investing Forums (12)</div>
+        <div class="src-pill" data-platform="Reddit Community" onclick="setPlatformFilter('Reddit Community', this)"><span class="material-icons" style="font-size:15px;">hub</span>Reddit Communities (6)</div>
+        <div class="src-pill" data-platform="Reddit Seed Thread" onclick="setPlatformFilter('Reddit Seed Thread', this)"><span class="material-icons" style="font-size:15px;">chat</span>Seed Threads (3)</div>
+        <div class="src-pill" data-platform="YouTube Channel" onclick="setPlatformFilter('YouTube Channel', this)"><span class="material-icons" style="font-size:15px;">smart_display</span>YouTube Channels (10)</div>
+        <div class="src-pill" data-platform="Twitter (X)" onclick="setPlatformFilter('Twitter (X)', this)"><span class="material-icons" style="font-size:15px;">alternate_email</span>Twitter / X Leaders (8)</div>
+        <div class="src-pill" data-platform="Instagram" onclick="setPlatformFilter('Instagram', this)"><span class="material-icons" style="font-size:15px;">photo_camera</span>Instagram Creators (7)</div>
+      </div>
+    </div>
+
+    <!-- Sources Grid -->
+    <div class="src-grid" id="sourcesGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:50px;"><div class="spinner"></div><p style="margin-top:10px;color:var(--text2);">Loading trained sources...</p></div>
+    </div>
+  </div>
+
+  <!-- Tab: Link Grounding & LLM Benchmark -->
+  <div class="tp" id="tp-llmbench">
+    <!-- Hero Banner -->
+    <div class="src-hero" style="background:linear-gradient(135deg,rgba(14,165,233,.14) 0%,rgba(0,208,156,.08) 50%,var(--card) 100%);border-color:rgba(14,165,233,0.35);">
+      <div class="src-hero-text">
+        <div class="src-tag-pill" style="background:rgba(14,165,233,.15);color:var(--blue);border-color:rgba(14,165,233,.3);"><span class="material-icons" style="font-size:14px;">verified</span>Ground Truth Link Provenance & Evaluation Benchmark</div>
+        <h2>Source Links & Retrieved Data for External LLM Accuracy Evaluation</h2>
+        <p>Every comment, review, and discussion is paired with its live Source URL (226 unique links) across YouTube channels, Reddit communities, TradingQ&A topics, Apple App Store, and Google Play Store. You can download this benchmark JSON or copy the pre-formatted system prompt to test with an external LLM (GPT-4o, Claude 3.5 Sonnet, Gemini Pro, DeepSeek) to grade and rank retrieval accuracy.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+        <button onclick="copySipDashPrompt()" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;padding:8px 14px;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-weight:600;">
+          <span class="material-icons" style="font-size:16px;color:var(--blue);">content_copy</span>
+          <span>Copy LLM Eval Prompt</span>
+        </button>
+        <a href="/api/sip/llm-benchmark/export" download="groww_sip_retrieval_llm_benchmark.json" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;padding:8px 16px;background:var(--blue);border-radius:6px;color:#fff;text-decoration:none;font-weight:700;">
+          <span class="material-icons" style="font-size:16px;">download</span>
+          <span>Download Benchmark (JSON)</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="src-kpis" style="margin-bottom:16px;">
+      <div class="src-kc">
+        <div class="src-kv" id="sipBmKpiTotal">1,154</div>
+        <div class="src-kl">Benchmark Test Cases</div>
+      </div>
+      <div class="src-kc">
+        <div class="src-kv" style="color:var(--green);" id="sipBmKpiLinks">226</div>
+        <div class="src-kl">Unique Source Links</div>
+      </div>
+      <div class="src-kc">
+        <div class="src-kv" style="color:var(--purple);">7 Sources</div>
+        <div class="src-kl">Cross-Platform Coverage</div>
+      </div>
+      <div class="src-kc">
+        <div class="src-kv" style="color:#10b981;">100%</div>
+        <div class="src-kl">Ground Truth Verifiable</div>
+      </div>
+    </div>
+
+    <!-- Collapsible Prompt Box -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;" onclick="toggleSipDashPrompt()">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="material-icons" style="color:var(--blue);font-size:18px;">terminal</span>
+          <strong style="font-size:0.85rem;color:var(--text);">System Prompt & 1-5 Scoring Rubric for External LLMs (Click to expand)</strong>
+        </div>
+        <span class="material-icons" id="sip-prompt-toggle-icon" style="color:var(--text2);font-size:18px;">expand_more</span>
+      </div>
+      <div id="sip-prompt-box-content" style="display:none;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);">
+        <pre id="sip-bm-prompt-text" style="background:rgba(0,0,0,0.4);border:1px solid var(--border);border-radius:6px;padding:10px 12px;color:#cbd5e1;font-size:0.75rem;line-height:1.45;overflow-x:auto;white-space:pre-wrap;max-height:200px;"></pre>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="src-filter-bar" style="margin-bottom:16px;">
+      <div class="src-search-wrap" style="flex:1;">
+        <span class="material-icons src-search-icon">search</span>
+        <input type="text" class="src-search-input" id="sipBmSearch" placeholder="Search by URL, post ID, author, or comment text..." oninput="filterSipDashBenchmark()">
+      </div>
+      <div class="src-pills" id="sipBmPlatformPills">
+        <div class="src-pill active" data-bmplat="all" onclick="setSipDashBmPlatform('all', this)">All (1,154)</div>
+        <div class="src-pill" data-bmplat="app_store" onclick="setSipDashBmPlatform('app_store', this)">App Store (75)</div>
+        <div class="src-pill" data-bmplat="play_store" onclick="setSipDashBmPlatform('play_store', this)">Play Store (30)</div>
+        <div class="src-pill" data-bmplat="youtube" onclick="setSipDashBmPlatform('youtube', this)">YouTube (842)</div>
+        <div class="src-pill" data-bmplat="reddit" onclick="setSipDashBmPlatform('reddit', this)">Reddit (116)</div>
+        <div class="src-pill" data-bmplat="tradingqna" onclick="setSipDashBmPlatform('tradingqna', this)">TradingQ&A (79)</div>
+      </div>
+    </div>
+
+    <div style="font-size:0.8rem;color:var(--text2);margin-bottom:10px;font-weight:600;" id="sipBmCount">Showing 1,154 benchmark test cases</div>
+
+    <!-- Benchmark Table Container -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:30px;">
+      <div style="max-height:750px;overflow-y:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.8rem;text-align:left;">
+          <thead style="position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--border);z-index:2;">
+            <tr style="color:var(--text2);">
+              <th style="padding:10px 12px;width:105px;">Case ID</th>
+              <th style="padding:10px 12px;width:240px;">Source Link & Platform</th>
+              <th style="padding:10px 12px;width:140px;">Author & Date</th>
+              <th style="padding:10px 12px;">Verbatim Retrieved Content</th>
+              <th style="padding:10px 12px;width:200px;">SIP Vector & Intent</th>
+              <th style="padding:10px 12px;width:100px;text-align:right;">LLM Test Action</th>
+            </tr>
+          </thead>
+          <tbody id="sipBmTableBody">
+            <tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text2);"><div class="spinner"></div><p style="margin-top:10px;">Loading LLM Benchmark test cases...</p></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Manual Retrieval & Rubrics -->
+  <div class="tp" id="tp-manual">
+    <div class="src-hero" style="background:linear-gradient(135deg,rgba(56,189,248,.14) 0%,rgba(0,137,123,.08) 50%,var(--card) 100%);border-color:rgba(56,189,248,0.35);">
+      <div class="src-hero-text">
+        <div class="src-tag-pill" style="background:rgba(56,189,248,.15);color:var(--blue);border-color:rgba(56,189,248,.3);"><span class="material-icons" style="font-size:14px;">manage_search</span>Manual Provenance Rubrics Inspector</div>
+        <h2>Manual Retrieval Verification & Data Rubrics</h2>
+        <p>Manually inspect every retrieved conversation with full Data Provenance: source URL, channel, author, date, and protocol, alongside human verification toggles.</p>
+      </div>
+      <div>
+        <a href="/api/groww/export/csv" class="btn" style="background:var(--blue);color:#fff;text-decoration:none;padding:8px 14px;border-radius:6px;font-size:0.8rem;font-weight:700;display:inline-flex;align-items:center;gap:4px;">
+          <span class="material-icons" style="font-size:16px;">download</span> Export Full CSV
+        </a>
+      </div>
+    </div>
+
+    <!-- Cards Container -->
+    <div id="sipManualGrid" style="display:flex;flex-direction:column;gap:12px;margin-bottom:30px;">
+      <div style="text-align:center;padding:50px;"><div class="spinner"></div><p style="margin-top:10px;color:var(--text2);">Loading manual rubrics items...</p></div>
+    </div>
+  </div>
+
+  <!-- Tab: Groq LLM Judge -->
+  <div class="tp" id="tp-groq">
+    <div class="src-hero" style="background:linear-gradient(135deg,rgba(0,208,156,.14) 0%,rgba(0,137,123,.08) 50%,var(--card) 100%);border-color:rgba(0,208,156,0.35);">
+      <div class="src-hero-text">
+        <div class="src-tag-pill" style="background:rgba(0,208,156,.15);color:var(--green);border-color:rgba(0,208,156,.3);"><span class="material-icons" style="font-size:14px;">bolt</span>Groq LPU™ LLM-as-a-Judge Evaluation Engine</div>
+        <h2>Groq AI LLM-as-a-Judge Rubrics Table & Accuracy Ranking</h2>
+        <p>Ultra-fast quantitative and qualitative evaluation using Groq LPU™ Inference (model: qwen/qwen3.8-27b). Rigorously grades each record across 4 data rubrics: Link Grounding (25%), Verbatim Authenticity (30%), SIP Vector Precision (25%), and PM Actionability (20%). Strict verdict gate: PASS (&ge; 4.0), BORDERLINE (3.0–3.9), FAIL (&lt; 3.0).</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+        <button id="btn-sip-groq-batch" onclick="runSipDashGroqBatch(5)" style="background:var(--green);color:#0A1B14;border:none;padding:9px 18px;border-radius:9999px;font-size:0.8rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;box-shadow:0 4px 12px rgba(0,208,156,0.3);">
+          <span class="material-icons" style="font-size:16px;">play_arrow</span>
+          <span id="btn-sip-groq-txt">Run Groq Judge (Next 5 Cases)</span>
+        </button>
+        <a href="/api/sip/groq-results/export" download="groq_sip_rubrics_evaluation_results.json" style="background:rgba(255,255,255,0.06);color:var(--text);border:1px solid var(--border);text-decoration:none;padding:6px 14px;border-radius:9999px;font-size:0.75rem;font-weight:600;display:inline-flex;align-items:center;gap:4px;">
+          <span class="material-icons" style="font-size:14px;color:var(--green);">download</span> Export Groq JSON
+        </a>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="src-kpis" style="margin-bottom:16px;">
+      <div class="src-kc"><div class="src-kv" id="sipGroqKpiAvg" style="color:#f59e0b;">3.3 / 5.0</div><div class="src-kl">Groq Composite Rating</div></div>
+      <div class="src-kc"><div class="src-kv" id="sipGroqKpiPass" style="color:var(--green);">28.6% PASS</div><div class="src-kl">Rubrics Pass Rate</div></div>
+      <div class="src-kc"><div class="src-kv" id="sipGroqKpiAttr" style="color:var(--blue);">3.9 / 5.0</div><div class="src-kl">Link Grounding Score</div></div>
+      <div class="src-kc"><div class="src-kv" id="sipGroqKpiTotal" style="color:var(--green);">14 Judged</div><div class="src-kl">Model: Groq/qwen/qwen3.8-27b</div></div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="src-filter-bar" style="margin-bottom:16px;">
+      <div class="src-search-wrap" style="flex:1;">
+        <span class="material-icons src-search-icon">search</span>
+        <input type="text" class="src-search-input" id="sipGroqSearch" placeholder="Search by case ID, critique, author, or quote..." oninput="filterSipDashGroq()" style="border-radius:9999px;">
+      </div>
+      <div class="src-pills" id="sipGroqVerdictPills">
+        <div class="src-pill active" data-v="all" onclick="setSipDashGroqVerdict('all', this)">All Verdicts</div>
+        <div class="src-pill" data-v="PASS" onclick="setSipDashGroqVerdict('PASS', this)" style="color:var(--green);">✓ PASS</div>
+        <div class="src-pill" data-v="BORDERLINE" onclick="setSipDashGroqVerdict('BORDERLINE', this)" style="color:var(--amber);">⚡ BORDERLINE</div>
+        <div class="src-pill" data-v="FAIL" onclick="setSipDashGroqVerdict('FAIL', this)" style="color:var(--red);">✕ FAIL</div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:30px;">
+      <div style="max-height:750px;overflow-y:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.8rem;text-align:left;">
+          <thead style="position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--border);z-index:2;">
+            <tr style="color:var(--text2);">
+              <th style="padding:10px 12px;width:100px;">Case ID</th>
+              <th style="padding:10px 12px;width:200px;">Source Link & Origin</th>
+              <th style="padding:10px 12px;width:240px;">Verbatim Quote</th>
+              <th style="padding:10px 12px;width:140px;">SIP Vector</th>
+              <th style="padding:10px 12px;width:160px;">Groq Rubrics (1-5)</th>
+              <th style="padding:10px 12px;width:100px;">Verdict Gate</th>
+              <th style="padding:10px 12px;">Groq Critique & Rationale</th>
+              <th style="padding:10px 12px;width:80px;text-align:right;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="sipGroqTableBody">
+            <tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text2);"><div class="spinner"></div><p style="margin-top:10px;">Loading Groq evaluations...</p></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Evals -->
+  <div class="tp" id="tp-eval">
+    <div id="evalC"><div class="empty"><span class="material-icons">grading</span><h3>No evaluation data</h3><p>Run the pipeline to generate evaluation results.</p></div></div>
+  </div>
+</main>
+
+<script>
+var G = {opps:[],evidence:[],job_id:null,dist:{},evals:null};
+var charts={};
+var trainedSources = [];
+var activePlatformFilter = 'all';
+
+var sipDashData = [];
+var activeSipDashCat = 'all';
+var activeSipDashPlat = 'all';
+var activeSipDashFric = 'all';
+
+var sipDashBenchmarkCases = [];
+var sipDashBenchmarkPrompt = '';
+var activeSipDashBmPlatform = 'all';
+
+var sipDashGroqList = [];
+var activeSipDashGroqVerdict = 'all';
+
+function showTab(id){
+  var tabs=['sipfiltered','manual','groq','llmbench','sources','opp','dist','ev','eval'];
+  var normId = (id === 'mistral') ? 'groq' : id;
+  document.querySelectorAll('.tabs .tab').forEach(function(t,i){
+    var tabKey = tabs[i];
+    t.classList.toggle('active', tabKey === normId || (normId === 'groq' && tabKey === 'groq'));
+  });
+  tabs.forEach(function(t){
+    var el = document.getElementById('tp-'+t);
+    if(el) el.classList.toggle('active', t === normId || (normId === 'groq' && t === 'groq'));
+  });
+  if(normId==='sipfiltered') loadAndRenderSipDashFiltered();
+  if(normId==='manual') loadAndRenderSipDashManual();
+  if(normId==='groq') loadAndRenderSipDashGroq();
+  if(normId==='llmbench') loadAndRenderSipDashBenchmark();
+  if(normId==='sources') loadAndRenderTrainedSources();
+  if(normId==='dist'&&G.dist.sip_outcome_distribution) renderCharts();
+  if(normId==='eval'&&!G.evals&&G.job_id) loadEvals();
+}
+
+async function loadAndRenderSipDashManual(){
+  if(!sipDashData.length){
+    await loadAndRenderSipDashFiltered();
+  }
+  renderSipDashManualGrid(sipDashData);
+}
+
+function renderSipDashManualGrid(records){
+  var c = document.getElementById('sipManualGrid');
+  if(!c) return;
+  if(!records||!records.length){
+    c.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text2);">No records match.</div>';
+    return;
+  }
+  var html = records.slice(0, 100).map(function(r){
+    var stars = r.rating ? '★'.repeat(r.rating) + '☆'.repeat(5-r.rating) : '—';
+    var dateStr = r.date ? r.date.slice(0, 10) : 'Recent';
+    return '<div class="src-card" style="padding:14px 16px;border-left:3px solid var(--green);">' +
+      '<div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.75rem;">' +
+      '<span class="badge" style="background:rgba(0,208,156,0.12);color:var(--green);font-weight:700;">' + (r.source||'Review') + ' • ' + (r.channel||r.source_name||'Groww') + '</span>' +
+      (r.source_url ? '<a href="' + r.source_url + '" target="_blank" style="color:var(--green);font-size:0.75rem;text-decoration:none;display:inline-flex;align-items:center;gap:2px;">Visit URL <span class="material-icons" style="font-size:12px;">open_in_new</span></a>' : '<span style="color:var(--text3);">Direct API</span>') +
+      '</div>' +
+      (r.title ? '<div style="font-weight:700;color:var(--text);font-size:0.8rem;margin-bottom:4px;">' + r.title + '</div>' : '') +
+      '<div style="font-size:0.8rem;color:var(--text2);margin-bottom:8px;line-height:1.4;">&ldquo;' + (r.text||'') + '&rdquo;</div>' +
+      '<div style="display:flex;align-items:center;justify-content:space-between;font-size:0.72rem;">' +
+      '<div><span style="background:rgba(0,208,156,0.15);color:var(--green);padding:2px 8px;border-radius:9999px;font-weight:700;">' + (r.sip_category_name||r.sip_category) + '</span></div>' +
+      '<div style="color:var(--text3);">' + (r.author||'Investor') + ' &bull; ' + dateStr + (r.rating ? ' &bull; <span style="color:#f59e0b;">' + stars + '</span>' : '') + '</div>' +
+      '</div>' +
+      '</div>';
+  }).join('');
+  c.innerHTML = html;
+}
+
+async function loadAndRenderSipDashGroq(){
+  try{
+    var r = await fetch('/api/sip/groq-results');
+    var d = await r.json();
+    if(d.evaluations){
+      sipDashGroqList = d.evaluations;
+      if(d.summary){
+        var s = d.summary;
+        if(s.average_composite_score) document.getElementById('sipGroqKpiAvg').textContent = s.average_composite_score + ' / 5.0';
+        if(s.pass_rate_pct !== undefined) document.getElementById('sipGroqKpiPass').textContent = s.pass_rate_pct + '% PASS';
+        if(s.average_attribution_score) document.getElementById('sipGroqKpiAttr').textContent = s.average_attribution_score + ' / 5.0';
+        document.getElementById('sipGroqKpiTotal').textContent = sipDashGroqList.length + ' Judged';
+      }
+    }
+  }catch(e){
+    console.warn('Error loading Groq results in SIP dash:', e);
+  }
+  filterSipDashGroq();
+}
+var loadAndRenderSipDashMistral = loadAndRenderSipDashGroq;
+
+function setSipDashGroqVerdict(v, el){
+  activeSipDashGroqVerdict = v;
+  document.querySelectorAll('#sipGroqVerdictPills .src-pill').forEach(function(p){p.classList.remove('active');});
+  if(el) el.classList.add('active');
+  filterSipDashGroq();
+}
+var setSipDashMistralVerdict = setSipDashGroqVerdict;
+
+function filterSipDashGroq(){
+  var term = (document.getElementById('sipGroqSearch').value||'').toLowerCase().trim();
+  var filtered = sipDashGroqList.filter(function(e){
+    if(activeSipDashGroqVerdict !== 'all' && e.verdict !== activeSipDashGroqVerdict) return false;
+    if(!term) return true;
+    return (e.test_case_id||'').toLowerCase().includes(term) ||
+           (e.verbatim_retrieved_text||'').toLowerCase().includes(term) ||
+           (e.detailed_critique||'').toLowerCase().includes(term) ||
+           (e.author||'').toLowerCase().includes(term);
+  });
+  renderSipDashGroqTable(filtered);
+}
+var filterSipDashMistral = filterSipDashGroq;
+
+function renderSipDashGroqTable(evals){
+  var tbody = document.getElementById('sipGroqTableBody');
+  if(!tbody) return;
+  if(!evals||!evals.length){
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text2);">No evaluations match.</td></tr>';
+    return;
+  }
+  var html = evals.map(function(e){
+    var sc = e.scores || {};
+    var vClass = e.verdict === 'PASS' ? 'var(--green)' : (e.verdict === 'BORDERLINE' ? 'var(--amber)' : 'var(--red)');
+    var shortUrl = e.source_url ? (e.source_url.length > 25 ? e.source_url.substring(0, 22) + '...' : e.source_url) : 'Direct';
+    return '<tr style="border-bottom:1px solid rgba(255,255,255,0.04);">' +
+      '<td style="padding:10px 12px;vertical-align:top;"><span style="font-family:monospace;font-size:0.75rem;color:var(--green);font-weight:700;">' + e.test_case_id + '</span><br><span style="font-size:0.7rem;color:var(--text3);">' + e.platform + '</span></td>' +
+      '<td style="padding:10px 12px;vertical-align:top;"><div style="font-size:0.75rem;font-weight:700;color:var(--text);">' + (e.channel_or_entity||e.author||'Source') + '</div>' +
+      (e.source_url ? '<a href="' + e.source_url + '" target="_blank" style="color:var(--green);font-size:0.72rem;text-decoration:none;">' + shortUrl + '</a>' : '<span style="color:var(--text3);font-size:0.7rem;">Direct API</span>') + '</td>' +
+      '<td style="padding:10px 12px;vertical-align:top;font-size:0.78rem;color:var(--text2);max-width:240px;overflow:hidden;text-overflow:ellipsis;">' + (e.verbatim_retrieved_text||'').slice(0, 100) + '...</td>' +
+      '<td style="padding:10px 12px;vertical-align:top;"><span style="background:rgba(0,208,156,0.15);color:var(--green);padding:2px 8px;border-radius:9999px;font-size:0.72rem;font-weight:700;">' + (e.sip_category_name||e.extracted_sip_category) + '</span></td>' +
+      '<td style="padding:10px 12px;vertical-align:top;font-size:0.72rem;color:var(--text3);"><div>Link: ' + (sc.link_attribution||5) + ' | Auth: ' + (sc.verbatim_authenticity||5) + '</div><div>Cat: ' + (sc.category_accuracy||5) + ' | Act: ' + (sc.pm_actionability||5) + '</div><div style="color:#f59e0b;font-weight:700;">★ ' + (sc.composite_score||0) + ' / 5.0</div></td>' +
+      '<td style="padding:10px 12px;vertical-align:top;"><span style="color:' + vClass + ';font-weight:700;font-size:0.75rem;padding:3px 8px;border-radius:9999px;border:1px solid ' + vClass + ';">' + e.verdict + '</span></td>' +
+      '<td style="padding:10px 12px;vertical-align:top;font-size:0.75rem;color:var(--text);line-height:1.4;max-width:280px;border-left:2px solid var(--green);">' + (e.detailed_critique||'') + '</td>' +
+      '<td style="padding:10px 12px;vertical-align:top;text-align:right;"><button onclick="alert(\'Case ' + e.test_case_id + ' scored ' + (sc.composite_score||0) + '/5.0 by Groq AI\')" style="background:rgba(0,208,156,0.12);color:var(--green);border:1px solid var(--green);padding:4px 10px;border-radius:9999px;font-size:0.7rem;cursor:pointer;font-weight:700;">Details</button></td>' +
+      '</tr>';
+  }).join('');
+  tbody.innerHTML = html;
+}
+var renderSipDashMistralTable = renderSipDashGroqTable;
+
+async function runSipDashGroqBatch(count){
+  var btn = document.getElementById('btn-sip-groq-batch') || document.getElementById('btn-sip-mistral-batch');
+  var txt = document.getElementById('btn-sip-groq-txt') || document.getElementById('btn-sip-mistral-txt');
+  if(btn) btn.disabled = true;
+  if(txt) txt.textContent = 'Judging with Groq...';
+  try{
+    var r = await fetch('/api/sip/groq-judge', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({count: count||5})
+    });
+    if(r.ok){
+      alert('Groq successfully evaluated 5 new test cases!');
+      await loadAndRenderSipDashGroq();
+    }
+  }catch(e){
+    console.error('Groq batch error:', e);
+  }finally{
+    if(btn) btn.disabled = false;
+    if(txt) txt.textContent = 'Run Groq Judge (Next 5 Cases)';
+  }
+}
+var runSipDashMistralBatch = runSipDashGroqBatch;
+
+
+async function loadAndRenderSipDashBenchmark(){
+  if(!sipDashBenchmarkCases.length){
+    try{
+      var r = await fetch('/api/sip/llm-benchmark');
+      var d = await r.json();
+      if(d.test_cases){
+        sipDashBenchmarkCases = d.test_cases;
+        if(d.evaluation_instructions && d.evaluation_instructions.system_prompt){
+          sipDashBenchmarkPrompt = d.evaluation_instructions.system_prompt;
+          var pEl = document.getElementById('sip-bm-prompt-text');
+          if(pEl) pEl.textContent = sipDashBenchmarkPrompt;
+        }
+        if(d.total_benchmark_cases) document.getElementById('sipBmKpiTotal').textContent = Number(d.total_benchmark_cases).toLocaleString();
+        if(d.total_unique_links) document.getElementById('sipBmKpiLinks').textContent = Number(d.total_unique_links).toLocaleString();
+      }
+    }catch(e){
+      console.warn('Error loading SIP dash benchmark:', e);
+    }
+  }
+  filterSipDashBenchmark();
+}
+
+function toggleSipDashPrompt(){
+  var c = document.getElementById('sip-prompt-box-content');
+  var ic = document.getElementById('sip-prompt-toggle-icon');
+  if(!c) return;
+  if(c.style.display==='none'||!c.style.display){
+    c.style.display='block';
+    if(ic) ic.textContent='expand_less';
+  }else{
+    c.style.display='none';
+    if(ic) ic.textContent='expand_more';
+  }
+}
+
+function copySipDashPrompt(){
+  var txt = sipDashBenchmarkPrompt || (document.getElementById('sip-bm-prompt-text') ? document.getElementById('sip-bm-prompt-text').textContent : '');
+  if(!txt) return;
+  navigator.clipboard.writeText(txt).then(function(){
+    alert('System Prompt & Scoring Rubric copied! Paste into GPT-4o, Claude 3.5, or Gemini.');
+  });
+}
+
+function copySipDashCase(id){
+  var tc = sipDashBenchmarkCases.find(function(c){return c.test_case_id === id;});
+  if(!tc) return;
+  navigator.clipboard.writeText(JSON.stringify(tc, null, 2)).then(function(){
+    alert('Test case ' + id + ' copied as JSON!');
+  });
+}
+
+function setSipDashBmPlatform(plat, el){
+  activeSipDashBmPlatform = plat;
+  document.querySelectorAll('#sipBmPlatformPills .src-pill').forEach(function(p){p.classList.remove('active');});
+  if(el) el.classList.add('active');
+  filterSipDashBenchmark();
+}
+
+function filterSipDashBenchmark(){
+  var term = (document.getElementById('sipBmSearch').value||'').toLowerCase().trim();
+  var filtered = sipDashBenchmarkCases.filter(function(c){
+    if(activeSipDashBmPlatform !== 'all' && c.source_code !== activeSipDashBmPlatform) return false;
+    if(!term) return true;
+    var tMatch = (c.verbatim_retrieved_text||'').toLowerCase().includes(term);
+    var uMatch = (c.source_url||'').toLowerCase().includes(term);
+    var aMatch = (c.author||'').toLowerCase().includes(term);
+    var cMatch = (c.channel_or_entity||'').toLowerCase().includes(term);
+    var idMatch = (c.test_case_id||'').toLowerCase().includes(term);
+    var catMatch = (c.sip_category_name||'').toLowerCase().includes(term);
+    return tMatch || uMatch || aMatch || cMatch || idMatch || catMatch;
+  });
+  var cEl = document.getElementById('sipBmCount');
+  if(cEl) cEl.textContent = 'Showing ' + filtered.length.toLocaleString() + ' of ' + sipDashBenchmarkCases.length.toLocaleString() + ' benchmark test cases';
+  renderSipDashBenchmarkTable(filtered);
+}
+
+function renderSipDashBenchmarkTable(cases){
+  var tbody = document.getElementById('sipBmTableBody');
+  if(!tbody) return;
+  if(!cases || !cases.length){
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text2);">No benchmark test cases match the filter.</td></tr>';
+    return;
+  }
+  var html = cases.slice(0, 300).map(function(tc){
+    var stars = tc.rating ? '★'.repeat(tc.rating) + '☆'.repeat(5-tc.rating) : '—';
+    var dateStr = tc.date ? tc.date.slice(0, 10) : 'Recent';
+    var shortUrl = tc.source_url ? (tc.source_url.length > 30 ? tc.source_url.substring(0, 27) + '...' : tc.source_url) : '';
+    return '<tr style="border-bottom:1px solid rgba(255,255,255,0.04);">' +
+      '<td style="padding:10px 12px;vertical-align:top;"><span style="font-family:monospace;font-size:0.75rem;color:var(--blue);background:rgba(14,165,233,0.1);padding:2px 6px;border-radius:4px;border:1px solid rgba(14,165,233,0.2);">' + tc.test_case_id + '</span></td>' +
+      '<td style="padding:10px 12px;vertical-align:top;"><div style="font-weight:600;color:var(--text);font-size:0.78rem;">' + tc.platform + (tc.channel_or_entity ? ' • ' + tc.channel_or_entity : '') + '</div>' +
+      (tc.source_url ? '<div style="margin-top:4px;"><a href="' + tc.source_url + '" target="_blank" style="color:var(--green);font-size:0.75rem;text-decoration:none;display:inline-flex;align-items:center;gap:3px;background:rgba(0,137,123,0.1);padding:2px 6px;border-radius:4px;"><span class="material-icons" style="font-size:12px;">open_in_new</span>' + shortUrl + '</a></div>' : '<span style="color:var(--text2);font-size:0.72rem;">Store Review API</span>') +
+      '</td>' +
+      '<td style="padding:10px 12px;vertical-align:top;white-space:nowrap;"><div style="font-weight:600;color:var(--text);font-size:0.78rem;max-width:130px;overflow:hidden;text-overflow:ellipsis;">' + (tc.author||'Investor') + '</div><div style="font-size:0.72rem;color:var(--text2);">' + dateStr + '</div>' + (tc.rating ? '<div style="color:#f59e0b;font-size:0.78rem;">' + stars + '</div>' : '') + '</td>' +
+      '<td style="padding:10px 12px;vertical-align:top;">' + (tc.title ? '<div style="font-weight:700;color:var(--text);margin-bottom:3px;font-size:0.8rem;">' + tc.title + '</div>' : '') + '<div style="font-size:0.78rem;color:var(--text2);max-height:80px;overflow-y:auto;line-height:1.4;">' + (tc.verbatim_retrieved_text||'') + '</div>' +
+      (tc.pm_actionable_insight ? '<div style="margin-top:4px;font-size:0.72rem;color:var(--green);background:rgba(0,137,123,0.08);padding:3px 6px;border-radius:4px;"><strong>PM Action:</strong> ' + tc.pm_actionable_insight + '</div>' : '') +
+      '</td>' +
+      '<td style="padding:10px 12px;vertical-align:top;"><span style="display:inline-block;padding:2px 6px;border-radius:10px;background:rgba(124,77,255,0.15);color:var(--purple);font-size:0.72rem;font-weight:700;">' + (tc.sip_category_name||tc.extracted_sip_category) + '</span><div style="margin-top:4px;font-size:0.7rem;color:var(--red);font-weight:600;">' + (tc.sip_friction_level||'MED') + ' Friction</div></td>' +
+      '<td style="padding:10px 12px;vertical-align:top;text-align:right;"><button onclick="copySipDashCase(\'' + tc.test_case_id + '\')" style="background:rgba(14,165,233,0.12);border:1px solid rgba(14,165,233,0.3);color:var(--blue);font-size:0.72rem;padding:4px 8px;border-radius:4px;cursor:pointer;font-weight:600;">Copy Case</button></td>' +
+      '</tr>';
+  }).join('');
+  tbody.innerHTML = html;
+}
+
+async function loadAndRenderSipDashFiltered(){
+  if(!sipDashData.length){
+    try{
+      var r = await fetch('/api/sip/filtered-intelligence');
+      var d = await r.json();
+      if(d.records){
+        sipDashData = d.records;
+        if(d.total_sip_relevant) document.getElementById('sipDashKpiTotal').textContent = d.total_sip_relevant.toLocaleString();
+        if(d.category_breakdown){
+          var cb = d.category_breakdown;
+          if(cb.autopay_mandate) document.getElementById('sipDashKpiMandate').textContent = cb.autopay_mandate;
+          if(cb.performance_anxiety) document.getElementById('sipDashKpiLoss').textContent = cb.performance_anxiety;
+          if(cb.pause_skip_cancel) document.getElementById('sipDashKpiPause').textContent = cb.pause_skip_cancel;
+        }
+      }
+    }catch(e){
+      console.warn('Error loading SIP filtered dash:', e);
+    }
+  }
+  filterSipDashIntelligence();
+}
+
+async function setSipDashCatFilter(cat, el){
+  activeSipDashCat = cat;
+  document.querySelectorAll('#sipDashCatPills .src-pill').forEach(function(p){p.classList.remove('active');});
+  if(el) el.classList.add('active');
+  if(!sipDashData.length) await loadAndRenderSipDashFiltered();
+  else filterSipDashIntelligence();
+}
+
+async function setSipDashPlatFilter(plat, el){
+  activeSipDashPlat = plat;
+  document.querySelectorAll('#tp-sipfiltered [data-plat]').forEach(function(p){p.classList.remove('active');});
+  if(el) el.classList.add('active');
+  if(!sipDashData.length) await loadAndRenderSipDashFiltered();
+  else filterSipDashIntelligence();
+}
+
+async function setSipDashFricFilter(fric, el){
+  activeSipDashFric = fric;
+  document.querySelectorAll('#tp-sipfiltered [data-fric]').forEach(function(p){p.classList.remove('active');});
+  if(el) el.classList.add('active');
+  if(!sipDashData.length) await loadAndRenderSipDashFiltered();
+  else filterSipDashIntelligence();
+}
+
+function filterSipDashIntelligence(){
+  var term = (document.getElementById('sipDashSearchInput').value || '').toLowerCase().trim();
+  var filtered = sipDashData.filter(function(r){
+    if(activeSipDashCat !== 'all' && r.sip_category !== activeSipDashCat) return false;
+    if(activeSipDashPlat !== 'all' && r.source_code !== activeSipDashPlat) return false;
+    if(activeSipDashFric !== 'all' && r.sip_friction_level !== activeSipDashFric) return false;
+    if(!term) return true;
+    var tMatch = (r.text||'').toLowerCase().includes(term);
+    var tiMatch = (r.title||'').toLowerCase().includes(term);
+    var aMatch = (r.author||'').toLowerCase().includes(term);
+    var cMatch = (r.sip_category_name||'').toLowerCase().includes(term);
+    var inMatch = (r.sip_user_intent||'').toLowerCase().includes(term);
+    var pmMatch = (r.pm_actionable_insight||'').toLowerCase().includes(term);
+    var sMatch = (r.source_name||'').toLowerCase().includes(term);
+    var kwMatch = (r.sip_matched_keywords||[]).some(function(k){return k.toLowerCase().includes(term);});
+    return tMatch || tiMatch || aMatch || cMatch || inMatch || pmMatch || sMatch || kwMatch;
+  });
+
+  document.getElementById('sipDashMatchCount').textContent = 'Showing ' + filtered.length.toLocaleString() + ' of ' + sipDashData.length.toLocaleString() + ' SIP conversations';
+  renderSipDashGrid(filtered);
+}
+
+function renderSipDashGrid(list){
+  var container = document.getElementById('sipDashGrid');
+  if(!list.length){
+    container.innerHTML = '<div style="text-align:center;padding:50px;" class="empty"><span class="material-icons" style="font-size:48px;color:var(--bord);">search_off</span><h3>No matching SIP conversations</h3><p>Try clearing your search term or switching the category filter.</p></div>';
+    return;
+  }
+
+  var display = list.slice(0, 200);
+  container.innerHTML = display.map(function(r){
+    var catBg = r.sip_bg_color || '#e0f2fe';
+    var catColor = r.sip_badge_color || '#0284c7';
+    var catIcon = r.sip_category_icon || 'filter_alt';
+    var dateStr = r.date ? new Date(r.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) : '';
+    
+    var fricStyle = 
+      r.sip_friction_level === 'Critical Churn Risk' ? 'background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;' :
+      r.sip_friction_level === 'Moderate Friction' ? 'background:#fef3c7;color:#b45309;border:1px solid #fde68a;' :
+      r.sip_friction_level === 'Investor Inquiry' ? 'background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;' :
+      'background:#dcfce7;color:#15803d;border:1px solid #bbf7d0;';
+
+    var matched = (r.sip_matched_terms || []).map(function(t){return '<span class="sip-matched-kw">'+t+'</span>';}).join(' ');
+    var stars = r.rating ? '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating) : '';
+
+    return '<div class="sip-intel-card">'
+      + '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">'
+      + '  <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">'
+      + '    <span class="sip-cat-badge" style="background:'+catBg+';color:'+catColor+';border:1px solid '+catColor+'40;">'
+      + '      <span class="material-icons" style="font-size:14px;">'+catIcon+'</span> '+ (r.sip_category_name||'SIP Topic')
+      + '    </span>'
+      + '    <span class="sip-friction-badge" style="'+fricStyle+'">'+ (r.sip_friction_level||'Signal') +'</span>'
+      + '    <span style="font-size:.72rem;font-weight:700;padding:2px 7px;border-radius:6px;background:var(--bg2);color:var(--text2);">' + (r.channel||r.source||'Source') + '</span>'
+      + '  </div>'
+      + '  <div style="font-size:.75rem;color:var(--text3);">' + (r.author ? '<strong>'+r.author+'</strong> · ' : '') + dateStr + (stars ? ' <span style="color:#f59e0b;font-size:.82rem;">'+stars+'</span>' : '') + '</div>'
+      + '</div>'
+      + (r.title ? '<div style="font-weight:700;font-size:.95rem;color:var(--text);margin-top:4px;">' + r.title + '</div>' : '')
+      + '<div style="font-size:.875rem;line-height:1.55;color:var(--text2);margin-top:4px;">' + r.text + '</div>'
+      + (r.pm_actionable_insight ? (
+          '<div class="pm-insight-box" style="margin-top:6px;">'
+          + '<div style="display:flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700;text-transform:uppercase;color:var(--green);margin-bottom:3px;"><span class="material-icons" style="font-size:14px;">lightbulb</span> PM 12-Month Retention Action</div>'
+          + '<div>' + r.pm_actionable_insight + '</div>'
+          + '</div>'
+        ) : '')
+      + '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.72rem;color:var(--text3);padding-top:8px;border-top:1px solid var(--bord);margin-top:4px;">'
+      + '  <div><strong>Intent:</strong> ' + (r.sip_user_intent||'Inquiry') + (matched ? ' · ' + matched : '') + '</div>'
+      + (r.source_url ? '<a href="'+r.source_url+'" target="_blank" style="color:var(--blue);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:3px;">Inspect Source <span class="material-icons" style="font-size:12px;">open_in_new</span></a>' : '')
+      + '</div>'
+      + '</div>';
+  }).join('');
+}
+
+async function loadAndRenderTrainedSources(){
+  if(!trainedSources.length){
+    try{
+      var r = await fetch('/api/sip/training-sources');
+      var d = await r.json();
+      if(d.sources && d.sources.length){
+        trainedSources = d.sources;
+        if(d.sheet_sources_count) document.getElementById('srcKpiSheet').textContent = d.sheet_sources_count;
+        if(d.added_forums_count) document.getElementById('srcKpiForums').textContent = d.added_forums_count;
+        if(d.total_sources) document.getElementById('srcKpiTotal').textContent = d.total_sources;
+      }
+    }catch(e){
+      console.warn('Error loading sources:', e);
+    }
+  }
+  filterSources();
+}
+
+function setPlatformFilter(platform, el){
+  activePlatformFilter = platform;
+  document.querySelectorAll('.src-pills .src-pill').forEach(function(p){ p.classList.remove('active'); });
+  if(el) el.classList.add('active');
+  filterSources();
+}
+
+function filterSources(){
+  var term = (document.getElementById('srcSearchInput').value || '').toLowerCase().trim();
+  var filtered = trainedSources.filter(function(s){
+    if(activePlatformFilter !== 'all' && s.platform !== activePlatformFilter) return false;
+    if(!term) return true;
+    var nameMatch = (s.name || '').toLowerCase().includes(term);
+    var handleMatch = (s.handle || '').toLowerCase().includes(term);
+    var angleMatch = (s.research_angle || '').toLowerCase().includes(term);
+    var topicMatch = (s.key_topics || []).some(function(t){ return t.toLowerCase().includes(term); });
+    var insightsMatch = (s.retrieved_insights || []).some(function(ins){ return ins.toLowerCase().includes(term); });
+    return nameMatch || handleMatch || angleMatch || topicMatch || insightsMatch;
+  });
+
+  document.getElementById('srcMatchCount').textContent = 'Showing ' + filtered.length + ' of ' + trainedSources.length + ' sources';
+  renderSourcesGrid(filtered);
+}
+
+function getPlatformClass(plat){
+  if(!plat) return 'forum';
+  var p = plat.toLowerCase();
+  if(p.includes('forum')) return 'investing-forum';
+  if(p.includes('seed')) return 'reddit-seed-thread';
+  if(p.includes('reddit')) return 'reddit-community';
+  if(p.includes('youtube')) return 'youtube-channel';
+  if(p.includes('twitter') || p.includes('x')) return 'twitter-x';
+  if(p.includes('instagram')) return 'instagram';
+  return 'investing-forum';
+}
+
+function getPlatformBadgeClass(plat){
+  if(!plat) return 'forum';
+  var p = plat.toLowerCase();
+  if(p.includes('forum')) return 'forum';
+  if(p.includes('seed')) return 'thread';
+  if(p.includes('reddit')) return 'reddit';
+  if(p.includes('youtube')) return 'youtube';
+  if(p.includes('twitter') || p.includes('x')) return 'twitter';
+  if(p.includes('instagram')) return 'instagram';
+  return 'forum';
+}
+
+function getPlatformIcon(plat){
+  if(!plat) return 'forum';
+  var p = plat.toLowerCase();
+  if(p.includes('forum')) return 'forum';
+  if(p.includes('seed')) return 'chat';
+  if(p.includes('reddit')) return 'hub';
+  if(p.includes('youtube')) return 'smart_display';
+  if(p.includes('twitter') || p.includes('x')) return 'alternate_email';
+  if(p.includes('instagram')) return 'photo_camera';
+  return 'travel_explore';
+}
+
+function renderSourcesGrid(list){
+  var container = document.getElementById('sourcesGrid');
+  if(!list.length){
+    container.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:50px;" class="empty"><span class="material-icons" style="font-size:48px;color:var(--bord);">search_off</span><h3>No matching sources found</h3><p>Try clearing your search term or switching the platform filter.</p></div>';
+    return;
+  }
+
+  container.innerHTML = list.map(function(s){
+    var cardClass = getPlatformClass(s.platform);
+    var badgeClass = getPlatformBadgeClass(s.platform);
+    var pIcon = getPlatformIcon(s.platform);
+    var isSheet = s.is_from_sheet;
+    var originLabel = isSheet ? 'Sheet Master' : '★ Premier Added Forum';
+    var originClass = isSheet ? '' : 'added';
+    var insights = (s.retrieved_insights || []).map(function(ins){
+      return '<li>' + esc(ins) + '</li>';
+    }).join('');
+    var tags = (s.key_topics || []).map(function(t){
+      return '<span class="src-tag">' + esc(t) + '</span>';
+    }).join('');
+    var quotes = (s.sample_quotes || []).slice(0, 1).map(function(q){
+      return '<div class="src-quotes-box">&ldquo;' + esc(q) + '&rdquo;</div>';
+    }).join('');
+
+    return '<div class="src-card platform-' + cardClass + '">'
+      + '<div class="src-top">'
+      + '  <div class="src-badges">'
+      + '    <span class="src-badge ' + badgeClass + '"><span class="material-icons" style="font-size:13px;">' + pIcon + '</span> ' + esc(s.platform) + '</span>'
+      + '    <span class="src-origin-tag ' + originClass + '">' + originLabel + '</span>'
+      + '  </div>'
+      + '  <span class="badge" style="background:#e8f5e9;color:#2e7d32;font-size:10px;font-weight:700;">✓ Trained & Mined</span>'
+      + '</div>'
+      + '<div class="src-title-area">'
+      + '  <div class="src-title">' + esc(s.name) + '</div>'
+      + (s.handle ? '  <div class="src-handle">' + esc(s.handle) + '</div>' : '')
+      + (s.url ? '  <a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer" class="src-link">'
+                 + '    <span>' + esc(s.url.replace(/^https?:\/\/(www\.)?/, '')) + '</span>'
+                 + '    <span class="material-icons" style="font-size:13px;">open_in_new</span>'
+                 + '  </a>' : '')
+      + '</div>'
+      + '<div class="src-angle-box">'
+      + '  <div class="src-angle-title"><span class="material-icons" style="font-size:13px;">search</span>Research Angle / What to Mine</div>'
+      + '  <div>' + esc(s.research_angle) + '</div>'
+      + '</div>'
+      + (insights ? '<div class="src-insights-box">'
+      + '  <div class="src-insights-title"><span class="material-icons" style="font-size:13px;">verified</span>Retrieved Information & Core Findings</div>'
+      + '  <ul class="src-insights-list">' + insights + '</ul>'
+      + '</div>' : '')
+      + (quotes || '')
+      + (tags ? '<div class="src-tags">' + tags + '</div>' : '')
+      + '</div>';
+  }).join('');
+}
+
+async function runPipeline(){
+  var btn=document.getElementById('btnRun');
+  btn.disabled=true;btn.innerHTML='<span class="spinner"></span> Running...';
+  setStatus('<span class="spinner"></span> Running 7-stage pipeline...');
+  markSteps([]);
+  try{
+    var r=await fetch('/api/sip/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({use_llm:true})});
+    var d=await r.json();
+    if(d.error)throw new Error(d.error);
+    G.job_id=d.sip_job_id;
+    setStatus('<span class="material-icons" style="color:var(--green)">check_circle</span> Pipeline complete! Loading...');
+    await loadResults(d.sip_job_id);
+  }catch(e){
+    setStatus('<span class="material-icons" style="color:var(--red)">error</span> Error: '+e.message);
+  }
+  btn.disabled=false;btn.innerHTML='<span class="material-icons">play_arrow</span>Run Discovery Pipeline';
+}
+
+async function loadLatest(){
+  setStatus('<span class="spinner"></span> Loading latest results...');
+  try{
+    var r=await fetch('/api/sip/latest');
+    if(!r.ok)throw new Error('No SIP results found. Run the pipeline first.');
+    var d=await r.json();
+    G.job_id=d.sip_job_id;
+    processResults(d);
+    setStatus('<span class="material-icons" style="color:var(--green)">check_circle</span> Loaded: '+(d.pipeline_run_at||'').slice(0,19));
+  }catch(e){
+    setStatus('<span class="material-icons" style="color:var(--amber)">warning</span> '+e.message);
+  }
+}
+
+async function loadResults(jid){
+  var r=await fetch('/api/sip/results/'+jid);
+  var d=await r.json();
+  processResults(d);
+}
+
+function processResults(d){
+  var st=d.stages||{};
+  var hyp=d.hypothesis_report||{};
+  var val=d.validation_report||{};
+  G.opps=d.opportunities||[];
+  G.evidence=d.evidence||[];
+  G.dist=hyp;
+  var tot=(st.collect&&st.collect.total_records)||0;
+  document.getElementById('statRecords').textContent=tot.toLocaleString();
+  document.getElementById('statHyps').textContent=G.opps.length;
+  document.getElementById('statValidity').textContent=(val.schema_validity_rate||0)+'%';
+  document.getElementById('mC').textContent=tot.toLocaleString();
+  document.getElementById('mF').textContent=((st.filter&&st.filter.kept)||0).toLocaleString();
+  document.getElementById('mH').textContent=G.opps.length;
+  document.getElementById('mV').textContent=(val.schema_validity_rate||0)+'%';
+  markSteps([1,2,3,4,5,6,7]);
+  renderOpportunities();
+  renderEvidence();
+  renderTriggers(hyp.top_triggers||[]);
+  renderFilterStats(st.filter);
+}
+
+function markSteps(done){
+  for(var i=1;i<=7;i++){
+    var el=document.getElementById('s'+i);
+    el.classList.remove('done','active');
+    if(done.indexOf(i)>-1)el.classList.add('done');
+  }
+}
+
+function setStatus(html){document.getElementById('runStatus').innerHTML=html;}
+
+function renderOpportunities(){
+  var c=document.getElementById('hypC');
+  if(!G.opps.length){
+    c.innerHTML='<div class="empty"><span class="material-icons">lightbulb</span><h3>No hypotheses found</h3><p>Run the pipeline on data containing SIP-related app reviews.</p></div>';
+    return;
+  }
+  c.innerHTML=G.opps.map(function(h,i){
+    var rc=i<3?'r'+(i+1):'';
+    var sc=h.scores||{};
+    var qs=(h.representative_quotes||[]).slice(0,3);
+    var oc=Object.entries(h.sip_outcomes||{}).map(function(e){return e[0]+': '+e[1];}).join(' | ');
+    return '<div class="hyp-card '+rc+'">'
+     +'<div class="hyp-top"><div class="hyp-rank">'+h.rank+'</div><div style="flex:1">'
+     +'<div class="hyp-label">'+esc(h.label)+'</div>'
+     +'<div class="hyp-freq">'+h.frequency_in_data+' mentions ('+h.frequency_pct+'%) &nbsp;&middot;&nbsp; '+esc(oc||'outcomes unknown')+'</div>'
+     +'<div class="hyp-scores">'
+     +'<span class="sp freq">Freq: '+sc.frequency+'/5</span>'
+     +'<span class="sp sev">Severity: '+sc.severity+'/5</span>'
+     +'<span class="sp rel">SIP Link: '+sc.metric_relevance+'/5</span>'
+     +'<span class="sp fix">Fixability: '+sc.fixability+'/5</span>'
+     +'<span class="sp comp">Score: '+sc.composite+'</span>'
+     +'</div></div></div>'
+     +(qs.length?'<div>'+qs.map(function(q){return '<div class="q-item">&ldquo;'+esc(q)+'&rdquo;</div>';}).join('')+'</div>':'')
+     +'<div class="hyp-footer">'
+     +'<div class="hf"><div class="hf-lbl"><span class="material-icons">link</span>SIP Continuation Link</div><div class="hf-txt">'+esc(h.sip_link_rationale||'—')+'</div></div>'
+     +'<div class="hf"><div class="hf-lbl"><span class="material-icons">science</span>Recommended Investigation</div><div class="hf-txt">'+esc(h.recommended_investigation||'—')+'</div><div class="lim">&#9888; '+esc(h.limitations||'—')+'</div></div>'
+     +'</div></div>';
+  }).join('');
+}
+
+function renderEvidence(){
+  var tb=document.getElementById('evTb');
+  var fo=document.getElementById('fO').value;
+  var fc=document.getElementById('fC').value;
+  var ft=document.getElementById('fT').value.toLowerCase();
+  var rows=G.evidence.filter(function(e){
+    if(fo&&e.sip_outcome!==fo)return false;
+    if(fc&&e.problem_category!==fc)return false;
+    if(ft&&!(e.original_text||'').toLowerCase().includes(ft)&&!(e.evidence_quote||'').toLowerCase().includes(ft))return false;
+    return true;
+  });
+  document.getElementById('evCnt').textContent=rows.length+' records';
+  if(!rows.length){tb.innerHTML='<tr><td colspan="10" style="text-align:center;padding:30px;color:var(--text3)">No records match.</td></tr>';return;}
+  tb.innerHTML=rows.slice(0,200).map(function(e){
+    var st='★'.repeat(e.rating||0)+'☆'.repeat(5-(e.rating||0));
+    var srcName = e.source || e.channel || 'Play Store';
+    return '<tr>'
+     +'<td>'+(e.date||'—').slice(0,10)+'</td>'
+     +'<td title="'+(e.rating||'')+'">'+st+'</td>'
+     +'<td><span class="badge" style="background:#e8eaf6;color:#1a237e;font-size:11px;font-weight:700;">'+esc(srcName)+'</span></td>'
+     +'<td><span class="badge b-unknown">'+esc(e.problem_category||'—')+'</span></td>'
+     +'<td><span class="badge b-'+(e.sip_outcome||'unknown')+'">'+esc(e.sip_outcome||'—')+'</span></td>'
+     +'<td><span class="badge b-'+(e.journey_stage||'unknown')+'">'+esc(e.journey_stage||'—')+'</span></td>'
+     +'<td>'+esc(e.trigger||'—')+'</td>'
+     +'<td>'+esc(e.emotion||'—')+'</td>'
+     +'<td style="max-width:280px;word-break:break-word"><em>'+esc((e.evidence_quote||'—').slice(0,180))+'</em></td>'
+     +'<td><span class="badge b-'+(e.confidence||'medium')+'">'+esc(e.confidence||'—')+'</span></td>'
+     +'</tr>';
+  }).join('');
+}
+
+var pal=['#1a237e','#283593','#3949ab','#5c6bc0','#9fa8da','#7986cb','#0288d1','#00acc1'];
+function mkChart(id,type,labels,data,extra){
+  if(charts[id])charts[id].destroy();
+  var ctx=document.getElementById(id);if(!ctx)return;
+  charts[id]=new Chart(ctx.getContext('2d'),{type:type,data:{labels:labels,datasets:[Object.assign({data:data,backgroundColor:pal.slice(0,labels.length),borderWidth:0},extra||{})]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:11},boxWidth:12}}}}});
+}
+
+function renderCharts(){
+  var d=G.dist;if(!d)return;
+  var so=d.sip_outcome_distribution||{};
+  mkChart('cOutcome','doughnut',Object.keys(so),Object.values(so));
+  var js=d.journey_stage_distribution||{};
+  mkChart('cJourney','doughnut',Object.keys(js),Object.values(js));
+  var em=d.emotion_distribution||{};
+  mkChart('cEmotion','bar',Object.keys(em),Object.values(em),{borderRadius:4});
+}
+
+function renderTriggers(triggers){
+  var c=document.getElementById('trigC');
+  if(!triggers.length){return;}
+  var max=Math.max.apply(null,triggers.map(function(t){return t[1];}));
+  c.innerHTML=triggers.map(function(t){
+    var pct=Math.round(t[1]/max*100);
+    return '<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:3px"><span>'+esc(t[0])+'</span><strong>'+t[1]+'</strong></div><div style="background:var(--bg2);border-radius:4px;height:6px"><div style="background:var(--primary);border-radius:4px;height:100%;width:'+pct+'%"></div></div></div>';
+  }).join('');
+}
+
+function renderFilterStats(fd){
+  if(!fd)return;
+  var c=document.getElementById('filtS');
+  var s=fd.stats||{};
+  c.innerHTML=Object.entries(s).map(function(e){return '<span style="margin-right:16px"><strong>'+e[1]+'</strong> '+e[0]+'</span>';}).join('')||'No data.';
+}
+
+async function loadEvals(){
+  if(!G.job_id)return;
+  var c=document.getElementById('evalC');
+  c.innerHTML='<div style="padding:40px;text-align:center"><div class="spinner" style="width:32px;height:32px;border-width:3px;margin:0 auto 12px"></div><p style="color:var(--text2)">Running evaluations...</p></div>';
+  try{
+    var r=await fetch('/api/sip/evals/'+G.job_id);
+    var d=await r.json();
+    if(d.error)throw new Error(d.error);
+    G.evals=d;renderEvals(d);
+  }catch(e){
+    c.innerHTML='<div class="empty"><span class="material-icons">error</span><h3>Eval Error</h3><p>'+esc(e.message)+'</p></div>';
+  }
+}
+
+function renderEvals(d){
+  var c=document.getElementById('evalC');
+  var ev=d.eval_report||{};var bv=d.batch_validation||{};var gv=d.golden_eval||{};
+  var ds=ev.dataset_summary||{};var exv=ev.extraction_validation||{};var hs=ev.hypothesis_summary||{};
+  var pr=bv.pass_rate||0;var gr=exv.evidence_grounding_rate||0;var gfr=gv.avg_field_pass_rate||0;
+  function cls(v){return v>=80?'pass':v>=60?'warn':'fail';}
+  c.innerHTML='<div class="card" style="margin-bottom:20px">'
+   +'<div class="card-header"><div class="card-title"><span class="material-icons">assessment</span>Evaluation Report</div>'
+   +'<small style="color:var(--text3)">Model: '+esc(ev.model_version||'—')+' · Prompt: '+esc(ev.prompt_version||'—')+'</small></div>'
+   +'<div class="eval-grid">'
+   +'<div class="em"><div class="em-v '+cls(pr)+'">'+pr+'%</div><div class="em-l">Schema Validity Rate</div></div>'
+   +'<div class="em"><div class="em-v '+cls(gr)+'">'+gr+'%</div><div class="em-l">Evidence Grounding Rate</div></div>'
+   +'<div class="em"><div class="em-v '+cls(gfr)+'">'+gfr+'%</div><div class="em-l">Golden Dataset Pass Rate</div></div>'
+   +'</div>'
+   +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px">'
+   +'<div><div style="font-size:.75rem;font-weight:600;color:var(--text2);margin-bottom:8px">Dataset Summary</div>'
+   +'<div style="font-size:.8rem;color:var(--text2);line-height:2">Collected: <strong>'+(ds.total_collected||0)+'</strong><br>After cleaning: <strong>'+(ds.after_cleaning||0)+'</strong><br>After filtering: <strong>'+(ds.after_filtering||0)+'</strong><br>Extracted: <strong>'+(ds.total_extracted||0)+'</strong></div></div>'
+   +'<div><div style="font-size:.75rem;font-weight:600;color:var(--text2);margin-bottom:8px">Hypothesis Summary</div>'
+   +'<div style="font-size:.8rem;color:var(--text2);line-height:2">Total: <strong>'+(hs.total_hypotheses||0)+'</strong><br>Top: <strong>'+esc(hs.top_hypothesis||'—')+'</strong><br>Decision: <strong style="color:var(--amber)">'+(ev.release_decision||'—')+'</strong></div></div>'
+   +'</div></div>'
+   +'<div class="card" style="margin-bottom:20px">'
+   +'<div class="card-header"><div class="card-title"><span class="material-icons">science</span>Golden Dataset ('+(gv.dataset_size||0)+' examples)</div></div>'
+   +'<p style="font-size:.78rem;color:var(--text2);margin-bottom:14px">Soft keyword-match against human-reviewed reference examples.</p>'
+   +(gv.case_results||[]).map(function(cr){
+     var fs=cr.field_scores||{};
+     return '<div class="gc"><div class="gc-in">&#128221; &ldquo;'+esc((cr.input||'—').slice(0,120))+'&rdquo;</div>'
+      +'<div style="font-size:.72rem;color:var(--text3);margin-bottom:6px">Status: <strong>'+cr.status+'</strong>'+(cr.field_pass_rate?' &nbsp;Pass: <strong>'+cr.field_pass_rate+'%</strong>':'')+'</div>'
+      +'<div class="fs">'+Object.entries(fs).map(function(e){return '<span class="fc '+e[1]+'">'+e[0]+': '+e[1]+'</span>';}).join('')+'</div></div>';
+   }).join('')+'</div>'
+   +'<div class="card"><div class="card-header"><div class="card-title"><span class="material-icons">warning</span>Known Limitations</div></div>'
+   +'<ul style="font-size:.8rem;color:var(--text2);line-height:2;padding-left:18px">'
+   +(ev.known_limitations||[]).map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul>'
+   +'<div class="disc" style="margin-top:14px;margin-bottom:0"><span class="material-icons">info</span><span>'+esc((gv.disclaimer||'Human review required before treating scores as production-ready.'))+'</span></div></div>';
+}
+
+function esc(s){
+  if(!s)return'';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+window.addEventListener('DOMContentLoaded',function(){
+  loadLatest();
+  loadAndRenderSipDashFiltered();
+  var h = window.location.hash.replace('#','');
+  if(h && document.getElementById('tp-'+h)){
+    showTab(h);
+  }
+});
+</script>
+</body></html>
