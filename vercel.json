@@ -2,14 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "api/index.py": {
-      "includeFiles": "{data/**,static/**,groww_cache.json,groww_sip_cache.json,google_sheet_export.csv}",
+      "includeFiles": "{data/**,static/**,public/**,groww_cache.json,groww_sip_cache.json,google_sheet_export.csv}",
       "maxDuration": 30
     }
   },
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/(.*)",
       "destination": "/api/index"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ]
 }

@@ -11,7 +11,30 @@ if str(ROOT_DIR) not in sys.path:
 os.chdir(str(ROOT_DIR))
 
 # Import the configured Flask application
-from app_server import app
+from app_server import app as flask_app
 
-# Vercel WSGI entry point
-# Vercel looks for the WSGI application named 'app'
+class VercelWSGIHandler:
+    def __init__(self, application):
+        self.application = application
+
+    def __call__(self, environ, start_response):
+        path = environ.get("PATH_INFO", "")
+        
+        # If Vercel rewrites stripped /api prefix or routed to /api/index
+        matched_uri = (
+            environ.get("HTTP_X_MATCHED_PATH")
+            or environ.get("HTTP_X_VERCEL_MATCHED_PATH")
+            or environ.get("HTTP_X_FORWARDED_URI")
+            or ""
+        )
+        if matched_uri and matched_uri.startswith("/api"):
+            environ["PATH_INFO"] = matched_uri
+
+        # If path starts directly with /sip, /rag, /analyze, /groww, prefix with /api
+        elif not path.startswith("/api") and any(path.startswith(p) for p in ["/sip", "/rag", "/analyze", "/results", "/reviews", "/trends", "/apps"]):
+            environ["PATH_INFO"] = "/api" + path
+
+        return self.application(environ, start_response)
+
+# Vercel entry point
+app = VercelWSGIHandler(flask_app)
