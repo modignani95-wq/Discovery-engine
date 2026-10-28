@@ -1,0 +1,11 @@
+.env
+.env.local
+.git
+.github
+*.log
+venv/
+.venv/
+__pycache__/
+*.pyc
+skills/__pycache__/
+tests/

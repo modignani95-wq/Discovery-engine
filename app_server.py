@@ -451,6 +451,7 @@ def _monthly_breakdown(reviews: List[Dict]) -> List[Dict]:
 
 @app.route("/")
 @app.route("/engine")
+@app.route("/index.html")
 def index():
     return send_from_directory(str(STATIC_DIR), "retrieval_discovery_engine.html")
 
