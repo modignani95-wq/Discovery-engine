@@ -10,6 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Pre-bundled Evidence Bank (144 Episodes + 1,154 Voices) for Instant Zero-Failure Offline & CDN Rendering -->
+  <script src="sip_evidence_bundle.js" defer></script>
+  <script src="/static/sip_evidence_bundle.js" defer></script>
+  <script src="/public/sip_evidence_bundle.js" defer></script>
+  
   <style>
     :root {
       /* Groww Clean Light Design System */
@@ -1614,17 +1619,35 @@
     </section>
 
     <!-- ──────────────────────────────────────────────────────────────────────── -->
-    <!-- TAB 4: EVIDENCE EXPLORER & MANUAL SEARCH (144) -->
+    <!-- TAB 4: EVIDENCE EXPLORER & ALL RETRIEVED DATA (1,154 Voices & 144 Episodes) -->
     <!-- ──────────────────────────────────────────────────────────────────────── -->
     <section id="pane-episodes" class="tab-pane" style="display:none">
       
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
         <div>
           <span class="t-eyebrow">Audited Evidence Base &amp; Vector Bank</span>
-          <h2 class="t-page-title" style="font-size:22px;">Evidence Explorer &amp; Manual Keyword Search</h2>
-          <p class="t-lead">Search manually across all 144 failure episodes and 1,050 investor quotes by keywords, author, fund house, or banking entity.</p>
+          <h2 class="t-page-title" style="font-size:22px;">Evidence Explorer &amp; All Retrieved Data</h2>
+          <p class="t-lead">Search across all 1,154 verified investor voices and 144 golden failure episodes across YouTube, Reddit, Play Store, App Store, and TradingQ&amp;A.</p>
         </div>
-        <span class="tag-audit" id="episodes-counter-badge">Showing 144 Episodes</span>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="tag-audit" id="episodes-counter-badge">Showing 1,154 Voices</span>
+        </div>
+      </div>
+
+      <!-- Dataset Switcher: 1,154 All Voices vs 144 Failure Episodes -->
+      <div style="display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; align-items:center; background:var(--surface-subtle); padding:10px 14px; border-radius:8px; border:1px solid var(--border-light);">
+        <span style="font-size:12px; font-weight:700; color:var(--ink-secondary); text-transform:uppercase; letter-spacing:0.5px;">Select Dataset:</span>
+        <button class="btn-primary" id="btn-ds-voices" onclick="switchDataset('voices')" style="display:inline-flex; align-items:center; gap:8px; padding:7px 16px; font-size:13px; font-weight:600; cursor:pointer;">
+          <span>🟢 All Retrieved Investor Voices</span>
+          <span style="background:rgba(255,255,255,0.3); padding:2px 8px; border-radius:10px; font-size:11px; font-weight:700;">1,154</span>
+        </button>
+        <button class="btn-secondary" id="btn-ds-episodes" onclick="switchDataset('episodes')" style="display:inline-flex; align-items:center; gap:8px; padding:7px 16px; font-size:13px; font-weight:600; cursor:pointer;">
+          <span>📑 Golden Failure Episodes</span>
+          <span style="background:var(--surface-card); padding:2px 8px; border-radius:10px; font-size:11px; font-weight:700; border:1px solid var(--border-light);">144</span>
+        </button>
+        <span style="font-size:11.5px; color:var(--ink-muted); margin-left:auto;">
+          ⚡ Zero-failure pre-bundled evidence engine (Instant local &amp; CDN rendering)
+        </span>
       </div>
 
       <!-- Filters & Manual Search Bar -->
@@ -1635,29 +1658,39 @@
           <button class="btn-secondary" onclick="document.getElementById('episodes-search').value=''; searchEpisodes('');" style="flex:none; padding:8px 14px;">✕ Clear</button>
         </div>
 
-        <div class="pill-group">
+        <div class="pill-group" id="explorer-platform-pills">
           <span class="t-eyebrow" style="margin-right:4px; color:var(--ink-muted)">Platform:</span>
-          <button class="pill-btn active" id="pill-plat-all" onclick="filterEpisodes('platform', 'all', this)">All (144)</button>
-          <button class="pill-btn" id="pill-plat-youtube" onclick="filterEpisodes('platform', 'youtube', this)">YouTube (42)</button>
-          <button class="pill-btn" id="pill-plat-app_store" onclick="filterEpisodes('platform', 'app_store', this)">App Store (36)</button>
-          <button class="pill-btn" id="pill-plat-reddit" onclick="filterEpisodes('platform', 'reddit', this)">Reddit (32)</button>
-          <button class="pill-btn" id="pill-plat-play_store" onclick="filterEpisodes('platform', 'play_store', this)">Play Store (28)</button>
-          <button class="pill-btn" id="pill-plat-tradingqna" onclick="filterEpisodes('platform', 'tradingqna', this)">TradingQ&amp;A (6)</button>
+          <button class="pill-btn active" id="pill-plat-all" onclick="filterEpisodes('platform', 'all', this)">All (1,154)</button>
+          <button class="pill-btn" id="pill-plat-youtube" onclick="filterEpisodes('platform', 'youtube', this)">YouTube (842)</button>
+          <button class="pill-btn" id="pill-plat-reddit" onclick="filterEpisodes('platform', 'reddit', this)">Reddit (116)</button>
+          <button class="pill-btn" id="pill-plat-tradingqna" onclick="filterEpisodes('platform', 'tradingqna', this)">TradingQ&amp;A (79)</button>
+          <button class="pill-btn" id="pill-plat-app_store" onclick="filterEpisodes('platform', 'app_store', this)">App Store (75)</button>
+          <button class="pill-btn" id="pill-plat-play_store" onclick="filterEpisodes('platform', 'play_store', this)">Play Store (30)</button>
         </div>
 
-        <div class="pill-group">
+        <div class="pill-group" id="explorer-stage-pills">
           <span class="t-eyebrow" style="margin-right:4px; color:var(--ink-muted)">12M Retention Stage:</span>
-          <button class="pill-btn active" id="pill-stage-all" onclick="filterEpisodes('stage', 'all', this)">All Stages (144)</button>
-          <button class="pill-btn" id="pill-stage-market_panic" onclick="filterEpisodes('stage', 'market_panic', this)">Drawdown Panic (45)</button>
-          <button class="pill-btn" id="pill-stage-expectation_mismatch" onclick="filterEpisodes('stage', 'expectation_mismatch', this)">Expectation Mismatch (42)</button>
-          <button class="pill-btn" id="pill-stage-checking_confusion" onclick="filterEpisodes('stage', 'checking_confusion', this)">Checking &amp; XIRR (33)</button>
-          <button class="pill-btn" id="pill-stage-life_cash_crunch" onclick="filterEpisodes('stage', 'life_cash_crunch', this)">Cash Squeeze (24)</button>
+          <button class="pill-btn active" id="pill-stage-all" onclick="filterEpisodes('stage', 'all', this)">All Stages (1,154)</button>
+          <button class="pill-btn" id="pill-stage-expectation_mismatch" onclick="filterEpisodes('stage', 'expectation_mismatch', this)">Expectation Mismatch (756)</button>
+          <button class="pill-btn" id="pill-stage-checking_confusion" onclick="filterEpisodes('stage', 'checking_confusion', this)">Checking &amp; XIRR (150)</button>
+          <button class="pill-btn" id="pill-stage-market_panic" onclick="filterEpisodes('stage', 'market_panic', this)">Drawdown Panic (114)</button>
+          <button class="pill-btn" id="pill-stage-life_cash_crunch" onclick="filterEpisodes('stage', 'life_cash_crunch', this)">Cash Squeeze (134)</button>
         </div>
       </div>
 
       <!-- Episodes Grid -->
       <div class="episodes-grid" id="episodes-grid-container">
         <!-- Rendered via JS -->
+      </div>
+
+      <!-- Pagination / Load More Controls -->
+      <div id="explorer-pagination-container" style="text-align:center; padding:24px 0 10px; display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap;">
+        <button class="btn-primary" id="btn-load-more-explorer" onclick="loadMoreExplorer()" style="padding:10px 24px; font-weight:600; display:inline-flex; align-items:center; gap:6px;">
+          <span>Load More Evidence (+36)</span>
+        </button>
+        <button class="btn-secondary" id="btn-load-all-explorer" onclick="loadAllExplorer()" style="padding:10px 20px;">
+          Show All Results
+        </button>
       </div>
 
     </section>
@@ -2323,6 +2356,10 @@
 <script>
   let currentEpisodes = [];
   let allEpisodesMaster = [];
+  let allVoicesMaster = [];
+  let allEpisodes144 = [];
+  let activeDatasetType = 'voices';
+  let explorerDisplayLimit = 36;
   let activeFilterPlatform = 'all';
   let activeFilterStage = 'all';
   let groqAuditResults = [];
@@ -2692,20 +2729,133 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     applyEpisodesFilters();
   }
 
-  // Evidence Explorer Loading & Filtering
-  async function loadEpisodes() {
-    const container = document.getElementById('episodes-grid-container');
-    container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:30px; color:var(--ink-muted);">Loading 144 structured episodes...</div>';
+  // ─── Evidence Explorer Loading & All Retrieved Data (1,154 Voices & 144 Episodes) ───
+  function initEvidenceExplorerData() {
+    if (window.SIP_VOICES_1154 && window.SIP_VOICES_1154.length) {
+      allVoicesMaster = window.SIP_VOICES_1154;
+    }
+    if (window.SIP_EPISODES_144 && window.SIP_EPISODES_144.length) {
+      allEpisodes144 = window.SIP_EPISODES_144;
+    }
 
+    if (activeDatasetType === 'voices') {
+      allEpisodesMaster = allVoicesMaster.length ? allVoicesMaster : (allEpisodes144 || []);
+    } else {
+      allEpisodesMaster = allEpisodes144.length ? allEpisodes144 : (allVoicesMaster || []);
+    }
+
+    currentEpisodes = [...allEpisodesMaster];
+    updateExplorerFilterCounts();
+    applyEpisodesFilters();
+  }
+
+  function switchDataset(type) {
+    activeDatasetType = type;
+    explorerDisplayLimit = 36;
+
+    const btnVoices = document.getElementById('btn-ds-voices');
+    const btnEpisodes = document.getElementById('btn-ds-episodes');
+    if (btnVoices && btnEpisodes) {
+      if (type === 'voices') {
+        btnVoices.className = 'btn-primary';
+        btnEpisodes.className = 'btn-secondary';
+      } else {
+        btnVoices.className = 'btn-secondary';
+        btnEpisodes.className = 'btn-primary';
+      }
+    }
+
+    if (type === 'voices') {
+      allEpisodesMaster = allVoicesMaster.length ? allVoicesMaster : (window.SIP_VOICES_1154 || []);
+    } else {
+      allEpisodesMaster = allEpisodes144.length ? allEpisodes144 : (window.SIP_EPISODES_144 || []);
+    }
+
+    // Reset filters to 'all'
+    activeFilterPlatform = 'all';
+    activeFilterStage = 'all';
+    document.querySelectorAll('#explorer-platform-pills .pill-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#explorer-stage-pills .pill-btn').forEach(b => b.classList.remove('active'));
+    const pAll = document.getElementById('pill-plat-all');
+    if (pAll) pAll.classList.add('active');
+    const sAll = document.getElementById('pill-stage-all');
+    if (sAll) sAll.classList.add('active');
+
+    updateExplorerFilterCounts();
+    applyEpisodesFilters();
+  }
+
+  function updateExplorerFilterCounts() {
+    const list = allEpisodesMaster;
+    const total = list.length;
+
+    const countPlat = code => list.filter(e => e.source_code === code || (e.platform || '').toLowerCase().includes(code)).length;
+    const countStage = stg => list.filter(e => e.stage === stg || (e.category || '').toLowerCase().includes(stg)).length;
+
+    const el = id => document.getElementById(id);
+    if (el('pill-plat-all')) el('pill-plat-all').textContent = `All (${total})`;
+    if (el('pill-plat-youtube')) el('pill-plat-youtube').textContent = `YouTube (${countPlat('youtube')})`;
+    if (el('pill-plat-reddit')) el('pill-plat-reddit').textContent = `Reddit (${countPlat('reddit')})`;
+    if (el('pill-plat-tradingqna')) el('pill-plat-tradingqna').textContent = `TradingQ&A (${countPlat('tradingqna')})`;
+    if (el('pill-plat-app_store')) el('pill-plat-app_store').textContent = `App Store (${countPlat('app_store')})`;
+    if (el('pill-plat-play_store')) el('pill-plat-play_store').textContent = `Play Store (${countPlat('play_store')})`;
+
+    if (el('pill-stage-all')) el('pill-stage-all').textContent = `All Stages (${total})`;
+    if (el('pill-stage-expectation_mismatch')) el('pill-stage-expectation_mismatch').textContent = `Expectation Mismatch (${countStage('expectation_mismatch')})`;
+    if (el('pill-stage-checking_confusion')) el('pill-stage-checking_confusion').textContent = `Checking & XIRR (${countStage('checking_confusion')})`;
+    if (el('pill-stage-market_panic')) el('pill-stage-market_panic').textContent = `Drawdown Panic (${countStage('market_panic')})`;
+    if (el('pill-stage-life_cash_crunch')) el('pill-stage-life_cash_crunch').textContent = `Cash Squeeze (${countStage('life_cash_crunch')})`;
+  }
+
+  async function loadEpisodes() {
+    // 1. Immediately hydrate with bundled data (0ms latency, zero failure risk!)
+    initEvidenceExplorerData();
+
+    // 2. Fetch live endpoints in parallel to update if available
     try {
-      const res = await fetch('/api/sip/episodes');
-      const json = await res.json();
-      allEpisodesMaster = json.episodes || [];
-      currentEpisodes = [...allEpisodesMaster];
-      renderEpisodesGrid();
+      const p1 = fetch('/api/sip/episodes').then(r => r.ok ? r.json() : null).catch(() => null);
+      const p2 = fetch('/api/sip/filtered-intelligence').then(r => r.ok ? r.json() : null).catch(() => null);
+      const [epRes, filRes] = await Promise.all([p1, p2]);
+
+      if (epRes && epRes.episodes && epRes.episodes.length) {
+        allEpisodes144 = epRes.episodes;
+      }
+      if (filRes && filRes.records && filRes.records.length) {
+        allVoicesMaster = filRes.records.map((r, i) => ({
+          id: r.post_id || `VOICE-${i+1}`,
+          test_case_id: r.post_id || `VOICE-${i+1}`,
+          episode_id: r.post_id || `VOICE-${i+1}`,
+          source_code: r.source_code || 'youtube',
+          platform: r.source_name || r.source || 'YouTube',
+          stage: r.sip_category || 'expectation_mismatch',
+          stage_label: r.sip_category_name || 'Expectation Mismatch',
+          title: r.title || `Investor Voice #${i+1}`,
+          author: r.author || `Investor #${i+1}`,
+          date: (r.date || '2026-10-24').slice(0, 10),
+          rating: r.rating,
+          category: r.sip_category || 'expectation_mismatch',
+          quote: r.text || '',
+          text: r.text || '',
+          source_url: r.source_url || 'https://groww.in',
+          retained_cues: (r.sip_matched_terms || ['SIP']).slice(0, 3),
+          lost_cues: [r.sip_friction_level || 'Behavioral Friction'],
+          pm_insight: r.pm_actionable_insight || 'Provide Day-0 expectation calibration.',
+          is_episode: false
+        }));
+      }
+
+      if (activeDatasetType === 'voices' && allVoicesMaster.length) {
+        allEpisodesMaster = allVoicesMaster;
+      } else if (allEpisodes144.length) {
+        allEpisodesMaster = allEpisodes144;
+      }
+      updateExplorerFilterCounts();
+      applyEpisodesFilters();
     } catch (err) {
-      console.error("Error loading episodes:", err);
-      container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:30px; color:var(--groww-red);">Error loading episodes. Please refresh.</div>';
+      console.warn("Evidence Explorer using offline bundle:", err);
+      if (!currentEpisodes.length) {
+        initEvidenceExplorerData();
+      }
     }
   }
 
@@ -2717,11 +2867,12 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
 
     if (filterType === 'platform') activeFilterPlatform = val;
     if (filterType === 'stage') activeFilterStage = val;
-
+    explorerDisplayLimit = 36;
     applyEpisodesFilters();
   }
 
   function searchEpisodes(query) {
+    explorerDisplayLimit = 36;
     applyEpisodesFilters();
   }
 
@@ -2734,14 +2885,18 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
         ep.source_code === activeFilterPlatform || 
         (ep.platform || '').toLowerCase().includes(activeFilterPlatform);
 
-      const matchesStage = activeFilterStage === 'all' || ep.stage === activeFilterStage;
+      const matchesStage = activeFilterStage === 'all' || 
+        ep.stage === activeFilterStage || 
+        (ep.category || '').toLowerCase().includes(activeFilterStage);
 
       const matchesQuery = !query || 
         (ep.quote || '').toLowerCase().includes(query) ||
+        (ep.text || '').toLowerCase().includes(query) ||
         (ep.author || '').toLowerCase().includes(query) ||
         (ep.title || '').toLowerCase().includes(query) ||
         (ep.test_case_id || '').toLowerCase().includes(query) ||
         (ep.episode_id || '').toLowerCase().includes(query) ||
+        (ep.id || '').toLowerCase().includes(query) ||
         (ep.pm_insight || '').toLowerCase().includes(query) ||
         (ep.retained_cues || []).some(c => c.toLowerCase().includes(query)) ||
         (ep.lost_cues || []).some(l => l.toLowerCase().includes(query));
@@ -2749,28 +2904,50 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
       return matchesPlatform && matchesStage && matchesQuery;
     });
 
-    document.getElementById('episodes-counter-badge').textContent = `Showing ${currentEpisodes.length} Episodes`;
+    const datasetLabel = activeDatasetType === 'voices' ? 'Voices' : 'Episodes';
+    const counterBadge = document.getElementById('episodes-counter-badge');
+    if (counterBadge) {
+      counterBadge.textContent = `Showing ${Math.min(explorerDisplayLimit, currentEpisodes.length)} of ${currentEpisodes.length} ${datasetLabel}`;
+    }
     renderEpisodesGrid(rawQuery);
+  }
+
+  function loadMoreExplorer() {
+    explorerDisplayLimit += 36;
+    applyEpisodesFilters();
+  }
+
+  function loadAllExplorer() {
+    explorerDisplayLimit = currentEpisodes.length;
+    applyEpisodesFilters();
   }
 
   function renderEpisodesGrid(searchHighlight = '') {
     const container = document.getElementById('episodes-grid-container');
+    const paginationContainer = document.getElementById('explorer-pagination-container');
+
     if (!currentEpisodes.length) {
-      container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--ink-muted);">No episodes matched the selected filters.</div>';
+      container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--ink-muted);">No records matched the selected filters. Try clearing search keywords or choosing "All".</div>';
+      if (paginationContainer) paginationContainer.style.display = 'none';
       return;
     }
 
-    container.innerHTML = currentEpisodes.map(ep => {
+    const visibleItems = currentEpisodes.slice(0, explorerDisplayLimit);
+
+    container.innerHTML = visibleItems.map(ep => {
       let quoteText = ep.quote || ep.text || '';
       if (searchHighlight) {
         const regex = new RegExp(`(${searchHighlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
         quoteText = quoteText.replace(regex, '<mark class="search-highlight">$1</mark>');
       }
 
+      const ratingStars = ep.rating ? `${'★'.repeat(Math.round(ep.rating))}${'☆'.repeat(5 - Math.round(ep.rating))}` : '';
+      const srcDisplay = (ep.source_code || 'source').replace('_', ' ');
+
       return `
-        <div class="episode-card" onclick="openEpisodeDetail('${ep.test_case_id || ep.episode_id}')">
+        <div class="episode-card" onclick="openEpisodeDetail('${ep.test_case_id || ep.episode_id || ep.id}')">
           <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span class="source-tag tag-${ep.source_code || 'play_store'}">${(ep.source_code || 'source').replace('_', ' ')}</span>
+            <span class="source-tag tag-${ep.source_code || 'play_store'}">${srcDisplay}</span>
             <span class="stage-tag tag-${ep.stage || 'market_panic'}">${ep.stage_label || ep.stage || 'Friction'}</span>
           </div>
           <p class="episode-quote">“${quoteText}”</p>
@@ -2780,21 +2957,53 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
               ${(ep.lost_cues || []).slice(0, 1).map(c => `<span class="cue-pill cue-lost">${c}</span>`).join('')}
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
-              <span style="font-size:11px; color:var(--ink-muted);">#${ep.episode_id || ep.test_case_id} · ${ep.author || 'Investor'}</span>
+              <span style="font-size:11px; color:var(--ink-muted);">#${(ep.episode_id || ep.test_case_id || ep.id || '').slice(0, 16)} · ${ep.author || 'Investor'}${ratingStars ? ' · ' + ratingStars : ''}</span>
               <span style="font-size:11px; color:var(--groww-mint-dark); font-weight:600;">Inspect ↗</span>
             </div>
           </div>
         </div>
       `;
     }).join('');
+
+    // Pagination controls visibility
+    if (paginationContainer) {
+      if (currentEpisodes.length > visibleItems.length) {
+        paginationContainer.style.display = 'flex';
+        const loadMoreBtn = document.getElementById('btn-load-more-explorer');
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = 'inline-flex';
+          loadMoreBtn.innerHTML = `<span>Load More Evidence (+36) · Showing ${visibleItems.length} of ${currentEpisodes.length}</span>`;
+        }
+        const loadAllBtn = document.getElementById('btn-load-all-explorer');
+        if (loadAllBtn) {
+          loadAllBtn.disabled = false;
+          loadAllBtn.style.opacity = '1';
+          loadAllBtn.textContent = 'Show All Results';
+        }
+      } else {
+        paginationContainer.style.display = 'flex';
+        const loadMoreBtn = document.getElementById('btn-load-more-explorer');
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = 'none';
+        }
+        const loadAllBtn = document.getElementById('btn-load-all-explorer');
+        if (loadAllBtn) {
+          loadAllBtn.textContent = `All ${currentEpisodes.length} Records Loaded ✓`;
+          loadAllBtn.disabled = true;
+          loadAllBtn.style.opacity = '0.7';
+        }
+      }
+    }
   }
 
   function openEpisodeDetail(caseId) {
-    const ep = allEpisodesMaster.find(e => e.test_case_id === caseId || e.episode_id === caseId || e.id === caseId);
+    const ep = allEpisodesMaster.find(e => e.test_case_id === caseId || e.episode_id === caseId || e.id === caseId)
+      || (allVoicesMaster && allVoicesMaster.find(e => e.test_case_id === caseId || e.episode_id === caseId || e.id === caseId))
+      || (allEpisodes144 && allEpisodes144.find(e => e.test_case_id === caseId || e.episode_id === caseId || e.id === caseId));
     if (!ep) return;
 
-    currentModalCaseId = ep.test_case_id || caseId;
-    document.getElementById('modal-ep-id').textContent = ep.episode_id || ep.test_case_id || 'EP-001';
+    currentModalCaseId = ep.test_case_id || ep.id || caseId;
+    document.getElementById('modal-ep-id').textContent = ep.episode_id || ep.test_case_id || ep.id || 'REC-001';
     
     const srcTag = document.getElementById('modal-source-tag');
     srcTag.className = `source-tag tag-${ep.source_code || 'play_store'}`;
@@ -2804,8 +3013,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     stgTag.className = `stage-tag tag-${ep.stage || 'market_panic'}`;
     stgTag.textContent = ep.stage_label || ep.stage || ep.category;
 
-    document.getElementById('modal-title').textContent = ep.title || 'SIP Retention Friction';
-    document.getElementById('modal-meta').textContent = `By ${ep.author || 'Investor'} · ${ep.date ? ep.date.slice(0, 10) : '2026-10-15'} · ${ep.category || 'SIP'}`;
+    document.getElementById('modal-title').textContent = ep.title || '12-Month SIP Retention Friction';
+    document.getElementById('modal-meta').textContent = `By ${ep.author || 'Investor'} · ${ep.date ? ep.date.slice(0, 10) : '2026-10-15'} · ${ep.platform || 'Public Voice'}`;
     document.getElementById('modal-quote').textContent = `“${ep.quote || ep.text || ''}”`;
 
     const retainedBox = document.getElementById('modal-retained-cues');

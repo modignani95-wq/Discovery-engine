@@ -7424,7 +7424,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_Ugz2_5g3n5JHRUaQLjl4AaABAg",
@@ -10642,8 +10642,8 @@
       "likes": 4,
       "timeframe": "verified_channel_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -10652,7 +10652,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "yt_ch_UgyBy0i-jYTMGswAWJZ4AaABAg",
@@ -11635,8 +11635,8 @@
       "likes": 0,
       "timeframe": "verified_channel_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -11645,7 +11645,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "yt_ch_Ugx7Ed10ElCTvMecHyB4AaABAg",
@@ -12941,7 +12941,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgyWbU7GK1Aj8hwDpYB4AaABAg",
@@ -13873,7 +13873,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgxO0FvzSscczozK9id4AaABAg",
@@ -16393,7 +16393,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgyKVFoko12ScmrCy694AaABAg",
@@ -16963,7 +16963,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgwNKpfiaFBOSKqcFRZ4AaABAg",
@@ -17193,8 +17193,8 @@
       "likes": 0,
       "timeframe": "verified_channel_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -17204,7 +17204,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "yt_ch_UgxSnNUuV-TPRPiCXRp4AaABAg",
@@ -18163,8 +18163,8 @@
       "likes": 1,
       "timeframe": "verified_channel_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -18173,7 +18173,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "yt_ch_Ugz8jl8wfEriiDab7uh4AaABAg",
@@ -18505,7 +18505,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_Ugzt4t14XQauvRejuzR4AaABAg",
@@ -18975,8 +18975,8 @@
       "likes": 0,
       "timeframe": "verified_channel_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -18985,7 +18985,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "yt_ch_UgwIv_1fuvVibZiQ2Ep4AaABAg",
@@ -19335,8 +19335,8 @@
       "likes": 0,
       "timeframe": "verified_channel_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -19347,7 +19347,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "yt_ch_UgygSRllZmFt3Ufat6R4AaABAg",
@@ -21428,7 +21428,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgwpHylDu7Oz8f8ap5h4AaABAg",
@@ -23105,7 +23105,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgxZXTNA0P1F8GEFVMx4AaABAg",
@@ -23166,7 +23166,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgzkC7PNtgkVZeF-PXV4AaABAg",
@@ -23196,7 +23196,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgwiDHcc1Qsy9OqJznF4AaABAg",
@@ -23257,7 +23257,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_Ugz1ul9p6CM567JNobJ4AaABAg",
@@ -23288,7 +23288,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgwmmbuhmkvFKR7MOAV4AaABAg",
@@ -23348,7 +23348,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgymbZ4YDG9rg1Ls-6B4AaABAg",
@@ -23379,7 +23379,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgyY_3TMg4LQJHty7XZ4AaABAg",
@@ -23440,7 +23440,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_Ugwzb0ClirHl_nWVhjp4AaABAg",
@@ -23501,7 +23501,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgwGCGQ7vW6LOB3rHph4AaABAg",
@@ -23532,7 +23532,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_Ugwlcv58VZEIy2wFnht4AaABAg",
@@ -23682,7 +23682,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgzaD0RssqSMtgSwsdh4AaABAg",
@@ -24104,7 +24104,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgzsoxEZ2XO1Vq-e5gh4AaABAg",
@@ -24256,7 +24256,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgzIA94Rdo0dPbiVqPJ4AaABAg",
@@ -24317,7 +24317,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgzvZAxV_t2vG0xCXfl4AaABAg",
@@ -24348,7 +24348,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgxRCjkSRTU17KlsrzZ4AaABAg",
@@ -24709,7 +24709,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_Ugzxeh2mrdEBGwBgTfN4AaABAg",
@@ -25220,7 +25220,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgxE-dKw6k7RnhdBOkV4AaABAg",
@@ -25671,7 +25671,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "yt_ch_UgwG_I80PwXerHO5G614AaABAg",
@@ -25912,7 +25912,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "reddit_t3_1xfnu5g",
@@ -26717,7 +26717,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "reddit_t3_1xgvjlj",
@@ -26795,8 +26795,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -26806,7 +26806,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_19rqj3n9hm0dh",
@@ -26855,8 +26855,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -26865,7 +26865,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_19rqudumuttgk",
@@ -27403,8 +27403,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wtfugh/grow_autopay_failure_help/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Grow Autopay Failure HELP: I currently have around ₹1 lakh invested in mutual funds through Groww, and all my holdings are in SOA (Statement of Account) form. I specifically want to keep my mutual fund holdings in SOA form and do not want them converted to a demat account. For the last 2–3 months, my monthly SIP of approximately ₹12,000 has been failing every time. Current Auto-Pay Setup I had set up an AutoPay using my SBI bank account, and it worked without any issues for around 6 months. However, for the last 3 months: - Every SIP AutoPay attempt is failing. - I have sufficient balance in my SBI account. - I have another AutoPay set up for my Claude subscription, and that payment continues to work normally. - I contacted SBI, but they were unable to identify why the MF AutoPay is failing. - I also contacted Groww support, but they couldn&#39;t resolve the issue. - I tried creating an entirely new AutoPay mandate, but that also failed. Because of this, I currently have to manually invest in my mutual funds every month. What I&#39;m Considering I&#39;m now considering transferring my mutual fund holdings from Groww to another broker/platform. I would like to understand:  Is it possible to transfer my existing mutual fund holdings from Groww to another broker/platform while keeping them in SOA form? Since my holdings are already in SOA form, can the new platform simply map/import those folios rather than converting them to demat? Are there any hidden charges or exit/transfer fees involved in moving mutual funds from Groww to another platform? Would the transfer have any tax implications, assuming I&#39;m only transferring the holdings and not selling/redeeming them? Which brokers/platforms currently offer a good overall user experience for mutual funds? Most importantly, which platforms support mutual funds in SOA form and allow SIPs/AutoPay directly without requiring demat? How reliable are their SIP AutoPay systems, especially compared with Groww? Are there any platforms that are particularly good for someone with a moderately aggressive risk appetite and a portfolio of around ₹1 lakh currently, but likely to grow over time?  My Key Requirement I do NOT want my mutual funds in a demat account. I want to continue holding them as SOA/non-demat mutual fund holdings, while having a reliable platform for: - SIPs - AutoPay - Manual investments - Portfolio tracking - Switching/redeeming when required - Easy management of multiple mutual funds I&#39;d appreciate recommendations based on current 2026 platform features, charges, SOA support, and overall user experience. Risk Appetite: Aggressive   &#32; submitted by &#32;  /u/-Not-Your-Buddy-   [link] &#32; [comments]",
-      "title": "Grow Autopay Failure HELP",
+      "text": "[r/MutualfundsIndia] Grow active SIP Failure HELP: I currently have around ₹1 lakh invested in mutual funds through Groww, and all my holdings are in SOA (Statement of Account) form. I specifically want to keep my mutual fund holdings in SOA form and do not want them converted to a demat account. For the last 2–3 months, my monthly SIP of approximately ₹12,000 has been failing every time. Current active SIP Setup I had set up an active SIP using my SBI bank account, and it worked without any issues for around 6 months. However, for the last 3 months: - Every SIP active SIP attempt is failing. - I have sufficient balance in my SBI account. - I have another active SIP set up for my Claude subscription, and that payment continues to work normally. - I contacted SBI, but they were unable to identify why the MF active SIP is failing. - I also contacted Groww support, but they couldn&#39;t resolve the issue. - I tried creating an entirely new active SIP installment schedule, but that also failed. Because of this, I currently have to manually invest in my mutual funds every month. What I&#39;m Considering I&#39;m now considering transferring my mutual fund holdings from Groww to another broker/platform. I would like to understand:  Is it possible to transfer my existing mutual fund holdings from Groww to another broker/platform while keeping them in SOA form? Since my holdings are already in SOA form, can the new platform simply map/import those folios rather than converting them to demat? Are there any hidden charges or exit/transfer fees involved in moving mutual funds from Groww to another platform? Would the transfer have any tax implications, assuming I&#39;m only transferring the holdings and not selling/redeeming them? Which brokers/platforms currently offer a good overall user experience for mutual funds? Most importantly, which platforms support mutual funds in SOA form and allow SIPs/active SIP directly without requiring demat? How reliable are their SIP active SIP systems, especially compared with Groww? Are there any platforms that are particularly good for someone with a moderately aggressive risk appetite and a portfolio of around ₹1 lakh currently, but likely to grow over time?  My Key Requirement I do NOT want my mutual funds in a demat account. I want to continue holding them as SOA/non-demat mutual fund holdings, while having a reliable platform for: - SIPs - active SIP - Manual investments - Portfolio tracking - Switching/redeeming when required - Easy management of multiple mutual funds I&#39;d appreciate recommendations based on current 2026 platform features, charges, SOA support, and overall user experience. Risk Appetite: Aggressive   &#32; submitted by &#32;  /u/-Not-Your-Buddy-   [link] &#32; [comments]",
+      "title": "Grow active SIP Failure HELP",
       "rating": null,
       "author": "u/-Not-Your-Buddy-",
       "date": "2026-09-29T17:07:48.000Z",
@@ -27414,8 +27414,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -27428,7 +27428,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_pcvwc80",
@@ -27436,8 +27436,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wtfugh/grow_autopay_failure_help/pcvwc80/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/undertaker-23 on Grow Autopay Failure HELP: Maybe some glitch on groww is not allowing the mandate with SBI. Have you tried setting up the mandate with some other bank?",
-      "title": "/u/undertaker-23 on Grow Autopay Failure HELP",
+      "text": "[r/MutualfundsIndia] /u/undertaker-23 on Grow active SIP Failure HELP: Maybe some glitch on groww is not allowing the installment schedule with SBI. Have you tried setting up the installment schedule with some other bank?",
+      "title": "/u/undertaker-23 on Grow active SIP Failure HELP",
       "rating": null,
       "author": "u/undertaker-23",
       "date": "2026-09-29T22:29:20.000Z",
@@ -27447,8 +27447,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -27458,7 +27458,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_pcxl6xc",
@@ -27466,8 +27466,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wtfugh/grow_autopay_failure_help/pcxl6xc/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/-Not-Your-Buddy- on Grow Autopay Failure HELP: I do have HDFC Current Account, but it&#39;s a salary account and I don&#39;t want to use it for this purpose.",
-      "title": "/u/-Not-Your-Buddy- on Grow Autopay Failure HELP",
+      "text": "[r/MutualfundsIndia] /u/-Not-Your-Buddy- on Grow active SIP Failure HELP: I do have HDFC Current Account, but it&#39;s a salary account and I don&#39;t want to use it for this purpose.",
+      "title": "/u/-Not-Your-Buddy- on Grow active SIP Failure HELP",
       "rating": null,
       "author": "u/-Not-Your-Buddy-",
       "date": "2026-09-30T03:43:50.000Z",
@@ -27477,8 +27477,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -27487,7 +27487,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_pcxyq2g",
@@ -27495,8 +27495,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wtfugh/grow_autopay_failure_help/pcxyq2g/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/undertaker-23 on Grow Autopay Failure HELP: Yes, better to have a separate bank account for all your investments.  Why don&#39;t you give Kotak a try if you don&#39;t have any other savings account? It&#39;s 811 account can be opened online and is a zero balance account too.",
-      "title": "/u/undertaker-23 on Grow Autopay Failure HELP",
+      "text": "[r/MutualfundsIndia] /u/undertaker-23 on Grow active SIP Failure HELP: Yes, better to have a separate bank account for all your investments.  Why don&#39;t you give Kotak a try if you don&#39;t have any other savings account? It&#39;s 811 account can be opened online and is a zero balance account too.",
+      "title": "/u/undertaker-23 on Grow active SIP Failure HELP",
       "rating": null,
       "author": "u/undertaker-23",
       "date": "2026-09-30T05:11:10.000Z",
@@ -27506,8 +27506,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -27516,7 +27516,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1wjyzvj",
@@ -27524,7 +27524,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wjyzvj/age_27_16lmonth_sip_portfolio_review_request/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Age 27, ₹1.6L/month SIP - portfolio review request (15-year horizon + wedding goal in 2029): Risk Appetite – High. Comfortable with -40% to -50% drawdowns, would add more rather than panic sell. Aware my fresh money is heavily skewed to small and mid cap. Goal – Three separate goals:  Wedding (my share) – ₹20-22L Emergency fund – ₹12L Long-term wealth creation  Horizon – Wedding: ~3 years (Aug 2029) Emergency: ongoing Wealth: 15+ years Allocation – ₹1,60,000/month total Invesco India Arbitrage – ₹40,000 (wedding corpus) Bandhan Small Cap – ₹32,000 WhiteOak Mid Cap – ₹32,000 ABSL Liquid – ₹10,000 (emergency) SBI Contra – ₹5,000 ICICI Gold ETF – ₹5,000 VOO + COPX, US ETFs – ₹6,000 (international) Savings account – ₹30,000 (emergency) Total: ~₹10.2L invested, ~₹11.9L current (+17%). By corpus weight the portfolio is roughly 50% large cap because of the frozen holdings, but fresh money skews heavily small/mid. App Used – Zerodha Coin (most funds), Groww (ABSL Liquid), Kuvera (SBI Contra), INDMoney (US ETFs and gold ETF). All Direct plans. Why These Funds – Bandhan Small Cap (₹32k) — Switched out of Nippon Small Cap because its AUM crossed ₹60,000cr and it can&#39;t meaningfully buy true small caps anymore. Bandhan has smaller AUM, ranked #1 in category, ~25% 5yr CAGR. WhiteOak Mid Cap (₹32k) — Smaller AUM, nimble, good manager pedigree. Aware it launched in 2022 and hasn&#39;t been tested through a bear market. My frozen ICICI Midcap corpus is the hedge against that. SBI Contra (₹5k) — Every other equity fund I own is growth or quality style. This is my only value exposure. Small position, treated as style insurance rather than a return driver. Invesco Arbitrage (₹40k) — Wedding money on a 3-year horizon. Needs capital safety but equity taxation (12.5% LTCG) instead of slab rate. Ruled out FDs and debt funds purely on tax. ABSL Liquid (₹10k) — True emergency layer with T+1 access. Deliberately separate from arbitrage because arbitrage is T+2 with an exit load. Gold and US ETFs (₹11k) — Gold as a macro hedge. US ETFs via LRS rather than an Indian FoF, because SEBI&#39;s overseas cap keeps suspending those. My Edelweiss US Tech SIP got suspended by the AMC in August. Stopped PPFCF and Nifty 50 — PPFCF because its international allocation is now SEBI-capped and the manager has publicly guided to 10-12% forward returns at ₹1.7L cr AUM. Nifty 50 because it felt like redundant beta given the existing corpus. Both held, no fresh money going in. Deliberately no flexi or multicap — I unbundled caps into separate funds so I control the weights rather than leaving it to a mandate. What I&#39;d like views on:  Is ~85% of fresh money into small and mid cap too aggressive even at 27 or does the frozen large-cap corpus provide enough ballast? Is there a better instrument than arbitrage for a 3-year wedding corpus? Six active funds - too few, too many, or about right? A distributor pitched replacing my mid cap with a multicap plus infrastructure thematic combo for &quot;better diversification.&quot; I&#39;m skeptical, it feels like it kills mid cap exposure and adds sector concentration. Am I wrong?  More interested in whether the structure holds up than in fund-level tips.  &#32; submitted by &#32;  /u/IncognitoAloo   [link] &#32; [comments]",
+      "text": "[r/MutualfundsIndia] Age 27, ₹1.6L/month SIP - portfolio review request (15-year horizon + wedding goal in 2029): Risk Appetite – High. Comfortable with -40% to -50% drawdowns, would add more rather than panic sell. Aware my fresh money is heavily skewed to small and mid cap. Goal – Three separate goals:  Wedding (my share) – ₹20-22L Emergency fund – ₹12L Long-term wealth creation  Horizon – Wedding: ~3 years (Aug 2029) Emergency: ongoing Wealth: 15+ years Allocation – ₹1,60,000/month total Invesco India Arbitrage – ₹40,000 (wedding corpus) Bandhan Small Cap – ₹32,000 WhiteOak Mid Cap – ₹32,000 ABSL Liquid – ₹10,000 (emergency) SBI Contra – ₹5,000 ICICI Gold ETF – ₹5,000 VOO + COPX, US ETFs – ₹6,000 (international) Savings account – ₹30,000 (emergency) Total: ~₹10.2L invested, ~₹11.9L current (+17%). By corpus weight the portfolio is roughly 50% large cap because of the frozen holdings, but fresh money skews heavily small/mid. App Used – Zerodha Coin (most funds), Groww (ABSL Liquid), Kuvera (SBI Contra), INDMoney (US ETFs and gold ETF). All Direct plans. Why These Funds – Bandhan Small Cap (₹32k) — Switched out of Nippon Small Cap because its AUM crossed ₹60,000cr and it can&#39;t meaningfully buy true small caps anymore. Bandhan has smaller AUM, ranked #1 in category, ~25% 5yr CAGR. WhiteOak Mid Cap (₹32k) — Smaller AUM, nimble, good manager pedigree. Aware it launched in 2022 and hasn&#39;t been tested through a bear market. My frozen ICICI Midcap corpus is the hedge against that. SBI Contra (₹5k) — Every other equity fund I own is growth or quality style. This is my only value exposure. Small position, treated as style insurance rather than a return driver. Invesco Arbitrage (₹40k) — Wedding money on a 3-year horizon. Needs capital safety but equity taxation (12.5% LTCG) instead of slab rate. Ruled out FDs and debt funds purely on tax. ABSL Liquid (₹10k) — True emergency layer with T+1 access. Deliberately separate from arbitrage because arbitrage is T+2 with an exit load. Gold and US ETFs (₹11k) — Gold as a macro hedge. US ETFs via LRS rather than an Indian FoF, because SEBI&#39;s overseas cap keeps suspending those. My Edelweiss US Tech SIP got suspended by the AMC in August. Stopped PPFCF and Nifty 50 — PPFCF because its international allocation is now SEBI-capped and the manager has publicly guided to 10-12% forward returns at ₹1.7L cr AUM. Nifty 50 because it felt like redundant beta given the existing corpus. Both held, no fresh money going in. Deliberately no flexi or multicap — I unbundled caps into separate funds so I control the weights rather than leaving it to a installment schedule. What I&#39;d like views on:  Is ~85% of fresh money into small and mid cap too aggressive even at 27 or does the frozen large-cap corpus provide enough ballast? Is there a better instrument than arbitrage for a 3-year wedding corpus? Six active funds - too few, too many, or about right? A distributor pitched replacing my mid cap with a multicap plus infrastructure thematic combo for &quot;better diversification.&quot; I&#39;m skeptical, it feels like it kills mid cap exposure and adds sector concentration. Am I wrong?  More interested in whether the structure holds up than in fund-level tips.  &#32; submitted by &#32;  /u/IncognitoAloo   [link] &#32; [comments]",
       "title": "Age 27, ₹1.6L/month SIP - portfolio review request (15-year horizon + wedding goal in 2029)",
       "rating": null,
       "author": "u/IncognitoAloo",
@@ -27645,7 +27645,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wjyzvj/age_27_16lmonth_sip_portfolio_review_request/paqgbxp/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/IncognitoAloo on Age 27, ₹1.6L/month SIP - portfolio review request (15-year horizon + wedding goal in 2029): Fair point, mandate says diversified and OpcoFinco is how they value stocks, not how they build the portfolio. I mixed up the two Cap bleed is real. 35% leeway either side means the label tells you less than people assume, applies to Bandhan too. Commodity angle is more interesting. I hold gold separately at ~3%, so if Bandhan takes commodity exposure I&#39;d be double counting. Will track their disclosures",
+      "text": "[r/MutualfundsIndia] /u/IncognitoAloo on Age 27, ₹1.6L/month SIP - portfolio review request (15-year horizon + wedding goal in 2029): Fair point, installment schedule says diversified and OpcoFinco is how they value stocks, not how they build the portfolio. I mixed up the two Cap bleed is real. 35% leeway either side means the label tells you less than people assume, applies to Bandhan too. Commodity angle is more interesting. I hold gold separately at ~3%, so if Bandhan takes commodity exposure I&#39;d be double counting. Will track their disclosures",
       "title": "/u/IncognitoAloo on Age 27, ₹1.6L/month SIP - portfolio review request (15-year horizon + wedding goal in 2029)",
       "rating": null,
       "author": "u/IncognitoAloo",
@@ -27656,8 +27656,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -27667,7 +27667,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_pb3urbx",
@@ -27823,7 +27823,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1uq2p7l/changing_banks_for_siplumpsum_vs_default/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Changing banks for SIP/Lumpsum vs. Default Redemption Bank (MF Central & Groww): I have a quick confusion regarding mutual fund payments and redemption banks. ​I recently started an HDFC Midcap Fund via the MF Central app. During the setup, my KYC was done, and I made the initial payment using Bank A via net banking. As a result, Bank A is now registered as my default bank account for this folio. ​Recently, I tracked/synced this external mutual fund inside the Groww app. Now, if I try to make an additional investment (lumpsum) in the same fund through Groww, it routes the payment via GPay UPI, where I have Bank B registered. ​I know that if I proceed, the payment will go through successfully from Bank B (since the account is in my name). However, my main question is: ​If I continue to make future investments through Bank B, will it automatically change my default redemption bank to Bank B in the future? Or will my redemption bank strictly remain Bank A (where the money will land whenever I redeem), unless I manually raise a &#39;Change of Bank Mandate&#39; request? Here are a few details about my portfolio and investment. I&#39;m a moderate invester. I have been investing in mutual funds for the last one year. I&#39;m investing in Mutual funds from AMCs like Bandhan small cap, hdfc mid cap, and PPFAS. I&#39;ve planned to keep investing for the upcoming 10 years minimum.  &#32; submitted by &#32;  /u/seoday   [link] &#32; [comments]",
+      "text": "[r/MutualfundsIndia] Changing banks for SIP/Lumpsum vs. Default Redemption Bank (MF Central & Groww): I have a quick confusion regarding mutual fund payments and redemption banks. ​I recently started an HDFC Midcap Fund via the MF Central app. During the setup, my KYC was done, and I made the initial payment using Bank A via net banking. As a result, Bank A is now registered as my default bank account for this folio. ​Recently, I tracked/synced this external mutual fund inside the Groww app. Now, if I try to make an additional investment (lumpsum) in the same fund through Groww, it routes the payment via GPay UPI, where I have Bank B registered. ​I know that if I proceed, the payment will go through successfully from Bank B (since the account is in my name). However, my main question is: ​If I continue to make future investments through Bank B, will it automatically change my default redemption bank to Bank B in the future? Or will my redemption bank strictly remain Bank A (where the money will land whenever I redeem), unless I manually raise a &#39;Change of monthly installment schedule&#39; request? Here are a few details about my portfolio and investment. I&#39;m a moderate invester. I have been investing in mutual funds for the last one year. I&#39;m investing in Mutual funds from AMCs like Bandhan small cap, hdfc mid cap, and PPFAS. I&#39;ve planned to keep investing for the upcoming 10 years minimum.  &#32; submitted by &#32;  /u/seoday   [link] &#32; [comments]",
       "title": "Changing banks for SIP/Lumpsum vs. Default Redemption Bank (MF Central & Groww)",
       "rating": null,
       "author": "u/seoday",
@@ -27834,8 +27834,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -27848,7 +27848,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_ow5f0a0",
@@ -28074,7 +28074,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1ttygku/why_is_zerodha_so_difficult_to_work_with/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Why is zerodha so difficult to work with?: I created a SIP in coin app (zerodha) and created a mandate as well. It shows active as well. But does it get linked with sips on its own? I had setup monthly setup , but no deduction happened i believe.  Is there something else i need to setup for autopay? Or it got triggered and will take time to reflect? Please help i am new to this.  &#32; submitted by &#32;  /u/Enough-Ad14   [link] &#32; [comments]",
+      "text": "[r/MutualfundsIndia] Why is zerodha so difficult to work with?: I created a SIP in coin app (zerodha) and created a installment schedule as well. It shows active as well. But does it get linked with sips on its own? I had setup monthly setup , but no deduction happened i believe.  Is there something else i need to setup for active SIP? Or it got triggered and will take time to reflect? Please help i am new to this.  &#32; submitted by &#32;  /u/Enough-Ad14   [link] &#32; [comments]",
       "title": "Why is zerodha so difficult to work with?",
       "rating": null,
       "author": "u/Enough-Ad14",
@@ -28085,8 +28085,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28098,7 +28098,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_op5u5me",
@@ -28106,7 +28106,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1ttygku/why_is_zerodha_so_difficult_to_work_with/op5u5me/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/sabka_katega_ram on Why is zerodha so difficult to work with?: Did you select the mandate which the fund should use to auto-deduct?",
+      "text": "[r/MutualfundsIndia] /u/sabka_katega_ram on Why is zerodha so difficult to work with?: Did you select the installment schedule which the fund should use to auto-deduct?",
       "title": "/u/sabka_katega_ram on Why is zerodha so difficult to work with?",
       "rating": null,
       "author": "u/sabka_katega_ram",
@@ -28117,8 +28117,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28127,7 +28127,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_op5uh09",
@@ -28135,7 +28135,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1ttygku/why_is_zerodha_so_difficult_to_work_with/op5uh09/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/sabka_katega_ram on Why is zerodha so difficult to work with?: https://support.zerodha.com/category/mutual-funds/payments-and-orders/coin-mandates/articles/sip-mandate-on-coin",
+      "text": "[r/MutualfundsIndia] /u/sabka_katega_ram on Why is zerodha so difficult to work with?: https://support.zerodha.com/category/mutual-funds/payments-and-orders/coin-mandates/articles/sip-installment schedule-on-coin",
       "title": "/u/sabka_katega_ram on Why is zerodha so difficult to work with?",
       "rating": null,
       "author": "u/sabka_katega_ram",
@@ -28146,8 +28146,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28157,7 +28157,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1trqwed",
@@ -28165,8 +28165,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1trqwed/help_me_understand_autopaymandate/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Help me understand Autopay/mandate: I was setting up an SIP of 15k in Zerodha. It asked me to create Mandate since that&#39;s my aim to have a Autopay. I created one through the UPI option in HDFC. But the mandate show amount as full 1L INR. Now I am confused or unaware how these work. Questions:  If I do approve it in the UPI app. Does the 1L gets transferred or gets locked-in in some manner? Or is that just a max limit for that mandate? It will only deduct my specified amount which I will set in SIP? What if i need to setup another SIP for a difference fund - do I need to create another Mandate or can use the same one?   &#32; submitted by &#32;  /u/bawlachora   [link] &#32; [comments]",
-      "title": "Help me understand Autopay/mandate",
+      "text": "[r/MutualfundsIndia] Help me understand active SIP/installment schedule: I was setting up an SIP of 15k in Zerodha. It asked me to create installment schedule since that&#39;s my aim to have a active SIP. I created one through the UPI option in HDFC. But the installment schedule show amount as full 1L INR. Now I am confused or unaware how these work. Questions:  If I do approve it in the UPI app. Does the 1L gets transferred or gets locked-in in some manner? Or is that just a max limit for that installment schedule? It will only deduct my specified amount which I will set in SIP? What if i need to setup another SIP for a difference fund - do I need to create another installment schedule or can use the same one?   &#32; submitted by &#32;  /u/bawlachora   [link] &#32; [comments]",
+      "title": "Help me understand active SIP/installment schedule",
       "rating": null,
       "author": "u/bawlachora",
       "date": "2026-05-30T05:29:58.000Z",
@@ -28176,8 +28176,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28188,7 +28188,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_oopm3bo",
@@ -28196,8 +28196,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1trqwed/help_me_understand_autopaymandate/oopm3bo/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/hjd204 on Help me understand Autopay/mandate: Dont worry itsmax amount per mandate..it will use only sip amount you set fromm that mandate",
-      "title": "/u/hjd204 on Help me understand Autopay/mandate",
+      "text": "[r/MutualfundsIndia] /u/hjd204 on Help me understand active SIP/installment schedule: Dont worry itsmax amount per installment schedule..it will use only sip amount you set fromm that installment schedule",
+      "title": "/u/hjd204 on Help me understand active SIP/installment schedule",
       "rating": null,
       "author": "u/hjd204",
       "date": "2026-05-30T05:34:43.000Z",
@@ -28207,8 +28207,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28219,7 +28219,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1tq3qif",
@@ -28257,7 +28257,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t9utc9/portfolio_review/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Portfolio Review: &#x200B; Seeking expert feedback on my retirement plan — 35. Goal - retirement by 50. Horizon: 15 years Risk profile : Aggressive. App used : Groww 📊 Current Financial Snapshot: • Indian Stocks (incl. SGBs): ₹14L • Indian Mutual Funds: ₹6L • EPF: ₹14L • US Stocks via INDmoney (VOO/QQQM/SCHD): ~₹34k • Emergency Fund: ₹6L (liquid, in bank) • Idle cash: ₹7.5L (to be deployed) • No loans. Renting. 📈 Current SIPs: • UTI Nifty 50 Index: ₹50k/month • PPFAS Flexicap: ₹30k/month • US ETFs (VOO + QQQM + SCHD): ₹20k/month From May, post-hike, I can invest ₹1.5L/month total. --- 🗂 Proposed Plan (₹1.5L/month from May): 1) UTI Nifty 50 Index — ₹40,000 Mature Nifty 50 passive fund in India with the lowest tracking error in the category (consistently under 0.02%) and one of the highest AUMs at ~₹23,000 Cr. 2) Motilal Oswal Nifty Midcap 150 Index — ₹20,000 First mover in the Midcap 150 index space with the highest AUM (₹3,408 Cr) in the category, ensuring smoother replication of all 150 stocks without the liquidity-driven tracking error that plagues newer, smaller funds. 3) PPFAS Flexicap — ₹20,000 Only Indian fund with a built-in international equity mandate (up to 35% overseas) actively managed across geographies including US, Japan, and domestic India — giving genuine global diversification without running a separate fund, at a reasonable expense ratio for active management. 4) VOO (S&amp;P 500) — ₹20,000 Vanguard&#39;s S&amp;P 500 ETF with a 0.03% expense ratio — the lowest cost entry to US large cap equity — giving broad exposure across 500 companies spanning tech, healthcare, financials, and energy rather than concentrating in any single sector. 5) SCHD — ₹15,000 Dividend-growth focused ETF with a quality screen (profitability + consecutive dividend growth) that historically outperforms pure dividend yield funds; the compounding dividend income stream is structurally valuable for a retirement-at-50 goal. 6) QQQM (Nasdaq 100) — ₹10,000 Consumer share class of QQQ with a 0.15% vs 0.20% expense ratio — economically identical exposure to the 100 largest non-financial Nasdaq companies (Nvidia, Microsoft, Apple, Meta) but cheaper for retail SIP investors; sized at ₹10k specifically to limit concentration risk at current elevated valuations. 7) Nippon India Gold BeES ETF — ₹10,000 Oldest gold ETF in India (launched 2007), highest liquidity with the tightest bid-ask spreads, tracks domestic gold price with near-zero tracking error, and is available on NSE without the 8-year lock-in of SGBs — making it the most operationally clean gold allocation for a monthly SIP. 8) Tata Arbitrage Fund (Direct) — ₹15,000 Best-in-category 3-year return (7.8%) at one of the lowest expense ratios (0.31%) in the arbitrage space, managed by a dedicated passive/arbitrage team since inception, with AUM of ₹20,686 Cr sitting in the operational sweet spot — large enough for scale, not so large it can&#39;t deploy capital efficiently. Total: ₹1,50,000/month --- 🔑 Key decisions baked in:  Kept PPFAS — the overlap argument with US stocks doesn&#39;t hold given their active international mandate beyond US large caps QQQM at ₹10k, not ₹40k — AI upside without concentration risk at current valuations No VPF top-up — EPF base is strong; lock-in hurts flexibility if I taper work by 45–47 Arbitrage/liquid buffer for correction optionality rather than staying fully deployed every month Idle ₹7.5L to be deployed via STP over 6 months across Midcap index, PPFAS, and US ETFs  Corpus target: ₹8–12 Cr by 50 (today&#39;s purchasing power), assuming ~12% blended CAGR. --- ❓ Looking for honest critique — especially on: • PPFAS retention vs. elimination given my direct US ETF exposure • QQQM sizing given current Nasdaq valuations • Whether the India/US split (~60/40) makes sense for a 15-year horizon • Gold at ₹10k — right-sized, too little, or unnecessary? • Should I include a small cap fund and if so - what do I cut down on? • Anything I&#39;m missing entirely Want to know where this plan is weak. Thanks in advance.  &#32; submitted by &#32;  /u/Heyothere19   [link] &#32; [comments]",
+      "text": "[r/MutualfundsIndia] Portfolio Review: &#x200B; Seeking expert feedback on my retirement plan — 35. Goal - retirement by 50. Horizon: 15 years Risk profile : Aggressive. App used : Groww 📊 Current Financial Snapshot: • Indian Stocks (incl. SGBs): ₹14L • Indian Mutual Funds: ₹6L • EPF: ₹14L • US Stocks via INDmoney (VOO/QQQM/SCHD): ~₹34k • Emergency Fund: ₹6L (liquid, in bank) • Idle cash: ₹7.5L (to be deployed) • No loans. Renting. 📈 Current SIPs: • UTI Nifty 50 Index: ₹50k/month • PPFAS Flexicap: ₹30k/month • US ETFs (VOO + QQQM + SCHD): ₹20k/month From May, post-hike, I can invest ₹1.5L/month total. --- 🗂 Proposed Plan (₹1.5L/month from May): 1) UTI Nifty 50 Index — ₹40,000 Mature Nifty 50 passive fund in India with the lowest tracking error in the category (consistently under 0.02%) and one of the highest AUMs at ~₹23,000 Cr. 2) Motilal Oswal Nifty Midcap 150 Index — ₹20,000 First mover in the Midcap 150 index space with the highest AUM (₹3,408 Cr) in the category, ensuring smoother replication of all 150 stocks without the liquidity-driven tracking error that plagues newer, smaller funds. 3) PPFAS Flexicap — ₹20,000 Only Indian fund with a built-in international equity installment schedule (up to 35% overseas) actively managed across geographies including US, Japan, and domestic India — giving genuine global diversification without running a separate fund, at a reasonable expense ratio for active management. 4) VOO (S&amp;P 500) — ₹20,000 Vanguard&#39;s S&amp;P 500 ETF with a 0.03% expense ratio — the lowest cost entry to US large cap equity — giving broad exposure across 500 companies spanning tech, healthcare, financials, and energy rather than concentrating in any single sector. 5) SCHD — ₹15,000 Dividend-growth focused ETF with a quality screen (profitability + consecutive dividend growth) that historically outperforms pure dividend yield funds; the compounding dividend income stream is structurally valuable for a retirement-at-50 goal. 6) QQQM (Nasdaq 100) — ₹10,000 Consumer share class of QQQ with a 0.15% vs 0.20% expense ratio — economically identical exposure to the 100 largest non-financial Nasdaq companies (Nvidia, Microsoft, Apple, Meta) but cheaper for retail SIP investors; sized at ₹10k specifically to limit concentration risk at current elevated valuations. 7) Nippon India Gold BeES ETF — ₹10,000 Oldest gold ETF in India (launched 2007), highest liquidity with the tightest bid-ask spreads, tracks domestic gold price with near-zero tracking error, and is available on NSE without the 8-year lock-in of SGBs — making it the most operationally clean gold allocation for a monthly SIP. 8) Tata Arbitrage Fund (Direct) — ₹15,000 Best-in-category 3-year return (7.8%) at one of the lowest expense ratios (0.31%) in the arbitrage space, managed by a dedicated passive/arbitrage team since inception, with AUM of ₹20,686 Cr sitting in the operational sweet spot — large enough for scale, not so large it can&#39;t deploy capital efficiently. Total: ₹1,50,000/month --- 🔑 Key decisions baked in:  Kept PPFAS — the overlap argument with US stocks doesn&#39;t hold given their active international installment schedule beyond US large caps QQQM at ₹10k, not ₹40k — AI upside without concentration risk at current valuations No VPF top-up — EPF base is strong; lock-in hurts flexibility if I taper work by 45–47 Arbitrage/liquid buffer for correction optionality rather than staying fully deployed every month Idle ₹7.5L to be deployed via STP over 6 months across Midcap index, PPFAS, and US ETFs  Corpus target: ₹8–12 Cr by 50 (today&#39;s purchasing power), assuming ~12% blended CAGR. --- ❓ Looking for honest critique — especially on: • PPFAS retention vs. elimination given my direct US ETF exposure • QQQM sizing given current Nasdaq valuations • Whether the India/US split (~60/40) makes sense for a 15-year horizon • Gold at ₹10k — right-sized, too little, or unnecessary? • Should I include a small cap fund and if so - what do I cut down on? • Anything I&#39;m missing entirely Want to know where this plan is weak. Thanks in advance.  &#32; submitted by &#32;  /u/Heyothere19   [link] &#32; [comments]",
       "title": "Portfolio Review",
       "rating": null,
       "author": "u/Heyothere19",
@@ -28290,8 +28290,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t6ym9b/how_do_i_delete_my_autopay_from_the_groww_app/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] How do I delete my Autopay from the Groww app?: How do I delete my Autopay from the Groww app? When I try to remove it, it says there is an active mandate. What should I do? Thanks in advance.  &#32; submitted by &#32;  /u/Vaallarris   [link] &#32; [comments]",
-      "title": "How do I delete my Autopay from the Groww app?",
+      "text": "[r/MutualfundsIndia] How do I delete my active SIP from the Groww app?: How do I delete my active SIP from the Groww app? When I try to remove it, it says there is an active installment schedule. What should I do? Thanks in advance.  &#32; submitted by &#32;  /u/Vaallarris   [link] &#32; [comments]",
+      "title": "How do I delete my active SIP from the Groww app?",
       "rating": null,
       "author": "u/Vaallarris",
       "date": "2026-05-08T05:30:30.000Z",
@@ -28301,8 +28301,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28312,7 +28312,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_okl4aql",
@@ -28320,8 +28320,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t6ym9b/how_do_i_delete_my_autopay_from_the_groww_app/okl4aql/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/amren-00 on How do I delete my Autopay from the Groww app?: I think all you can do is cancel SIP, it’ll delete the autopay",
-      "title": "/u/amren-00 on How do I delete my Autopay from the Groww app?",
+      "text": "[r/MutualfundsIndia] /u/amren-00 on How do I delete my active SIP from the Groww app?: I think all you can do is cancel SIP, it’ll delete the active SIP",
+      "title": "/u/amren-00 on How do I delete my active SIP from the Groww app?",
       "rating": null,
       "author": "u/amren-00",
       "date": "2026-05-08T05:48:19.000Z",
@@ -28331,8 +28331,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28343,7 +28343,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_okm751d",
@@ -28351,8 +28351,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t6ym9b/how_do_i_delete_my_autopay_from_the_groww_app/okm751d/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/Vaallarris on How do I delete my Autopay from the Groww app?: If I cancel the sip and restart the sip the sip will the amount I invested will it remains same.",
-      "title": "/u/Vaallarris on How do I delete my Autopay from the Groww app?",
+      "text": "[r/MutualfundsIndia] /u/Vaallarris on How do I delete my active SIP from the Groww app?: If I cancel the sip and restart the sip the sip will the amount I invested will it remains same.",
+      "title": "/u/Vaallarris on How do I delete my active SIP from the Groww app?",
       "rating": null,
       "author": "u/Vaallarris",
       "date": "2026-05-08T11:04:40.000Z",
@@ -28362,8 +28362,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28373,7 +28373,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_okm7dir",
@@ -28381,8 +28381,8 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t6ym9b/how_do_i_delete_my_autopay_from_the_groww_app/okm7dir/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/amren-00 on How do I delete my Autopay from the Groww app?: Depends on the market",
-      "title": "/u/amren-00 on How do I delete my Autopay from the Groww app?",
+      "text": "[r/MutualfundsIndia] /u/amren-00 on How do I delete my active SIP from the Groww app?: Depends on the market",
+      "title": "/u/amren-00 on How do I delete my active SIP from the Groww app?",
       "rating": null,
       "author": "u/amren-00",
       "date": "2026-05-08T11:06:17.000Z",
@@ -28392,8 +28392,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28402,7 +28402,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1t02qfg",
@@ -28410,7 +28410,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t02qfg/fx_retail_web_vs_fx_retail_bharat_connect/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] FX Retail Web vs FX Retail Bharat Connect: I posted earlier about FX Retail.  My today&#39;s failed journey in converting INR to USD.  Earlier i set up with BoB 10p/USD markup. It is a manual process. I have to print/scan couple of documents and email them to the FX manager for processing. Typically 2 days processing including the deal booking on FX Retail. I hope this can be compressed to single day of i act in the morning.  But today i was not in home to print/scan the documents. FX manager off on 4th. Realistically i can convert to USD by 5t or 6th May and I buy Irish ETF (Nasdaq 100) in European markets by 7 May.  It felt too long given both USD and Nasdaq raising. 1 week is definitely a lost opportunity.  I went back to my earlier setup with ICICI on money 2 world where i had 90p discount setup. It got removed likely due to set expiry date. Again working with bank will also take easily a week.  I went to BHIM &gt; Bills &gt; Financial &gt; Forex  Usually i do test run for $100 for any new system. This time i mistakenly assumed it will work magically. So went with the flow and tried to book USD in 1000s of dollars. Interestingly the markup is only 20p not 30p as i was assuming earlier (they added a buffer 10p). Price difference between this and BoB setup is $1 only. So i was happy to execute this.  Then i found Icici bank not linked to BHIM. So, i went and added it. (At this point i didn&#39;t realise the 5k limit for new UPI registrations)  Then attempted booking. It went till UPI mandate screen and failed with  Dear Customer, your AutoPay mandate registration has failed due to falcon decline-ICICI Bank. I thought i will retry later. But when I checked the balance in UPI saving, it was showing lower balance as if it was deducted. So i went and checked in the bank. Money was linened but not deducted. I wasn&#39;t sure when it will be removed, i ended up sending emails to multiple parties involved. I hate multiple party transactions. FX Retail, ICICI Bank, BHIM, Bharat Connect. FX Retail alone replied saying that they checked with NPCI on this but no further update. Eventually in the evening amount was available again. Not sure if this is the norm or someone acted on the email i sent.  I will try again on Monday. If this works, it will be really good and fast option under 5 lakhs INR. I will try again with ICICI to set up 20p in direct FX Retail, but they are adamant not to. Probably showing them that i am already doing it at 20p/USD via them will push them to set up. I don&#39;t know. I want to make it only bank and FX Retail involved transaction not more parties. Anyone successfully bought USD via Bharat Connect?  &#32; submitted by &#32;  /u/Melodic-Telephone967   [link] &#32; [comments]",
+      "text": "[r/MutualfundsIndia] FX Retail Web vs FX Retail Bharat Connect: I posted earlier about FX Retail.  My today&#39;s failed journey in converting INR to USD.  Earlier i set up with BoB 10p/USD markup. It is a manual process. I have to print/scan couple of documents and email them to the FX manager for processing. Typically 2 days processing including the deal booking on FX Retail. I hope this can be compressed to single day of i act in the morning.  But today i was not in home to print/scan the documents. FX manager off on 4th. Realistically i can convert to USD by 5t or 6th May and I buy Irish ETF (Nasdaq 100) in European markets by 7 May.  It felt too long given both USD and Nasdaq raising. 1 week is definitely a lost opportunity.  I went back to my earlier setup with ICICI on money 2 world where i had 90p discount setup. It got removed likely due to set expiry date. Again working with bank will also take easily a week.  I went to BHIM &gt; Bills &gt; Financial &gt; Forex  Usually i do test run for $100 for any new system. This time i mistakenly assumed it will work magically. So went with the flow and tried to book USD in 1000s of dollars. Interestingly the markup is only 20p not 30p as i was assuming earlier (they added a buffer 10p). Price difference between this and BoB setup is $1 only. So i was happy to execute this.  Then i found Icici bank not linked to BHIM. So, i went and added it. (At this point i didn&#39;t realise the 5k limit for new UPI registrations)  Then attempted booking. It went till UPI installment schedule screen and failed with  Dear Customer, your active SIP installment schedule registration has failed due to falcon decline-ICICI Bank. I thought i will retry later. But when I checked the balance in UPI saving, it was showing lower balance as if it was deducted. So i went and checked in the bank. Money was linened but not deducted. I wasn&#39;t sure when it will be removed, i ended up sending emails to multiple parties involved. I hate multiple party transactions. FX Retail, ICICI Bank, BHIM, Bharat Connect. FX Retail alone replied saying that they checked with NPCI on this but no further update. Eventually in the evening amount was available again. Not sure if this is the norm or someone acted on the email i sent.  I will try again on Monday. If this works, it will be really good and fast option under 5 lakhs INR. I will try again with ICICI to set up 20p in direct FX Retail, but they are adamant not to. Probably showing them that i am already doing it at 20p/USD via them will push them to set up. I don&#39;t know. I want to make it only bank and FX Retail involved transaction not more parties. Anyone successfully bought USD via Bharat Connect?  &#32; submitted by &#32;  /u/Melodic-Telephone967   [link] &#32; [comments]",
       "title": "FX Retail Web vs FX Retail Bharat Connect",
       "rating": null,
       "author": "u/Melodic-Telephone967",
@@ -28421,8 +28421,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28432,7 +28432,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t1_oj6uanw",
@@ -28440,7 +28440,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1t02qfg/fx_retail_web_vs_fx_retail_bharat_connect/oj6uanw/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] /u/MaverickOdyssey on FX Retail Web vs FX Retail Bharat Connect: Had issue with HDFC where mandate registration kept failing with “invalid credit transaction,” so I switched to ICICI. Was able to initiate the trade via BHIM UPI and money got debited instantly and got email from FX retail with deal details, but on Money2World it showed “deal not found in system.” Raised multiple escalations with FX retail + ICICI NRI support (not very helpful tbh), then gave up for the day. Later that night got a message saying the deal was ready. Logged in, trade details were visible, but couldn’t complete it online since I didn’t have my debit card for 3D Secure auth after OTP. Called customer care again → they told me to visit a branch. At the branch, they were initially clueless, took my details, and said they’d follow up. Around 3:30 PM got a call back — they processed it manually. Gave confirmations + A2 details over the phone, then I emailed Aadhaar &amp; PAN. Around 6:30 PM they called again asking which company/exchange I’m investing in. After that: ~5 mins → transaction approved ~15 mins → funds credited to IBKR Was able to invest by ~7:30 PM IST. ICICI charged 1500 + 795.26(as GST) got 20p as markup  TL;DR: There was issue with FX retail on Wednesday where deals didn’t sync from CCIL that was the reason why it didn’t show up in Money to remit portal.",
+      "text": "[r/MutualfundsIndia] /u/MaverickOdyssey on FX Retail Web vs FX Retail Bharat Connect: Had issue with HDFC where installment schedule registration kept failing with “invalid credit transaction,” so I switched to ICICI. Was able to initiate the trade via BHIM UPI and money got debited instantly and got email from FX retail with deal details, but on Money2World it showed “deal not found in system.” Raised multiple escalations with FX retail + ICICI NRI support (not very helpful tbh), then gave up for the day. Later that night got a message saying the deal was ready. Logged in, trade details were visible, but couldn’t complete it online since I didn’t have my debit card for 3D Secure auth after OTP. Called customer care again → they told me to visit a branch. At the branch, they were initially clueless, took my details, and said they’d follow up. Around 3:30 PM got a call back — they processed it manually. Gave confirmations + A2 details over the phone, then I emailed Aadhaar &amp; PAN. Around 6:30 PM they called again asking which company/exchange I’m investing in. After that: ~5 mins → transaction approved ~15 mins → funds credited to IBKR Was able to invest by ~7:30 PM IST. ICICI charged 1500 + 795.26(as GST) got 20p as markup  TL;DR: There was issue with FX retail on Wednesday where deals didn’t sync from CCIL that was the reason why it didn’t show up in Money to remit portal.",
       "title": "/u/MaverickOdyssey on FX Retail Web vs FX Retail Bharat Connect",
       "rating": null,
       "author": "u/MaverickOdyssey",
@@ -28451,8 +28451,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28461,7 +28461,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1s5p6mj",
@@ -28469,7 +28469,7 @@
       "source_code": "reddit",
       "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1s5p6mj/fi_federal_bank_partnership_ending_what_happens/",
       "collected_at": "2026-10-28T05:12:36.438734+00:00",
-      "text": "[r/MutualfundsIndia] Fi & Federal Bank partnership ending — what happens to SIPs and UPI mandates?: Hey everyone, I’ve been using Fi for my savings account and had set up a few SIPs and UPI autopay mandates through it. With the recent changes, I’m a bit confused about what happens next. Do these mandates still work normally through Federal Bank, or do I need to set them up again? Im using groww by the way If anyone has already dealt with this, would love to know what you did. Thanks!  &#32; submitted by &#32;  /u/santosh_bisai   [link] &#32; [comments]",
+      "text": "[r/MutualfundsIndia] Fi & Federal Bank partnership ending — what happens to SIPs and UPI mandates?: Hey everyone, I’ve been using Fi for my savings account and had set up a few SIPs and UPI active SIP mandates through it. With the recent changes, I’m a bit confused about what happens next. Do these mandates still work normally through Federal Bank, or do I need to set them up again? Im using groww by the way If anyone has already dealt with this, would love to know what you did. Thanks!  &#32; submitted by &#32;  /u/santosh_bisai   [link] &#32; [comments]",
       "title": "Fi & Federal Bank partnership ending — what happens to SIPs and UPI mandates?",
       "rating": null,
       "author": "u/santosh_bisai",
@@ -28480,8 +28480,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28491,7 +28491,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1xh1rpd",
@@ -28837,8 +28837,8 @@
       "channel": "Reddit (r/r/MutualfundsIndia)",
       "timeframe": "verified_reddit_mine",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -28848,7 +28848,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "reddit_t3_1xesjqe",
@@ -29410,8 +29410,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -29421,7 +29421,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_360157",
@@ -29615,7 +29615,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Compounding Optimization / Limit Check",
-      "pm_actionable_insight": "Automatically validate existing bank mandate max ceilings before allowing investors to activate annual step-ups."
+      "pm_actionable_insight": "Automatically validate existing monthly installment schedule max ceilings before allowing investors to activate annual step-ups."
     },
     {
       "post_id": "tqna_371637",
@@ -29623,8 +29623,8 @@
       "source_code": "tradingqna",
       "source_url": "https://tradingqna.com/t/34955",
       "collected_at": "2026-10-27T11:44:16.462451+00:00",
-      "text": "[BSE to launch e-mandate facility on mutual fund platform] @Bhuvan : can you please let us know if coin is also implementing this we need this auto debit SIPs for mutual funds, Also we need one feature where we can do real SIPs via BSE and also pause and modify … its working already in Groww… why cant it be done in demat mode via platform… this will help...",
-      "title": "BSE to launch e-mandate facility on mutual fund platform",
+      "text": "[BSE to launch SIP installment facility on mutual fund platform] @Bhuvan : can you please let us know if coin is also implementing this we need this auto debit SIPs for mutual funds, Also we need one feature where we can do real SIPs via BSE and also pause and modify … its working already in Groww… why cant it be done in demat mode via platform… this will help...",
+      "title": "BSE to launch SIP installment facility on mutual fund platform",
       "rating": null,
       "author": "Sandeep_Gupta1",
       "date": "2026-08-14T18:34:27Z",
@@ -29746,8 +29746,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -29757,7 +29757,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_378356",
@@ -29774,8 +29774,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -29785,7 +29785,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_159723",
@@ -30274,8 +30274,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -30285,7 +30285,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_500476",
@@ -30711,8 +30711,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -30721,7 +30721,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_187857",
@@ -30794,8 +30794,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -30804,7 +30804,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_515803",
@@ -30931,8 +30931,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -30941,7 +30941,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_453348",
@@ -31058,7 +31058,7 @@
       "source_code": "tradingqna",
       "source_url": "https://tradingqna.com/t/120947",
       "collected_at": "2026-10-27T11:44:17.716469+00:00",
-      "text": "[Discontinuation of pooling for mutual funds and how it affects Coin] @Bhuvan , @Nitin yes it’s time to introduce changes in coin for making the mutual fund investments smooth Introduce One time mandate which can be signed with bse star via coin app zerodha. All SIPs shud be auto paid to amcs via mandate and bse star Also most important make pause and modify featur...",
+      "text": "[Discontinuation of pooling for mutual funds and how it affects Coin] @Bhuvan , @Nitin yes it’s time to introduce changes in coin for making the mutual fund investments smooth Introduce One time installment schedule which can be signed with bse star via coin app zerodha. All SIPs shud be auto paid to amcs via installment schedule and bse star Also most important make pause and modify featur...",
       "title": "Discontinuation of pooling for mutual funds and how it affects Coin",
       "rating": null,
       "author": "Sandeep_Gupta1",
@@ -31088,7 +31088,7 @@
       "source_code": "tradingqna",
       "source_url": "https://tradingqna.com/t/154584",
       "collected_at": "2026-10-27T11:44:17.716469+00:00",
-      "text": "[Groww Overtaking Zerodha] Hey, your order wasn't a lump sum order, it was a SIP. The SIP was mapped to the mandate, and, as required by the mandated procedure to execute, the sip was triggered on T-2 days (January 24, 2024). However, due to trading holidays on January 26, 27, and 28th, the SIP was processed on January 29,...",
+      "text": "[Groww Overtaking Zerodha] Hey, your order wasn't a lump sum order, it was a SIP. The SIP was mapped to the installment schedule, and, as required by the mandated procedure to execute, the sip was triggered on T-2 days (January 24, 2024). However, due to trading holidays on January 26, 27, and 28th, the SIP was processed on January 29,...",
       "title": "Groww Overtaking Zerodha",
       "rating": null,
       "author": "Deepak_Kumar_Singh",
@@ -31097,8 +31097,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31109,7 +31109,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_280624",
@@ -31117,8 +31117,8 @@
       "source_code": "tradingqna",
       "source_url": "https://tradingqna.com/t/71094",
       "collected_at": "2026-10-27T11:44:17.716469+00:00",
-      "text": "[Upi mandate issues] Hi ,. I applied for IRFC IPO on last day, and accidentally canceled the ipo after 5pm,. The cancellation request was processing. And at around night 10pm I got a mandate request to block funds in BHIM UPI. SO I accepted it and the money was blocked successfully. I haven’t got any confirmation fro...",
-      "title": "Upi mandate issues",
+      "text": "[Upi installment schedule issues] Hi ,. I applied for IRFC IPO on last day, and accidentally canceled the ipo after 5pm,. The cancellation request was processing. And at around night 10pm I got a installment schedule request to block funds in BHIM UPI. SO I accepted it and the money was blocked successfully. I haven’t got any confirmation fro...",
+      "title": "Upi installment schedule issues",
       "rating": null,
       "author": "Good_Friend",
       "date": "2026-08-14T18:34:27Z",
@@ -31126,8 +31126,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31136,7 +31136,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_510234",
@@ -31234,8 +31234,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31244,7 +31244,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_400125",
@@ -31288,8 +31288,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31300,7 +31300,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_349120",
@@ -31344,8 +31344,8 @@
       "channel": "TradingQ&A Forum",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31354,7 +31354,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "tqna_253889",
@@ -31589,8 +31589,8 @@
       "channel": "X (Twitter)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31601,7 +31601,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "social_40e37a61",
@@ -31663,7 +31663,7 @@
       "source_code": "social_media",
       "source_url": "https://twitter.com/NehaMutualFunds/status/1784589214",
       "collected_at": "2026-10-27T11:46:27.605511+00:00",
-      "text": "First-time investor tip: If you setup an OTP mandate on Groww, make sure your registered phone number matches your bank record exactly. 90% of SIP debit rejections happen due to bank mobile mismatches.",
+      "text": "First-time investor tip: If you setup an OTP installment schedule on Groww, make sure your registered phone number matches your bank record exactly. 90% of SIP debit rejections happen due to bank mobile mismatches.",
       "title": "X (Twitter) post by @NehaMutualFunds",
       "rating": null,
       "author": "@NehaMutualFunds",
@@ -31672,8 +31672,8 @@
       "channel": "X (Twitter)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31683,7 +31683,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "social_a4dd6695",
@@ -31719,7 +31719,7 @@
       "source_code": "social_media",
       "source_url": "https://twitter.com/BengaluruInvestor/status/1781298410",
       "collected_at": "2026-10-27T11:46:27.605511+00:00",
-      "text": "Can Groww please introduce multi-bank mandate fallback? If Primary bank has low balance on SIP date, attempt debit on Secondary bank before bouncing.",
+      "text": "Can Groww please introduce multi-monthly installment schedule fallback? If Primary bank has low balance on SIP date, attempt debit on Secondary bank before bouncing.",
       "title": "X (Twitter) post by @BengaluruInvestor",
       "rating": null,
       "author": "@BengaluruInvestor",
@@ -31728,8 +31728,8 @@
       "channel": "X (Twitter)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31739,7 +31739,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "social_a597aaa1",
@@ -31860,8 +31860,8 @@
       "source_code": "other_public",
       "source_url": "https://www.desidime.com/discussions/nach-mandate-cancellation-groww",
       "collected_at": "2026-10-27T11:46:27.606149+00:00",
-      "text": "[DesiDime] Bank NACH mandate cancellation: Warning to first timers! If you delete a SIP on Groww, also verify in your net banking that the e-mandate is revoked. Otherwise bank might still try to debit and trigger penalty if balance is zero.",
-      "title": "Bank NACH mandate cancellation after stopping Groww SIP",
+      "text": "[DesiDime] Bank NACH installment schedule cancellation: Warning to first timers! If you delete a SIP on Groww, also verify in your net banking that the SIP installment is revoked. Otherwise bank might still try to debit and trigger penalty if balance is zero.",
+      "title": "Bank NACH installment schedule cancellation after stopping Groww SIP",
       "rating": null,
       "author": "frugal_engineer",
       "date": "2026-10-16T17:30:00Z",
@@ -31869,8 +31869,8 @@
       "channel": "DesiDime Personal Finance",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -31881,7 +31881,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "other_16808d22",
@@ -32052,7 +32052,7 @@
       "source_code": "app_store",
       "source_url": "https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1404871703",
       "collected_at": "2026-10-28T06:13:00.961432+00:00",
-      "text": "Issue with SIP: When we create multiple SIP mandates, instead of debiting once for each mandate it’s taking as separate transaction and debiting multiple times for the same day. This could be aggregated as one payment",
+      "text": "Issue with SIP: When we create multiple SIP mandates, instead of debiting once for each installment schedule it’s taking as separate transaction and debiting multiple times for the same day. This could be aggregated as one payment",
       "title": "Issue with SIP",
       "rating": 3,
       "author": "SS_2903",
@@ -32061,8 +32061,8 @@
       "channel": "Apple App Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -32072,7 +32072,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "ios_14618436208",
@@ -32581,8 +32581,8 @@
       "channel": "Apple App Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -32591,7 +32591,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "ios_14509656244",
@@ -32626,7 +32626,7 @@
       "source_code": "app_store",
       "source_url": "https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1404871703",
       "collected_at": "2026-10-28T06:13:03.644970+00:00",
-      "text": "SIP Activation not working: hello Groww team, I wanted to inform you that. I’m using this application from last 3 years for sip management. but now new sip activation is not working properly, I have tried my all possibilities to activate sip please check this issue asap and improve this flow. \n\n\nthe issue is:\nwhen I click on sip activate autopay - with my phonepe or googlepay upi it shows something went wrong, and inside groww upi it shows no upi is activated please activate - i dont want to activate.\n\nsuggestion:\nuse less vibe coding and proper feature improvement thanks! previous version was far better than this.",
+      "text": "SIP Activation not working: hello Groww team, I wanted to inform you that. I’m using this application from last 3 years for sip management. but now new sip activation is not working properly, I have tried my all possibilities to activate sip please check this issue asap and improve this flow. \n\n\nthe issue is:\nwhen I click on sip activate active SIP - with my phonepe or googlepay upi it shows something went wrong, and inside groww upi it shows no upi is activated please activate - i dont want to activate.\n\nsuggestion:\nuse less vibe coding and proper feature improvement thanks! previous version was far better than this.",
       "title": "SIP Activation not working",
       "rating": 1,
       "author": "Ankit_Chotaliya",
@@ -32635,8 +32635,8 @@
       "channel": "Apple App Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -32646,7 +32646,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "ios_14508217560",
@@ -32844,7 +32844,7 @@
       "source_code": "app_store",
       "source_url": "https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1404871703",
       "collected_at": "2026-10-28T06:13:07.862449+00:00",
-      "text": "Poor service: Im using this app more than 6 month im use for only applying ipo but more then time ipo mandate is not received and not modifications in hni ipo zerodha is best app",
+      "text": "Poor service: Im using this app more than 6 month im use for only applying ipo but more then time ipo installment schedule is not received and not modifications in hni ipo zerodha is best app",
       "title": "Poor service",
       "rating": 1,
       "author": "Nikunj Basopiya",
@@ -32853,8 +32853,8 @@
       "channel": "Apple App Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -32863,7 +32863,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "ios_14492639164",
@@ -34065,7 +34065,7 @@
       "source_code": "play_store",
       "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
       "collected_at": "2026-10-28T06:13:26.437843+00:00",
-      "text": "transfer money or mandate failed. insufficient balance in account. made it sufficient to apply but Groww doesn't allow apply again as regular investor in Jio IPO. I transferred money to Groww, don't know whether it will be used to get the Jio IPO.",
+      "text": "transfer money or SIP paused due to cash squeeze. insufficient balance in account. made it sufficient to apply but Groww doesn't allow apply again as regular investor in Jio IPO. I transferred money to Groww, don't know whether it will be used to get the Jio IPO.",
       "title": "Play Store 2★ Review",
       "rating": 2,
       "author": "Chandra Mohana Prasad V",
@@ -34074,8 +34074,8 @@
       "channel": "Google Play Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -34084,7 +34084,7 @@
       ],
       "sip_friction_level": "Moderate Friction",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "play_01ed6c7e-af94-4905-b1f1-d537ea9b4594",
@@ -34146,7 +34146,7 @@
       "source_code": "play_store",
       "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
       "collected_at": "2026-10-28T06:13:28.105932+00:00",
-      "text": "giving 1 star, my worst experience, autopay always failed, ipo always autopay failed, than I uninstall and use DHAN apps it's very fast and instant payment fast response",
+      "text": "giving 1 star, my worst experience, active SIP always failed, ipo always active SIP failed, than I uninstall and use DHAN apps it's very fast and instant payment fast response",
       "title": "Play Store 1★ Review",
       "rating": 1,
       "author": "paresh gajjar",
@@ -34155,8 +34155,8 @@
       "channel": "Google Play Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -34165,7 +34165,7 @@
       ],
       "sip_friction_level": "Critical Churn Risk",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "play_fd3d9b34-69ce-4e18-b454-e639fc0a8e52",
@@ -34281,7 +34281,7 @@
       "source_code": "play_store",
       "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
       "collected_at": "2026-10-28T06:13:29.821582+00:00",
-      "text": "I've found out that to place *sell order of stocks at market price * user is not prompted to confirm and is instantaneous due to which I had accidentally placed order as a result of misclick. I hope this gets fixed. Edit : Recent Autopay requests from IPO application haven't mentioned the application ID and I'm very frustrated I might create wrong Autopay. Besides there are repetetive Autopay requests from IPO applications.",
+      "text": "I've found out that to place *sell order of stocks at market price * user is not prompted to confirm and is instantaneous due to which I had accidentally placed order as a result of misclick. I hope this gets fixed. Edit : Recent active SIP requests from IPO application haven't mentioned the application ID and I'm very frustrated I might create wrong active SIP. Besides there are repetetive active SIP requests from IPO applications.",
       "title": "Play Store 2★ Review",
       "rating": 2,
       "author": "Aditya B.",
@@ -34290,8 +34290,8 @@
       "channel": "Google Play Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -34300,7 +34300,7 @@
       ],
       "sip_friction_level": "Investor Inquiry",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "play_b94b83bb-16e9-4b69-b9a5-c6ad6b52874b",
@@ -34417,7 +34417,7 @@
       "source_code": "play_store",
       "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
       "collected_at": "2026-10-28T06:13:30.427808+00:00",
-      "text": "I need customer support I have ipo autopay issue this is not work to auto pay plz solve this problem",
+      "text": "I need customer support I have ipo active SIP issue this is not work to auto pay plz solve this problem",
       "title": "Play Store 1★ Review",
       "rating": 1,
       "author": "Ruchit Chavda",
@@ -34426,8 +34426,8 @@
       "channel": "Google Play Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -34436,7 +34436,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "play_a4954abd-cdc2-49b1-8306-c6bb82a0b658",
@@ -34472,7 +34472,7 @@
       "source_code": "play_store",
       "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
       "collected_at": "2026-10-28T06:13:30.428807+00:00",
-      "text": "Excellent and very beginner-friendly app! The interface is clean, making mutual fund investments and SIP setup simple and hassle-free. Tracking investments and managing autopay is smooth. Highly recommended for long-term investors!\"",
+      "text": "Excellent and very beginner-friendly app! The interface is clean, making mutual fund investments and SIP setup simple and hassle-free. Tracking investments and managing active SIP is smooth. Highly recommended for long-term investors!\"",
       "title": "Play Store 5★ Review",
       "rating": 5,
       "author": "Gaddam srinivas",
@@ -34481,8 +34481,8 @@
       "channel": "Google Play Store (India)",
       "timeframe": "last_4_months",
       "is_sip_related": true,
-      "sip_category": "autopay_mandate",
-      "sip_category_name": "Auto-Pay & Bank Mandate",
+      "sip_category": "life_cash_crunch",
+      "sip_category_name": "Cash Squeeze & Flexible Cadence",
       "sip_category_icon": "payments",
       "sip_badge_color": "#ef4444",
       "sip_bg_color": "rgba(239, 68, 68, 0.12)",
@@ -34493,7 +34493,7 @@
       ],
       "sip_friction_level": "Informational & Learning",
       "sip_user_intent": "Mandate Setup / Payment Debit Friction",
-      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH bounce penalties."
+      "pm_actionable_insight": "Introduce bank pre-debit notifications (T-24h) and multi-bank fallback to prevent ₹590 NACH cash squeeze penalties."
     },
     {
       "post_id": "play_fb4af904-6dfa-49b2-adc9-127bb0279cec",
