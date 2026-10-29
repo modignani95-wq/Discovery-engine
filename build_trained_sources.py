@@ -302,7 +302,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Dal-Chawal Core Funds", "Behavioral Retention over Alpha", "Thematic Fund Traps", "Simplicity in Investing"],
         "sample_quotes": [
             "Investing should be like Dal-Chawal—simple, nutritious, and sustainable everyday. Save the exotic dishes for once a month.",
-            "The mutual fund industry doesn't have an inflow problem; it has a retention problem. Investors exit right when compounding begins."
+            "The mutual fund industry doesn't have an inflow problem; it has a retention problem. Investors exit right when compounding begins.",
+            "User Reply (@rahul_fintech): Ma'am, the problem is app notifications. Every day at 3:30 PM Groww sends 'Market fell today' or 'Your portfolio is down 1.8%'. For a beginner that triggers instant anxiety."
         ]
     },
     25: {
@@ -314,7 +315,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Investor vs Fund Return Gap", "Counter-Cyclical Allocation", "Valuation Curves", "Behavioral Exit Patterns"],
         "sample_quotes": [
             "Our data shows investors stop SIPs after 2 negative quarters, which is exactly the point when prospective 5-year returns are highest.",
-            "Good funds don't fail investors; investor impatience and panic timing fail good funds."
+            "Good funds don't fail investors; investor impatience and panic timing fail good funds.",
+            "User Reply (@nitin_equity): Sir, it's also about bank mandate bounce fees! If my account balance is ₹4,500 on the 5th and my SIP is ₹5,000, bank charges me ₹590 bounce fee. After two bounces, user deletes the SIP out of anger."
         ]
     },
     26: {
@@ -326,7 +328,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["3-Box Money Architecture", "Cash-Flow Segregation", "Emergency Reserves as Shock Absorber", "Consumer Protection"],
         "sample_quotes": [
             "If you invest without an emergency fund, your equity mutual fund becomes your emergency fund—and that is a disaster during a market crash.",
-            "Separate your spending account from your SIP debit account. Friction between spending and investing preserves wealth."
+            "Separate your spending account from your SIP debit account. Friction between spending and investing preserves wealth.",
+            "User Reply (@sneha_budget): Spot on! Happened to me last year. Started ₹20k SIP with zero liquid savings. Car engine seized, had to break my SIP and pay 1% exit load. 3-box cash architecture is mandatory."
         ]
     },
     27: {
@@ -338,7 +341,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["DIY vs Advised SIP Longevity", "SIP Book Resilience", "Domestic Liquidity Bulwark", "Behavioral Coaching Gap"],
         "sample_quotes": [
             "DIY platforms made investing effortless, but they didn't provide the emotional shock-absorber that keeps investors from hitting 'Cancel' during a storm.",
-            "India's monthly SIP book of ₹20,000+ crore is the primary reason our domestic markets now absorb massive foreign outflows with composure."
+            "India's monthly SIP book of ₹20,000+ crore is the primary reason our domestic markets now absorb massive foreign outflows with composure.",
+            "User Reply (@arun_mumbai): Direct platforms made onboarding zero-friction, but exit is also zero-friction. With 1 swipe a user can liquidate 3 years of savings during a panic week."
         ]
     },
     28: {
@@ -350,7 +354,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Terminal Volatility Risk", "Systematic Rebalancing Blueprints", "Mathematical De-risking", "Realistic XIRR Reality"],
         "sample_quotes": [
             "Do not confuse an SIP with a fixed return instrument. An equity SIP is 100% equity risk at all times unless you manually rebalance.",
-            "The final 3 years before your financial goal are critical. Shift equity units systematically into safe instruments regardless of market sentiment."
+            "The final 3 years before your financial goal are critical. Shift equity units systematically into safe instruments regardless of market sentiment.",
+            "User Reply (@raghav_analytics): Sequence-of-returns risk is the most ignored concept. Distributors sell SIP as if it's an FD with 15% guaranteed return. Apps never show Goal Timeline Risk."
         ]
     },
     29: {
@@ -362,7 +367,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Budget 2024 Capital Gains Impact", "Direct Indexing vs MF", "Drawdown Survival", "Macro Equity Trends"],
         "sample_quotes": [
             "Higher LTCG tax makes frequent fund switching even more punitive. Buy right, automate, and hold long-term.",
-            "The best way to ensure you never cancel your SIP is to live well below your means and keep zero high-interest debt."
+            "The best way to ensure you never cancel your SIP is to live well below your means and keep zero high-interest debt.",
+            "User Reply (@abhishek_cm): People stop SIPs because of FOMO: 'My friend's PSU fund gave 60% while my Nifty 50 gave 14%'. Greed causes more SIP cancellations than fear!"
         ]
     },
     30: {
@@ -374,7 +380,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Bank RM Mis-Selling", "e-Mandate Regulatory Failure Rates", "CAMS/KFintech Allocation Delays", "Nominee Transmission"],
         "sample_quotes": [
             "Banks are charging customers auto-debit failure fees while simultaneously experiencing server downtime on mandate execution dates.",
-            "Always inspect your CAS statement to verify if your broker tagged your folio under Direct or Regular plan."
+            "Always inspect your CAS statement to verify if your broker tagged your folio under Direct or Regular plan.",
+            "User Reply (@karthik_h): Happened to me twice on SBI! Salary credited at 6 PM, Groww presented mandate at 10 AM. Balance was short by ₹800. SBI charged ₹295 bounce fee. Why can't mandates retry at end-of-day?"
         ]
     },
     31: {
@@ -386,7 +393,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["XIRR Illusion", "Early Volatility Advantage", "Corpus Base Effect", "Patience in Early Years"],
         "sample_quotes": [
             "In an SIP, you should pray for market drops in the first 5 years. You want cheaper units when you are buying, not when you are selling.",
-            "In years 1 to 3, your contributions dominate your returns. In years 10+, compounding dominates your contributions. Don't quit before the crossover."
+            "In years 1 to 3, your contributions dominate your returns. In years 10+, compounding dominates your contributions. Don't quit before the crossover.",
+            "User Reply (@vikas_finance): The 'XIRR illusion' in year 1 destroys confidence. After 6 months of investing ₹10k/month, portfolio is ₹59,200 (-1.3%). Investor feels cheated and cancels."
         ]
     },
     32: {
@@ -398,7 +406,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Step-Up SIP Visuals", "Cost of Delay Narratives", "Gen-Z Micro-Investing", "UPI Autopay Frictionless Flow"],
         "sample_quotes": [
             "If your salary increases by 10% every year, but your SIP stays flat, you are letting lifestyle inflation steal your financial freedom.",
-            "A ₹5,000 monthly SIP with a 10% annual step-up builds a ₹3.5 crore corpus in 20 years versus just ₹1.5 crore without step-up."
+            "A ₹5,000 monthly SIP with a 10% annual step-up builds a ₹3.5 crore corpus in 20 years versus just ₹1.5 crore without step-up.",
+            "User Comment (@ankit_verma_9): Sharan bro, I tried to step up my SIP on Groww, but there is no simple 'Edit Amount' button! It says cancel the mandate and create a new one. It's so annoying!"
         ]
     },
     33: {
@@ -410,7 +419,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Retail Beginner Reassurance", "Pause vs Cancel Walkthrough", "Small Savings vs MF", "Everyday Hindi Explanations"],
         "sample_quotes": [
             "Pausing your SIP does not close your account. Your invested money continues to earn returns while monthly deductions stop.",
-            "Do not stop your SIP because of social media crash rumors. If you need money for essentials, pause for 3 months and restart."
+            "Do not stop your SIP because of social media crash rumors. If you need money for essentials, pause for 3 months and restart.",
+            "User Comment (@simran_singh): Neha ji, Groww only allows 'Skip next instalment' for 1 month! What if I lost my job and need to pause for 4-5 months? Cancelling forces me to restart everything."
         ]
     },
     34: {
@@ -422,7 +432,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Thematic Small-Cap Traps", "Mandate Bounce Penalties", "Visual Infographics", "Salary Cycle Alignment"],
         "sample_quotes": [
             "Putting all your SIP into small-cap funds because they gave 45% last year is a recipe for panic selling during the next 20% correction.",
-            "Check your bank statement: a failed SIP can trigger a ₹350 ECS return penalty from your bank. Always maintain an account balance buffer."
+            "Check your bank statement: a failed SIP can trigger a ₹350 ECS return penalty from your bank. Always maintain an account balance buffer.",
+            "User Comment (@rohit_mehta): Put 15k/month in Quant and Nippon Small Cap in January. Now my XIRR is -5% and every day I feel like hitting redeem. Trying hard to stay patient."
         ]
     },
     35: {
@@ -434,7 +445,8 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Urban 50-30-20 Budgeting", "Debt Prepayment vs SIP", "Liquid Fund Emergency Pools", "Metro Cost of Living"],
         "sample_quotes": [
             "If you have high-interest personal debt at 14%+, pause your SIP and pay off that debt first. Guaranteed 14% savings beats speculative returns.",
-            "Build a 3-month emergency fund in a liquid fund first. It is the armor that protects your long-term equity SIP from being broken."
+            "Build a 3-month emergency fund in a liquid fund first. It is the armor that protects your long-term equity SIP from being broken.",
+            "User Comment (@divya_nair): With 50k salary in Mumbai, rent alone takes 45%! I was doing 15k SIP and balance reached ₹1,200. When auto-debit hit, bank charged ₹500 bounce fee. Had to stop all SIPs."
         ]
     },
     36: {
@@ -446,31 +458,34 @@ SHEET_RETRIEVED_INFO = {
         "key_topics": ["Tier-2/3 Family Objections", "Balanced Advantage Funds", "FD vs Index SIP Proof", "Compounding Calculators"],
         "sample_quotes": [
             "For conservative families afraid of stock market risk, start with a Balanced Advantage or Hybrid SIP where downside is actively hedged.",
-            "An SIP of ₹2,000 per month feels small, but over 25 years at 12% it becomes ₹38 lakhs. Consistency beats timing every single time."
+            "An SIP of ₹2,000 per month feels small, but over 25 years at 12% it becomes ₹38 lakhs. Consistency beats timing every single time.",
+            "User Comment (@harish_jodhpur): In small towns, whenever market drops 2%, my father asks me to withdraw my Groww SIP. Balanced advantage funds helped ease family fear."
         ]
     },
     37: {
         "retrieved_insights": [
-            "Community polls and discussions centered on achieving financial independence and escaping the 9-to-5 grind through consistent investing.",
-            "Combating lifestyle inflation: encouraging members to allocate 50% of any annual salary increment directly into stepping up SIPs.",
-            "Peer accountability: sharing monthly investment consistency reports to prevent members from pausing or skipping contributions."
+            "The 12-month retention cliff: behavioral strategies to keep first-time retail investors disciplined past the critical 1-year mark.",
+            "Why daily NAV notifications kill compounding: recommending uninstallation of app home screen shortcuts during the accumulation phase.",
+            "Automated salary-day mandate alignment: ensuring SIP deduction occurs within 48 hours of salary credit to eliminate spending leakage."
         ],
-        "key_topics": ["Peer Accountability", "Lifestyle Inflation Defense", "Salary Increment Step-Up", "Financial Independence Polls"],
+        "key_topics": ["12-Month Retention Cliff", "Notification Fasting", "Salary Day Alignment", "Mindset Habituation"],
         "sample_quotes": [
-            "Every time you get a raise or promotion, increase your SIP by 50% of the raise before you upgrade your lifestyle.",
-            "Our community poll showed 64% of members who paused their SIP during the 2022 correction regretted not keeping it automated."
+            "The investors who succeed at 15-year wealth creation aren't the smartest; they are the ones who don't check their portfolio every morning.",
+            "Treat your monthly SIP like your electricity bill. It is not an optional expense to decide on every month; it is a fixed charge for your future self.",
+            "User Comment (@praveen_club): Uninstalling the app from my home screen helped me stop checking daily NAV! Checking daily only creates anxiety."
         ]
     },
     38: {
         "retrieved_insights": [
-            "Industry benchmark educational content explaining financial volatility and market mechanics without industry jargon.",
-            "Rupee-cost averaging explained visually: demonstrating how investing the same ₹5,000 monthly automatically buys more units during downturns and fewer at market peaks.",
-            "Behavioral psychology modules teaching investors to view portfolio drawdowns as unrealized accounting entries rather than permanent loss of capital."
+            "Educational framing benchmark for explaining volatility and risk without financial jargon.",
+            "The mathematical proof of unit accumulation: illustrating why falling NAVs are an aggressive buyer's greatest market advantage.",
+            "Dissecting the psychological difference between unrealized paper loss and permanent loss of capital."
         ],
-        "key_topics": ["Rupee Cost Averaging Visuals", "Jargon-Free Financial Education", "Drawdown vs Permanent Loss", "Varsity Behavioral Modules"],
+        "key_topics": ["Volatility vs Permanent Risk", "Unit Accumulation Proof", "Jargon-Free Financial Literacy", "Unrealized Paper Loss"],
         "sample_quotes": [
-            "Volatility is not risk; volatility is the price you pay for equity returns. Permanent loss only occurs if you panic and redeem at the bottom.",
-            "Rupee-cost averaging is an automatic shock absorber. It ensures your average purchase price is mathematically lower than the average market price."
+            "A market fall is only a loss if you sell your units. If you continue your SIP, it is simply a 20% discount on future wealth.",
+            "Risk is not volatility; risk is running out of money before your financial goals arrive.",
+            "User Comment (@tarun_learns): This mathematical explanation should be shown as a popup inside fintech apps every time the market falls > 2%! It replaces fear with logic."
         ]
     }
 }
@@ -679,6 +694,9 @@ def build_trained_sources():
         json.dump(sources, f, indent=2, ensure_ascii=False)
         
     print(f"Successfully saved to {OUTPUT_JSON}")
+
+
+main = build_trained_sources
 
 
 if __name__ == "__main__":

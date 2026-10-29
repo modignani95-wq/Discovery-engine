@@ -130,9 +130,14 @@ def main():
         elif src_code == "app_store":
             platform_name = "Apple App Store"
         elif src_code == "reddit":
-            platform_name = "Reddit r/MutualfundsIndia"
+            sub = r.get("subreddit") or "r/mutualfunds"
+            platform_name = f"Reddit ({sub})"
         elif src_code == "tradingqna":
             platform_name = "TradingQ&A"
+        elif src_code == "twitter":
+            platform_name = "Twitter (X)"
+        elif src_code == "instagram":
+            platform_name = "Instagram"
 
         voices_clean.append({
             "id": voice_id,
@@ -149,7 +154,7 @@ def main():
             "category": stage,
             "quote": text_clean,
             "text": text_clean,
-            "source_url": (r.get("source_url") or "https://groww.in").replace("autopay", "sip_pause").replace("mandate", "schedule"),
+            "source_url": r.get("source_url") or "https://groww.in",
             "retained_cues": sanitize_val((r.get("sip_matched_terms") or ["SIP"]))[:3],
             "lost_cues": sanitize_val([r.get("sip_friction_level") or "Behavioral Friction"]),
             "pm_insight": insight_clean or "Provide Day-0 expectation calibration and flexible step-down options.",

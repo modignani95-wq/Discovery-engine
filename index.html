@@ -666,6 +666,8 @@
     .tag-play_store { background: var(--groww-blue-soft); color: var(--groww-blue); border: 1px solid var(--groww-blue-border); }
     .tag-app_store { background: var(--groww-mint-light); color: var(--groww-mint-dark); border: 1px solid var(--groww-mint-border); }
     .tag-reddit { background: var(--groww-red-soft); color: var(--groww-red); border: 1px solid var(--groww-red-border); }
+    .tag-twitter { background: #f3e8ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+    .tag-instagram { background: #fdf2f8; color: #db2777; border: 1px solid #fbcfe8; }
     .tag-youtube { background: var(--groww-amber-soft); color: var(--groww-amber); border: 1px solid var(--groww-amber-border); }
     .tag-tradingqna { background: var(--groww-purple-soft); color: var(--groww-purple); border: 1px solid var(--groww-purple-border); }
     .tag-valuepickr { background: var(--groww-mint-light); color: var(--groww-mint-dark); border: 1px solid var(--groww-mint-border); }
@@ -1663,6 +1665,8 @@
           <button class="pill-btn active" id="pill-plat-all" onclick="filterEpisodes('platform', 'all', this)">All (1,154)</button>
           <button class="pill-btn" id="pill-plat-youtube" onclick="filterEpisodes('platform', 'youtube', this)">YouTube (842)</button>
           <button class="pill-btn" id="pill-plat-reddit" onclick="filterEpisodes('platform', 'reddit', this)">Reddit (116)</button>
+          <button class="pill-btn" id="pill-plat-twitter" onclick="filterEpisodes('platform', 'twitter', this)">Twitter / X (36)</button>
+          <button class="pill-btn" id="pill-plat-instagram" onclick="filterEpisodes('platform', 'instagram', this)">Instagram (30)</button>
           <button class="pill-btn" id="pill-plat-tradingqna" onclick="filterEpisodes('platform', 'tradingqna', this)">TradingQ&amp;A (79)</button>
           <button class="pill-btn" id="pill-plat-app_store" onclick="filterEpisodes('platform', 'app_store', this)">App Store (75)</button>
           <button class="pill-btn" id="pill-plat-play_store" onclick="filterEpisodes('platform', 'play_store', this)">Play Store (30)</button>
@@ -2796,6 +2800,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     if (el('pill-plat-all')) el('pill-plat-all').textContent = `All (${total})`;
     if (el('pill-plat-youtube')) el('pill-plat-youtube').textContent = `YouTube (${countPlat('youtube')})`;
     if (el('pill-plat-reddit')) el('pill-plat-reddit').textContent = `Reddit (${countPlat('reddit')})`;
+    if (el('pill-plat-twitter')) el('pill-plat-twitter').textContent = `Twitter / X (${countPlat('twitter')})`;
+    if (el('pill-plat-instagram')) el('pill-plat-instagram').textContent = `Instagram (${countPlat('instagram')})`;
     if (el('pill-plat-tradingqna')) el('pill-plat-tradingqna').textContent = `TradingQ&A (${countPlat('tradingqna')})`;
     if (el('pill-plat-app_store')) el('pill-plat-app_store').textContent = `App Store (${countPlat('app_store')})`;
     if (el('pill-plat-play_store')) el('pill-plat-play_store').textContent = `Play Store (${countPlat('play_store')})`;

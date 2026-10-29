@@ -943,11 +943,63 @@ def fetch_youtube_comments(count: int = 2000) -> List[Dict[str, Any]]:
 # 6. SOCIAL MEDIA CONVERSATIONS (X / Twitter / Bluesky / Mastodon) — Last 4 Months
 # ==============================================================================
 
-def fetch_social_media_conversations(count: int = 40) -> List[Dict[str, Any]]:
+def fetch_twitter_conversations(count: int = 100) -> List[Dict[str, Any]]:
+    """
+    Fetch Twitter (X) threads and retail user replies from the 8 verified fintech leaders
+    (Radhika Gupta, Kalpen Parekh, Monika Halan, Swarup Mohanty, Deepak Shenoy, Neil Borate,
+    Aashish Somaiyaa, Freefincal).
+    """
+    twitter_file = Path(__file__).parent / "data" / "twitter_social_conversations.json"
+    if twitter_file.exists():
+        try:
+            with open(twitter_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if data:
+                    logger.info(f"Loaded {len(data)} Twitter posts & user replies from {twitter_file.name}")
+                    return data[:count]
+        except Exception as e:
+            logger.warning(f"Could not load {twitter_file.name}: {e}")
+    return []
+
+
+def fetch_instagram_conversations(count: int = 100) -> List[Dict[str, Any]]:
+    """
+    Fetch Instagram educational posts/reels and follower comments from the 7 creators
+    (Finance With Sharan, Neha Nagar, Anushka Rathod, Shreyaa Kapoor, Anant Ladha,
+    1% Club, Zerodha Varsity).
+    """
+    insta_file = Path(__file__).parent / "data" / "instagram_social_conversations.json"
+    if insta_file.exists():
+        try:
+            with open(insta_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if data:
+                    logger.info(f"Loaded {len(data)} Instagram posts & user comments from {insta_file.name}")
+                    return data[:count]
+        except Exception as e:
+            logger.warning(f"Could not load {insta_file.name}: {e}")
+    return []
+
+
+def fetch_social_media_conversations(count: int = 200) -> List[Dict[str, Any]]:
     """
     Fetch public social media posts and community threads from fintech users
-    discussing Groww and SIP investing in the last 4 months (June 27 – October 27, 2026).
+    discussing Groww and SIP investing in the last 4 months, including Twitter (X)
+    threads + user replies and Instagram reels + follower comments.
     """
+    # 1. Load Twitter and Instagram conversations
+    combined = []
+    tw_data = fetch_twitter_conversations(count=count)
+    if tw_data:
+        combined.extend(tw_data)
+    
+    in_data = fetch_instagram_conversations(count=count)
+    if in_data:
+        combined.extend(in_data)
+
+    if combined:
+        return combined[:count]
+
     social_posts = [
         {
             "author": "@FinTechGuy_IN",
@@ -1114,6 +1166,18 @@ SOURCE_METADATA = {
         "badge_color": "var(--reddit-orange)",
         "icon": "forum",
     },
+    "twitter": {
+        "name": "Twitter / X (Fintech Leaders & Replies)",
+        "description": "Threads & retail user replies from 8 verified leaders (Radhika Gupta, Kalpen Parekh, etc.)",
+        "badge_color": "var(--social-violet)",
+        "icon": "alternate_email",
+    },
+    "instagram": {
+        "name": "Instagram (Creators & Comments)",
+        "description": "Educational reels & user comments from 7 creators (Finance With Sharan, Neha Nagar, etc.)",
+        "badge_color": "var(--instagram-magenta)",
+        "icon": "photo_camera",
+    },
     "tradingqna": {
         "name": "Investing Forums (TradingQ&A)",
         "description": "TradingQ&A Discourse community discussions on mutual funds & Groww SIPs (Last 4 Months)",
@@ -1121,7 +1185,7 @@ SOURCE_METADATA = {
         "icon": "chat_bubble",
     },
     "social_media": {
-        "name": "Social Media (Fintech Leaders)",
+        "name": "Social Media (Fintech Leaders & Creators)",
         "description": "Discussions and creator posts from verified finance leaders (Last 4 Months)",
         "badge_color": "var(--social-violet)",
         "icon": "alternate_email",
@@ -1191,7 +1255,29 @@ def collect_all_groww_sources(
             source_stats["tradingqna"] = 0
 
 
-    # 6. Social Media (Last 4 Months)
+    # 4. Twitter (X) - 8 Verified Leaders & User Replies
+    if "twitter" in active_codes:
+        try:
+            tw_posts = fetch_twitter_conversations(count=max_per_source)
+            records.extend(tw_posts)
+            source_stats["twitter"] = len(tw_posts)
+            logger.info(f"Collected {len(tw_posts)} Twitter posts & user replies (Last 4 Months)")
+        except Exception as e:
+            errors["twitter"] = str(e)
+            source_stats["twitter"] = 0
+
+    # 5. Instagram - 7 Creators & Follower Comments
+    if "instagram" in active_codes:
+        try:
+            in_posts = fetch_instagram_conversations(count=max_per_source)
+            records.extend(in_posts)
+            source_stats["instagram"] = len(in_posts)
+            logger.info(f"Collected {len(in_posts)} Instagram posts & user comments (Last 4 Months)")
+        except Exception as e:
+            errors["instagram"] = str(e)
+            source_stats["instagram"] = 0
+
+    # 6. Social Media (Combined)
     if "social_media" in active_codes:
         try:
             soc_posts = fetch_social_media_conversations(count=max_per_source)
