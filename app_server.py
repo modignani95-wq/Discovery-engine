@@ -28,7 +28,7 @@ if sys.platform == "win32":
 from dotenv import load_dotenv
 load_dotenv()
 
-from flask import Flask, jsonify, request, Response, send_from_directory
+from flask import Flask, jsonify, request, Response, send_from_directory, redirect
 import database as db
 
 STATIC_DIR = Path(__file__).parent / "static"
@@ -458,7 +458,7 @@ def index():
 
 @app.route("/scraper")
 def scraper_view():
-    return send_from_directory(str(STATIC_DIR), "index.html")
+    return redirect("/", code=302)
 
 
 @app.route("/api/analyze", methods=["POST"])
@@ -586,8 +586,7 @@ def job_status(job_id: str):
 
 @app.route("/dashboard")
 def dashboard_view():
-    """Serve the 5-tab historical trends dashboard."""
-    return send_from_directory(str(STATIC_DIR), "dashboard.html")
+    return redirect("/", code=302)
 
 
 @app.route("/api/cached")
@@ -909,8 +908,7 @@ def sip_dashboard():
 
 @app.route("/sip-legacy")
 def sip_legacy_dashboard():
-    """Serve the legacy SIP Discovery Engine dashboard."""
-    return send_from_directory(str(STATIC_DIR), "sip_dashboard.html")
+    return redirect("/", code=302)
 
 
 @app.route("/api/sip/run", methods=["POST"])
@@ -1736,8 +1734,7 @@ def api_sip_search():
 
 @app.route("/groww")
 def groww_dashboard():
-    """Serve the Groww Multi-Source Intelligence & SIP Discovery Center."""
-    return send_from_directory(str(STATIC_DIR), "groww_dashboard.html")
+    return redirect("/", code=302)
 
 
 @app.route("/api/groww/sources")
