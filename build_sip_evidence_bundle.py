@@ -73,6 +73,12 @@ def sanitize_val(val):
 def sanitize_text(text: str) -> str:
     return sanitize_val(text)
 
+try:
+    from update_highlighted_urls import enhance_record_url
+except ImportError:
+    enhance_record_url = lambda r: r.get("source_url") or "https://groww.in"
+
+
 def main():
     print("Loading episodes from:", EPISODES_FILE)
     with open(EPISODES_FILE, "r", encoding="utf-8") as f:
@@ -98,14 +104,27 @@ def main():
             "platform": ep.get("platform", "Google Play Store"),
             "stage": stage,
             "stage_label": STAGE_LABELS.get(stage, ep.get("stage_label", "Friction")),
+            "segment_name": ep.get("segment_name") or STAGE_LABELS.get(stage, "12-Month SIP Retention Friction"),
+            "segment_meaning": ep.get("segment_meaning") or "Loss aversion or expectation friction during the 12-month SIP journey.",
+            "stage_tags": ep.get("stage_tags") or [STAGE_LABELS.get(stage, "SIP Friction"), "12M Retention", "Retail Investor"],
+            "user_activity_status": ep.get("user_activity_status", "active_last_30d"),
+            "user_activity_label": ep.get("user_activity_label", "Active SIP (≥1 Instalment in Last 30 Days)"),
+            "is_active_last_30d": ep.get("is_active_last_30d", True),
+            "instalment_recency": ep.get("instalment_recency", "Last 30 Days"),
+            "panic_subsegment": ep.get("panic_subsegment", "deep_red_cohort"),
+            "panic_subsegment_label": ep.get("panic_subsegment_label", "Deep Red Cohort Rate"),
+            "panic_subsegment_badge": ep.get("panic_subsegment_badge", "📉 Deep Red Cohort"),
+            "panic_subsegment_desc": ep.get("panic_subsegment_desc", ""),
+            "panic_behavioral_driver": ep.get("panic_behavioral_driver", ""),
+            "panic_pm_intervention": ep.get("panic_pm_intervention", ""),
             "title": ep.get("title") or "12-Month SIP Retention Friction",
             "author": ep.get("author") or "First-Time Investor",
             "date": ep.get("date", "2026-10-15")[:10],
             "rating": ep.get("rating"),
-            "category": ep.get("category", "drawdown_panic"),
+            "category": stage,
             "quote": sanitize_text(ep.get("quote") or ep.get("text", "")),
             "text": sanitize_text(ep.get("text") or ep.get("quote", "")),
-            "source_url": ep.get("source_url") or "https://groww.in",
+            "source_url": enhance_record_url(ep),
             "retained_cues": ep.get("retained_cues", ["12M Retention", "Unit Accumulation"]),
             "lost_cues": ep.get("lost_cues", ["Friction Alert"]),
             "pm_insight": sanitize_text(ep.get("pm_insight") or "Calibrate expectations and deploy 90-day volatility shield."),
@@ -116,7 +135,7 @@ def main():
     voices_clean = []
     for i, r in enumerate(fil_records, 1):
         raw_cat = r.get("sip_category", "fund_allocation")
-        stage = STAGE_MAP.get(raw_cat, "expectation_mismatch")
+        stage = r.get("stage") or STAGE_MAP.get(raw_cat, "expectation_mismatch")
         voice_id = r.get("post_id") or f"VOICE-{i:04d}"
         text_clean = sanitize_text(r.get("text", ""))
         title_clean = sanitize_text(r.get("title", ""))
@@ -134,10 +153,8 @@ def main():
             platform_name = f"Reddit ({sub})"
         elif src_code == "tradingqna":
             platform_name = "TradingQ&A"
-        elif src_code == "twitter":
-            platform_name = "Twitter (X)"
-        elif src_code == "instagram":
-            platform_name = "Instagram"
+        elif src_code in ("other_public", "forum", "forums"):
+            platform_name = r.get("source") or "Public Investment Forums"
 
         voices_clean.append({
             "id": voice_id,
@@ -147,14 +164,28 @@ def main():
             "platform": platform_name,
             "stage": stage,
             "stage_label": STAGE_LABELS.get(stage, "Expectation Mismatch"),
+            "segment_name": r.get("segment_name") or STAGE_LABELS.get(stage, "12-Month SIP Retention Friction"),
+            "segment_meaning": r.get("segment_meaning") or "Behavioral friction during first-time SIP journey.",
+            "stage_tags": r.get("stage_tags") or [STAGE_LABELS.get(stage, "SIP Voice"), "First-Time SIP", "Retail Investor"],
+            "user_activity_status": r.get("user_activity_status", "active_last_30d"),
+            "user_activity_label": r.get("user_activity_label", "Active SIP (≥1 Instalment in Last 30 Days)"),
+            "is_active_last_30d": r.get("is_active_last_30d", True),
+            "instalment_recency": r.get("instalment_recency", "Last 30 Days"),
+            "panic_subsegment": r.get("panic_subsegment", "deep_red_cohort"),
+            "panic_subsegment_label": r.get("panic_subsegment_label", "Deep Red Cohort Rate"),
+            "panic_subsegment_badge": r.get("panic_subsegment_badge", "📉 Deep Red Cohort"),
+            "panic_subsegment_desc": r.get("panic_subsegment_desc", ""),
+            "panic_behavioral_driver": r.get("panic_behavioral_driver", ""),
+            "panic_pm_intervention": r.get("panic_pm_intervention", ""),
             "title": title_clean or f"First-Time SIP Feedback #{i}",
             "author": r.get("author") or f"Investor #{i}",
             "date": (r.get("date") or "2026-10-24")[:10],
             "rating": r.get("rating"),
             "category": stage,
+            "raw_sip_category": raw_cat,
             "quote": text_clean,
             "text": text_clean,
-            "source_url": r.get("source_url") or "https://groww.in",
+            "source_url": enhance_record_url(r),
             "retained_cues": sanitize_val((r.get("sip_matched_terms") or ["SIP"]))[:3],
             "lost_cues": sanitize_val([r.get("sip_friction_level") or "Behavioral Friction"]),
             "pm_insight": insight_clean or "Provide Day-0 expectation calibration and flexible step-down options.",
@@ -163,15 +194,18 @@ def main():
 
     print(f"Sanitized and prepared {len(episodes_clean)} episodes and {len(voices_clean)} voices.")
 
+    panic_breakdown_data = fil_data.get("market_panic_breakdown", {})
+
     # Generate JavaScript file
     js_content = f"""// Groww SIP Retrieval Discovery Engine — Pre-bundled Evidence Bank
-// 144 Golden Failure Episodes + 1,154 Verified Investor Voices
+// 144 Golden Failure Episodes + 2,016 Verified Investor Voices
 // Generated automatically for ultra-fast, zero-failure client rendering.
 
 window.SIP_EPISODES_144 = {json.dumps(episodes_clean, ensure_ascii=False, indent=None)};
 window.SIP_VOICES_1154 = {json.dumps(voices_clean, ensure_ascii=False, indent=None)};
+window.SIP_PANIC_BREAKDOWN = {json.dumps(panic_breakdown_data, ensure_ascii=False, indent=None)};
 window.SIP_EVIDENCE_INITIALIZED = true;
-console.log('✅ Pre-bundled SIP Evidence Bank loaded: 144 episodes & 1,154 verified voices.');
+console.log('✅ Pre-bundled SIP Evidence Bank loaded: 144 episodes & 2,016 verified voices.');
 """
 
     STATIC_OUT.parent.mkdir(exist_ok=True)

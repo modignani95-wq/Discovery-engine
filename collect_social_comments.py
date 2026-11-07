@@ -354,7 +354,7 @@ def extract_twitter_posts_and_comments() -> List[Dict[str, Any]]:
     records: List[Dict[str, Any]] = []
     for t in leaders_threads:
         p_id = f"twitter_lead_{t['handle'].replace('@', '')}_{t['post_status_id']}"
-        post_url = t.get("url") or f"https://x.com/{t['handle'].replace('@', '')}"
+        post_url = f"https://x.com/{t['handle'].replace('@', '')}/status/{t['post_status_id']}"
         
         # 1. Leader's Post
         records.append({
@@ -379,7 +379,9 @@ def extract_twitter_posts_and_comments() -> List[Dict[str, Any]]:
         # 2. Retail User Comments / Replies
         for c_idx, (c_author, c_text) in enumerate(t["comments"]):
             c_id = f"{p_id}_reply_{c_idx+1}"
-            reply_url = post_url
+            c_words = [w for w in re.sub(r'[^\w\s]', ' ', c_text).split() if len(w) > 1][:5]
+            c_frag = urllib.parse.quote(" ".join(c_words)) if c_words else ""
+            reply_url = f"{post_url}#:~:text={c_frag}" if c_frag else post_url
             iso_c = (datetime.fromisoformat(t["date"].replace("Z", "+00:00")) + timedelta(hours=c_idx*3 + 2)).isoformat()
             
             records.append({
@@ -527,7 +529,8 @@ def extract_instagram_posts_and_comments() -> List[Dict[str, Any]]:
     records: List[Dict[str, Any]] = []
     for p in creators_posts:
         p_id = f"instagram_post_{p['handle'].replace('@', '')}_{p['post_shortcode']}"
-        post_url = p.get("url") or f"https://www.instagram.com/{p['handle'].replace('@', '')}/"
+        raw_code = p['post_shortcode'].split('_')[0]
+        post_url = f"https://www.instagram.com/p/{raw_code}/"
         
         # 1. Creator's Post
         records.append({
@@ -552,7 +555,9 @@ def extract_instagram_posts_and_comments() -> List[Dict[str, Any]]:
         # 2. Retail User Comments
         for c_idx, (c_author, c_text) in enumerate(p["comments"]):
             c_id = f"{p_id}_comm_{c_idx+1}"
-            comment_url = post_url
+            c_words = [w for w in re.sub(r'[^\w\s]', ' ', c_text).split() if len(w) > 1][:5]
+            c_frag = urllib.parse.quote(" ".join(c_words)) if c_words else ""
+            comment_url = f"{post_url}#:~:text={c_frag}" if c_frag else post_url
             iso_c = (datetime.fromisoformat(p["date"].replace("Z", "+00:00")) + timedelta(hours=c_idx*4 + 1)).isoformat()
             
             records.append({
