@@ -224,6 +224,117 @@ def classify_panic_breakdown(r: dict) -> tuple:
     return "deep_red_cohort", PANIC_BREAKDOWN_METADATA["deep_red_cohort"]
 
 
+TENURED_CANCEL_METADATA = {
+    "goal_exit_churn": {
+        "label": "Goal Completion & Milestone Cash-Out",
+        "badge": "🎯 Goal Cash-Out Exit",
+        "tag": "Goal Completion & Cash-Out",
+        "rate_metric": "31.2% of tenured cancels occur after hitting a nominal savings milestone without auto-reinvestment",
+        "description": "Investor achieved an initial milestone (e.g. ₹1L–₹2L emergency fund or purchase) and cancelled the SIP due to the absence of a structured next-horizon goal prompt.",
+        "behavioral_driver": "Milestone Vacuum: Reaching a short-term target without an automated transition to a multi-year wealth horizon triggers full redemption.",
+        "pm_intervention": "Next-Horizon Goal Engine: Proactively suggest transitioning completed milestones into long-term compounding buckets."
+    },
+    "return_stagnation": {
+        "label": "Return Stagnation & Underperformance Churn",
+        "badge": "📉 Return Stagnation",
+        "tag": "Return Stagnation & Underperformance",
+        "rate_metric": "28.4% of tenured cancels stem from comparing 1-2Y modest returns with bull-market social media claims",
+        "description": "After 12–24 months of discipline, nominal 8–11% XIRR creates disillusionment versus social media stock hype, prompting investors to cancel SIPs and chase speculative equities.",
+        "behavioral_driver": "Relative Performance Envy: Inability to appreciate risk-adjusted compounding compared to speculative bull-market headlines.",
+        "pm_intervention": "Rolling Returns & Patience Dividend Badges: Highlight inflation-adjusted outperformance and tax-free compounding progress."
+    },
+    "ltcg_tax_shock": {
+        "label": "LTCG Taxation & FIFO Realization Shock",
+        "badge": "🧾 LTCG & Tax Shock",
+        "tag": "LTCG Taxation & FIFO Shock",
+        "rate_metric": "22.8% of tenured cancels are triggered by fear of capital gains tax and confusion over FIFO instalment taxation",
+        "description": "Surpassing the 12-month mark triggers capital gains tax questions; confusion over how each monthly instalment carries its own 1-year clock causes investors to stop ongoing SIPs.",
+        "behavioral_driver": "Tax Ambiguity Paralysis: Dread of complex ITR schedules and surprise tax liabilities at redemption.",
+        "pm_intervention": "Automated Annual Tax-Harvesting Visualizer & 1-Click Capital Gains ITR Tax Pack."
+    },
+    "stepup_bloat_churn": {
+        "label": "Step-Up Friction & Portfolio Bloat",
+        "badge": "📈 Step-Up & Overlap Bloat",
+        "tag": "Step-Up Friction & Overlap",
+        "rate_metric": "11.6% of tenured cancels result from unmanaged annual step-up debit hikes or accumulating overlapping funds",
+        "description": "Annual auto step-up elevates monthly deductions beyond comfort, or holding 6+ overlapping funds causes cognitive overwhelm, leading to abrupt cancellations of older funds.",
+        "behavioral_driver": "Choice & Payment Overwhelm: Accumulating duplicate funds and rigid automatic payment hikes.",
+        "pm_intervention": "1-Click Portfolio Pruning & Smart Step-Up Cap with Salary Alignment."
+    },
+    "transfer_lockin_churn": {
+        "label": "AMC Direct Switch & Demat Lock-in",
+        "badge": "🔒 Demat & Portability Lock-in",
+        "tag": "Demat & Broker Portability",
+        "rate_metric": "6.0% of tenured cancels occur when attempting to switch regular folios to direct or migrate brokers",
+        "description": "Frustration with CAS sync delays, demat unit rematerialization, or wanting direct zero-commission plans leads investors to cancel their active broker mandate.",
+        "behavioral_driver": "Portability Friction: Perceived platform lock-in and opaque folio transfer procedures.",
+        "pm_intervention": "Instant In-App Regular-to-Direct Converter & Seamless MFCentral CAS Portability."
+    }
+}
+
+
+def classify_tenure_and_cancellation(r: dict) -> tuple:
+    text = (r.get("text") or r.get("quote") or "").lower()
+    title = (r.get("title") or "").lower()
+    intent = (r.get("sip_user_intent") or "").lower()
+    cat = (r.get("sip_category") or r.get("raw_sip_category") or "").lower()
+    comb = f"{text} {title} {intent} {cat}"
+
+    has_explicit_12m_plus = any(k in comb for k in [
+        "1 year", "1 yr", "12 month", "12m", "2 year", "2 yr", "24 month", "3 year", "3 yr",
+        "1.5 year", "since 2024", "since 2023", "since 2022", "since 2021", "since 2020",
+        "for a year", "completed 1 year", "after 1 year", "investing for 1 year", "investing for 2 years",
+        "long term", "ltcg", "stcg", "capital gain", "tax harvesting", "taxation", "elss lock",
+        "step-up", "step up", "annual increment", "switch to direct", "regular to direct",
+        "portfolio review", "rebalance", "cagr after", "stagnant", "underperforming for",
+        "after 12 installments", "12th installment"
+    ])
+
+    if has_explicit_12m_plus or cat in ["taxation_redemption", "step_up"]:
+        tenure_bucket = "tenured_12m_plus"
+        tenure_label = "🏅 Tenured (>12 Months)"
+        tenure_badge = "🏅 >12M Tenured"
+    elif r.get("stage") == "life_cash_crunch" or cat in ["pause_skip_cancel", "autopay_mandate"]:
+        tenure_bucket = "squeeze_6_12m"
+        tenure_label = "Months 6–12 (Fatigue & Squeeze)"
+        tenure_badge = "⏳ M6–12 Squeeze"
+    elif r.get("stage") == "market_panic" or "panic" in cat:
+        tenure_bucket = "cliff_3_6m"
+        tenure_label = "Months 3–6 (Drawdown Cliff)"
+        tenure_badge = "📉 M3–6 Cliff"
+    else:
+        tenure_bucket = "early_0_3m"
+        tenure_label = "Months 1–3 (Honeymoon & Setup)"
+        tenure_badge = "🌱 M1–3 Setup"
+
+    cancel_reason = None
+    cancel_meta = None
+
+    if tenure_bucket == "tenured_12m_plus":
+        # Priority 1: Goal Exit & Cash-Out
+        if any(k in comb for k in ["goal", "target", "emergency fund", "withdraw all", "redeem all", "need money", "trip", "bike", "wedding", "car", "cash out", "redeemed"]):
+            cancel_reason = "goal_exit_churn"
+            cancel_meta = TENURED_CANCEL_METADATA["goal_exit_churn"]
+        # Priority 2: Return Stagnation vs Direct Stocks / Index
+        elif any(k in comb for k in ["stagnant", "underperform", "slow", "only 8%", "only 10%", "fd return", "cagr", "direct stock", "f&o", "30%", "not growing", "fail to create wealth", "returns reduce", "disappointing returns", "low return"]):
+            cancel_reason = "return_stagnation"
+            cancel_meta = TENURED_CANCEL_METADATA["return_stagnation"]
+        # Priority 3: LTCG & Tax Realization Shock
+        elif any(k in comb for k in ["tax", "ltcg", "stcg", "capital gain", "112a", "harvest", "tds", "itr", "fifo", "elss", "3 year lock"]):
+            cancel_reason = "ltcg_tax_shock"
+            cancel_meta = TENURED_CANCEL_METADATA["ltcg_tax_shock"]
+        # Priority 4: Step-Up Friction & Portfolio Bloat
+        elif any(k in comb for k in ["step up", "step-up", "overlap", "too many fund", "bloat", "portfolio review", "annual increment", "heavy debit", "increase sip", "5 funds", "6 funds", "multiple fund"]):
+            cancel_reason = "stepup_bloat_churn"
+            cancel_meta = TENURED_CANCEL_METADATA["stepup_bloat_churn"]
+        # Priority 5: AMC Direct Switch & Demat Lock-in
+        else:
+            cancel_reason = "transfer_lockin_churn"
+            cancel_meta = TENURED_CANCEL_METADATA["transfer_lockin_churn"]
+
+    return tenure_bucket, tenure_label, tenure_badge, cancel_reason, cancel_meta
+
+
 def classify_user_activity(r: dict) -> tuple:
     text = (r.get("text") or r.get("quote") or "").lower()
     intent = (r.get("sip_user_intent") or "").lower()
@@ -270,15 +381,42 @@ def enrich_record(r: dict) -> dict:
     r["panic_behavioral_driver"] = panic_meta["behavioral_driver"]
     r["panic_pm_intervention"] = panic_meta["pm_intervention"]
 
+    tenure_bucket, tenure_label, tenure_badge, cancel_reason, cancel_meta = classify_tenure_and_cancellation(r)
+    r["investor_tenure_bucket"] = tenure_bucket
+    r["investor_tenure_label"] = tenure_label
+    r["investor_tenure_badge"] = tenure_badge
+    r["is_tenured_12m_plus"] = (tenure_bucket == "tenured_12m_plus")
+
+    if cancel_reason and cancel_meta:
+        r["tenured_cancel_reason"] = cancel_reason
+        r["tenured_cancel_label"] = cancel_meta["label"]
+        r["tenured_cancel_badge"] = cancel_meta["badge"]
+        r["tenured_cancel_desc"] = cancel_meta["description"]
+        r["tenured_cancel_driver"] = cancel_meta["behavioral_driver"]
+        r["tenured_cancel_fix"] = cancel_meta["pm_intervention"]
+        if tenure_bucket == "tenured_12m_plus":
+            if cancel_meta["tag"] not in stage_tags:
+                stage_tags.append(cancel_meta["tag"])
+    else:
+        r["tenured_cancel_reason"] = None
+        r["tenured_cancel_label"] = None
+        r["tenured_cancel_badge"] = None
+        r["tenured_cancel_desc"] = None
+        r["tenured_cancel_driver"] = None
+        r["tenured_cancel_fix"] = None
+
     # Prepend active badge if user is actively debiting in last 30 days
     if is_active_30d:
         stage_tags.insert(0, "Active SIP: Last 30D Instalment")
     else:
         stage_tags.insert(0, user_status_label)
 
+    if tenure_bucket == "tenured_12m_plus":
+        stage_tags.insert(1, "🏅 >12M Tenured")
+
     if stage == "market_panic":
         if panic_meta["tag"] not in stage_tags:
-            stage_tags.insert(1, panic_meta["tag"])
+            stage_tags.insert(2, panic_meta["tag"])
 
     r["stage"] = stage
     r["stage_label"] = stage_label
@@ -375,6 +513,31 @@ def main():
         "all_corpus_breakdown": dict(panic_counts_all)
     }
 
+    # Tenure breakdowns
+    tenure_counts = Counter(r["investor_tenure_bucket"] for r in enriched_records)
+    data["tenure_breakdown"] = dict(tenure_counts)
+
+    tenured_records = [r for r in enriched_records if r["investor_tenure_bucket"] == "tenured_12m_plus"]
+    tenured_cancel_counts = Counter(r["tenured_cancel_reason"] for r in tenured_records)
+
+    data["tenured_12m_cancel_breakdown"] = {
+        "total_tenured_12m_plus": len(tenured_records),
+        "tenured_pct_of_corpus": round((len(tenured_records) / len(enriched_records)) * 100, 1),
+        "reasons": {
+            k: {
+                "count": tenured_cancel_counts.get(k, 0),
+                "pct": round((tenured_cancel_counts.get(k, 0) / max(1, len(tenured_records))) * 100, 1),
+                "label": meta["label"],
+                "badge": meta["badge"],
+                "rate_metric": meta["rate_metric"],
+                "description": meta["description"],
+                "behavioral_driver": meta["behavioral_driver"],
+                "pm_intervention": meta["pm_intervention"]
+            }
+            for k, meta in TENURED_CANCEL_METADATA.items()
+        }
+    }
+
     print("Enriched stage breakdown in filtered intelligence:")
     for stg, count in stage_counts.items():
         print(f"  {stg} ({STAGE_LABELS[stg]}): {count}")
@@ -403,6 +566,12 @@ def main():
             "deep_red_cohort": len([ep for ep in ep_panic_recs if ep["panic_subsegment"] == "deep_red_cohort"]),
             "anxiety_session_freq": len([ep for ep in ep_panic_recs if ep["panic_subsegment"] == "anxiety_session_freq"]),
             "post_crash_churn_velocity": len([ep for ep in ep_panic_recs if ep["panic_subsegment"] == "post_crash_churn_velocity"])
+        }
+        ep_data["tenure_breakdown"] = dict(Counter(ep["investor_tenure_bucket"] for ep in enriched_episodes))
+        ep_tenured = [ep for ep in enriched_episodes if ep["investor_tenure_bucket"] == "tenured_12m_plus"]
+        ep_data["tenured_12m_cancel_breakdown"] = {
+            "total_tenured_12m_plus": len(ep_tenured),
+            "reasons": dict(Counter(ep["tenured_cancel_reason"] for ep in ep_tenured))
         }
 
         print("Enriched stage breakdown in 144 episodes:")

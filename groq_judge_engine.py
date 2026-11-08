@@ -273,6 +273,15 @@ Provide your rubric evaluation scores (1-5), composite score, strict verdict gat
             "extracted_sip_category": test_case.get("extracted_sip_category"),
             "sip_friction_level": test_case.get("sip_friction_level"),
             "pm_actionable_insight": test_case.get("pm_actionable_insight"),
+            "investor_tenure_bucket": test_case.get("investor_tenure_bucket"),
+            "investor_tenure_label": test_case.get("investor_tenure_label"),
+            "investor_tenure_badge": test_case.get("investor_tenure_badge"),
+            "is_tenured_12m_plus": test_case.get("is_tenured_12m_plus", False),
+            "tenured_cancel_reason": test_case.get("tenured_cancel_reason"),
+            "tenured_cancel_label": test_case.get("tenured_cancel_label"),
+            "tenured_cancel_badge": test_case.get("tenured_cancel_badge"),
+            "tenured_cancel_desc": test_case.get("tenured_cancel_desc"),
+            "tenured_cancel_fix": test_case.get("tenured_cancel_fix"),
             "scores": {
                 "link_attribution": link_score,
                 "verbatim_authenticity": verb_score,
@@ -330,7 +339,7 @@ def update_summary_stats(cached):
     }
 
 
-def judge_batch(count=5, platform=None, force=False):
+def judge_batch(count=5, platform=None, force=False, cohort=None, tenure=None, tenured_cancel=None):
     """Judge a batch of unjudged test cases from the benchmark dataset."""
     if not BENCHMARK_FILE.exists():
         from build_llm_benchmark import main as build_bm
@@ -346,6 +355,12 @@ def judge_batch(count=5, platform=None, force=False):
     candidates = [c for c in all_cases if force or c["test_case_id"] not in evaluated_ids]
     if platform and platform != "all":
         candidates = [c for c in candidates if c.get("source_code") == platform]
+    if cohort == "tenured_12m" or tenure == "tenured_12m_plus":
+        candidates = [c for c in candidates if c.get("is_tenured_12m_plus") or c.get("investor_tenure_bucket") == "tenured_12m_plus"]
+    elif tenure and tenure != "all":
+        candidates = [c for c in candidates if c.get("investor_tenure_bucket") == tenure]
+    if tenured_cancel and tenured_cancel != "all":
+        candidates = [c for c in candidates if c.get("tenured_cancel_reason") == tenured_cancel]
 
     target_cases = candidates[:count]
     results = []

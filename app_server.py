@@ -1097,6 +1097,8 @@ def api_sip_filtered_intelligence():
         stage = request.args.get("stage")
         user_status = request.args.get("user_status") or request.args.get("status")
         panic_sub = request.args.get("panic_subsegment") or request.args.get("panic_sub")
+        tenure = request.args.get("tenure") or request.args.get("tenure_bucket")
+        tenured_cancel = request.args.get("tenured_cancel") or request.args.get("cancel_reason")
         source = request.args.get("source")
         friction = request.args.get("friction")
         search = (request.args.get("search") or "").lower().strip()
@@ -1111,6 +1113,13 @@ def api_sip_filtered_intelligence():
             records = [r for r in records if r.get("stage") == stage or r.get("category") == stage]
         if panic_sub and panic_sub != "all":
             records = [r for r in records if r.get("panic_subsegment") == panic_sub]
+        if tenure and tenure != "all":
+            if tenure == "tenured_12m_plus":
+                records = [r for r in records if r.get("is_tenured_12m_plus") or r.get("investor_tenure_bucket") == "tenured_12m_plus"]
+            else:
+                records = [r for r in records if r.get("investor_tenure_bucket") == tenure]
+        if tenured_cancel and tenured_cancel != "all":
+            records = [r for r in records if r.get("tenured_cancel_reason") == tenured_cancel]
         if category and category != "all":
             records = [r for r in records if r.get("sip_category") == category or r.get("raw_sip_category") == category]
         if source and source != "all":
@@ -1141,6 +1150,8 @@ def api_sip_filtered_intelligence():
             "active_last_30d_count": data.get("active_last_30d_count", 1627),
             "active_last_30d_pct": data.get("active_last_30d_pct", 80.7),
             "market_panic_breakdown": data.get("market_panic_breakdown", {}),
+            "tenure_breakdown": data.get("tenure_breakdown", {}),
+            "tenured_12m_cancel_breakdown": data.get("tenured_12m_cancel_breakdown", {}),
             "source_breakdown": data.get("source_breakdown", {}),
             "friction_breakdown": data.get("friction_breakdown", {}),
             "records": records,
@@ -1281,6 +1292,55 @@ def api_sip_market_panic_breakdown():
             "pm_strategic_summary": [
                 "Market Drawdown Panic is a 3-step behavioral chain: Deep Red Return Shock triggers Anxious Session Monitoring, which accelerates Churn Velocity into bottom-selling.",
                 "Preventing the transition from Deep Red to Churn requires intervention at Step 2: throttling panic notifications and replacing nominal red losses with unit accumulation progress."
+            ]
+        })
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+
+
+@app.route("/api/sip/tenured-12m-analysis")
+def api_sip_tenured_12m_analysis():
+    """Returns deep-dive PM behavioral intelligence for >12 Months Tenured Investors:
+    Why first-time investors who survived the initial 12-month cliff cancel their SIPs."""
+    filtered_file = Path(__file__).parent / "data" / "sip_filtered_intelligence.json"
+    if not filtered_file.exists():
+        return jsonify({"error": "Dataset not found"}), 404
+
+    try:
+        with open(filtered_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        records = data.get("sip_records", [])
+        tenured_records = [r for r in records if r.get("investor_tenure_bucket") == "tenured_12m_plus"]
+
+        breakdown_meta = data.get("tenured_12m_cancel_breakdown", {})
+
+        # Sample voices for each cancellation problem
+        samples = {}
+        for reason_key in ["ltcg_tax_shock", "stepup_bloat_churn", "transfer_lockin_churn", "goal_exit_churn", "return_stagnation"]:
+            sub_recs = [r for r in tenured_records if r.get("tenured_cancel_reason") == reason_key]
+            samples[reason_key] = [
+                {
+                    "id": r.get("post_id"),
+                    "source": r.get("source_name") or r.get("source"),
+                    "text": r.get("text"),
+                    "author": r.get("author"),
+                    "source_url": r.get("source_url")
+                }
+                for r in sub_recs[:3]
+            ]
+
+        return jsonify({
+            "success": True,
+            "cohort_definition": "First-time mutual fund investors who have been actively investing for >12 months (past the 1-year cliff)",
+            "total_tenured_12m_voices": len(tenured_records),
+            "total_corpus_voices": len(records),
+            "tenured_pct_of_corpus": round(len(tenured_records) / len(records) * 100, 1),
+            "cancellation_dimensions": breakdown_meta.get("reasons", {}),
+            "sample_voices": samples,
+            "pm_takeaways": [
+                "Overcoming the 12-month mark does NOT eliminate churn risk; it transforms psychological friction from loss aversion into taxation dread (LTCG FIFO), step-up payment fatigue, and milestone cash-outs.",
+                "Top PM Interventions: Automated annual tax-harvesting visualizer, 1-click portfolio pruning with step-up caps, and next-horizon goal reinvestment prompts."
             ]
         })
     except Exception as exc:
@@ -1456,6 +1516,9 @@ def api_sip_mistral_results():
         verdict = request.args.get("verdict")
         platform = request.args.get("platform")
         category = request.args.get("category")
+        tenure = request.args.get("tenure")
+        tenured_cancel = request.args.get("tenured_cancel")
+        cohort = request.args.get("cohort")
         search = (request.args.get("search") or "").lower().strip()
         limit = request.args.get("limit")
 
@@ -1466,6 +1529,17 @@ def api_sip_mistral_results():
 
         if platform and platform != "all":
             eval_list = [e for e in eval_list if e.get("source_code") == platform]
+
+        if cohort == "tenured_12m" or tenure == "tenured_12m_plus":
+            eval_list = [
+                e for e in eval_list
+                if e.get("is_tenured_12m_plus") or e.get("investor_tenure_bucket") == "tenured_12m_plus"
+            ]
+        elif tenure and tenure != "all":
+            eval_list = [e for e in eval_list if e.get("investor_tenure_bucket") == tenure]
+
+        if tenured_cancel and tenured_cancel != "all":
+            eval_list = [e for e in eval_list if e.get("tenured_cancel_reason") == tenured_cancel]
 
         if category and category != "all":
             eval_list = [
@@ -1527,7 +1601,17 @@ def api_sip_mistral_judge():
                 "summary": cached.get("summary", {}),
             })
         else:
-            result = judge_batch(count=batch_count, platform=platform, force=force)
+            cohort = body.get("cohort")
+            tenure = body.get("tenure")
+            tenured_cancel = body.get("tenured_cancel")
+            result = judge_batch(
+                count=batch_count,
+                platform=platform,
+                force=force,
+                cohort=cohort,
+                tenure=tenure,
+                tenured_cancel=tenured_cancel,
+            )
             return jsonify({
                 "success": True,
                 "batch_result": result,
@@ -1566,6 +1650,9 @@ def api_sip_groq_results():
         verdict = request.args.get("verdict")
         platform = request.args.get("platform")
         category = request.args.get("category")
+        tenure = request.args.get("tenure")
+        tenured_cancel = request.args.get("tenured_cancel")
+        cohort = request.args.get("cohort")
         search = (request.args.get("search") or "").lower().strip()
         limit = request.args.get("limit")
 
@@ -1576,6 +1663,17 @@ def api_sip_groq_results():
 
         if platform and platform != "all":
             eval_list = [e for e in eval_list if e.get("source_code") == platform]
+
+        if cohort == "tenured_12m" or tenure == "tenured_12m_plus":
+            eval_list = [
+                e for e in eval_list
+                if e.get("is_tenured_12m_plus") or e.get("investor_tenure_bucket") == "tenured_12m_plus"
+            ]
+        elif tenure and tenure != "all":
+            eval_list = [e for e in eval_list if e.get("investor_tenure_bucket") == tenure]
+
+        if tenured_cancel and tenured_cancel != "all":
+            eval_list = [e for e in eval_list if e.get("tenured_cancel_reason") == tenured_cancel]
 
         if category and category != "all":
             eval_list = [
@@ -1637,7 +1735,17 @@ def api_sip_groq_judge():
                 "summary": cached.get("summary", {}),
             })
         else:
-            result = judge_batch(count=batch_count, platform=platform, force=force)
+            cohort = body.get("cohort")
+            tenure = body.get("tenure")
+            tenured_cancel = body.get("tenured_cancel")
+            result = judge_batch(
+                count=batch_count,
+                platform=platform,
+                force=force,
+                cohort=cohort,
+                tenure=tenure,
+                tenured_cancel=tenured_cancel,
+            )
             return jsonify({
                 "success": True,
                 "batch_result": result,

@@ -117,6 +117,16 @@ def main():
             "panic_subsegment_desc": ep.get("panic_subsegment_desc", ""),
             "panic_behavioral_driver": ep.get("panic_behavioral_driver", ""),
             "panic_pm_intervention": ep.get("panic_pm_intervention", ""),
+            "investor_tenure_bucket": ep.get("investor_tenure_bucket", "early_0_3m"),
+            "investor_tenure_label": ep.get("investor_tenure_label", "Months 1–3 (Honeymoon & Setup)"),
+            "investor_tenure_badge": ep.get("investor_tenure_badge", "🌱 M1–3 Setup"),
+            "is_tenured_12m_plus": ep.get("is_tenured_12m_plus", False),
+            "tenured_cancel_reason": ep.get("tenured_cancel_reason"),
+            "tenured_cancel_label": ep.get("tenured_cancel_label"),
+            "tenured_cancel_badge": ep.get("tenured_cancel_badge"),
+            "tenured_cancel_desc": ep.get("tenured_cancel_desc"),
+            "tenured_cancel_driver": ep.get("tenured_cancel_driver"),
+            "tenured_cancel_fix": ep.get("tenured_cancel_fix"),
             "title": ep.get("title") or "12-Month SIP Retention Friction",
             "author": ep.get("author") or "First-Time Investor",
             "date": ep.get("date", "2026-10-15")[:10],
@@ -177,6 +187,16 @@ def main():
             "panic_subsegment_desc": r.get("panic_subsegment_desc", ""),
             "panic_behavioral_driver": r.get("panic_behavioral_driver", ""),
             "panic_pm_intervention": r.get("panic_pm_intervention", ""),
+            "investor_tenure_bucket": r.get("investor_tenure_bucket", "early_0_3m"),
+            "investor_tenure_label": r.get("investor_tenure_label", "Months 1–3 (Honeymoon & Setup)"),
+            "investor_tenure_badge": r.get("investor_tenure_badge", "🌱 M1–3 Setup"),
+            "is_tenured_12m_plus": r.get("is_tenured_12m_plus", False),
+            "tenured_cancel_reason": r.get("tenured_cancel_reason"),
+            "tenured_cancel_label": r.get("tenured_cancel_label"),
+            "tenured_cancel_badge": r.get("tenured_cancel_badge"),
+            "tenured_cancel_desc": r.get("tenured_cancel_desc"),
+            "tenured_cancel_driver": r.get("tenured_cancel_driver"),
+            "tenured_cancel_fix": r.get("tenured_cancel_fix"),
             "title": title_clean or f"First-Time SIP Feedback #{i}",
             "author": r.get("author") or f"Investor #{i}",
             "date": (r.get("date") or "2026-10-24")[:10],
@@ -195,6 +215,8 @@ def main():
     print(f"Sanitized and prepared {len(episodes_clean)} episodes and {len(voices_clean)} voices.")
 
     panic_breakdown_data = fil_data.get("market_panic_breakdown", {})
+    tenure_breakdown_data = fil_data.get("tenure_breakdown", {})
+    tenured_cancel_data = fil_data.get("tenured_12m_cancel_breakdown", {})
 
     # Generate JavaScript file
     js_content = f"""// Groww SIP Retrieval Discovery Engine — Pre-bundled Evidence Bank
@@ -204,8 +226,10 @@ def main():
 window.SIP_EPISODES_144 = {json.dumps(episodes_clean, ensure_ascii=False, indent=None)};
 window.SIP_VOICES_1154 = {json.dumps(voices_clean, ensure_ascii=False, indent=None)};
 window.SIP_PANIC_BREAKDOWN = {json.dumps(panic_breakdown_data, ensure_ascii=False, indent=None)};
+window.SIP_TENURE_BREAKDOWN = {json.dumps(tenure_breakdown_data, ensure_ascii=False, indent=None)};
+window.SIP_TENURED_12M_BREAKDOWN = {json.dumps(tenured_cancel_data, ensure_ascii=False, indent=None)};
 window.SIP_EVIDENCE_INITIALIZED = true;
-console.log('✅ Pre-bundled SIP Evidence Bank loaded: 144 episodes & 2,016 verified voices.');
+console.log('✅ Pre-bundled SIP Evidence Bank loaded: 144 episodes & 2,016 verified voices with tenure & >12M churn breakdown.');
 """
 
     STATIC_OUT.parent.mkdir(exist_ok=True)

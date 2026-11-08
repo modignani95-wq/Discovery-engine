@@ -378,9 +378,16 @@
       color: var(--groww-red);
       font-size: 11px;
       font-weight: 700;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      line-height: 1.25;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
     .tag-audit {
       background: var(--groww-mint-light);
@@ -388,11 +395,16 @@
       color: var(--groww-mint-dark);
       font-size: 11.5px;
       font-weight: 600;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      line-height: 1.25;
       gap: 6px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
     .hero-featured-title {
       font-family: var(--font-display);
@@ -542,6 +554,12 @@
       border-bottom: 1px solid var(--border-light);
       vertical-align: middle;
       color: var(--ink-secondary);
+    }
+    .matrix-table th:last-child,
+    .matrix-table td:last-child {
+      white-space: nowrap;
+      min-width: 270px;
+      text-align: left;
     }
     .matrix-table tbody tr:hover {
       background: var(--surface-subtle);
@@ -754,6 +772,39 @@
     .tag-deep_red_cohort { background: rgba(239, 68, 68, 0.12); color: #B91C1C; border: 1px solid rgba(239, 68, 68, 0.3); }
     .tag-anxiety_session_freq { background: rgba(245, 158, 11, 0.12); color: #B45309; border: 1px solid rgba(245, 158, 11, 0.3); }
     .tag-post_crash_churn_velocity { background: rgba(139, 92, 246, 0.12); color: #6D28D9; border: 1px solid rgba(139, 92, 246, 0.3); }
+
+    /* >12 Months Investor Tenure Tags */
+    .tenure-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: -0.01em;
+    }
+    .tag-tenured_12m_plus { background: #EEF2FF; color: #4338CA; border: 1px solid #C7D2FE; }
+    .tag-squeeze_6_12m { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
+    .tag-cliff_3_6m { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+    .tag-early_0_3m { background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+
+    /* >12 Months Cancellation Reason Tags */
+    .cancel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: -0.01em;
+    }
+    .tag-ltcg_tax_shock { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .tag-stepup_bloat_churn { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
+    .tag-transfer_lockin_churn { background: #FFF7ED; color: #C2410C; border: 1px solid #FFEDD5; }
+    .tag-goal_exit_churn { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+    .tag-return_stagnation { background: #FEF2F2; color: #B91C1C; border: 1px solid #FECACA; }
 
     .episode-quote {
       color: var(--ink-primary);
@@ -1403,6 +1454,162 @@
 
         </div>
       </div>
+
+      <!-- ──────────────────────────────────────────────────────────────────────── -->
+      <!-- >12 MONTHS TENURED INVESTOR MILESTONE ANALYSIS: WHY LATE-STAGE INVESTORS CANCEL -->
+      <!-- ──────────────────────────────────────────────────────────────────────── -->
+      <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.04) 0%, rgba(59, 130, 246, 0.03) 50%, rgba(16, 185, 129, 0.04) 100%); border: 1.5px solid rgba(79, 70, 229, 0.28); border-radius: var(--radius-lg); padding: 22px 24px; margin-bottom: 24px; position: relative;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="tenure-tag tag-tenured_12m_plus" style="font-size:12px;">🏅 &gt;12 Months Tenured Investor Milestone Analysis</span>
+              <span class="tag-audit"><span class="pulse-dot"></span> 416 Voices · 20.6% of Total Corpus</span>
+            </div>
+            <h3 style="font-size:18px; font-weight:800; color:var(--ink-primary); margin:6px 0 2px 0;">Late-Stage Cancellation Vectors: Why First-Time Investors Cancel After 12 Months</h3>
+            <p style="font-size:13px; color:var(--ink-secondary); margin:0;">
+              Investors who cross Month 12 have successfully survived the early drop-off cliff (M3–M6). However, at Month 12+, they collide with a completely different set of <strong>structural, tax, and portfolio friction vectors</strong> that trigger unexpected cancellations.
+            </p>
+          </div>
+          <button class="btn-primary" onclick="filterByTenure('tenured_12m_plus')" style="padding:7px 14px; font-size:12.5px; display:inline-flex; align-items:center; gap:6px; cursor:pointer; background:#4F46E5;">
+            <span>🔍 View All 416 &gt;12M Tenured Records in Explorer →</span>
+          </button>
+        </div>
+
+        <!-- Funnel Progression Bar across 4 Tenures -->
+        <div style="background:#FFFFFF; border:1px solid var(--border-light); border-radius:8px; padding:14px 16px; margin-bottom:16px;">
+          <div style="font-size:12px; font-weight:700; color:var(--ink-primary); margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;">
+            <span>Tenure Retention Funnel Across 2,016 First-Time Investors</span>
+            <span style="color:var(--ink-muted); font-size:11px;">M12+ Survival: 20.6%</span>
+          </div>
+          <div style="display:flex; height:24px; border-radius:6px; overflow:hidden; gap:2px;">
+            <div style="flex:1046; background:#94A3B8; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-size:10px; font-weight:700;" title="0–3M Early: 1,046 Voices (51.9%)">0–3M (51.9%)</div>
+            <div style="flex:228; background:#F59E0B; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-size:10px; font-weight:700;" title="3–6M Cliff: 228 Voices (11.3%)">3–6M (11.3%)</div>
+            <div style="flex:326; background:#8B5CF6; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-size:10px; font-weight:700;" title="6–12M Squeeze: 326 Voices (16.2%)">6–12M (16.2%)</div>
+            <div style="flex:416; background:#4F46E5; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-size:10px; font-weight:700;" title=">12M Tenured: 416 Voices (20.6%)">&gt;12M (20.6%)</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--ink-muted); margin-top:6px; flex-wrap:wrap; gap:6px;">
+            <span>⏳ Early Setup Friction (1,046)</span>
+            <span>⚠️ Drawdown Panic Cliff (228)</span>
+            <span>📉 Habit &amp; Cash Squeeze (326)</span>
+            <span style="color:#4F46E5; font-weight:700;">🏅 Milestone Tenured Churn (416)</span>
+          </div>
+        </div>
+
+        <!-- 5 Tenured Cancellation Problem Cards -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:14px; margin:16px 0;">
+          
+          <!-- Reason 1: LTCG Tax Shock -->
+          <div style="background:#FFFFFF; border:1px solid rgba(29, 78, 216, 0.25); border-top:3px solid #1D4ED8; border-radius:8px; padding:16px; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="cancel-tag tag-ltcg_tax_shock">💸 LTCG Tax Shock</span>
+                <span style="font-size:12px; font-weight:700; color:#1D4ED8;">157 Voices (37.7%)</span>
+              </div>
+              <div style="font-size:13px; font-weight:700; color:var(--ink-primary); margin:8px 0 4px 0;">LTCG Taxation &amp; FIFO Realization Shock</div>
+              <p style="font-size:12px; line-height:1.5; color:var(--ink-secondary); margin:0;">
+                <strong>Why They Cancel:</strong> At Month 12, the first SIP instalments cross the 1-year mark for Long-Term Capital Gains (12.5% tax above ₹1.25 Lakh). Investors face anxiety over FIFO (First-In, First-Out) calculations, fear surprise tax liabilities on redemption, and cancel ongoing SIPs out of dread.
+              </p>
+            </div>
+            <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-light);">
+              <div style="font-size:11.5px; color:#047857; font-weight:600; margin-bottom:8px;">
+                🛡️ <strong>PM Fix:</strong> Automated FIFO Tax-Harvesting Assistant &amp; Annual ₹1.25L Exemption Simulator
+              </div>
+              <button class="btn-secondary" onclick="filterByTenuredCancel('ltcg_tax_shock')" style="width:100%; font-size:11.5px; padding:5px 10px; cursor:pointer;">
+                Filter 157 LTCG Tax Shock Records →
+              </button>
+            </div>
+          </div>
+
+          <!-- Reason 2: Step-Up Bloat Churn -->
+          <div style="background:#FFFFFF; border:1px solid rgba(109, 40, 217, 0.25); border-top:3px solid #6D28D9; border-radius:8px; padding:16px; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="cancel-tag tag-stepup_bloat_churn">📈 Step-Up &amp; Bloat</span>
+                <span style="font-size:12px; font-weight:700; color:#6D28D9;">89 Voices (21.4%)</span>
+              </div>
+              <div style="font-size:13px; font-weight:700; color:var(--ink-primary); margin:8px 0 4px 0;">Annual Step-Up Friction &amp; Portfolio Bloat</div>
+              <p style="font-size:12px; line-height:1.5; color:var(--ink-secondary); margin:0;">
+                <strong>Why They Cancel:</strong> Automated 10–15% annual step-ups compound monthly debits beyond salary increments. Simultaneously, investors accumulate 6–8 overlapping funds with 70%+ asset overlap, leading to decision paralysis and full SIP cancellation.
+              </p>
+            </div>
+            <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-light);">
+              <div style="font-size:11.5px; color:#047857; font-weight:600; margin-bottom:8px;">
+                🎛️ <strong>PM Fix:</strong> Smart Step-Up Cap &amp; 1-Click Portfolio Overlap Consolidation
+              </div>
+              <button class="btn-secondary" onclick="filterByTenuredCancel('stepup_bloat_churn')" style="width:100%; font-size:11.5px; padding:5px 10px; cursor:pointer;">
+                Filter 89 Step-Up &amp; Bloat Records →
+              </button>
+            </div>
+          </div>
+
+          <!-- Reason 3: Transfer Lock-In Churn -->
+          <div style="background:#FFFFFF; border:1px solid rgba(194, 65, 12, 0.25); border-top:3px solid #C2410C; border-radius:8px; padding:16px; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="cancel-tag tag-transfer_lockin_churn">🔄 Switch &amp; Lock-in</span>
+                <span style="font-size:12px; font-weight:700; color:#C2410C;">88 Voices (21.2%)</span>
+              </div>
+              <div style="font-size:13px; font-weight:700; color:var(--ink-primary); margin:8px 0 4px 0;">AMC Direct Switch &amp; Portability Lock-in</div>
+              <p style="font-size:12px; line-height:1.5; color:var(--ink-secondary); margin:0;">
+                <strong>Why They Cancel:</strong> After 12 months, users learn about regular vs direct expense ratios or try migrating between platforms (Groww/Zerodha/MFCentral). Friction in CAS reconciliation, demat conversion delays, and exit-load confusion force SIP termination.
+              </p>
+            </div>
+            <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-light);">
+              <div style="font-size:11.5px; color:#047857; font-weight:600; margin-bottom:8px;">
+                ⚡ <strong>PM Fix:</strong> Zero-Downtime Regular-to-Direct Switch Flow &amp; Instant CAS Reconciliation
+              </div>
+              <button class="btn-secondary" onclick="filterByTenuredCancel('transfer_lockin_churn')" style="width:100%; font-size:11.5px; padding:5px 10px; cursor:pointer;">
+                Filter 88 Switch &amp; Lock-in Records →
+              </button>
+            </div>
+          </div>
+
+          <!-- Reason 4: Goal Exit Churn -->
+          <div style="background:#FFFFFF; border:1px solid rgba(4, 120, 87, 0.25); border-top:3px solid #047857; border-radius:8px; padding:16px; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="cancel-tag tag-goal_exit_churn">🎯 Goal Met Cash-Out</span>
+                <span style="font-size:12px; font-weight:700; color:#047857;">65 Voices (15.6%)</span>
+              </div>
+              <div style="font-size:13px; font-weight:700; color:var(--ink-primary); margin:8px 0 4px 0;">Goal Completion &amp; Milestone Cash-Out</div>
+              <p style="font-size:12px; line-height:1.5; color:var(--ink-secondary); margin:0;">
+                <strong>Why They Cancel:</strong> The investor hit their initial 1-year target (₹50k–₹1 Lakh emergency buffer, vacation, or gadget fund) and redeemed the corpus. Because the app lacks an automated next-milestone lifecycle transition, the SIP was stopped indefinitely.
+              </p>
+            </div>
+            <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-light);">
+              <div style="font-size:11.5px; color:#047857; font-weight:600; margin-bottom:8px;">
+                🌱 <strong>PM Fix:</strong> Post-Goal Wealth Bridge &amp; Automated Next-Milestone Roll-Over
+              </div>
+              <button class="btn-secondary" onclick="filterByTenuredCancel('goal_exit_churn')" style="width:100%; font-size:11.5px; padding:5px 10px; cursor:pointer;">
+                Filter 65 Goal Met Records →
+              </button>
+            </div>
+          </div>
+
+          <!-- Reason 5: Return Stagnation -->
+          <div style="background:#FFFFFF; border:1px solid rgba(185, 28, 28, 0.25); border-top:3px solid #B91C1C; border-radius:8px; padding:16px; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="cancel-tag tag-return_stagnation">⚖️ Return Stagnation</span>
+                <span style="font-size:12px; font-weight:700; color:#B91C1C;">17 Voices (4.1%)</span>
+              </div>
+              <div style="font-size:13px; font-weight:700; color:var(--ink-primary); margin:8px 0 4px 0;">Return Stagnation &amp; Underperformance Churn</div>
+              <p style="font-size:12px; line-height:1.5; color:var(--ink-secondary); margin:0;">
+                <strong>Why They Cancel:</strong> After 12 months of disciplined investing, an 8%–11% annualized return feels lackluster compared to social media hype around direct equity or IPOs. Without benchmark alpha context, users stop SIPs to gamble in direct stock trading.
+              </p>
+            </div>
+            <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-light);">
+              <div style="font-size:11.5px; color:#047857; font-weight:600; margin-bottom:8px;">
+                📊 <strong>PM Fix:</strong> Benchmark Alpha Contextualizer &amp; Long-Term Compounding Trajectory
+              </div>
+              <button class="btn-secondary" onclick="filterByTenuredCancel('return_stagnation')" style="width:100%; font-size:11.5px; padding:5px 10px; cursor:pointer;">
+                Filter 17 Return Stagnation Records →
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="stat-grid">
         <div class="stat-metric-card">
           <span class="stat-val" style="color:var(--groww-red)">32.0%</span>
@@ -1768,7 +1975,7 @@
               <th>Checking &amp; XIRR Anxiety<br><small style="text-transform:none; font-weight:400; color:var(--ink-muted);">Daily Checking &amp; Math Confusion</small></th>
               <th>Cash Squeeze &amp; Fatigue<br><small style="text-transform:none; font-weight:400; color:var(--ink-muted);">Months 6–8 Squeeze &amp; Rigid Debit</small></th>
               <th>In-Scope Total</th>
-              <th>Dominant 12M Churn Driver</th>
+              <th style="white-space:nowrap; min-width:270px;">Dominant 12M Churn Driver</th>
             </tr>
           </thead>
           <tbody>
@@ -1782,7 +1989,7 @@
               <td><span class="matrix-badge-cell mb-med" onclick="filterFromMatrix('play_store', 'checking_confusion')" title="Click to view all 53 records in Evidence Explorer">53 (17.7%)</span></td>
               <td><span class="matrix-badge-cell mb-high" onclick="filterFromMatrix('play_store', 'life_cash_crunch')" title="Click to view all 103 records in Evidence Explorer">103 (34.3%)</span></td>
               <td><span class="num-bold">300 in-scope</span></td>
-              <td><span class="tag-critical">Cash Squeeze (34.3%)</span></td>
+              <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">Cash Squeeze (34.3%)</span></td>
             </tr>
             <tr>
               <td>
@@ -1794,7 +2001,7 @@
               <td><span class="matrix-badge-cell mb-med" onclick="filterFromMatrix('app_store', 'checking_confusion')" title="Click to view all 47 records in Evidence Explorer">47 (15.7%)</span></td>
               <td><span class="matrix-badge-cell mb-high" onclick="filterFromMatrix('app_store', 'life_cash_crunch')" title="Click to view all 95 records in Evidence Explorer">95 (31.7%)</span></td>
               <td><span class="num-bold">300 in-scope</span></td>
-              <td><span class="tag-critical">Expectation Mismatch (32.7%)</span></td>
+              <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">Expectation Mismatch (32.7%)</span></td>
             </tr>
             <tr>
               <td>
@@ -1806,7 +2013,7 @@
               <td><span class="matrix-badge-cell mb-low" onclick="filterFromMatrix('youtube', 'checking_confusion')" title="Click to view all 40 records in Evidence Explorer">40 (4.8%)</span></td>
               <td><span class="matrix-badge-cell mb-med" onclick="filterFromMatrix('youtube', 'life_cash_crunch')" title="Click to view all 115 records in Evidence Explorer">115 (13.7%)</span></td>
               <td><span class="num-bold">842 in-scope</span></td>
-              <td><span class="tag-critical">Expectation Mismatch (73.3%)</span></td>
+              <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">Expectation Mismatch (73.3%)</span></td>
             </tr>
             <tr>
               <td>
@@ -1818,7 +2025,7 @@
               <td><span class="matrix-badge-cell mb-med" onclick="filterFromMatrix('reddit', 'checking_confusion')" title="Click to view all 65 records in Evidence Explorer">65 (15.5%)</span></td>
               <td><span class="matrix-badge-cell mb-high" onclick="filterFromMatrix('reddit', 'life_cash_crunch')" title="Click to view all 150 records in Evidence Explorer">150 (35.8%)</span></td>
               <td><span class="num-bold">419 in-scope</span></td>
-              <td><span class="tag-critical">Cash Squeeze (35.8%)</span></td>
+              <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">Cash Squeeze (35.8%)</span></td>
             </tr>
             <tr>
               <td>
@@ -1830,7 +2037,7 @@
               <td><span class="matrix-badge-cell mb-high" onclick="filterFromMatrix('tradingqna', 'checking_confusion')" title="Click to view all 45 records in Evidence Explorer">45 (46.4%)</span></td>
               <td><span class="matrix-badge-cell mb-med" onclick="filterFromMatrix('tradingqna', 'life_cash_crunch')" title="Click to view all 26 records in Evidence Explorer">26 (26.8%)</span></td>
               <td><span class="num-bold">97 in-scope</span></td>
-              <td><span class="tag-critical">Checking &amp; XIRR (46.4%)</span></td>
+              <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">Checking &amp; XIRR (46.4%)</span></td>
             </tr>
             <tr>
               <td>
@@ -1842,7 +2049,7 @@
               <td><span class="matrix-badge-cell mb-med" onclick="filterFromMatrix('other_public', 'checking_confusion')" title="Click to view all 12 records in Evidence Explorer">12 (20.7%)</span></td>
               <td><span class="matrix-badge-cell mb-high" onclick="filterFromMatrix('other_public', 'life_cash_crunch')" title="Click to view all 26 records in Evidence Explorer">26 (44.8%)</span></td>
               <td><span class="num-bold">58 in-scope</span></td>
-              <td><span class="tag-critical">Cash Squeeze (44.8%)</span></td>
+              <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">Cash Squeeze (44.8%)</span></td>
             </tr>
           </tbody>
           <tfoot>
@@ -1935,6 +2142,25 @@
           <button class="pill-btn" id="pill-panic-deep_red_cohort" onclick="filterEpisodes('panic_sub', 'deep_red_cohort', this)" style="color:#DC2626; font-weight:600;">📉 Deep Red Cohort Rate (163)</button>
           <button class="pill-btn" id="pill-panic-anxiety_session_freq" onclick="filterEpisodes('panic_sub', 'anxiety_session_freq', this)" style="color:#D97706; font-weight:600;">📲 Anxiety Session Frequency (58)</button>
           <button class="pill-btn" id="pill-panic-post_crash_churn_velocity" onclick="filterEpisodes('panic_sub', 'post_crash_churn_velocity', this)" style="color:#7C3AED; font-weight:600;">⚡ Post-Market-Crash Churn Velocity (57)</button>
+        </div>
+
+        <div class="pill-group" id="explorer-tenure-pills" style="margin-top:4px;">
+          <span class="t-eyebrow" style="margin-right:4px; color:#4338CA">Investor Tenure:</span>
+          <button class="pill-btn active" id="pill-tenure-all" onclick="filterEpisodes('tenure', 'all', this)">All Tenures (2,016)</button>
+          <button class="pill-btn" id="pill-tenure-tenured_12m_plus" onclick="filterEpisodes('tenure', 'tenured_12m_plus', this)" style="color:#4338CA; font-weight:700;">🏅 &gt;12 Months Tenured (416)</button>
+          <button class="pill-btn" id="pill-tenure-squeeze_6_12m" onclick="filterEpisodes('tenure', 'squeeze_6_12m', this)">6–12 Months Squeeze (326)</button>
+          <button class="pill-btn" id="pill-tenure-cliff_3_6m" onclick="filterEpisodes('tenure', 'cliff_3_6m', this)">3–6 Months Cliff (228)</button>
+          <button class="pill-btn" id="pill-tenure-early_0_3m" onclick="filterEpisodes('tenure', 'early_0_3m', this)">0–3 Months Early (1,046)</button>
+        </div>
+
+        <div class="pill-group" id="explorer-tenured-cancel-pills" style="margin-top:4px;">
+          <span class="t-eyebrow" style="margin-right:4px; color:#6D28D9">&gt;12M Cancellation Reasons:</span>
+          <button class="pill-btn active" id="pill-tcancel-all" onclick="filterEpisodes('tenured_cancel', 'all', this)">All &gt;12M Reasons (416)</button>
+          <button class="pill-btn" id="pill-tcancel-ltcg_tax_shock" onclick="filterEpisodes('tenured_cancel', 'ltcg_tax_shock', this)" style="color:#1D4ED8; font-weight:600;">💸 LTCG Tax Shock (157)</button>
+          <button class="pill-btn" id="pill-tcancel-stepup_bloat_churn" onclick="filterEpisodes('tenured_cancel', 'stepup_bloat_churn', this)" style="color:#6D28D9; font-weight:600;">📈 Step-Up &amp; Bloat (89)</button>
+          <button class="pill-btn" id="pill-tcancel-transfer_lockin_churn" onclick="filterEpisodes('tenured_cancel', 'transfer_lockin_churn', this)" style="color:#C2410C; font-weight:600;">🔄 Switch &amp; Lock-in (88)</button>
+          <button class="pill-btn" id="pill-tcancel-goal_exit_churn" onclick="filterEpisodes('tenured_cancel', 'goal_exit_churn', this)" style="color:#047857; font-weight:600;">🎯 Goal Met Cash-Out (65)</button>
+          <button class="pill-btn" id="pill-tcancel-return_stagnation" onclick="filterEpisodes('tenured_cancel', 'return_stagnation', this)" style="color:#B91C1C; font-weight:600;">⚖️ Return Stagnation (17)</button>
         </div>
       </div>
 
@@ -2279,9 +2505,11 @@
           <button class="pill-btn" onclick="filterAuditTable('PASS', this)">Pass Only</button>
           <button class="pill-btn" onclick="filterAuditTable('BORDERLINE', this)">Borderline</button>
           <button class="pill-btn" onclick="filterAuditTable('FAIL', this)">Fail Only</button>
+          <button class="pill-btn" onclick="filterAuditTable('TENURED_12M', this)" style="color:#4338CA; font-weight:700;">🏅 &gt;12M Tenured Audits</button>
         </div>
-        <div style="display:flex; gap:8px;">
-          <button class="btn-groww" id="run-groq-batch-btn" onclick="runGroqBatchEvaluation()">⚡ Run Groq Source Audit on Next 5 Cases</button>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn-groww" id="run-groq-batch-btn" onclick="runGroqBatchEvaluation()">⚡ Run Groq Audit on Next 5</button>
+          <button class="btn-groww" id="run-groq-tenured-btn" onclick="runGroqTenuredBatchEvaluation()" style="background:#4F46E5;">⚡ Audit &gt;12M Tenured Cases</button>
           <a class="btn-secondary" href="/api/sip/groq-results/export" download>📥 Download JSON</a>
         </div>
       </div>
@@ -2518,10 +2746,12 @@
 <div class="modal-backdrop" id="episode-modal" onclick="closeModalOnBackdrop(event, 'episode-modal')">
   <div class="modal-content">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-      <div style="display:flex; align-items:center; gap:8px;">
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
         <span class="core-badge" id="modal-ep-id">EP-001</span>
         <span class="source-tag tag-app_store" id="modal-source-tag">App Store</span>
         <span class="cohort-tag tag-active_last_30d" id="modal-cohort-tag">🟢 Active SIP: Last 30D</span>
+        <span class="tenure-tag tag-tenured_12m_plus" id="modal-tenure-tag">🏅 &gt;12M Tenured</span>
+        <span class="cancel-tag tag-ltcg_tax_shock" id="modal-cancel-tag" style="display:none;">💸 LTCG Tax Shock</span>
         <span class="panic-subtag tag-deep_red_cohort" id="modal-panic-tag" style="display:none;">📉 Deep Red Cohort</span>
         <span class="stage-tag tag-market_panic" id="modal-stage-tag">Drawdown Panic</span>
       </div>
@@ -2546,6 +2776,15 @@
       </div>
       <p style="font-size:12px; color:var(--ink-primary); line-height:1.4; margin:0 0 6px 0;" id="modal-panic-desc"></p>
       <div style="font-size:11.5px; color:#047857; font-weight:600;" id="modal-panic-fix"></div>
+    </div>
+
+    <div id="modal-tenured-box" style="display:none; margin:10px 0; padding:10px 12px; background:rgba(79, 70, 229, 0.04); border-radius:8px; border:1px solid rgba(79, 70, 229, 0.25); border-left:3px solid #4F46E5;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+        <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#4F46E5;" id="modal-tenured-title">&gt;12 Months Tenured Cancellation Vector</span>
+        <span style="font-size:11px; color:var(--ink-muted);" id="modal-tenured-label">LTCG Tax Shock</span>
+      </div>
+      <p style="font-size:12px; color:var(--ink-primary); line-height:1.4; margin:0 0 6px 0;" id="modal-tenured-desc"></p>
+      <div style="font-size:11.5px; color:#047857; font-weight:600;" id="modal-tenured-fix"></div>
     </div>
 
     <div style="margin:14px 0; padding:14px; background:var(--surface-subtle); border-radius:8px; border-left:3px solid var(--groww-mint);">
@@ -2650,6 +2889,8 @@
   let activeFilterStage = 'all';
   let activeFilterStatus = 'all';
   let activeFilterPanicSubsegment = 'all';
+  let activeFilterTenure = 'all';
+  let activeFilterTenuredCancel = 'all';
   let groqAuditResults = [];
   let currentModalCaseId = null;
 
@@ -3159,7 +3400,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
             return `<td><span class="matrix-badge-cell ${bClass}" onclick="filterFromMatrix('${s.code}', '${stg.key}')" title="Click to view all ${c} records in Evidence Explorer">${c} (${pct}%)</span></td>`;
           }).join('')}
           <td><span class="num-bold">${sTotal} in-scope</span></td>
-          <td><span class="tag-critical">${dominant.label} (${sTotal > 0 ? ((maxC / sTotal) * 100).toFixed(1) : 0}%)</span></td>
+          <td style="white-space:nowrap; min-width:270px;"><span class="tag-critical">${dominant.label} (${sTotal > 0 ? ((maxC / sTotal) * 100).toFixed(1) : 0}%)</span></td>
         </tr>
       `;
     }).join('');
@@ -3174,7 +3415,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
             return `<td><span class="matrix-badge-cell mb-high" onclick="filterFromMatrix('all', '${stg.key}')" title="Click to view all ${c} records in Evidence Explorer">${c} (${pct}%)</span></td>`;
           }).join('')}
           <td><span class="num-bold" style="color:var(--groww-mint-dark)">${totalAll} (100%)</span></td>
-          <td>${totalAll} Verified Voices</td>
+          <td style="white-space:nowrap; min-width:270px;">${totalAll} Verified Voices</td>
         </tr>
       </tfoot>
     `;
@@ -3188,7 +3429,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
           <th>Checking &amp; XIRR Anxiety<br><small style="text-transform:none; font-weight:400; color:var(--ink-muted);">Daily Checking &amp; Math Confusion</small></th>
           <th>Cash Squeeze &amp; Fatigue<br><small style="text-transform:none; font-weight:400; color:var(--ink-muted);">Months 6–8 Squeeze &amp; Rigid Debit</small></th>
           <th>In-Scope Total</th>
-          <th>Dominant 12M Churn Driver</th>
+          <th style="white-space:nowrap; min-width:270px;">Dominant 12M Churn Driver</th>
         </tr>
       </thead>
     `;
@@ -3260,10 +3501,14 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     activeFilterStage = 'all';
     activeFilterStatus = 'all';
     activeFilterPanicSubsegment = 'all';
+    activeFilterTenure = 'all';
+    activeFilterTenuredCancel = 'all';
     document.querySelectorAll('#explorer-platform-pills .pill-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('#explorer-stage-pills .pill-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('#explorer-status-pills .pill-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('#explorer-panic-pills .pill-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#explorer-tenure-pills .pill-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#explorer-tenured-cancel-pills .pill-btn').forEach(b => b.classList.remove('active'));
     const pAll = document.getElementById('pill-plat-all');
     if (pAll) pAll.classList.add('active');
     const sAll = document.getElementById('pill-stage-all');
@@ -3272,6 +3517,10 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     if (statAll) statAll.classList.add('active');
     const panicAll = document.getElementById('pill-panic-all');
     if (panicAll) panicAll.classList.add('active');
+    const tAll = document.getElementById('pill-tenure-all');
+    if (tAll) tAll.classList.add('active');
+    const tcAll = document.getElementById('pill-tcancel-all');
+    if (tcAll) tcAll.classList.add('active');
 
     renderMatrixTable();
     updateExplorerFilterCounts();
@@ -3297,6 +3546,11 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
       return epStat === stat || (stat === 'active_last_30d' && (e.is_active_last_30d === true || epStat === 'active_last_30d'));
     }).length;
     const countPanic = sub => list.filter(e => (e.panic_subsegment || 'deep_red_cohort') === sub).length;
+    const countTenure = tKey => list.filter(e => {
+      const b = e.investor_tenure_bucket || 'early_0_3m';
+      return b === tKey || (tKey === 'tenured_12m_plus' && (e.is_tenured_12m_plus || b === 'tenured_12m_plus'));
+    }).length;
+    const countTCancel = rKey => list.filter(e => (e.tenured_cancel_reason || '') === rKey).length;
 
     const el = id => document.getElementById(id);
     if (el('pill-plat-all')) el('pill-plat-all').textContent = `All (${total})`;
@@ -3322,6 +3576,20 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     if (el('pill-panic-deep_red_cohort')) el('pill-panic-deep_red_cohort').textContent = `📉 Deep Red Cohort Rate (${countPanic('deep_red_cohort')})`;
     if (el('pill-panic-anxiety_session_freq')) el('pill-panic-anxiety_session_freq').textContent = `📲 Anxiety Session Freq (${countPanic('anxiety_session_freq')})`;
     if (el('pill-panic-post_crash_churn_velocity')) el('pill-panic-post_crash_churn_velocity').textContent = `⚡ Post-Crash Velocity (${countPanic('post_crash_churn_velocity')})`;
+
+    if (el('pill-tenure-all')) el('pill-tenure-all').textContent = `All Tenures (${total})`;
+    if (el('pill-tenure-tenured_12m_plus')) el('pill-tenure-tenured_12m_plus').textContent = `🏅 >12 Months Tenured (${countTenure('tenured_12m_plus')})`;
+    if (el('pill-tenure-squeeze_6_12m')) el('pill-tenure-squeeze_6_12m').textContent = `6–12 Months Squeeze (${countTenure('squeeze_6_12m')})`;
+    if (el('pill-tenure-cliff_3_6m')) el('pill-tenure-cliff_3_6m').textContent = `3–6 Months Cliff (${countTenure('cliff_3_6m')})`;
+    if (el('pill-tenure-early_0_3m')) el('pill-tenure-early_0_3m').textContent = `0–3 Months Early (${countTenure('early_0_3m')})`;
+
+    const tenuredTotal = countTenure('tenured_12m_plus');
+    if (el('pill-tcancel-all')) el('pill-tcancel-all').textContent = `All >12M Reasons (${tenuredTotal})`;
+    if (el('pill-tcancel-ltcg_tax_shock')) el('pill-tcancel-ltcg_tax_shock').textContent = `💸 LTCG Tax Shock (${countTCancel('ltcg_tax_shock')})`;
+    if (el('pill-tcancel-stepup_bloat_churn')) el('pill-tcancel-stepup_bloat_churn').textContent = `📈 Step-Up & Bloat (${countTCancel('stepup_bloat_churn')})`;
+    if (el('pill-tcancel-transfer_lockin_churn')) el('pill-tcancel-transfer_lockin_churn').textContent = `🔄 Switch & Lock-in (${countTCancel('transfer_lockin_churn')})`;
+    if (el('pill-tcancel-goal_exit_churn')) el('pill-tcancel-goal_exit_churn').textContent = `🎯 Goal Met Cash-Out (${countTCancel('goal_exit_churn')})`;
+    if (el('pill-tcancel-return_stagnation')) el('pill-tcancel-return_stagnation').textContent = `⚖️ Return Stagnation (${countTCancel('return_stagnation')})`;
   }
 
   async function loadEpisodes() {
@@ -3361,6 +3629,15 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
             panic_subsegment_desc: r.panic_subsegment_desc || '',
             panic_behavioral_driver: r.panic_behavioral_driver || '',
             panic_pm_intervention: r.panic_pm_intervention || '',
+            investor_tenure_bucket: r.investor_tenure_bucket || 'early_0_3m',
+            investor_tenure_label: r.investor_tenure_label || '0–3 Months Early Onboarding',
+            investor_tenure_badge: r.investor_tenure_badge || '⏳ Early (0–3M)',
+            is_tenured_12m_plus: r.is_tenured_12m_plus !== undefined ? r.is_tenured_12m_plus : (r.investor_tenure_bucket === 'tenured_12m_plus'),
+            tenured_cancel_reason: r.tenured_cancel_reason || null,
+            tenured_cancel_label: r.tenured_cancel_label || null,
+            tenured_cancel_badge: r.tenured_cancel_badge || null,
+            tenured_cancel_desc: r.tenured_cancel_desc || null,
+            tenured_cancel_fix: r.tenured_cancel_fix || null,
             title: r.title || `Investor Voice #${i+1}`,
             author: r.author || `Investor #${i+1}`,
             date: (r.date || '2026-10-24').slice(0, 10),
@@ -3404,6 +3681,80 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     if (filterType === 'stage') activeFilterStage = val;
     if (filterType === 'status') activeFilterStatus = val;
     if (filterType === 'panic_sub') activeFilterPanicSubsegment = val;
+    if (filterType === 'tenure') activeFilterTenure = val;
+    if (filterType === 'tenured_cancel') activeFilterTenuredCancel = val;
+    explorerDisplayLimit = 36;
+    applyEpisodesFilters();
+  }
+
+  function filterByTenure(tenureKey) {
+    switchTab('episodes');
+    activeFilterPlatform = 'all';
+    activeFilterStage = 'all';
+    activeFilterStatus = 'all';
+    activeFilterPanicSubsegment = 'all';
+    activeFilterTenure = tenureKey;
+    activeFilterTenuredCancel = 'all';
+    document.querySelectorAll('#explorer-tenure-pills .pill-btn').forEach(b => {
+      if (b.id === `pill-tenure-${tenureKey}`) b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-tenured-cancel-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-tcancel-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-status-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-status-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-platform-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-plat-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-stage-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-stage-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-panic-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-panic-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    explorerDisplayLimit = 36;
+    applyEpisodesFilters();
+  }
+
+  function filterByTenuredCancel(cancelKey) {
+    switchTab('episodes');
+    activeFilterPlatform = 'all';
+    activeFilterStage = 'all';
+    activeFilterStatus = 'all';
+    activeFilterPanicSubsegment = 'all';
+    activeFilterTenure = 'tenured_12m_plus';
+    activeFilterTenuredCancel = cancelKey;
+    document.querySelectorAll('#explorer-tenure-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-tenure-tenured_12m_plus') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-tenured-cancel-pills .pill-btn').forEach(b => {
+      if (b.id === `pill-tcancel-${cancelKey}`) b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-status-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-status-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-platform-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-plat-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-stage-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-stage-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
+    document.querySelectorAll('#explorer-panic-pills .pill-btn').forEach(b => {
+      if (b.id === 'pill-panic-all') b.classList.add('active');
+      else b.classList.remove('active');
+    });
     explorerDisplayLimit = 36;
     applyEpisodesFilters();
   }
@@ -3484,6 +3835,13 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
       const matchesPanicSub = activeFilterPanicSubsegment === 'all' ||
         (ep.panic_subsegment || 'deep_red_cohort') === activeFilterPanicSubsegment;
 
+      const matchesTenure = activeFilterTenure === 'all' ||
+        (ep.investor_tenure_bucket || 'early_0_3m') === activeFilterTenure ||
+        (activeFilterTenure === 'tenured_12m_plus' && (ep.is_tenured_12m_plus || ep.investor_tenure_bucket === 'tenured_12m_plus'));
+
+      const matchesTenuredCancel = activeFilterTenuredCancel === 'all' ||
+        (ep.tenured_cancel_reason || '') === activeFilterTenuredCancel;
+
       const matchesQuery = !query || 
         (ep.quote || '').toLowerCase().includes(query) ||
         (ep.text || '').toLowerCase().includes(query) ||
@@ -3497,6 +3855,10 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
         (ep.panic_subsegment_label || '').toLowerCase().includes(query) ||
         (ep.panic_subsegment || '').toLowerCase().includes(query) ||
         (ep.panic_subsegment_desc || '').toLowerCase().includes(query) ||
+        (ep.investor_tenure_label || '').toLowerCase().includes(query) ||
+        (ep.investor_tenure_badge || '').toLowerCase().includes(query) ||
+        (ep.tenured_cancel_label || '').toLowerCase().includes(query) ||
+        (ep.tenured_cancel_desc || '').toLowerCase().includes(query) ||
         (ep.stage_tags || []).some(t => t.toLowerCase().includes(query)) ||
         (ep.test_case_id || '').toLowerCase().includes(query) ||
         (ep.episode_id || '').toLowerCase().includes(query) ||
@@ -3505,7 +3867,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
         (ep.retained_cues || []).some(c => c.toLowerCase().includes(query)) ||
         (ep.lost_cues || []).some(l => l.toLowerCase().includes(query));
 
-      return matchesPlatform && matchesStage && matchesStatus && matchesPanicSub && matchesQuery;
+      return matchesPlatform && matchesStage && matchesStatus && matchesPanicSub && matchesTenure && matchesTenuredCancel && matchesQuery;
     });
 
     const datasetLabel = activeDatasetType === 'voices' ? 'Voices' : 'Episodes';
@@ -3562,6 +3924,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
             <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
               <span class="source-tag tag-${ep.source_code || 'play_store'}">${srcDisplay}</span>
               <span class="cohort-tag tag-${statusKey}" title="${ep.user_activity_label || statusLabel}">${statusLabel}</span>
+              <span class="tenure-tag tag-${ep.investor_tenure_bucket || 'early_0_3m'}" title="${ep.investor_tenure_label || ''}">${ep.investor_tenure_badge || '⏳ Early (0–3M)'}</span>
+              ${(ep.is_tenured_12m_plus && ep.tenured_cancel_badge) ? `<span class="cancel-tag tag-${ep.tenured_cancel_reason || 'ltcg_tax_shock'}" title="${ep.tenured_cancel_desc || ''}">${ep.tenured_cancel_badge}</span>` : ''}
               ${ep.panic_subsegment ? `<span class="panic-subtag tag-${panicKey}" title="${ep.panic_subsegment_desc || ep.panic_subsegment_label}">${panicBadge}</span>` : ''}
             </div>
             <span class="stage-tag tag-${stageKey}">${stageLabel}</span>

@@ -66,8 +66,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -79,7 +79,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-002",
@@ -145,8 +155,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Post-Crash Churn Velocity",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Post-Crash Churn Velocity"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -158,7 +168,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-003",
@@ -224,8 +244,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -237,7 +257,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-004",
@@ -303,8 +333,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -316,7 +346,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-005",
@@ -382,8 +422,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -395,7 +435,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-006",
@@ -460,8 +510,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "🏅 >12M Tenured",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -473,7 +523,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "ltcg_tax_shock",
+      "tenured_cancel_label": "LTCG Taxation & FIFO Realization Shock",
+      "tenured_cancel_badge": "🧾 LTCG & Tax Shock",
+      "tenured_cancel_desc": "Surpassing the 12-month mark triggers capital gains tax questions; confusion over how each monthly instalment carries its own 1-year clock causes investors to stop ongoing SIPs.",
+      "tenured_cancel_driver": "Tax Ambiguity Paralysis: Dread of complex ITR schedules and surprise tax liabilities at redemption.",
+      "tenured_cancel_fix": "Automated Annual Tax-Harvesting Visualizer & 1-Click Capital Gains ITR Tax Pack."
     },
     {
       "episode_id": "EP-007",
@@ -538,8 +598,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "SIP Pause, Skip & Cancellation",
       "user_activity_status": "active_last_30d",
@@ -551,7 +611,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-008",
@@ -617,8 +687,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "🏅 >12M Tenured",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -630,7 +700,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "ltcg_tax_shock",
+      "tenured_cancel_label": "LTCG Taxation & FIFO Realization Shock",
+      "tenured_cancel_badge": "🧾 LTCG & Tax Shock",
+      "tenured_cancel_desc": "Surpassing the 12-month mark triggers capital gains tax questions; confusion over how each monthly instalment carries its own 1-year clock causes investors to stop ongoing SIPs.",
+      "tenured_cancel_driver": "Tax Ambiguity Paralysis: Dread of complex ITR schedules and surprise tax liabilities at redemption.",
+      "tenured_cancel_fix": "Automated Annual Tax-Harvesting Visualizer & 1-Click Capital Gains ITR Tax Pack."
     },
     {
       "episode_id": "EP-009",
@@ -695,8 +775,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "At-Risk / Pending Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "SIP Pause, Skip & Cancellation",
       "user_activity_status": "at_risk",
@@ -708,7 +788,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-010",
@@ -773,8 +863,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "First-Time Onboarding & KYC",
       "user_activity_status": "active_last_30d",
@@ -786,7 +876,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-011",
@@ -852,8 +952,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -865,7 +965,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-012",
@@ -931,8 +1041,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -944,7 +1054,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-013",
@@ -1009,8 +1129,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -1022,7 +1142,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-014",
@@ -1088,8 +1218,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Stopped / Cancelled SIP",
-        "Post-Crash Churn Velocity",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Post-Crash Churn Velocity"
       ],
       "raw_sip_category": "SIP Pause, Skip & Cancellation",
       "user_activity_status": "churned",
@@ -1101,7 +1231,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-015",
@@ -1167,8 +1307,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -1180,7 +1320,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-016",
@@ -1214,8 +1364,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "At-Risk / Pending Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Market Drawdown & Loss Panic",
       "user_activity_status": "at_risk",
@@ -1227,7 +1377,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-017",
@@ -1261,8 +1421,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -1274,7 +1434,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-018",
@@ -1308,8 +1478,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Anxiety Session Frequency",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Anxiety Session Frequency"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -1321,7 +1491,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-019",
@@ -1354,8 +1534,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Expectation Mismatch & Return Salience",
       "user_activity_status": "active_last_30d",
@@ -1367,7 +1547,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-020",
@@ -1401,8 +1591,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "First-Time Onboarding & KYC",
       "user_activity_status": "active_last_30d",
@@ -1414,7 +1604,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-021",
@@ -1447,8 +1647,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "First-Time Onboarding & KYC",
       "user_activity_status": "active_last_30d",
@@ -1460,7 +1660,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-022",
@@ -1494,8 +1704,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "🏅 >12M Tenured",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Demat vs AMC Folios & Tracking",
       "user_activity_status": "active_last_30d",
@@ -1507,7 +1717,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "transfer_lockin_churn",
+      "tenured_cancel_label": "AMC Direct Switch & Demat Lock-in",
+      "tenured_cancel_badge": "🔒 Demat & Portability Lock-in",
+      "tenured_cancel_desc": "Frustration with CAS sync delays, demat unit rematerialization, or wanting direct zero-commission plans leads investors to cancel their active broker mandate.",
+      "tenured_cancel_driver": "Portability Friction: Perceived platform lock-in and opaque folio transfer procedures.",
+      "tenured_cancel_fix": "Instant In-App Regular-to-Direct Converter & Seamless MFCentral CAS Portability."
     },
     {
       "episode_id": "EP-023",
@@ -1541,8 +1761,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -1554,7 +1774,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-024",
@@ -1588,8 +1818,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Post-Crash Churn Velocity",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Post-Crash Churn Velocity"
       ],
       "raw_sip_category": "Portfolio Checking & XIRR Anxiety",
       "user_activity_status": "active_last_30d",
@@ -1601,7 +1831,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-025",
@@ -1635,8 +1875,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Anxiety Session Frequency",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Anxiety Session Frequency"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -1648,7 +1888,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-026",
@@ -1682,8 +1932,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Demat vs AMC Folios & Tracking",
       "user_activity_status": "active_last_30d",
@@ -1695,7 +1945,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-027",
@@ -1729,8 +1989,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Anxiety Session Frequency",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Anxiety Session Frequency"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -1742,7 +2002,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-028",
@@ -1776,8 +2046,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -1789,7 +2059,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-029",
@@ -1823,8 +2103,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Stopped / Cancelled SIP",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Cash Squeeze & Habit Fatigue",
       "user_activity_status": "churned",
@@ -1836,7 +2116,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-030",
@@ -1869,8 +2159,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "First-Time Onboarding & KYC",
       "user_activity_status": "active_last_30d",
@@ -1882,7 +2172,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-031",
@@ -1916,8 +2216,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Stopped / Cancelled SIP",
-        "Post-Crash Churn Velocity",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Post-Crash Churn Velocity"
       ],
       "raw_sip_category": "Cash Squeeze & Habit Fatigue",
       "user_activity_status": "churned",
@@ -1929,7 +2229,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-032",
@@ -1963,8 +2273,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -1976,7 +2286,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-033",
@@ -2009,8 +2329,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2022,7 +2342,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-034",
@@ -2056,8 +2386,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Post-Crash Churn Velocity",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Post-Crash Churn Velocity"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -2069,7 +2399,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-035",
@@ -2103,8 +2443,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2116,7 +2456,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-036",
@@ -2150,8 +2500,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2163,7 +2513,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-037",
@@ -2196,8 +2556,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2209,7 +2569,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-038",
@@ -2242,8 +2612,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Anxiety Session Frequency",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Anxiety Session Frequency"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -2255,7 +2625,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-039",
@@ -2289,8 +2669,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2302,7 +2682,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-040",
@@ -2335,8 +2725,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2348,7 +2738,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-041",
@@ -2382,8 +2782,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2395,7 +2795,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-042",
@@ -2428,8 +2838,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Market Drawdown & Loss Panic",
       "user_activity_status": "active_last_30d",
@@ -2441,7 +2851,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-043",
@@ -2475,8 +2895,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Anxiety Session Frequency",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Anxiety Session Frequency"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -2488,7 +2908,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-044",
@@ -2521,8 +2951,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Demat vs AMC Folios & Tracking",
       "user_activity_status": "active_last_30d",
@@ -2534,7 +2964,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-045",
@@ -2568,8 +3008,8 @@
       "segment_meaning": "Loss aversion triggered by initial nominal portfolio dip (-3% to -8%) during months 3–5; investor stops SIP believing equity mutual funds are eroding capital.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Deep Red Cohort Rate",
-        "Months 3–5 Drawdown Panic"
+        "Months 3–5 Drawdown Panic",
+        "Deep Red Cohort Rate"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -2581,7 +3021,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-046",
@@ -2628,7 +3078,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-047",
@@ -2674,7 +3134,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-048",
@@ -2721,7 +3191,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-049",
@@ -2768,7 +3248,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-050",
@@ -2815,7 +3305,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-051",
@@ -2862,7 +3362,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-052",
@@ -2909,7 +3419,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-053",
@@ -2956,7 +3476,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-054",
@@ -3003,7 +3533,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-055",
@@ -3050,7 +3590,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-056",
@@ -3097,7 +3647,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-057",
@@ -3144,7 +3704,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-058",
@@ -3191,7 +3761,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-059",
@@ -3238,7 +3818,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-060",
@@ -3285,7 +3875,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-061",
@@ -3331,7 +3931,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-062",
@@ -3378,7 +3988,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-063",
@@ -3424,7 +4044,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-064",
@@ -3471,7 +4101,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-065",
@@ -3517,7 +4157,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-066",
@@ -3564,7 +4214,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-067",
@@ -3611,7 +4271,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-068",
@@ -3658,7 +4328,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-069",
@@ -3704,7 +4384,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "cliff_3_6m",
+      "investor_tenure_label": "Months 3–6 (Drawdown Cliff)",
+      "investor_tenure_badge": "📉 M3–6 Cliff",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-070",
@@ -3751,7 +4441,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-071",
@@ -3797,7 +4497,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-072",
@@ -3843,7 +4553,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-073",
@@ -3891,7 +4611,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-074",
@@ -3938,7 +4668,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-075",
@@ -3985,7 +4725,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-076",
@@ -4031,7 +4781,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-077",
@@ -4077,7 +4837,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-078",
@@ -4124,7 +4894,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-079",
@@ -4170,7 +4950,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-080",
@@ -4217,7 +5007,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-081",
@@ -4264,7 +5064,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-082",
@@ -4300,8 +5110,8 @@
       "segment_meaning": "Day-0 expectation gap: anticipating linear FD-like monthly compounding, unrealistic 30%+ returns, or spreading investments across overlapping funds.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Day-0 Linear Return Illusion",
-        "KYC & First-Time Onboarding"
+        "🏅 >12M Tenured",
+        "Day-0 Linear Return Illusion"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -4313,7 +5123,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "goal_exit_churn",
+      "tenured_cancel_label": "Goal Completion & Milestone Cash-Out",
+      "tenured_cancel_badge": "🎯 Goal Cash-Out Exit",
+      "tenured_cancel_desc": "Investor achieved an initial milestone (e.g. ₹1L–₹2L emergency fund or purchase) and cancelled the SIP due to the absence of a structured next-horizon goal prompt.",
+      "tenured_cancel_driver": "Milestone Vacuum: Reaching a short-term target without an automated transition to a multi-year wealth horizon triggers full redemption.",
+      "tenured_cancel_fix": "Next-Horizon Goal Engine: Proactively suggest transitioning completed milestones into long-term compounding buckets."
     },
     {
       "episode_id": "EP-083",
@@ -4348,8 +5168,8 @@
       "segment_meaning": "Day-0 expectation gap: anticipating linear FD-like monthly compounding, unrealistic 30%+ returns, or spreading investments across overlapping funds.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Day-0 Linear Return Illusion",
-        "KYC & First-Time Onboarding"
+        "🏅 >12M Tenured",
+        "Day-0 Linear Return Illusion"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -4361,7 +5181,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "goal_exit_churn",
+      "tenured_cancel_label": "Goal Completion & Milestone Cash-Out",
+      "tenured_cancel_badge": "🎯 Goal Cash-Out Exit",
+      "tenured_cancel_desc": "Investor achieved an initial milestone (e.g. ₹1L–₹2L emergency fund or purchase) and cancelled the SIP due to the absence of a structured next-horizon goal prompt.",
+      "tenured_cancel_driver": "Milestone Vacuum: Reaching a short-term target without an automated transition to a multi-year wealth horizon triggers full redemption.",
+      "tenured_cancel_fix": "Next-Horizon Goal Engine: Proactively suggest transitioning completed milestones into long-term compounding buckets."
     },
     {
       "episode_id": "EP-084",
@@ -4408,7 +5238,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-085",
@@ -4457,7 +5297,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-086",
@@ -4503,7 +5353,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-087",
@@ -4537,8 +5397,8 @@
       "segment_meaning": "Day-0 expectation gap: anticipating linear FD-like monthly compounding, unrealistic 30%+ returns, or spreading investments across overlapping funds.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Day-0 Linear Return Illusion",
-        "KYC & First-Time Onboarding"
+        "🏅 >12M Tenured",
+        "Day-0 Linear Return Illusion"
       ],
       "raw_sip_category": "First-Time Onboarding & KYC",
       "user_activity_status": "active_last_30d",
@@ -4550,7 +5410,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "transfer_lockin_churn",
+      "tenured_cancel_label": "AMC Direct Switch & Demat Lock-in",
+      "tenured_cancel_badge": "🔒 Demat & Portability Lock-in",
+      "tenured_cancel_desc": "Frustration with CAS sync delays, demat unit rematerialization, or wanting direct zero-commission plans leads investors to cancel their active broker mandate.",
+      "tenured_cancel_driver": "Portability Friction: Perceived platform lock-in and opaque folio transfer procedures.",
+      "tenured_cancel_fix": "Instant In-App Regular-to-Direct Converter & Seamless MFCentral CAS Portability."
     },
     {
       "episode_id": "EP-088",
@@ -4596,7 +5466,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-089",
@@ -4642,7 +5522,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-090",
@@ -4689,7 +5579,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-091",
@@ -4736,7 +5636,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-092",
@@ -4783,7 +5693,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-093",
@@ -4819,8 +5739,8 @@
       "segment_meaning": "Micro-monitoring anxiety: opening app daily, confusion over volatile 1-month XIRR vs absolute gains, or Demat vs AMC folio allotment cutoff timings.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Daily Checking & Math Confusion",
-        "Demat vs AMC Folio Tracking"
+        "🏅 >12M Tenured",
+        "Daily Checking & Math Confusion"
       ],
       "raw_sip_category": "Demat vs AMC Folios & Tracking",
       "user_activity_status": "active_last_30d",
@@ -4832,7 +5752,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "goal_exit_churn",
+      "tenured_cancel_label": "Goal Completion & Milestone Cash-Out",
+      "tenured_cancel_badge": "🎯 Goal Cash-Out Exit",
+      "tenured_cancel_desc": "Investor achieved an initial milestone (e.g. ₹1L–₹2L emergency fund or purchase) and cancelled the SIP due to the absence of a structured next-horizon goal prompt.",
+      "tenured_cancel_driver": "Milestone Vacuum: Reaching a short-term target without an automated transition to a multi-year wealth horizon triggers full redemption.",
+      "tenured_cancel_fix": "Next-Horizon Goal Engine: Proactively suggest transitioning completed milestones into long-term compounding buckets."
     },
     {
       "episode_id": "EP-094",
@@ -4879,7 +5809,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-095",
@@ -4913,8 +5853,8 @@
       "segment_meaning": "Micro-monitoring anxiety: opening app daily, confusion over volatile 1-month XIRR vs absolute gains, or Demat vs AMC folio allotment cutoff timings.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Daily Checking & Math Confusion",
-        "Daily NAV Micro-Monitoring"
+        "🏅 >12M Tenured",
+        "Daily Checking & Math Confusion"
       ],
       "raw_sip_category": "Step-Up & Top-Up SIP",
       "user_activity_status": "active_last_30d",
@@ -4926,7 +5866,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "ltcg_tax_shock",
+      "tenured_cancel_label": "LTCG Taxation & FIFO Realization Shock",
+      "tenured_cancel_badge": "🧾 LTCG & Tax Shock",
+      "tenured_cancel_desc": "Surpassing the 12-month mark triggers capital gains tax questions; confusion over how each monthly instalment carries its own 1-year clock causes investors to stop ongoing SIPs.",
+      "tenured_cancel_driver": "Tax Ambiguity Paralysis: Dread of complex ITR schedules and surprise tax liabilities at redemption.",
+      "tenured_cancel_fix": "Automated Annual Tax-Harvesting Visualizer & 1-Click Capital Gains ITR Tax Pack."
     },
     {
       "episode_id": "EP-096",
@@ -4961,8 +5911,8 @@
       "segment_meaning": "Micro-monitoring anxiety: opening app daily, confusion over volatile 1-month XIRR vs absolute gains, or Demat vs AMC folio allotment cutoff timings.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Daily Checking & Math Confusion",
-        "Demat vs AMC Folio Tracking"
+        "🏅 >12M Tenured",
+        "Daily Checking & Math Confusion"
       ],
       "raw_sip_category": "First-Time Onboarding & KYC",
       "user_activity_status": "active_last_30d",
@@ -4974,7 +5924,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "goal_exit_churn",
+      "tenured_cancel_label": "Goal Completion & Milestone Cash-Out",
+      "tenured_cancel_badge": "🎯 Goal Cash-Out Exit",
+      "tenured_cancel_desc": "Investor achieved an initial milestone (e.g. ₹1L–₹2L emergency fund or purchase) and cancelled the SIP due to the absence of a structured next-horizon goal prompt.",
+      "tenured_cancel_driver": "Milestone Vacuum: Reaching a short-term target without an automated transition to a multi-year wealth horizon triggers full redemption.",
+      "tenured_cancel_fix": "Next-Horizon Goal Engine: Proactively suggest transitioning completed milestones into long-term compounding buckets."
     },
     {
       "episode_id": "EP-097",
@@ -5008,8 +5968,8 @@
       "segment_meaning": "Micro-monitoring anxiety: opening app daily, confusion over volatile 1-month XIRR vs absolute gains, or Demat vs AMC folio allotment cutoff timings.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Daily Checking & Math Confusion",
-        "Step-Up SIP Math"
+        "🏅 >12M Tenured",
+        "Daily Checking & Math Confusion"
       ],
       "raw_sip_category": "SIP Pause, Skip & Cancellation",
       "user_activity_status": "active_last_30d",
@@ -5021,7 +5981,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "stepup_bloat_churn",
+      "tenured_cancel_label": "Step-Up Friction & Portfolio Bloat",
+      "tenured_cancel_badge": "📈 Step-Up & Overlap Bloat",
+      "tenured_cancel_desc": "Annual auto step-up elevates monthly deductions beyond comfort, or holding 6+ overlapping funds causes cognitive overwhelm, leading to abrupt cancellations of older funds.",
+      "tenured_cancel_driver": "Choice & Payment Overwhelm: Accumulating duplicate funds and rigid automatic payment hikes.",
+      "tenured_cancel_fix": "1-Click Portfolio Pruning & Smart Step-Up Cap with Salary Alignment."
     },
     {
       "episode_id": "EP-098",
@@ -5068,7 +6038,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-099",
@@ -5114,7 +6094,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-100",
@@ -5160,7 +6150,17 @@
       "panic_subsegment_badge": "⚡ Post-Crash Velocity",
       "panic_subsegment_desc": "Rapid mandate cancellation latency where the investor panic-stops or pauses autopay before the next debit following a market correction.",
       "panic_behavioral_driver": "Capitulation at Market Bottom: Selling low and cancelling autopay before cost-averaging can compound.",
-      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation."
+      "panic_pm_intervention": "Smart 1–3M Dip Pause: Provide a low-friction pause with historical recovery projection instead of binary cancellation.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-101",
@@ -5207,7 +6207,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-102",
@@ -5254,7 +6264,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-103",
@@ -5301,7 +6321,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-104",
@@ -5348,7 +6378,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-105",
@@ -5395,7 +6435,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-106",
@@ -5442,7 +6492,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-107",
@@ -5489,7 +6549,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-108",
@@ -5536,7 +6606,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-109",
@@ -5570,8 +6650,8 @@
       "segment_meaning": "Micro-monitoring anxiety: opening app daily, confusion over volatile 1-month XIRR vs absolute gains, or Demat vs AMC folio allotment cutoff timings.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Daily Checking & Math Confusion",
-        "Daily NAV Micro-Monitoring"
+        "🏅 >12M Tenured",
+        "Daily Checking & Math Confusion"
       ],
       "raw_sip_category": "Market Dips & Loss Aversion",
       "user_activity_status": "active_last_30d",
@@ -5583,7 +6663,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "transfer_lockin_churn",
+      "tenured_cancel_label": "AMC Direct Switch & Demat Lock-in",
+      "tenured_cancel_badge": "🔒 Demat & Portability Lock-in",
+      "tenured_cancel_desc": "Frustration with CAS sync delays, demat unit rematerialization, or wanting direct zero-commission plans leads investors to cancel their active broker mandate.",
+      "tenured_cancel_driver": "Portability Friction: Perceived platform lock-in and opaque folio transfer procedures.",
+      "tenured_cancel_fix": "Instant In-App Regular-to-Direct Converter & Seamless MFCentral CAS Portability."
     },
     {
       "episode_id": "EP-110",
@@ -5617,8 +6707,8 @@
       "segment_meaning": "Micro-monitoring anxiety: opening app daily, confusion over volatile 1-month XIRR vs absolute gains, or Demat vs AMC folio allotment cutoff timings.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Daily Checking & Math Confusion",
-        "Daily NAV Micro-Monitoring"
+        "🏅 >12M Tenured",
+        "Daily Checking & Math Confusion"
       ],
       "raw_sip_category": "Taxation & Locked Units",
       "user_activity_status": "active_last_30d",
@@ -5630,7 +6720,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "ltcg_tax_shock",
+      "tenured_cancel_label": "LTCG Taxation & FIFO Realization Shock",
+      "tenured_cancel_badge": "🧾 LTCG & Tax Shock",
+      "tenured_cancel_desc": "Surpassing the 12-month mark triggers capital gains tax questions; confusion over how each monthly instalment carries its own 1-year clock causes investors to stop ongoing SIPs.",
+      "tenured_cancel_driver": "Tax Ambiguity Paralysis: Dread of complex ITR schedules and surprise tax liabilities at redemption.",
+      "tenured_cancel_fix": "Automated Annual Tax-Harvesting Visualizer & 1-Click Capital Gains ITR Tax Pack."
     },
     {
       "episode_id": "EP-111",
@@ -5677,7 +6777,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-112",
@@ -5724,7 +6834,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-113",
@@ -5771,7 +6891,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-114",
@@ -5817,7 +6947,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-115",
@@ -5863,7 +7003,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-116",
@@ -5909,7 +7059,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-117",
@@ -5955,7 +7115,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-118",
@@ -6002,7 +7172,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-119",
@@ -6049,7 +7229,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-120",
@@ -6096,7 +7286,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "early_0_3m",
+      "investor_tenure_label": "Months 1–3 (Honeymoon & Setup)",
+      "investor_tenure_badge": "🌱 M1–3 Setup",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-121",
@@ -6143,7 +7343,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-122",
@@ -6190,7 +7400,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-123",
@@ -6237,7 +7457,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-124",
@@ -6284,7 +7514,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-125",
@@ -6331,7 +7571,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-126",
@@ -6378,7 +7628,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-127",
@@ -6425,7 +7685,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-128",
@@ -6471,7 +7741,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-129",
@@ -6518,7 +7798,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-130",
@@ -6564,7 +7854,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-131",
@@ -6598,8 +7898,8 @@
       "segment_meaning": "Life cash-flow friction during months 6–8 (festivals, medical, salary delays) where absence of 1-click pause/skip triggers bank bounce fees and forces SIP cancellation.",
       "stage_tags": [
         "Active SIP: Last 30D Instalment",
-        "Months 6–8 Squeeze & Rigid Debit",
-        "Cash Squeeze & Fatigue"
+        "🏅 >12M Tenured",
+        "Months 6–8 Squeeze & Rigid Debit"
       ],
       "raw_sip_category": "Fund Allocation & Overlap",
       "user_activity_status": "active_last_30d",
@@ -6611,7 +7911,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "tenured_12m_plus",
+      "investor_tenure_label": "🏅 Tenured (>12 Months)",
+      "investor_tenure_badge": "🏅 >12M Tenured",
+      "is_tenured_12m_plus": true,
+      "tenured_cancel_reason": "stepup_bloat_churn",
+      "tenured_cancel_label": "Step-Up Friction & Portfolio Bloat",
+      "tenured_cancel_badge": "📈 Step-Up & Overlap Bloat",
+      "tenured_cancel_desc": "Annual auto step-up elevates monthly deductions beyond comfort, or holding 6+ overlapping funds causes cognitive overwhelm, leading to abrupt cancellations of older funds.",
+      "tenured_cancel_driver": "Choice & Payment Overwhelm: Accumulating duplicate funds and rigid automatic payment hikes.",
+      "tenured_cancel_fix": "1-Click Portfolio Pruning & Smart Step-Up Cap with Salary Alignment."
     },
     {
       "episode_id": "EP-132",
@@ -6658,7 +7968,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-133",
@@ -6705,7 +8025,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-134",
@@ -6752,7 +8082,17 @@
       "panic_subsegment_badge": "📲 Anxiety Session Freq",
       "panic_subsegment_desc": "Hyper-frequent app opens driven by market dip notifications, daily P&L refreshing, and XIRR distortion anxiety.",
       "panic_behavioral_driver": "Compulsive Volatility Monitoring: Inability to tolerate short-term fluctuations, amplified by sensationalist notifications.",
-      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges."
+      "panic_pm_intervention": "Zen Mode & Dip Throttling: Suppress panic notifications and display educational rupee-cost averaging nudges.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-135",
@@ -6799,7 +8139,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-136",
@@ -6846,7 +8196,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-137",
@@ -6893,7 +8253,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-138",
@@ -6940,7 +8310,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-139",
@@ -6987,7 +8367,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-140",
@@ -7034,7 +8424,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-141",
@@ -7081,7 +8481,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-142",
@@ -7128,7 +8538,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-143",
@@ -7175,7 +8595,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     },
     {
       "episode_id": "EP-144",
@@ -7222,7 +8652,17 @@
       "panic_subsegment_badge": "📉 Deep Red Cohort",
       "panic_subsegment_desc": "First-time investor experiencing negative portfolio balance (-3% to -15% nominal drawdown), triggering acute loss aversion and capital erosion fear.",
       "panic_behavioral_driver": "Loss Aversion: Seeing negative portfolio value triggers emotional dread of permanent capital loss.",
-      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months."
+      "panic_pm_intervention": "90-Day Volatility Shield: Replace red nominal P&L with Units Accumulated View during early months.",
+      "investor_tenure_bucket": "squeeze_6_12m",
+      "investor_tenure_label": "Months 6–12 (Fatigue & Squeeze)",
+      "investor_tenure_badge": "⏳ M6–12 Squeeze",
+      "is_tenured_12m_plus": false,
+      "tenured_cancel_reason": null,
+      "tenured_cancel_label": null,
+      "tenured_cancel_badge": null,
+      "tenured_cancel_desc": null,
+      "tenured_cancel_driver": null,
+      "tenured_cancel_fix": null
     }
   ],
   "stage_breakdown": {
@@ -7236,5 +8676,20 @@
     "deep_red_cohort": 35,
     "anxiety_session_freq": 5,
     "post_crash_churn_velocity": 5
+  },
+  "tenure_breakdown": {
+    "cliff_3_6m": 43,
+    "tenured_12m_plus": 13,
+    "early_0_3m": 65,
+    "squeeze_6_12m": 23
+  },
+  "tenured_12m_cancel_breakdown": {
+    "total_tenured_12m_plus": 13,
+    "reasons": {
+      "ltcg_tax_shock": 4,
+      "transfer_lockin_churn": 3,
+      "goal_exit_churn": 4,
+      "stepup_bloat_churn": 2
+    }
   }
 }
