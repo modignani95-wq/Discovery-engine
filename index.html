@@ -4401,38 +4401,70 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
   }
 
   // Groq Audit Lab & Accuracy Scorecard
+  function applyGroqScorecard(m) {
+    if (!m) return;
+    const elOverall = document.getElementById('acc-overall');
+    const elAttr = document.getElementById('acc-attribution');
+    const elFaith = document.getElementById('acc-faithfulness');
+    const elPrec = document.getElementById('acc-precision');
+    const elHall = document.getElementById('acc-hallucination');
+    const elLat = document.getElementById('acc-latency');
+    const sideBadge = document.getElementById('sidebar-acc-badge');
+    
+    if (elOverall) elOverall.textContent = `${m.overall_accuracy_pct}%`;
+    if (elAttr) elAttr.textContent = `${m.source_attribution_pct}%`;
+    if (elFaith) elFaith.textContent = `${m.grounded_faithfulness_pct}%`;
+    if (elPrec) elPrec.textContent = `${m.verbatim_authenticity_pct}%`;
+    if (elHall) elHall.textContent = `${m.hallucination_rate_pct}%`;
+    if (elLat) elLat.textContent = `~${m.average_latency_ms}ms`;
+    if (sideBadge) sideBadge.textContent = `${m.overall_accuracy_pct}%`;
+  }
+
   async function loadGroqAccuracyScorecard() {
+    // 1. Immediate offline/pre-bundled hydration
+    if (window.GROQ_ACCURACY_SCORECARD && window.GROQ_ACCURACY_SCORECARD.accuracy_metrics) {
+      applyGroqScorecard(window.GROQ_ACCURACY_SCORECARD.accuracy_metrics);
+    }
+    // 2. Fetch live updates if server is online
     try {
       const res = await fetch('/api/sip/groq-accuracy');
-      const json = await res.json();
-      if (json.success && json.accuracy_metrics) {
-        const m = json.accuracy_metrics;
-        document.getElementById('acc-overall').textContent = `${m.overall_accuracy_pct}%`;
-        document.getElementById('acc-attribution').textContent = `${m.source_attribution_pct}%`;
-        document.getElementById('acc-faithfulness').textContent = `${m.grounded_faithfulness_pct}%`;
-        document.getElementById('acc-precision').textContent = `${m.verbatim_authenticity_pct}%`;
-        document.getElementById('acc-hallucination').textContent = `${m.hallucination_rate_pct}%`;
-        document.getElementById('acc-latency').textContent = `~${m.average_latency_ms}ms`;
-        
-        const sideBadge = document.getElementById('sidebar-acc-badge');
-        if (sideBadge) sideBadge.textContent = `${m.overall_accuracy_pct}%`;
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.accuracy_metrics) {
+          applyGroqScorecard(json.accuracy_metrics);
+        }
       }
     } catch (e) {
-      console.error("Error loading Groq accuracy:", e);
+      console.warn("Groq accuracy live fetch fallback:", e);
     }
   }
 
   async function loadGroqAuditResults() {
     const tbody = document.getElementById('rubrics-table-body');
-    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--ink-muted);">Loading Groq LPU evaluations...</td></tr>';
 
+    // 1. Immediate offline/pre-bundled hydration (0ms latency, zero-failure)
+    if (window.GROQ_JUDGE_RESULTS && Array.isArray(window.GROQ_JUDGE_RESULTS.evaluations) && window.GROQ_JUDGE_RESULTS.evaluations.length > 0) {
+      groqAuditResults = window.GROQ_JUDGE_RESULTS.evaluations;
+      renderAuditTable(groqAuditResults);
+    } else if (tbody && (!groqAuditResults || groqAuditResults.length === 0)) {
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--ink-muted);">Loading Groq LPU evaluations...</td></tr>';
+    }
+
+    // 2. Fetch live updates from server if available
     try {
       const res = await fetch('/api/sip/groq-results');
-      const json = await res.json();
-      groqAuditResults = json.evaluations || [];
-      renderAuditTable(groqAuditResults);
+      if (res.ok) {
+        const json = await res.json();
+        if (json.evaluations && json.evaluations.length > 0) {
+          groqAuditResults = json.evaluations;
+          renderAuditTable(groqAuditResults);
+        }
+      }
     } catch (err) {
-      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--groww-red);">Error loading evaluations.</td></tr>';
+      console.warn("Groq results live fetch fallback:", err);
+      if (!groqAuditResults || groqAuditResults.length === 0) {
+        if (tbody) tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--groww-red);">Error loading evaluations.</td></tr>';
+      }
     }
   }
 
@@ -4444,6 +4476,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
 
     if (verdict === 'all') {
       renderAuditTable(groqAuditResults);
+    } else if (verdict === 'TENURED_12M') {
+      renderAuditTable(groqAuditResults.filter(r => r.is_tenured_12m_plus || r.investor_tenure_bucket === 'tenured_12m_plus'));
     } else {
       renderAuditTable(groqAuditResults.filter(r => r.verdict === verdict));
     }
@@ -4451,7 +4485,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
 
   function renderAuditTable(list) {
     const tbody = document.getElementById('rubrics-table-body');
-    if (!list.length) {
+    if (!tbody) return;
+    if (!list || !list.length) {
       tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--ink-muted);">No evaluations found.</td></tr>';
       return;
     }
@@ -4467,6 +4502,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
       const pmScore = rubrics.pm_actionability || 3.5;
       const compScore = item.composite_score || rubrics.composite_score || 3.3;
 
+      const isTenured = item.is_tenured_12m_plus || item.investor_tenure_bucket === 'tenured_12m_plus';
+
       return `
         <tr>
           <td>
@@ -4479,6 +4516,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
           </td>
           <td>
             <span class="core-badge" style="font-size:11px;">${item.sip_category_name || item.extracted_sip_category || 'SIP'}</span>
+            ${isTenured ? `<div style="margin-top:4px;"><span style="display:inline-flex; align-items:center; gap:4px; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:12px; background:#EEF2FF; color:#4338CA; border:1px solid #C7D2FE;">🏅 &gt;12M Tenured</span></div>` : ''}
+            ${item.tenured_cancel_reason ? `<div style="margin-top:3px;"><span style="display:inline-block; font-size:10px; font-weight:600; padding:1px 6px; border-radius:8px; background:rgba(239,68,68,0.1); color:#DC2626; border:1px solid rgba(239,68,68,0.2);">${item.tenured_cancel_label || item.tenured_cancel_reason}</span></div>` : ''}
           </td>
           <td>
             <div style="font-size:11px; font-family:monospace; line-height:1.4;">
@@ -4534,11 +4573,40 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     }, 3000);
   }
 
+  async function runGroqTenuredBatchEvaluation() {
+    const btn = document.getElementById('run-groq-tenured-btn');
+    btn.textContent = "⏳ Auditing >12M Cases...";
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/sip/groq-judge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ count: 5, force: true, cohort: 'tenured_12m' })
+      });
+      const json = await res.json();
+      if (json.success) {
+        btn.textContent = "✅ >12M Audits Complete!";
+        loadGroqAuditResults();
+        loadGroqAccuracyScorecard();
+      } else {
+        btn.textContent = "⚠️ Error auditing";
+      }
+    } catch (err) {
+      btn.textContent = "⚠️ Network error";
+    }
+    setTimeout(() => {
+      btn.textContent = "⚡ Audit >12M Tenured Cases";
+      btn.disabled = false;
+    }, 3000);
+  }
+
   // Initializer
   window.addEventListener('DOMContentLoaded', () => {
     initTheme();
     loadEpisodes();
     loadGroqAccuracyScorecard();
+    loadGroqAuditResults();
     selectOppRow(document.getElementById('opp-row-O1'), 'O1');
   });
 </script>

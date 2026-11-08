@@ -190,8 +190,13 @@ def load_cached_results():
 
 def save_cached_results(data):
     """Save Groq judge evaluations to JSON."""
-    with open(RESULTS_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    try:
+        with open(RESULTS_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except OSError as e:
+        logger.warning(f"Unable to write to {RESULTS_FILE} (read-only file system or serverless environment): {e}")
+    except Exception as e:
+        logger.warning(f"Error saving to {RESULTS_FILE}: {e}")
 
 
 def judge_single_case(test_case, force=False):

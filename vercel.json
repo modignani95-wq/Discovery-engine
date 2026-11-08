@@ -9,7 +9,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index"
+      "destination": "/api/index.py?__vercel_subpath=$1"
     },
     {
       "source": "/((?!api/).*)",
