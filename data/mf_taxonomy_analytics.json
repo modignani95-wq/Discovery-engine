@@ -1,0 +1,323 @@
+{
+  "status": "success",
+  "total_evaluated_records": 2016,
+  "total_tagged_records": 402,
+  "total_unassigned_records": 1614,
+  "tag_distribution": {
+    "FUTURE_RETURN_UNCERTAINTY": 58,
+    "ALTERNATIVE_INVESTMENT_UNDERPERFORMANCE": 56,
+    "BELOW_EXPECTED_RETURNS": 4,
+    "TARGET_RETURN_MISMATCH": 5,
+    "INVESTMENT_HORIZON_MISMATCH": 36,
+    "MARKET_VOLATILITY_FEAR": 39,
+    "BENCHMARK_UNDERPERFORMANCE": 21,
+    "FINANCIAL_NEEDS_MISMATCH": 167,
+    "CAPITAL_LOSS_FEAR": 16
+  },
+  "category_distribution": {
+    "MUTUAL_FUND_RISK_PERCEPTION": 113,
+    "MUTUAL_FUND_RETURN_DISSATISFACTION": 81,
+    "MUTUAL_FUND_GOAL_SUITABILITY": 208
+  },
+  "categories": [
+    {
+      "category_id": "MUTUAL_FUND_RISK_PERCEPTION",
+      "category_name": "Mutual Fund Risk Perception",
+      "category_icon": "🛡️",
+      "badge_color": "#DC2626",
+      "bg_color": "#FEF2F2",
+      "border_color": "#FCA5A5",
+      "description": "Perceptions of risk, capital security, market downturns, and return predictability.",
+      "count": 113,
+      "percentage": 28.1,
+      "tags": [
+        {
+          "tag_id": "CAPITAL_LOSS_FEAR",
+          "name": "Capital Loss Fear",
+          "description": "Fear of losing invested principal or capital",
+          "keywords": [
+            "principal loss",
+            "investment loss",
+            "capital protection",
+            "loss aversion",
+            "fear of losing money"
+          ],
+          "behavioral_driver": "Extreme loss aversion triggered when portfolio value dips below net invested capital during market drops.",
+          "pm_intervention": "Automated 90-Day Volatility Shield & Unit Accumulation Reframing ('Your ₹2,000 bought 12% more units today at a discount').",
+          "count": 16,
+          "percentage": 4.0,
+          "sample_quotes": [
+            {
+              "text": "I have really experienced what you mentioned... I started my SIp around 2018. Until 2020 June - the market was almost bearish and I always saw negative returns....",
+              "author": "@rajakumarparuchuri327",
+              "source": "Youtube"
+            },
+            {
+              "text": "Doing investment in SIP since last 4 and half years. In first 3 years my portfolio was always in red and i felt like giving up but today the return I am getting...",
+              "author": "@nelkol6",
+              "source": "Youtube"
+            }
+          ]
+        },
+        {
+          "tag_id": "MARKET_VOLATILITY_FEAR",
+          "name": "Market Volatility Fear",
+          "description": "Fear caused by frequent market fluctuations and downturns",
+          "keywords": [
+            "market volatility",
+            "market fluctuations",
+            "market crash",
+            "market downturn",
+            "market uncertainty"
+          ],
+          "behavioral_driver": "Acute anxiety from day-to-day Sensex/Nifty swings causing retail investors to halt SIPs during nominal market corrections.",
+          "pm_intervention": "Pre-scheduled Market Dip Buy Multipliers and smart calm-down screens during >2% market corrections.",
+          "count": 39,
+          "percentage": 9.7,
+          "sample_quotes": [
+            {
+              "text": "Just another reason to increase confidence and influence sellers(in this case SIP) to not sell (not stop SIP) during the market crash.\n\nThe problem is indian ma...",
+              "author": "@niharkantipaul",
+              "source": "Youtube"
+            },
+            {
+              "text": "Ur videos are really helpful, i used to panic when market falls, lose my sleep atop sip all that. But now thanks to ur videos i dont care abt markets now. I jus...",
+              "author": "@weekendgamer85",
+              "source": "Youtube"
+            }
+          ]
+        },
+        {
+          "tag_id": "FUTURE_RETURN_UNCERTAINTY",
+          "name": "Future Return Uncertainty",
+          "description": "Concern about unpredictable or uncertain future investment returns",
+          "keywords": [
+            "unpredictable returns",
+            "return uncertainty",
+            "uncertain future returns",
+            "investment expectations",
+            "return predictability"
+          ],
+          "behavioral_driver": "Lack of clear mental models about market cycles leading to compulsive portfolio checking and XIRR confusion.",
+          "pm_intervention": "Monte Carlo Horizon Projections showing 3Y and 5Y historical rolling return bands instead of static fluctuating 1Y XIRR.",
+          "count": 58,
+          "percentage": 14.4,
+          "sample_quotes": [
+            {
+              "text": "So traditional assumption of 12% YOY returns is no longer valid now? If yes , what is the new safest assumption?",
+              "author": "@Shail2412",
+              "source": "Youtube"
+            },
+            {
+              "text": "Total invested 30,000, current value 30,400 (+400 profit). But app shows XIRR as -2.4%! How can profit be positive while XIRR is negative? This math confusion m...",
+              "author": "Android Investor (Coimbatore)",
+              "source": "Play Store"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category_id": "MUTUAL_FUND_GOAL_SUITABILITY",
+      "category_name": "Mutual Fund Goal Suitability",
+      "category_icon": "🎯",
+      "badge_color": "#D97706",
+      "bg_color": "#FFFBEB",
+      "border_color": "#FDE68A",
+      "description": "Alignment of mutual fund characteristics with investor life horizons, financial targets, and emergency liquidity.",
+      "count": 208,
+      "percentage": 51.7,
+      "tags": [
+        {
+          "tag_id": "TARGET_RETURN_MISMATCH",
+          "name": "Target Return Mismatch",
+          "description": "Investors believe mutual funds cannot generate sufficient returns to achieve their target financial goals.",
+          "keywords": [
+            "expected returns",
+            "return expectations",
+            "insufficient returns",
+            "target returns",
+            "investment goal returns",
+            "expected vs actual returns"
+          ],
+          "behavioral_driver": "Belief that mutual fund returns are insufficient to achieve aggressive wealth accumulation milestones.",
+          "pm_intervention": "Dynamic Goal-Deficit Calculator that automatically recommends step-up SIP percentages (+10%/yr) to keep target goals on track.",
+          "count": 5,
+          "percentage": 1.2,
+          "sample_quotes": [
+            {
+              "text": "0.1% extra on yearly means 1.5-3 % for period of 15-25 years horizon where corpus is in crores so even 0.1% with yearly compounding have significant benefits.🎉",
+              "author": "@TheSachin006",
+              "source": "Youtube"
+            },
+            {
+              "text": "I have an idea . How about you first decide how much cagr you want, say 12 to 18 percent, depending upon the index. Then every month or quarter, do a lump sum ,...",
+              "author": "@DrCajetanTellis",
+              "source": "Youtube"
+            }
+          ]
+        },
+        {
+          "tag_id": "INVESTMENT_HORIZON_MISMATCH",
+          "name": "Investment Horizon Mismatch",
+          "description": "Investors believe mutual funds do not align with the time available to achieve their financial goals.",
+          "keywords": [
+            "short-term goals",
+            "long-term goals",
+            "investment duration",
+            "time horizon",
+            "investment timeline",
+            "early withdrawal"
+          ],
+          "behavioral_driver": "Mismatch between volatile equity mutual fund products and short 6-12 month financial goals.",
+          "pm_intervention": "Pre-Checkout Goal Horizon Calibration routing sub-3Y goals into Arbitrage/Liquid funds rather than Mid/Small Cap equity.",
+          "count": 36,
+          "percentage": 9.0,
+          "sample_quotes": [
+            {
+              "text": "Could please talk about weekly SIP short term returns (6 months to 1 year) vs monthly sip same duration",
+              "author": "@vj9646",
+              "source": "Youtube"
+            },
+            {
+              "text": "Sir pls make a video for girl child long term investment",
+              "author": "@RajuKumar-iz1vj",
+              "source": "Youtube"
+            }
+          ]
+        },
+        {
+          "tag_id": "FINANCIAL_NEEDS_MISMATCH",
+          "name": "Financial Needs Mismatch",
+          "description": "Investors believe mutual funds do not meet their liquidity, income, capital protection, or other financial requirements.",
+          "keywords": [
+            "liquidity needs",
+            "capital protection",
+            "income requirements",
+            "financial goal suitability",
+            "emergency fund",
+            "access to money"
+          ],
+          "behavioral_driver": "Rigid auto-debit dates clashing with month-end liquidity crunches and lack of flexible instant access to capital.",
+          "pm_intervention": "Dynamic Salary-Day Smart Auto-Debit buffer with 1-Click SIP Pause and Instant Overdraft Liquidity against MF units.",
+          "count": 167,
+          "percentage": 41.5,
+          "sample_quotes": [
+            {
+              "text": "1. Get a Job\n2. Insurance (Life + health)\n3. Emergency Fund (Equal to 6 month of Expense)\n4. SIP with Step up\n\nBe Disciplined and Patient with your money.",
+              "author": "@TuhinRL_46",
+              "source": "Youtube"
+            },
+            {
+              "text": "Comment by u/ActiveTop6570: Have 3 years of emergency money first. Dont let sip money run as there is no timeline when this dooms day will get over Consider pos...",
+              "author": "u/ActiveTop6570",
+              "source": "Reddit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category_id": "MUTUAL_FUND_RETURN_DISSATISFACTION",
+      "category_name": "Mutual Fund Return Dissatisfaction",
+      "category_icon": "📉",
+      "badge_color": "#2563EB",
+      "bg_color": "#EFF6FF",
+      "border_color": "#BFDBFE",
+      "description": "Dissatisfaction stemming from returns lagging investor expectations, benchmark indices, or alternative investment vehicles.",
+      "count": 81,
+      "percentage": 20.1,
+      "tags": [
+        {
+          "tag_id": "BELOW_EXPECTED_RETURNS",
+          "name": "Below Expected Returns",
+          "description": "Investors are dissatisfied because actual mutual fund returns are lower than their expected returns.",
+          "keywords": [
+            "below expected returns",
+            "return expectations",
+            "expected vs actual returns",
+            "return disappointment",
+            "investment expectations",
+            "lower than anticipated returns"
+          ],
+          "behavioral_driver": "Unrealistic Day-0 20%+ return expectations anchored from bull market influencer claims encountering realistic 11-13% equity CAGR.",
+          "pm_intervention": "Day-0 Return Expectation Calibration and 5Y Rolling Return visualizer during initial onboarding.",
+          "count": 4,
+          "percentage": 1.0,
+          "sample_quotes": [
+            {
+              "text": "Why don't you say directly that SIP won't give good returns in future so no benefit of investing in SIP",
+              "author": "@gauravmongia9192",
+              "source": "Youtube"
+            },
+            {
+              "text": "Pata nhi sir paisa banta bhi hai ya nhi...very disappointed.",
+              "author": "@Y2k1003",
+              "source": "Youtube"
+            }
+          ]
+        },
+        {
+          "tag_id": "BENCHMARK_UNDERPERFORMANCE",
+          "name": "Benchmark Underperformance",
+          "description": "Investors are dissatisfied because their mutual fund performs worse than its relevant benchmark.",
+          "keywords": [
+            "benchmark underperformance",
+            "benchmark comparison",
+            "index underperformance",
+            "fund performance",
+            "relative returns",
+            "Nifty comparison",
+            "BSE benchmark"
+          ],
+          "behavioral_driver": "Anger at paying active expense ratio (TER) of 0.8%-1.5% while fund lags Nifty 50 TRI index.",
+          "pm_intervention": "Smart Rolling Alpha Transparency & automated AMC portfolio peer-quartile health checks.",
+          "count": 21,
+          "percentage": 5.2,
+          "sample_quotes": [
+            {
+              "text": "Your video deserves more views. No bullshit and stupid advice.. good work pranjal.. keep doing the good work! 👌🏽",
+              "author": "@RohitS-om5jy",
+              "source": "Youtube"
+            },
+            {
+              "text": "Why your Small and Mid cap model portfolio, Growth model portfolio can't beat the benchmark",
+              "author": "@monojbauri3001",
+              "source": "Youtube"
+            }
+          ]
+        },
+        {
+          "tag_id": "ALTERNATIVE_INVESTMENT_UNDERPERFORMANCE",
+          "name": "Alternative Underperformance",
+          "description": "Investors dissatisfied because mutual fund returns are lower than returns from alternative investment options.",
+          "keywords": [
+            "fixed deposit comparison",
+            "FD returns",
+            "stock market returns",
+            "gold returns",
+            "alternative investment returns",
+            "opportunity cost",
+            "competing investment options"
+          ],
+          "behavioral_driver": "Opportunity cost frustration when direct equity or risk-free bank FDs outperform MF NAV in the short run.",
+          "pm_intervention": "Tax-Adjusted Post-Inflation Return Comparison widget illustrating post-tax compounding vs 7% taxable bank FD.",
+          "count": 56,
+          "percentage": 13.9,
+          "sample_quotes": [
+            {
+              "text": "Mf returns are negative for those who started in 5years back . MF asset managers are not delivering as per expectations. If it continues like this, how much eve...",
+              "author": "@shantkumart",
+              "source": "Youtube"
+            },
+            {
+              "text": "@Shankar, we should also include the percentage of return the lumpsump amount staying FD while they have not invested yet",
+              "author": "@omkarkhatavkar8563",
+              "source": "Youtube"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

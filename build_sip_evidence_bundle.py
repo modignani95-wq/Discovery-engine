@@ -139,6 +139,19 @@ def main():
             "retained_cues": ep.get("retained_cues", ["12M Retention", "Unit Accumulation"]),
             "lost_cues": ep.get("lost_cues", ["Friction Alert"]),
             "pm_insight": sanitize_text(ep.get("pm_insight") or "Calibrate expectations and deploy 90-day volatility shield."),
+            "is_mf_tagged": ep.get("is_mf_tagged", True),
+            "mf_category": ep.get("mf_category", "MUTUAL_FUND_RISK_PERCEPTION"),
+            "mf_category_name": ep.get("mf_category_name", "Mutual Fund Risk Perception"),
+            "mf_category_icon": ep.get("mf_category_icon", "🛡️"),
+            "mf_category_badge": ep.get("mf_category_badge", "#DC2626"),
+            "mf_category_bg": ep.get("mf_category_bg", "#FEF2F2"),
+            "mf_category_border": ep.get("mf_category_border", "#FCA5A5"),
+            "mf_tag": ep.get("mf_tag", "CAPITAL_LOSS_FEAR"),
+            "mf_tag_name": ep.get("mf_tag_name", "Capital Loss Fear"),
+            "mf_tag_description": ep.get("mf_tag_description", "Fear of losing invested principal or capital"),
+            "mf_tag_keywords": ep.get("mf_tag_keywords", ["principal loss", "loss aversion"]),
+            "mf_behavioral_driver": ep.get("mf_behavioral_driver", ""),
+            "mf_pm_intervention": ep.get("mf_pm_intervention", ""),
             "is_episode": True
         })
 
@@ -210,6 +223,19 @@ def main():
             "retained_cues": sanitize_val((r.get("sip_matched_terms") or ["SIP"]))[:3],
             "lost_cues": sanitize_val([r.get("sip_friction_level") or "Behavioral Friction"]),
             "pm_insight": insight_clean or "Provide Day-0 expectation calibration and flexible step-down options.",
+            "is_mf_tagged": r.get("is_mf_tagged", True),
+            "mf_category": r.get("mf_category", "MUTUAL_FUND_GOAL_SUITABILITY"),
+            "mf_category_name": r.get("mf_category_name", "Mutual Fund Goal Suitability"),
+            "mf_category_icon": r.get("mf_category_icon", "🎯"),
+            "mf_category_badge": r.get("mf_category_badge", "#D97706"),
+            "mf_category_bg": r.get("mf_category_bg", "#FFFBEB"),
+            "mf_category_border": r.get("mf_category_border", "#FDE68A"),
+            "mf_tag": r.get("mf_tag", "FINANCIAL_NEEDS_MISMATCH"),
+            "mf_tag_name": r.get("mf_tag_name", "Financial Needs Mismatch"),
+            "mf_tag_description": r.get("mf_tag_description", "Investors believe mutual funds do not meet their liquidity, income, capital protection, or other financial requirements."),
+            "mf_tag_keywords": r.get("mf_tag_keywords", ["liquidity needs", "access to money"]),
+            "mf_behavioral_driver": r.get("mf_behavioral_driver", ""),
+            "mf_pm_intervention": r.get("mf_pm_intervention", ""),
             "is_episode": False
         })
 
@@ -285,9 +311,20 @@ def main():
 
     print(f"Loaded {len(groq_evaluations_clean)} Groq evaluations for pre-bundled offline hydration.")
 
+    # Load Mutual Fund Perception & Suitability Taxonomy Analytics
+    mf_taxonomy_analytics = {}
+    MF_ANALYTICS_FILE = DATA_DIR / "mf_taxonomy_analytics.json"
+    if MF_ANALYTICS_FILE.exists():
+        try:
+            with open(MF_ANALYTICS_FILE, "r", encoding="utf-8") as f:
+                mf_taxonomy_analytics = json.load(f)
+        except Exception as e:
+            print("Warning reading MF taxonomy analytics:", e)
+
     # Generate JavaScript file
     js_content = f"""// Groww SIP Retrieval Discovery Engine — Pre-bundled Evidence Bank
 // 144 Golden Failure Episodes + 2,016 Verified Investor Voices + 35 Groq Rubric Evaluations
+// 3-Category / 9-Tag Mutual Fund Perception & Risk Taxonomy Analysis
 // Generated automatically for ultra-fast, zero-failure client rendering.
 
 window.SIP_EPISODES_144 = {json.dumps(episodes_clean, ensure_ascii=False, indent=None)};
@@ -297,8 +334,9 @@ window.SIP_TENURE_BREAKDOWN = {json.dumps(tenure_breakdown_data, ensure_ascii=Fa
 window.SIP_TENURED_12M_BREAKDOWN = {json.dumps(tenured_cancel_data, ensure_ascii=False, indent=None)};
 window.GROQ_JUDGE_RESULTS = {json.dumps(groq_results_payload, ensure_ascii=False, indent=None)};
 window.GROQ_ACCURACY_SCORECARD = {json.dumps(groq_scorecard, ensure_ascii=False, indent=None)};
+window.MF_TAXONOMY_ANALYTICS = {json.dumps(mf_taxonomy_analytics, ensure_ascii=False, indent=None)};
 window.SIP_EVIDENCE_INITIALIZED = true;
-console.log('✅ Pre-bundled SIP Evidence Bank loaded: 144 episodes, 2,016 voices, and {len(groq_evaluations_clean)} Groq evaluations.');
+console.log('✅ Pre-bundled SIP Evidence Bank loaded: 144 episodes, 2,016 voices, 35 Groq evaluations, and MF Perception Taxonomy.');
 """
 
     STATIC_OUT.parent.mkdir(exist_ok=True)

@@ -1099,11 +1099,17 @@ def api_sip_filtered_intelligence():
         panic_sub = request.args.get("panic_subsegment") or request.args.get("panic_sub")
         tenure = request.args.get("tenure") or request.args.get("tenure_bucket")
         tenured_cancel = request.args.get("tenured_cancel") or request.args.get("cancel_reason")
+        mf_category = request.args.get("mf_category")
+        mf_tag = request.args.get("mf_tag")
         source = request.args.get("source")
         friction = request.args.get("friction")
         search = (request.args.get("search") or "").lower().strip()
 
         records = data.get("sip_records", [])
+        if mf_category and mf_category != "all":
+            records = [r for r in records if r.get("mf_category") == mf_category]
+        if mf_tag and mf_tag != "all":
+            records = [r for r in records if r.get("mf_tag") == mf_tag]
         if user_status and user_status != "all":
             if user_status == "active_last_30d":
                 records = [r for r in records if r.get("is_active_last_30d") or r.get("user_activity_status") == "active_last_30d"]
@@ -1347,6 +1353,24 @@ def api_sip_tenured_12m_analysis():
         return jsonify({"error": str(exc)}), 500
 
 
+@app.route("/api/sip/taxonomy-analysis", methods=["GET"])
+def api_sip_taxonomy_analysis():
+    """Return comprehensive 3-category / 9-tag Mutual Fund Perception & Risk Taxonomy Analysis."""
+    analytics_file = Path(__file__).parent / "data" / "mf_taxonomy_analytics.json"
+    if not analytics_file.exists():
+        try:
+            from tag_mf_taxonomy import apply_taxonomy
+            apply_taxonomy()
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+    try:
+        with open(analytics_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+
+
 @app.route("/api/sip/episodes")
 def api_sip_episodes():
     """Return all 144 structured retrieval & friction failure episodes with cues, stages, and metrics."""
@@ -1365,6 +1389,8 @@ def api_sip_episodes():
         platform = request.args.get("platform")
         stage = request.args.get("stage")
         category = request.args.get("category")
+        mf_category = request.args.get("mf_category")
+        mf_tag = request.args.get("mf_tag")
         search = (request.args.get("search") or "").lower().strip()
         limit = request.args.get("limit")
 
@@ -1381,6 +1407,12 @@ def api_sip_episodes():
                     ep["groq_eval"] = groq_evals[cid]
         except Exception:
             pass
+
+        if mf_category and mf_category != "all":
+            episodes = [e for e in episodes if e.get("mf_category") == mf_category]
+
+        if mf_tag and mf_tag != "all":
+            episodes = [e for e in episodes if e.get("mf_tag") == mf_tag]
 
         if platform and platform != "all":
             episodes = [e for e in episodes if e.get("source_code") == platform or platform in (e.get("platform") or "").lower()]
