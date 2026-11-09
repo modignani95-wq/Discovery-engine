@@ -3788,6 +3788,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     }
     activeFilterMfCategory = parentCat;
 
+    syncTaxonomyTagVisibility(parentCat);
+
     document.querySelectorAll('#explorer-mf-cat-pills .pill-btn').forEach(b => {
       b.classList.toggle('active', b.id === `pill-mfcat-${parentCat}`);
     });
@@ -4148,6 +4150,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     if (el('pill-mftag-BELOW_EXPECTED_RETURNS')) el('pill-mftag-BELOW_EXPECTED_RETURNS').textContent = `📉 Below Expected Returns (${countMfTag('BELOW_EXPECTED_RETURNS')})`;
     if (el('pill-mftag-BENCHMARK_UNDERPERFORMANCE')) el('pill-mftag-BENCHMARK_UNDERPERFORMANCE').textContent = `📊 Benchmark Underperformance (${countMfTag('BENCHMARK_UNDERPERFORMANCE')})`;
     if (el('pill-mftag-ALTERNATIVE_INVESTMENT_UNDERPERFORMANCE')) el('pill-mftag-ALTERNATIVE_INVESTMENT_UNDERPERFORMANCE').textContent = `🏦 Alternative Underperformance (${countMfTag('ALTERNATIVE_INVESTMENT_UNDERPERFORMANCE')})`;
+    syncTaxonomyTagVisibility(activeFilterMfCategory);
   }
 
   async function loadEpisodes() {
@@ -4245,6 +4248,69 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     }
   }
 
+    const TAXONOMY_CAT_TO_TAGS = {
+    'MUTUAL_FUND_RISK_PERCEPTION': [
+      'CAPITAL_LOSS_FEAR',
+      'MARKET_VOLATILITY_FEAR',
+      'FUTURE_RETURN_UNCERTAINTY'
+    ],
+    'MUTUAL_FUND_GOAL_SUITABILITY': [
+      'TARGET_RETURN_MISMATCH',
+      'INVESTMENT_HORIZON_MISMATCH',
+      'FINANCIAL_NEEDS_MISMATCH'
+    ],
+    'MUTUAL_FUND_RETURN_DISSATISFACTION': [
+      'BELOW_EXPECTED_RETURNS',
+      'BENCHMARK_UNDERPERFORMANCE',
+      'ALTERNATIVE_INVESTMENT_UNDERPERFORMANCE'
+    ]
+  };
+
+  function syncTaxonomyTagVisibility(catKey) {
+    const tagContainer = document.getElementById('explorer-mf-tag-pills');
+    if (!tagContainer) return;
+
+    const allPill = document.getElementById('pill-mftag-all');
+    const taggedTotal = (typeof allEpisodesMaster !== 'undefined') ? allEpisodesMaster.filter(e => e.is_mf_tagged && e.mf_tag).length : 402;
+
+    // 1. If 'all' category: show all 9 tags
+    if (!catKey || catKey === 'all') {
+      tagContainer.querySelectorAll('.pill-btn').forEach(btn => {
+        btn.style.display = '';
+      });
+      if (allPill) {
+        allPill.textContent = `All 9 Tags (${taggedTotal})`;
+      }
+      return;
+    }
+
+    // 2. Specific category selected: only show tags belonging to that category
+    const allowedTags = TAXONOMY_CAT_TO_TAGS[catKey] || [];
+    
+    // Update the 'All' pill for this specific category
+    if (allPill) {
+      let catCount = 0;
+      if (typeof allEpisodesMaster !== 'undefined') {
+        catCount = allEpisodesMaster.filter(e => e.is_mf_tagged && (e.mf_category || '').toUpperCase() === catKey.toUpperCase()).length;
+      }
+      const catLabel = catKey === 'MUTUAL_FUND_RISK_PERCEPTION' ? 'Risk Perception' :
+                       (catKey === 'MUTUAL_FUND_GOAL_SUITABILITY' ? 'Goal Suitability' : 'Return Dissatisfaction');
+      allPill.textContent = `All ${catLabel} (${catCount})`;
+      allPill.style.display = '';
+    }
+
+    // Show/hide each specific tag pill
+    tagContainer.querySelectorAll('.pill-btn').forEach(btn => {
+      if (btn.id === 'pill-mftag-all') return;
+      const tagId = btn.id.replace('pill-mftag-', '');
+      if (allowedTags.includes(tagId)) {
+        btn.style.display = '';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+  }
+
   function filterEpisodes(filterType, val, btn) {
     if (btn) {
       btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
@@ -4255,6 +4321,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     if (filterType === 'mf_category') {
       activeFilterMfCategory = val;
       activeFilterMfTag = 'all';
+      syncTaxonomyTagVisibility(val);
       document.querySelectorAll('#explorer-mf-tag-pills .pill-btn').forEach(b => {
         b.classList.toggle('active', b.id === 'pill-mftag-all');
       });
@@ -4271,6 +4338,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
           parentCat = 'MUTUAL_FUND_RETURN_DISSATISFACTION';
         }
         activeFilterMfCategory = parentCat;
+        syncTaxonomyTagVisibility(parentCat);
         document.querySelectorAll('#explorer-mf-cat-pills .pill-btn').forEach(b => {
           b.classList.toggle('active', b.id === `pill-mfcat-${parentCat}`);
         });
@@ -4285,6 +4353,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     activeFilterPlatform = 'all';
     activeFilterMfCategory = catKey;
     activeFilterMfTag = 'all';
+
+    syncTaxonomyTagVisibility(catKey);
 
     document.querySelectorAll('#explorer-platform-pills .pill-btn').forEach(b => {
       b.classList.toggle('active', b.id === 'pill-plat-all');
@@ -4314,6 +4384,8 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
       parentCat = 'MUTUAL_FUND_RETURN_DISSATISFACTION';
     }
     activeFilterMfCategory = parentCat;
+
+    syncTaxonomyTagVisibility(parentCat);
 
     document.querySelectorAll('#explorer-platform-pills .pill-btn').forEach(b => {
       b.classList.toggle('active', b.id === 'pill-plat-all');
