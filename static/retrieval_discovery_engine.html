@@ -2932,23 +2932,46 @@ Be Disciplined and Patient with your money.”
         </div>
       </div>
 
-      <!-- Action Toolbar -->
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-        <div class="pill-group" style="flex-wrap:wrap; gap:4px;">
-          <span class="t-eyebrow" style="margin-right:4px; color:var(--ink-muted)">Audit Filter:</span>
-          <button class="pill-btn active" onclick="filterAuditTable('all', this)">All Results</button>
-          <button class="pill-btn" onclick="filterAuditTable('PASS', this)">✅ Pass Only</button>
-          <button class="pill-btn" onclick="filterAuditTable('BORDERLINE', this)">⚠️ Borderline</button>
-          <button class="pill-btn" onclick="filterAuditTable('FAIL', this)">❌ Fail Only</button>
-          <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RISK_PERCEPTION', this)" style="color:#DC2626; font-weight:700;">🛡️ Risk Perception</button>
-          <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_GOAL_SUITABILITY', this)" style="color:#D97706; font-weight:700;">🎯 Goal Suitability</button>
-          <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RETURN_DISSATISFACTION', this)" style="color:#2563EB; font-weight:700;">📉 Return Dissatisfaction</button>
-          <button class="pill-btn" onclick="filterAuditTable('TENURED_12M', this)" style="color:#4338CA; font-weight:700;">🏅 &gt;12M Tenured</button>
+      <!-- Action Toolbar with Multi-dimensional Filters -->
+      <div class="clean-card" style="padding:16px 18px; margin-bottom:16px; background:#FFFFFF; border:1px solid var(--border-light); border-radius:10px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:12px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--ink-secondary);">AUDIT FILTER SUITE</span>
+            <span id="audit-filter-summary" style="font-size:11.5px; font-weight:700; background:var(--groww-mint-light); color:var(--groww-mint-dark); padding:2px 8px; border-radius:12px;">Showing 48 of 48 cases</span>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn-groww" id="run-groq-batch-btn" onclick="runGroqBatchEvaluation()" style="font-size:12px; padding:6px 12px;">⚡ Run Groq Audit on Next 5</button>
+            <button class="btn-groww" id="run-groq-tenured-btn" onclick="runGroqTenuredBatchEvaluation()" style="background:#4F46E5; font-size:12px; padding:6px 12px;">⚡ Audit &gt;12M Tenured Cases</button>
+            <a class="btn-secondary" href="/api/sip/groq-results/export" download style="font-size:12px; padding:6px 12px;">📥 Download JSON</a>
+          </div>
         </div>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button class="btn-groww" id="run-groq-batch-btn" onclick="runGroqBatchEvaluation()">⚡ Run Groq Audit on Next 5</button>
-          <button class="btn-groww" id="run-groq-tenured-btn" onclick="runGroqTenuredBatchEvaluation()" style="background:#4F46E5;">⚡ Audit &gt;12M Tenured Cases</button>
-          <a class="btn-secondary" href="/api/sip/groq-results/export" download>📥 Download JSON</a>
+
+        <!-- Platform Filter Row -->
+        <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid var(--border-light);">
+          <span class="t-eyebrow" style="min-width:115px; color:var(--ink-muted); font-size:11px; font-weight:700;">PLATFORM:</span>
+          <div class="pill-group" id="audit-platform-pills" style="flex-wrap:wrap; gap:4px;">
+            <button class="pill-btn active" onclick="filterAuditByPlatform('all', this)">🌐 All Platforms (48)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('youtube', this)">📺 YouTube (11)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('reddit', this)">💬 Reddit (10)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('play_store', this)">📱 Google Play Store (6)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('app_store', this)">🍏 Apple App Store (7)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('tradingqna', this)">📈 TradingQ&amp;A / Forums (14)</button>
+          </div>
+        </div>
+
+        <!-- Verdict & Category Filter Row -->
+        <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px;">
+          <span class="t-eyebrow" style="min-width:115px; color:var(--ink-muted); font-size:11px; font-weight:700;">VERDICT &amp; CAT:</span>
+          <div class="pill-group" id="audit-verdict-pills" style="flex-wrap:wrap; gap:4px;">
+            <button class="pill-btn active" onclick="filterAuditTable('all', this)">All Verdicts</button>
+            <button class="pill-btn" onclick="filterAuditTable('PASS', this)">✅ Pass Only</button>
+            <button class="pill-btn" onclick="filterAuditTable('BORDERLINE', this)">⚠️ Borderline</button>
+            <button class="pill-btn" onclick="filterAuditTable('FAIL', this)">❌ Fail Only</button>
+            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RISK_PERCEPTION', this)" style="color:#DC2626; font-weight:700;">🛡️ Risk Perception</button>
+            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_GOAL_SUITABILITY', this)" style="color:#D97706; font-weight:700;">🎯 Goal Suitability</button>
+            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RETURN_DISSATISFACTION', this)" style="color:#2563EB; font-weight:700;">📉 Return Dissatisfaction</button>
+            <button class="pill-btn" onclick="filterAuditTable('TENURED_12M', this)" style="color:#4338CA; font-weight:700;">🏅 &gt;12M Tenured</button>
+          </div>
         </div>
       </div>
 
@@ -5224,15 +5247,133 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     }
   }
 
+  let activeAuditPlatform = 'all';
+  let activeAuditVerdict = 'all';
+
+  function updateAuditPillCounts() {
+    if (!groqAuditResults || !groqAuditResults.length) return;
+    const total = groqAuditResults.length;
+    let yt = 0, rd = 0, ps = 0, as = 0, tq = 0;
+    let passCount = 0, borderCount = 0, failCount = 0;
+
+    groqAuditResults.forEach(item => {
+      const src = (item.source_code || '').toLowerCase();
+      const plat = (item.platform || '').toLowerCase();
+      if (src === 'youtube' || plat.includes('youtube')) yt++;
+      else if (src === 'reddit' || plat.includes('reddit')) rd++;
+      else if (src === 'play_store' || plat.includes('play')) ps++;
+      else if (src === 'app_store' || plat.includes('apple') || plat.includes('app store')) as++;
+      else if (src === 'tradingqna' || src === 'other_public' || plat.includes('trading') || plat.includes('forum')) tq++;
+
+      const v = (item.verdict || '').toUpperCase();
+      if (v === 'PASS') passCount++;
+      else if (v === 'BORDERLINE') borderCount++;
+      else if (v === 'FAIL') failCount++;
+    });
+
+    const pillsContainer = document.getElementById('audit-platform-pills');
+    if (pillsContainer) {
+      const buttons = pillsContainer.querySelectorAll('button');
+      if (buttons[0]) buttons[0].innerHTML = `🌐 All Platforms (${total})`;
+      if (buttons[1]) buttons[1].innerHTML = `📺 YouTube (${yt})`;
+      if (buttons[2]) buttons[2].innerHTML = `💬 Reddit (${rd})`;
+      if (buttons[3]) buttons[3].innerHTML = `📱 Google Play Store (${ps})`;
+      if (buttons[4]) buttons[4].innerHTML = `🍏 Apple App Store (${as})`;
+      if (buttons[5]) buttons[5].innerHTML = `📈 TradingQ&amp;A / Forums (${tq})`;
+    }
+
+    const verdictContainer = document.getElementById('audit-verdict-pills');
+    if (verdictContainer) {
+      const vButtons = verdictContainer.querySelectorAll('button');
+      if (vButtons[1]) vButtons[1].innerHTML = `✅ Pass Only (${passCount})`;
+      if (vButtons[2]) vButtons[2].innerHTML = `⚠️ Borderline (${borderCount})`;
+      if (vButtons[3]) vButtons[3].innerHTML = `❌ Fail Only (${failCount})`;
+    }
+  }
+
+  function filterAuditByPlatform(platformKey, btn) {
+    if (btn) {
+      document.querySelectorAll('#audit-platform-pills .pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    activeAuditPlatform = platformKey;
+    applyAuditFilters();
+  }
+
+  function filterAuditTable(filterKey, btn) {
+    if (btn) {
+      document.querySelectorAll('#audit-verdict-pills .pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    activeAuditVerdict = filterKey;
+    applyAuditFilters();
+  }
+
+  function applyAuditFilters() {
+    if (!groqAuditResults || !groqAuditResults.length) return;
+    let filtered = [...groqAuditResults];
+
+    // 1. Platform filter
+    if (activeAuditPlatform !== 'all') {
+      filtered = filtered.filter(item => {
+        const src = (item.source_code || '').toLowerCase();
+        const plat = (item.platform || '').toLowerCase();
+        if (activeAuditPlatform === 'youtube') return src === 'youtube' || plat.includes('youtube');
+        if (activeAuditPlatform === 'reddit') return src === 'reddit' || plat.includes('reddit');
+        if (activeAuditPlatform === 'play_store') return src === 'play_store' || plat.includes('play');
+        if (activeAuditPlatform === 'app_store') return src === 'app_store' || plat.includes('apple') || plat.includes('app store');
+        if (activeAuditPlatform === 'tradingqna') return src === 'tradingqna' || src === 'other_public' || plat.includes('trading') || plat.includes('forum');
+        return true;
+      });
+    }
+
+    // 2. Verdict / Category filter
+    if (activeAuditVerdict !== 'all') {
+      if (activeAuditVerdict === 'TENURED_12M') {
+        filtered = filtered.filter(r => r.is_tenured_12m_plus || r.investor_tenure_bucket === 'tenured_12m_plus');
+      } else if (activeAuditVerdict.startsWith('MUTUAL_FUND_')) {
+        filtered = filtered.filter(r => r.mf_category === activeAuditVerdict);
+      } else {
+        filtered = filtered.filter(r => r.verdict === activeAuditVerdict);
+      }
+    }
+
+    const summaryBadge = document.getElementById('audit-filter-summary');
+    if (summaryBadge) {
+      let platformName = "All Platforms";
+      if (activeAuditPlatform === 'youtube') platformName = "YouTube";
+      else if (activeAuditPlatform === 'reddit') platformName = "Reddit";
+      else if (activeAuditPlatform === 'play_store') platformName = "Google Play Store";
+      else if (activeAuditPlatform === 'app_store') platformName = "Apple App Store";
+      else if (activeAuditPlatform === 'tradingqna') platformName = "TradingQ&A / Forums";
+
+      let verdictName = "";
+      if (activeAuditVerdict === 'PASS') verdictName = " • Pass Only";
+      else if (activeAuditVerdict === 'BORDERLINE') verdictName = " • Borderline";
+      else if (activeAuditVerdict === 'FAIL') verdictName = " • Fail Only";
+      else if (activeAuditVerdict === 'TENURED_12M') verdictName = " • >12M Tenured";
+      else if (activeAuditVerdict.startsWith('MUTUAL_FUND_')) verdictName = " • " + activeAuditVerdict.replace('MUTUAL_FUND_', '').replace(/_/g, ' ');
+
+      summaryBadge.textContent = `Showing ${filtered.length} of ${groqAuditResults.length} cases (${platformName}${verdictName})`;
+    }
+
+    renderAuditTable(filtered);
+  }
+
   async function loadGroqAuditResults() {
     const tbody = document.getElementById('rubrics-table-body');
 
     // 1. Immediate offline/pre-bundled hydration (0ms latency, zero-failure)
-    if (window.GROQ_JUDGE_RESULTS && Array.isArray(window.GROQ_JUDGE_RESULTS.evaluations) && window.GROQ_JUDGE_RESULTS.evaluations.length > 0) {
-      groqAuditResults = window.GROQ_JUDGE_RESULTS.evaluations;
-      renderAuditTable(groqAuditResults);
+    if (window.GROQ_JUDGE_RESULTS && window.GROQ_JUDGE_RESULTS.evaluations) {
+      if (Array.isArray(window.GROQ_JUDGE_RESULTS.evaluations)) {
+        groqAuditResults = window.GROQ_JUDGE_RESULTS.evaluations;
+      } else if (typeof window.GROQ_JUDGE_RESULTS.evaluations === 'object') {
+        groqAuditResults = Object.values(window.GROQ_JUDGE_RESULTS.evaluations);
+      }
+      updateAuditPillCounts();
+      applyAuditFilters();
     } else if (tbody && (!groqAuditResults || groqAuditResults.length === 0)) {
-      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--ink-muted);">Loading Groq LPU evaluations...</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:24px; color:var(--ink-muted);">Loading Groq LPU evaluations...</td></tr>';
     }
 
     // 2. Fetch live updates from server if available
@@ -5242,31 +5383,15 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
         const json = await res.json();
         if (json.evaluations && json.evaluations.length > 0) {
           groqAuditResults = json.evaluations;
-          renderAuditTable(groqAuditResults);
+          updateAuditPillCounts();
+          applyAuditFilters();
         }
       }
     } catch (err) {
       console.warn("Groq results live fetch fallback:", err);
       if (!groqAuditResults || groqAuditResults.length === 0) {
-        if (tbody) tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--groww-red);">Error loading evaluations.</td></tr>';
+        if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:24px; color:var(--groww-red);">Error loading evaluations.</td></tr>';
       }
-    }
-  }
-
-  function filterAuditTable(filterKey, btn) {
-    if (btn) {
-      btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    }
-
-    if (filterKey === 'all') {
-      renderAuditTable(groqAuditResults);
-    } else if (filterKey === 'TENURED_12M') {
-      renderAuditTable(groqAuditResults.filter(r => r.is_tenured_12m_plus || r.investor_tenure_bucket === 'tenured_12m_plus'));
-    } else if (filterKey.startsWith('MUTUAL_FUND_')) {
-      renderAuditTable(groqAuditResults.filter(r => r.mf_category === filterKey));
-    } else {
-      renderAuditTable(groqAuditResults.filter(r => r.verdict === filterKey));
     }
   }
 
