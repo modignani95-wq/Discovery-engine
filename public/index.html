@@ -2937,7 +2937,7 @@ Be Disciplined and Patient with your money.”
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
           <div style="display:flex; align-items:center; gap:8px;">
             <span style="font-size:12px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--ink-secondary);">AUDIT FILTER SUITE</span>
-            <span id="audit-filter-summary" style="font-size:11.5px; font-weight:700; background:var(--groww-mint-light); color:var(--groww-mint-dark); padding:2px 8px; border-radius:12px;">Showing 48 of 48 cases</span>
+            <span id="audit-filter-summary" style="font-size:11.5px; font-weight:700; background:var(--groww-mint-light); color:var(--groww-mint-dark); padding:2px 8px; border-radius:12px;">Showing 408 of 408 cases</span>
           </div>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
             <button class="btn-groww" id="run-groq-batch-btn" onclick="runGroqBatchEvaluation()" style="font-size:12px; padding:6px 12px;">⚡ Run Groq Audit on Next 5</button>
@@ -2950,12 +2950,12 @@ Be Disciplined and Patient with your money.”
         <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid var(--border-light);">
           <span class="t-eyebrow" style="min-width:115px; color:var(--ink-muted); font-size:11px; font-weight:700;">PLATFORM:</span>
           <div class="pill-group" id="audit-platform-pills" style="flex-wrap:wrap; gap:4px;">
-            <button class="pill-btn active" onclick="filterAuditByPlatform('all', this)">🌐 All Platforms (48)</button>
-            <button class="pill-btn" onclick="filterAuditByPlatform('youtube', this)">📺 YouTube (11)</button>
-            <button class="pill-btn" onclick="filterAuditByPlatform('reddit', this)">💬 Reddit (10)</button>
-            <button class="pill-btn" onclick="filterAuditByPlatform('play_store', this)">📱 Google Play Store (6)</button>
-            <button class="pill-btn" onclick="filterAuditByPlatform('app_store', this)">🍏 Apple App Store (7)</button>
-            <button class="pill-btn" onclick="filterAuditByPlatform('tradingqna', this)">📈 TradingQ&amp;A / Forums (14)</button>
+            <button class="pill-btn active" onclick="filterAuditByPlatform('all', this)">🌐 All Platforms (408)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('youtube', this)">📺 YouTube (33)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('reddit', this)">💬 Reddit (117)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('play_store', this)">📱 Google Play Store (121)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('app_store', this)">🍏 Apple App Store (112)</button>
+            <button class="pill-btn" onclick="filterAuditByPlatform('tradingqna', this)">📈 TradingQ&amp;A / Forums (25)</button>
           </div>
         </div>
 
@@ -2964,12 +2964,12 @@ Be Disciplined and Patient with your money.”
           <span class="t-eyebrow" style="min-width:115px; color:var(--ink-muted); font-size:11px; font-weight:700;">VERDICT &amp; CAT:</span>
           <div class="pill-group" id="audit-verdict-pills" style="flex-wrap:wrap; gap:4px;">
             <button class="pill-btn active" onclick="filterAuditTable('all', this)">All Verdicts</button>
-            <button class="pill-btn" onclick="filterAuditTable('PASS', this)">✅ Pass Only</button>
-            <button class="pill-btn" onclick="filterAuditTable('BORDERLINE', this)">⚠️ Borderline</button>
-            <button class="pill-btn" onclick="filterAuditTable('FAIL', this)">❌ Fail Only</button>
-            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RISK_PERCEPTION', this)" style="color:#DC2626; font-weight:700;">🛡️ Risk Perception</button>
-            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_GOAL_SUITABILITY', this)" style="color:#D97706; font-weight:700;">🎯 Goal Suitability</button>
-            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RETURN_DISSATISFACTION', this)" style="color:#2563EB; font-weight:700;">📉 Return Dissatisfaction</button>
+            <button class="pill-btn" onclick="filterAuditTable('PASS', this)">✅ Pass Only (402)</button>
+            <button class="pill-btn" onclick="filterAuditTable('BORDERLINE', this)">⚠️ Borderline (2)</button>
+            <button class="pill-btn" onclick="filterAuditTable('FAIL', this)">❌ Fail Only (4)</button>
+            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RISK_PERCEPTION', this)" style="color:#DC2626; font-weight:700;">🛡️ Risk Perception (114)</button>
+            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_GOAL_SUITABILITY', this)" style="color:#D97706; font-weight:700;">🎯 Goal Suitability (210)</button>
+            <button class="pill-btn" onclick="filterAuditTable('MUTUAL_FUND_RETURN_DISSATISFACTION', this)" style="color:#2563EB; font-weight:700;">📉 Return Dissatisfaction (84)</button>
             <button class="pill-btn" onclick="filterAuditTable('TENURED_12M', this)" style="color:#4338CA; font-weight:700;">🏅 &gt;12M Tenured</button>
           </div>
         </div>
@@ -5255,6 +5255,7 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     const total = groqAuditResults.length;
     let yt = 0, rd = 0, ps = 0, as = 0, tq = 0;
     let passCount = 0, borderCount = 0, failCount = 0;
+    let riskCount = 0, goalCount = 0, returnCount = 0, tenuredCount = 0;
 
     groqAuditResults.forEach(item => {
       const src = (item.source_code || '').toLowerCase();
@@ -5269,6 +5270,13 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
       if (v === 'PASS') passCount++;
       else if (v === 'BORDERLINE') borderCount++;
       else if (v === 'FAIL') failCount++;
+
+      const cat = item.mf_category;
+      if (cat === 'MUTUAL_FUND_RISK_PERCEPTION') riskCount++;
+      else if (cat === 'MUTUAL_FUND_GOAL_SUITABILITY') goalCount++;
+      else if (cat === 'MUTUAL_FUND_RETURN_DISSATISFACTION') returnCount++;
+
+      if (item.is_tenured_12m_plus || item.investor_tenure_bucket === 'tenured_12m_plus') tenuredCount++;
     });
 
     const pillsContainer = document.getElementById('audit-platform-pills');
@@ -5285,9 +5293,14 @@ ${(outG.output_text || inG.sanitized_text || '').replace(/\[PAN_CARD_MASKED\]/g,
     const verdictContainer = document.getElementById('audit-verdict-pills');
     if (verdictContainer) {
       const vButtons = verdictContainer.querySelectorAll('button');
-      if (vButtons[1]) vButtons[1].innerHTML = `✅ Pass Only (${passCount})`;
+      if (vButtons[0]) vButtons.innerHTML = `All Verdicts (${total})`;
+      if (vButtons[1]) vButtons.innerHTML = `✅ Pass Only (${passCount})`;
       if (vButtons[2]) vButtons[2].innerHTML = `⚠️ Borderline (${borderCount})`;
       if (vButtons[3]) vButtons[3].innerHTML = `❌ Fail Only (${failCount})`;
+      if (vButtons[4]) vButtons.innerHTML = `🛡️ Risk Perception (${riskCount})`;
+      if (vButtons[5]) vButtons.innerHTML = `🎯 Goal Suitability (${goalCount})`;
+      if (vButtons[6]) vButtons.innerHTML = `📉 Return Dissatisfaction (${returnCount})`;
+      if (vButtons[7]) vButtons.innerHTML = `🏅 &gt;12M Tenured (${tenuredCount})`;
     }
   }
 
